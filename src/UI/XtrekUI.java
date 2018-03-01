@@ -24,10 +24,16 @@ import javaapplication1.SoundAndSpeech;
  *
  * @author zhuhongbo
  */
+
+enum Menu {ONE, TWO, THREE, FOUR, FIVE, SIX};
+enum Situation {OFF, MENU, WHERETO, TRIPCOMPUTER, MAP, SPEECH, SATELLITE, ABOUTME};
+
+
 public class XtrekUI extends javax.swing.JFrame {
     
-    String situation = "off"; // used to change different functionanility on different situation 
-    int menuOrder = 0; // number help to order different ptcture on menu
+ // used to change different functionanility on different situation 
+    Menu menu;
+    Situation situation;
     int currentPanelName = 1;
     int speechOrder = 0;
     String textdisp = "";
@@ -1676,24 +1682,24 @@ public class XtrekUI extends javax.swing.JFrame {
         screenPanel.repaint();
         screenPanel.revalidate();            
         //add panel
-        if ("off".equals(situation)){
+        if (situation == Situation.OFF){
             screenPanel.add(menu1Panel);
-            situation = "menu";
+            situation = Situation.MENU;
         } else {
             screenPanel.add(offPanel);
-            situation = "off";
+            situation = Situation.OFF;
             
         }
         screenPanel.repaint();
         screenPanel.revalidate();
-        menuOrder = 0;
+        menu = Menu.ONE;
     }//GEN-LAST:event_onButtonActionPerformed
 
     private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButtonActionPerformed
               
         if (null != situation) // TODO add your handling code here:
         switch (situation) {
-            case "menu":
+            case MENU:
                 // TODO add your handling code here:
                 //remove panel
                 screenPanel.removeAll();
@@ -1701,32 +1707,33 @@ public class XtrekUI extends javax.swing.JFrame {
                 screenPanel.revalidate();
                 //add panel
                 // change to menu mode
-                switch (menuOrder) {
-                    case 0:
+                switch (menu) {
+                    case ONE:
                         screenPanel.add(menu2Panel);
                         screenPanel.repaint();
                         screenPanel.revalidate();
-                        menuOrder = 1;
+                        menu = Menu.TWO;
                         break;
-                    case 1:
+                    case TWO:
                         screenPanel.add(menu3Panel);
-                        menuOrder = 2;
+                        menu = Menu.THREE;
                         break;
-                    case 2:
+                    case THREE:
                         screenPanel.add(menu4Panel);
-                        menuOrder = 3;
+                        menu = Menu.FOUR;
+                        
                         break;
-                    case 3:
+                    case FOUR:
                         screenPanel.add(menu5Panel);
-                        menuOrder = 4;
+                        menu = Menu.FIVE;
                         break;
-                    case 4:
+                    case FIVE:
                         screenPanel.add(menu6Panel);
-                        menuOrder = 5;
+                        menu = Menu.SIX;
                         break;
-                    case 5:
+                    case SIX:
                         screenPanel.add(menu1Panel);
-                        menuOrder = 0;
+                        menu = Menu.ONE;
                         break;
                     default:
                         break;
@@ -1735,7 +1742,7 @@ public class XtrekUI extends javax.swing.JFrame {
                 screenPanel.revalidate();
                 // change to whereTo mode
                 break;
-            case "whereTo":
+            case WHERETO:
                 switch(currentPanelName){
                     case 1: jPanel3.removeAll();
                     jPanel3.repaint();
@@ -2143,7 +2150,7 @@ public class XtrekUI extends javax.swing.JFrame {
                 }
                 // change to speech mode   
                 break;
-            case "speech":
+            case SPEECH:
                 speechPanel.removeAll();
                 speechPanel.repaint();
                 speechPanel.revalidate();
@@ -2190,7 +2197,7 @@ public class XtrekUI extends javax.swing.JFrame {
                 
                 //change to map mode
                 break;
-            case "map":
+            case MAP:
                 if (zoomValue > MIN_ZOOM) {//check whether zoom value is greater than min zoom
                     
                     browser.executeJavaScript("map.setZoom(" + --zoomValue + ")");
@@ -2206,34 +2213,34 @@ public class XtrekUI extends javax.swing.JFrame {
         if (null != situation) // TODO add your handling code here:
         // change to menu mode
         switch (situation) {
-            case "menu":
+            case MENU:
                 screenPanel.removeAll();
                 screenPanel.repaint();
                 screenPanel.revalidate();
-                switch (menuOrder) {
-                    case 0:
+                switch (menu) {
+                    case ONE:
                         screenPanel.add(menu6Panel);
-                        menuOrder = 5;
+                        menu = Menu.SIX;
                         break;
-                    case 1:
+                    case TWO:
                         screenPanel.add(menu1Panel);
-                        menuOrder = 0;
+                        menu = Menu.ONE;
                         break;
-                    case 2:
+                    case THREE:
                         screenPanel.add(menu2Panel);
-                        menuOrder = 1;
+                        menu = Menu.TWO;
                         break;
-                    case 3:
+                    case FOUR:
                         screenPanel.add(menu3Panel);
-                        menuOrder = 2;
+                        menu = Menu.THREE;
                         break;
-                    case 4:
+                    case FIVE:
                         screenPanel.add(menu4Panel);
-                        menuOrder = 3;
+                        menu = Menu.FOUR;
                         break;
-                    case 5:
+                    case SIX:
                         screenPanel.add(menu5Panel);
-                        menuOrder = 4;
+                        menu = Menu.FIVE;
                         break;
                     default:
                         break;
@@ -2242,7 +2249,7 @@ public class XtrekUI extends javax.swing.JFrame {
                 screenPanel.revalidate();
                 //change to whereTo mode    
                 break;
-            case "whereTo":
+            case WHERETO:
                 switch(currentPanelName){
                     case 1: jPanel3.removeAll();
                     jPanel3.repaint();
@@ -2646,7 +2653,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     currentPanelName -= 1;
                     break;
                 }       break;
-            case "speech":
+            case SPEECH:
                 speechPanel.removeAll();
                 speechPanel.repaint();
                 speechPanel.revalidate();
@@ -2690,7 +2697,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     default:
                         break;
                 }   break;
-            case "map":
+            case MAP:
                 if (zoomValue < MAX_ZOOM) {//check whether zoom value is less than max zoom
 
                     browser.executeJavaScript("map.setZoom(" + ++zoomValue + ")"); // calling setZoom of google.maps.Map JavaScript object
@@ -2705,7 +2712,7 @@ public class XtrekUI extends javax.swing.JFrame {
     private void menuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuButtonActionPerformed
         // TODO add your handling code here:
         // this button helps you to back to menu panel
-        if (!"menu".equals(situation) && !"off".equals(situation)) {
+        if (situation != Situation.MENU && situation != Situation.OFF) {
              // TODO add your handling code here:
         //remove panel
             screenPanel.removeAll();
@@ -2713,23 +2720,23 @@ public class XtrekUI extends javax.swing.JFrame {
             screenPanel.revalidate();
             
         // add panel
-            switch (menuOrder) {
-                case 0:
+            switch (menu) {
+                case ONE:
                     screenPanel.add(menu1Panel);
                     break;
-                case 1:
+                case TWO:
                     screenPanel.add(menu2Panel);
                     break;
-                case 2:
+                case THREE:
                     screenPanel.add(menu3Panel);
                     break;
-                case 3:
+                case FOUR:
                     screenPanel.add(menu4Panel);
                     break;
-                case 4:
+                case FIVE:
                     screenPanel.add(menu5Panel);
                     break;
-                case 5:
+                case SIX:
                     screenPanel.add(menu6Panel);
                     break;
                 default:
@@ -2737,7 +2744,7 @@ public class XtrekUI extends javax.swing.JFrame {
             }
             screenPanel.repaint();
             screenPanel.revalidate();
-            situation = "menu";
+            situation = Situation.MENU;
             
         }
     }//GEN-LAST:event_menuButtonActionPerformed
@@ -2745,16 +2752,16 @@ public class XtrekUI extends javax.swing.JFrame {
     private void selectButtonActionPerformed(java.awt.event.ActionEvent evt){//GEN-FIRST:event_selectButtonActionPerformed
         if (null != situation) // TODO add your handling code here:
         switch (situation) {
-            case "menu":
+            case MENU:
                 screenPanel.removeAll();
                 screenPanel.repaint();
                 screenPanel.revalidate();
-                switch (menuOrder) {
-                    case 0:
+                switch (menu) {
+                    case ONE:
                         screenPanel.add(whereToPanel);
-                        situation = "whereTo";
+                        situation = Situation.WHERETO;
                         break;
-                    case 1:
+                    case TWO:
                         if(tripComputerRun == false){
                             String s0 ="50.735459,-3.533207";
                             String s1 ="50.722932 -3.530193";
@@ -2772,9 +2779,9 @@ public class XtrekUI extends javax.swing.JFrame {
                             tripComputerRun = true;
                         }
                         screenPanel.add(tripComputerPanel);
-                        situation = "tripComputer";
+                        situation = Situation.TRIPCOMPUTER;
                         break;
-                    case 2:
+                    case THREE:
                         File file =new File("map.html");
                         String path = file.getAbsolutePath();
                         System.out.print(path);
@@ -2782,20 +2789,20 @@ public class XtrekUI extends javax.swing.JFrame {
                         browser.loadURL(path);
                         screenPanel.add(view, BorderLayout.CENTER);
                         screenPanel.add(mapPanel);
-                        situation = "map";
+                        situation = Situation.MAP;
                         break;
-                    case 3:
+                    case FOUR:
                         screenPanel.add(speechPanel);
-                        situation = "speech";
+                        situation = Situation.SPEECH;
                         break;
-                    case 4:
+                    case FIVE:
                         screenPanel.add(TSPanel);
                         SerialPortHandler.connect();
-                        situation = "satellite";
+                        situation = Situation.SATELLITE;
                         break;
-                    case 5:
+                    case SIX:
                         screenPanel.add(aboutPanel);
-                        situation = "about";
+                        situation = Situation.ABOUTME;
                         break;
                     default:
                         break;
@@ -2805,7 +2812,7 @@ public class XtrekUI extends javax.swing.JFrame {
                 screenPanel.revalidate();
                 break;
                 
-            case "whereTo":
+            case WHERETO:
                 switch(currentPanelName){
                     case 1: jTextField1.setText(textdisp + "A");
                     textdisp = textdisp + "A";
@@ -2943,7 +2950,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     break;
                     
                 }       break;
-            case "speech":
+            case SPEECH:
                 try {
                     NewSoundAndSpeech a = new NewSoundAndSpeech();
                     SoundAndSpeech b = new SoundAndSpeech();
