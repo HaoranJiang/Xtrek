@@ -6,7 +6,6 @@ package UI;
  */
 import javaapplication1.HttpConnect;
 import javaapplication1.NewSoundAndSpeech;
-import directionsdemo.tripComputer;
 import static java.lang.Thread.sleep;
 import java.net.URLEncoder;
 import java.util.logging.Level;
@@ -85,13 +84,6 @@ public class XtrekUI extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         menu6Panel = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        mapPanel = new javax.swing.JPanel();
-        jEditorPane1 = new javax.swing.JEditorPane();
-        aboutPanel = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         whereToPanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -177,6 +169,13 @@ public class XtrekUI extends javax.swing.JFrame {
         jLabel55 = new javax.swing.JLabel();
         jPanel44 = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
+        aboutPanel = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        mapPanel = new javax.swing.JPanel();
+        jEditorPane1 = new javax.swing.JEditorPane();
         speechPanel = new javax.swing.JPanel();
         smenu1Panel = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -350,53 +349,6 @@ public class XtrekUI extends javax.swing.JFrame {
         );
 
         screenPanel.add(menu6Panel, "card5");
-
-        javax.swing.GroupLayout mapPanelLayout = new javax.swing.GroupLayout(mapPanel);
-        mapPanel.setLayout(mapPanelLayout);
-        mapPanelLayout.setHorizontalGroup(
-            mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jEditorPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
-        );
-        mapPanelLayout.setVerticalGroup(
-            mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 245, Short.MAX_VALUE)
-            .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jEditorPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
-        );
-
-        screenPanel.add(mapPanel, "card5");
-
-        aboutPanel.setMaximumSize(new java.awt.Dimension(203, 245));
-        aboutPanel.setMinimumSize(new java.awt.Dimension(203, 245));
-        aboutPanel.setPreferredSize(new java.awt.Dimension(203, 245));
-        aboutPanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                aboutPanelMouseMoved(evt);
-            }
-        });
-        aboutPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel14.setText("(c)2018");
-        aboutPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
-
-        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
-        jLabel15.setText("ECM2415 University of Exeter");
-        aboutPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 200, 50));
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AM.png"))); // NOI18N
-        jLabel16.setMaximumSize(new java.awt.Dimension(100, 98));
-        jLabel16.setMinimumSize(new java.awt.Dimension(100, 98));
-        aboutPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 90, 90));
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
-        jLabel17.setText("   XTrek");
-        jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        aboutPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 50));
-
-        screenPanel.add(aboutPanel, "card15");
 
         whereToPanel.setPreferredSize(new java.awt.Dimension(203, 245));
 
@@ -1452,6 +1404,53 @@ public class XtrekUI extends javax.swing.JFrame {
         );
 
         screenPanel.add(whereToPanel, "card14");
+
+        aboutPanel.setMaximumSize(new java.awt.Dimension(203, 245));
+        aboutPanel.setMinimumSize(new java.awt.Dimension(203, 245));
+        aboutPanel.setPreferredSize(new java.awt.Dimension(203, 245));
+        aboutPanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                aboutPanelMouseMoved(evt);
+            }
+        });
+        aboutPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel14.setText("(c)2018");
+        aboutPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, -1, -1));
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 13)); // NOI18N
+        jLabel15.setText("ECM2415 University of Exeter");
+        aboutPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 200, 50));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/AM.png"))); // NOI18N
+        jLabel16.setMaximumSize(new java.awt.Dimension(100, 98));
+        jLabel16.setMinimumSize(new java.awt.Dimension(100, 98));
+        aboutPanel.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 90, 90));
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 40)); // NOI18N
+        jLabel17.setText("   XTrek");
+        jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        aboutPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 50));
+
+        screenPanel.add(aboutPanel, "card15");
+
+        javax.swing.GroupLayout mapPanelLayout = new javax.swing.GroupLayout(mapPanel);
+        mapPanel.setLayout(mapPanelLayout);
+        mapPanelLayout.setHorizontalGroup(
+            mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jEditorPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+        );
+        mapPanelLayout.setVerticalGroup(
+            mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 245, Short.MAX_VALUE)
+            .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jEditorPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
+        );
+
+        screenPanel.add(mapPanel, "card5");
 
         speechPanel.setLayout(new java.awt.CardLayout());
 
@@ -2717,37 +2716,27 @@ public class XtrekUI extends javax.swing.JFrame {
             switch (menuOrder) {
                 case 0:
                     screenPanel.add(menu1Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
                     break;
                 case 1:
                     screenPanel.add(menu2Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
                     break;
                 case 2:
                     screenPanel.add(menu3Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
                     break;
                 case 3:
                     screenPanel.add(menu4Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
                     break;
                 case 4:
                     screenPanel.add(menu5Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
                     break;
                 case 5:
                     screenPanel.add(menu6Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
                     break;
                 default:
                     break;
             }
+            screenPanel.repaint();
+            screenPanel.revalidate();
             situation = "menu";
             
         }
@@ -2763,8 +2752,6 @@ public class XtrekUI extends javax.swing.JFrame {
                 switch (menuOrder) {
                     case 0:
                         screenPanel.add(whereToPanel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         situation = "whereTo";
                         break;
                     case 1:
@@ -2785,8 +2772,6 @@ public class XtrekUI extends javax.swing.JFrame {
                             tripComputerRun = true;
                         }
                         screenPanel.add(tripComputerPanel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         situation = "tripComputer";
                         break;
                     case 2:
@@ -2797,33 +2782,29 @@ public class XtrekUI extends javax.swing.JFrame {
                         browser.loadURL(path);
                         screenPanel.add(view, BorderLayout.CENTER);
                         screenPanel.add(mapPanel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         situation = "map";
                         break;
                     case 3:
                         screenPanel.add(speechPanel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         situation = "speech";
                         break;
                     case 4:
                         screenPanel.add(TSPanel);
                         SerialPortHandler.connect();
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         situation = "satellite";
                         break;
                     case 5:
                         screenPanel.add(aboutPanel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         situation = "about";
                         break;
                     default:
                         break;
                         
-                }   break;
+                }
+                screenPanel.repaint();
+                screenPanel.revalidate();
+                break;
+                
             case "whereTo":
                 switch(currentPanelName){
                     case 1: jTextField1.setText(textdisp + "A");
