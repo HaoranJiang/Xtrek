@@ -1675,29 +1675,23 @@ public class XtrekUI extends javax.swing.JFrame {
         //remove panel
         screenPanel.removeAll();
         screenPanel.repaint();
-        screenPanel.revalidate();
-        
-        
+        screenPanel.revalidate();            
         //add panel
         if ("off".equals(situation)){
             screenPanel.add(menu1Panel);
-            screenPanel.repaint();
-            screenPanel.revalidate();
             situation = "menu";
-            menuOrder = 0;
         } else {
             screenPanel.add(offPanel);
-            screenPanel.repaint();
-            screenPanel.revalidate();
             situation = "off";
-            menuOrder = 0;
             
         }
+        screenPanel.repaint();
+        screenPanel.revalidate();
+        menuOrder = 0;
     }//GEN-LAST:event_onButtonActionPerformed
 
     private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButtonActionPerformed
-        
-        
+              
         if (null != situation) // TODO add your handling code here:
         switch (situation) {
             case "menu":
@@ -1717,37 +1711,29 @@ public class XtrekUI extends javax.swing.JFrame {
                         break;
                     case 1:
                         screenPanel.add(menu3Panel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         menuOrder = 2;
                         break;
                     case 2:
                         screenPanel.add(menu4Panel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         menuOrder = 3;
                         break;
                     case 3:
                         screenPanel.add(menu5Panel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         menuOrder = 4;
                         break;
                     case 4:
                         screenPanel.add(menu6Panel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         menuOrder = 5;
                         break;
                     case 5:
                         screenPanel.add(menu1Panel);
-                        screenPanel.repaint();
-                        screenPanel.revalidate();
                         menuOrder = 0;
                         break;
                     default:
                         break;
                 }
+                screenPanel.repaint();
+                screenPanel.revalidate();
                 // change to whereTo mode
                 break;
             case "whereTo":
