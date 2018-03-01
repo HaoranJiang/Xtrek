@@ -70,6 +70,100 @@ public class XtrekUI extends javax.swing.JFrame {
         selectButton = new javax.swing.JButton();
         menuButton = new javax.swing.JButton();
         screenPanel = new javax.swing.JPanel();
+        whereToPanel = new javax.swing.JPanel();
+        jPanelTextDisplay = new javax.swing.JPanel();
+        jLabelTextDisplay = new javax.swing.JLabel();
+        jTextFieldDestination = new javax.swing.JTextField();
+        jPanelSubmit = new javax.swing.JPanel();
+        jPanelSubmitButton = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jPanelSubmitHighlight = new javax.swing.JPanel();
+        jLabel62 = new javax.swing.JLabel();
+        jPanelKeyBoard = new javax.swing.JPanel();
+        jPanelKeyA = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jPanelKeyB = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jPanelKeyC = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jPanelKeyD = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jPanelKeyE = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jPanelKeyF = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jPanelKeyG = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jPanelKeyH = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jPanelKeyI = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jPanelKeyJ = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jPanelKeyK = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jPanelKeyL = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jPanelKeyM = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        jPanelKeyN = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jPanelKeyO = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
+        jPanelKeyP = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        jPanelKeyQ = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jPanelKeyR = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jPanelKeyS = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jPanelKeyT = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jPanelKeyU = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        jPanelKeyV = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jPanelKeyW = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanelKeyX = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jPanelKeyY = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jPanelKeyZ = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jPanelKeySpace = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jPanelKeyNext = new javax.swing.JPanel();
+        jLabel44 = new javax.swing.JLabel();
+        jPanelKey1 = new javax.swing.JPanel();
+        jLabel45 = new javax.swing.JLabel();
+        jPanelKey2 = new javax.swing.JPanel();
+        jLabel46 = new javax.swing.JLabel();
+        jPanelKey3 = new javax.swing.JPanel();
+        jLabel47 = new javax.swing.JLabel();
+        jPanelKey4 = new javax.swing.JPanel();
+        jLabel48 = new javax.swing.JLabel();
+        jPanelKey5 = new javax.swing.JPanel();
+        jLabel49 = new javax.swing.JLabel();
+        jPanelKey6 = new javax.swing.JPanel();
+        jLabel50 = new javax.swing.JLabel();
+        jPanelKey7 = new javax.swing.JPanel();
+        jLabel51 = new javax.swing.JLabel();
+        jPanelKey8 = new javax.swing.JPanel();
+        jLabel52 = new javax.swing.JLabel();
+        jPanelKey9 = new javax.swing.JPanel();
+        jLabel53 = new javax.swing.JLabel();
+        jPanelKey0 = new javax.swing.JPanel();
+        jLabel54 = new javax.swing.JLabel();
+        jPanelKeyDel = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
+        jPanelKeyPrev = new javax.swing.JPanel();
+        jLabel56 = new javax.swing.JLabel();
+        jPanelAlphaKeyBoard = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanelNumKeyBoard = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         offPanel = new javax.swing.JPanel();
         menu1Panel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -90,91 +184,6 @@ public class XtrekUI extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        whereToPanel = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        jPanel10 = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
-        jPanel11 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jPanel16 = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jPanel17 = new javax.swing.JPanel();
-        jLabel29 = new javax.swing.JLabel();
-        jPanel18 = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
-        jPanel19 = new javax.swing.JPanel();
-        jLabel31 = new javax.swing.JLabel();
-        jPanel20 = new javax.swing.JPanel();
-        jLabel32 = new javax.swing.JLabel();
-        jPanel21 = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
-        jPanel22 = new javax.swing.JPanel();
-        jLabel34 = new javax.swing.JLabel();
-        jPanel23 = new javax.swing.JPanel();
-        jLabel35 = new javax.swing.JLabel();
-        jPanel24 = new javax.swing.JPanel();
-        jLabel36 = new javax.swing.JLabel();
-        jPanel25 = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
-        jPanel26 = new javax.swing.JPanel();
-        jLabel38 = new javax.swing.JLabel();
-        jPanel27 = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jPanel28 = new javax.swing.JPanel();
-        jLabel40 = new javax.swing.JLabel();
-        jPanel29 = new javax.swing.JPanel();
-        jLabel41 = new javax.swing.JLabel();
-        jPanel30 = new javax.swing.JPanel();
-        jLabel42 = new javax.swing.JLabel();
-        jPanel31 = new javax.swing.JPanel();
-        jLabel43 = new javax.swing.JLabel();
-        jPanel32 = new javax.swing.JPanel();
-        jLabel44 = new javax.swing.JLabel();
-        jPanel33 = new javax.swing.JPanel();
-        jLabel45 = new javax.swing.JLabel();
-        jPanel34 = new javax.swing.JPanel();
-        jLabel46 = new javax.swing.JLabel();
-        jPanel35 = new javax.swing.JPanel();
-        jLabel47 = new javax.swing.JLabel();
-        jPanel36 = new javax.swing.JPanel();
-        jLabel48 = new javax.swing.JLabel();
-        jPanel37 = new javax.swing.JPanel();
-        jLabel49 = new javax.swing.JLabel();
-        jPanel38 = new javax.swing.JPanel();
-        jLabel50 = new javax.swing.JLabel();
-        jPanel39 = new javax.swing.JPanel();
-        jLabel51 = new javax.swing.JLabel();
-        jPanel40 = new javax.swing.JPanel();
-        jLabel52 = new javax.swing.JLabel();
-        jPanel41 = new javax.swing.JPanel();
-        jLabel53 = new javax.swing.JLabel();
-        jPanel42 = new javax.swing.JPanel();
-        jLabel54 = new javax.swing.JLabel();
-        jPanel43 = new javax.swing.JPanel();
-        jLabel55 = new javax.swing.JLabel();
-        jPanel44 = new javax.swing.JPanel();
-        jLabel56 = new javax.swing.JLabel();
         speechPanel = new javax.swing.JPanel();
         smenu1Panel = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
@@ -253,6 +262,1158 @@ public class XtrekUI extends javax.swing.JFrame {
 
         screenPanel.setBackground(new java.awt.Color(255, 255, 255));
         screenPanel.setLayout(new java.awt.CardLayout());
+
+        whereToPanel.setPreferredSize(new java.awt.Dimension(203, 245));
+
+        jPanelTextDisplay.setPreferredSize(new java.awt.Dimension(203, 34));
+
+        jLabelTextDisplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/text.png"))); // NOI18N
+
+        jTextFieldDestination.setPreferredSize(new java.awt.Dimension(200, 32));
+        jTextFieldDestination.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDestinationActionPerformed(evt);
+            }
+        });
+
+        jPanelSubmit.setLayout(new java.awt.CardLayout());
+
+        jPanelSubmitButton.setPreferredSize(new java.awt.Dimension(64, 34));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_submit.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelSubmitButtonLayout = new javax.swing.GroupLayout(jPanelSubmitButton);
+        jPanelSubmitButton.setLayout(jPanelSubmitButtonLayout);
+        jPanelSubmitButtonLayout.setHorizontalGroup(
+            jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelSubmitButtonLayout.setVerticalGroup(
+            jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 33, Short.MAX_VALUE)
+            .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelSubmit.add(jPanelSubmitButton, "card2");
+
+        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_submit_highlight.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelSubmitHighlightLayout = new javax.swing.GroupLayout(jPanelSubmitHighlight);
+        jPanelSubmitHighlight.setLayout(jPanelSubmitHighlightLayout);
+        jPanelSubmitHighlightLayout.setHorizontalGroup(
+            jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+            .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelSubmitHighlightLayout.createSequentialGroup()
+                    .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelSubmitHighlightLayout.setVerticalGroup(
+            jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 33, Short.MAX_VALUE)
+            .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel62, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelSubmit.add(jPanelSubmitHighlight, "card3");
+
+        javax.swing.GroupLayout jPanelTextDisplayLayout = new javax.swing.GroupLayout(jPanelTextDisplay);
+        jPanelTextDisplay.setLayout(jPanelTextDisplayLayout);
+        jPanelTextDisplayLayout.setHorizontalGroup(
+            jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addComponent(jLabelTextDisplay)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(48, Short.MAX_VALUE)))
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTextDisplayLayout.createSequentialGroup()
+                    .addGap(0, 153, Short.MAX_VALUE)
+                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+        jPanelTextDisplayLayout.setVerticalGroup(
+            jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 34, Short.MAX_VALUE)
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addComponent(jLabelTextDisplay)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 2, Short.MAX_VALUE)))
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 1, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.setLayout(new java.awt.CardLayout());
+
+        jPanelKeyA.setPreferredSize(new java.awt.Dimension(203, 212));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_a.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyALayout = new javax.swing.GroupLayout(jPanelKeyA);
+        jPanelKeyA.setLayout(jPanelKeyALayout);
+        jPanelKeyALayout.setHorizontalGroup(
+            jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKeyALayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel13))
+        );
+        jPanelKeyALayout.setVerticalGroup(
+            jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKeyALayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel13))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyA, "card2");
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_b.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyBLayout = new javax.swing.GroupLayout(jPanelKeyB);
+        jPanelKeyB.setLayout(jPanelKeyBLayout);
+        jPanelKeyBLayout.setHorizontalGroup(
+            jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyBLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel18)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyBLayout.setVerticalGroup(
+            jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyBLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel18)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyB, "card3");
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_c.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyCLayout = new javax.swing.GroupLayout(jPanelKeyC);
+        jPanelKeyC.setLayout(jPanelKeyCLayout);
+        jPanelKeyCLayout.setHorizontalGroup(
+            jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelKeyCLayout.setVerticalGroup(
+            jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyC, "card4");
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_d.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyDLayout = new javax.swing.GroupLayout(jPanelKeyD);
+        jPanelKeyD.setLayout(jPanelKeyDLayout);
+        jPanelKeyDLayout.setHorizontalGroup(
+            jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyDLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel20)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyDLayout.setVerticalGroup(
+            jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyDLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel20)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyD, "card5");
+
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_e.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyELayout = new javax.swing.GroupLayout(jPanelKeyE);
+        jPanelKeyE.setLayout(jPanelKeyELayout);
+        jPanelKeyELayout.setHorizontalGroup(
+            jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyELayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel21)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyELayout.setVerticalGroup(
+            jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyELayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel21)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyE, "card6");
+
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_f.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyFLayout = new javax.swing.GroupLayout(jPanelKeyF);
+        jPanelKeyF.setLayout(jPanelKeyFLayout);
+        jPanelKeyFLayout.setHorizontalGroup(
+            jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyFLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel22)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyFLayout.setVerticalGroup(
+            jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyFLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel22)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyF, "card7");
+
+        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_g.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyGLayout = new javax.swing.GroupLayout(jPanelKeyG);
+        jPanelKeyG.setLayout(jPanelKeyGLayout);
+        jPanelKeyGLayout.setHorizontalGroup(
+            jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyGLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel23)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyGLayout.setVerticalGroup(
+            jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyGLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel23)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyG, "card8");
+
+        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_h.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyHLayout = new javax.swing.GroupLayout(jPanelKeyH);
+        jPanelKeyH.setLayout(jPanelKeyHLayout);
+        jPanelKeyHLayout.setHorizontalGroup(
+            jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyHLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel24)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyHLayout.setVerticalGroup(
+            jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyHLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel24)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyH, "card9");
+
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_i.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyILayout = new javax.swing.GroupLayout(jPanelKeyI);
+        jPanelKeyI.setLayout(jPanelKeyILayout);
+        jPanelKeyILayout.setHorizontalGroup(
+            jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyILayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel25)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyILayout.setVerticalGroup(
+            jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyILayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel25)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyI, "card10");
+
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_j.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyJLayout = new javax.swing.GroupLayout(jPanelKeyJ);
+        jPanelKeyJ.setLayout(jPanelKeyJLayout);
+        jPanelKeyJLayout.setHorizontalGroup(
+            jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyJLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel26)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyJLayout.setVerticalGroup(
+            jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyJLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel26)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyJ, "card11");
+
+        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_k.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyKLayout = new javax.swing.GroupLayout(jPanelKeyK);
+        jPanelKeyK.setLayout(jPanelKeyKLayout);
+        jPanelKeyKLayout.setHorizontalGroup(
+            jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyKLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel27)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyKLayout.setVerticalGroup(
+            jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyKLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel27)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyK, "card12");
+
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_l.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyLLayout = new javax.swing.GroupLayout(jPanelKeyL);
+        jPanelKeyL.setLayout(jPanelKeyLLayout);
+        jPanelKeyLLayout.setHorizontalGroup(
+            jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyLLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel28)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyLLayout.setVerticalGroup(
+            jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyLLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel28)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyL, "card13");
+
+        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_m.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyMLayout = new javax.swing.GroupLayout(jPanelKeyM);
+        jPanelKeyM.setLayout(jPanelKeyMLayout);
+        jPanelKeyMLayout.setHorizontalGroup(
+            jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyMLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel29)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyMLayout.setVerticalGroup(
+            jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyMLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel29)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyM, "card14");
+
+        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_n.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyNLayout = new javax.swing.GroupLayout(jPanelKeyN);
+        jPanelKeyN.setLayout(jPanelKeyNLayout);
+        jPanelKeyNLayout.setHorizontalGroup(
+            jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyNLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel30)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyNLayout.setVerticalGroup(
+            jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyNLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel30)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyN, "card15");
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_o.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyOLayout = new javax.swing.GroupLayout(jPanelKeyO);
+        jPanelKeyO.setLayout(jPanelKeyOLayout);
+        jPanelKeyOLayout.setHorizontalGroup(
+            jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyOLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel31)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyOLayout.setVerticalGroup(
+            jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyOLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel31)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyO, "card16");
+
+        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_p.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyPLayout = new javax.swing.GroupLayout(jPanelKeyP);
+        jPanelKeyP.setLayout(jPanelKeyPLayout);
+        jPanelKeyPLayout.setHorizontalGroup(
+            jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyPLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel32)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyPLayout.setVerticalGroup(
+            jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyPLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel32)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyP, "card17");
+
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_q.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyQLayout = new javax.swing.GroupLayout(jPanelKeyQ);
+        jPanelKeyQ.setLayout(jPanelKeyQLayout);
+        jPanelKeyQLayout.setHorizontalGroup(
+            jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyQLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel33)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyQLayout.setVerticalGroup(
+            jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyQLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel33)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyQ, "card18");
+
+        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_r.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyRLayout = new javax.swing.GroupLayout(jPanelKeyR);
+        jPanelKeyR.setLayout(jPanelKeyRLayout);
+        jPanelKeyRLayout.setHorizontalGroup(
+            jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyRLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel34)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyRLayout.setVerticalGroup(
+            jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyRLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel34)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyR, "card19");
+
+        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_s.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeySLayout = new javax.swing.GroupLayout(jPanelKeyS);
+        jPanelKeyS.setLayout(jPanelKeySLayout);
+        jPanelKeySLayout.setHorizontalGroup(
+            jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeySLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel35)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeySLayout.setVerticalGroup(
+            jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeySLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel35)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyS, "card20");
+
+        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_t.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyTLayout = new javax.swing.GroupLayout(jPanelKeyT);
+        jPanelKeyT.setLayout(jPanelKeyTLayout);
+        jPanelKeyTLayout.setHorizontalGroup(
+            jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyTLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel36)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyTLayout.setVerticalGroup(
+            jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyTLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel36)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyT, "card21");
+
+        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_u.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyULayout = new javax.swing.GroupLayout(jPanelKeyU);
+        jPanelKeyU.setLayout(jPanelKeyULayout);
+        jPanelKeyULayout.setHorizontalGroup(
+            jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyULayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel37)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyULayout.setVerticalGroup(
+            jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyULayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel37)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyU, "card22");
+
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_v.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyVLayout = new javax.swing.GroupLayout(jPanelKeyV);
+        jPanelKeyV.setLayout(jPanelKeyVLayout);
+        jPanelKeyVLayout.setHorizontalGroup(
+            jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyVLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel38)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyVLayout.setVerticalGroup(
+            jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyVLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel38)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyV, "card23");
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_w.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyWLayout = new javax.swing.GroupLayout(jPanelKeyW);
+        jPanelKeyW.setLayout(jPanelKeyWLayout);
+        jPanelKeyWLayout.setHorizontalGroup(
+            jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyWLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel39)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyWLayout.setVerticalGroup(
+            jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyWLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel39)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyW, "card24");
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_x.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyXLayout = new javax.swing.GroupLayout(jPanelKeyX);
+        jPanelKeyX.setLayout(jPanelKeyXLayout);
+        jPanelKeyXLayout.setHorizontalGroup(
+            jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyXLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel40)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyXLayout.setVerticalGroup(
+            jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyXLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel40)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyX, "card25");
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_y.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyYLayout = new javax.swing.GroupLayout(jPanelKeyY);
+        jPanelKeyY.setLayout(jPanelKeyYLayout);
+        jPanelKeyYLayout.setHorizontalGroup(
+            jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyYLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel41)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyYLayout.setVerticalGroup(
+            jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyYLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel41)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyY, "card26");
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_z.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyZLayout = new javax.swing.GroupLayout(jPanelKeyZ);
+        jPanelKeyZ.setLayout(jPanelKeyZLayout);
+        jPanelKeyZLayout.setHorizontalGroup(
+            jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyZLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel42)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyZLayout.setVerticalGroup(
+            jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyZLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel42)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyZ, "card27");
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_space.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeySpaceLayout = new javax.swing.GroupLayout(jPanelKeySpace);
+        jPanelKeySpace.setLayout(jPanelKeySpaceLayout);
+        jPanelKeySpaceLayout.setHorizontalGroup(
+            jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeySpaceLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel43)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeySpaceLayout.setVerticalGroup(
+            jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeySpaceLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel43)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeySpace, "card28");
+
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_next.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyNextLayout = new javax.swing.GroupLayout(jPanelKeyNext);
+        jPanelKeyNext.setLayout(jPanelKeyNextLayout);
+        jPanelKeyNextLayout.setHorizontalGroup(
+            jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyNextLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel44)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyNextLayout.setVerticalGroup(
+            jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyNextLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel44)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyNext, "card29");
+
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_1.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey1Layout = new javax.swing.GroupLayout(jPanelKey1);
+        jPanelKey1.setLayout(jPanelKey1Layout);
+        jPanelKey1Layout.setHorizontalGroup(
+            jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel45)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey1Layout.setVerticalGroup(
+            jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel45)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey1, "card30");
+
+        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_2.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey2Layout = new javax.swing.GroupLayout(jPanelKey2);
+        jPanelKey2.setLayout(jPanelKey2Layout);
+        jPanelKey2Layout.setHorizontalGroup(
+            jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel46)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey2Layout.setVerticalGroup(
+            jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel46)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey2, "card31");
+
+        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_3.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey3Layout = new javax.swing.GroupLayout(jPanelKey3);
+        jPanelKey3.setLayout(jPanelKey3Layout);
+        jPanelKey3Layout.setHorizontalGroup(
+            jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel47)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey3Layout.setVerticalGroup(
+            jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel47)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey3, "card32");
+
+        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_4.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey4Layout = new javax.swing.GroupLayout(jPanelKey4);
+        jPanelKey4.setLayout(jPanelKey4Layout);
+        jPanelKey4Layout.setHorizontalGroup(
+            jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel48)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey4Layout.setVerticalGroup(
+            jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel48)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey4, "card33");
+
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_5.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey5Layout = new javax.swing.GroupLayout(jPanelKey5);
+        jPanelKey5.setLayout(jPanelKey5Layout);
+        jPanelKey5Layout.setHorizontalGroup(
+            jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey5Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel49)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey5Layout.setVerticalGroup(
+            jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey5Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel49)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey5, "card34");
+
+        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_6.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey6Layout = new javax.swing.GroupLayout(jPanelKey6);
+        jPanelKey6.setLayout(jPanelKey6Layout);
+        jPanelKey6Layout.setHorizontalGroup(
+            jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey6Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel50)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey6Layout.setVerticalGroup(
+            jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey6Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel50)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey6, "card35");
+
+        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_7.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey7Layout = new javax.swing.GroupLayout(jPanelKey7);
+        jPanelKey7.setLayout(jPanelKey7Layout);
+        jPanelKey7Layout.setHorizontalGroup(
+            jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey7Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel51)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey7Layout.setVerticalGroup(
+            jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey7Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel51)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey7, "card36");
+
+        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_8.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey8Layout = new javax.swing.GroupLayout(jPanelKey8);
+        jPanelKey8.setLayout(jPanelKey8Layout);
+        jPanelKey8Layout.setHorizontalGroup(
+            jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey8Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel52)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey8Layout.setVerticalGroup(
+            jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey8Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel52)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey8, "card37");
+
+        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_9.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey9Layout = new javax.swing.GroupLayout(jPanelKey9);
+        jPanelKey9.setLayout(jPanelKey9Layout);
+        jPanelKey9Layout.setHorizontalGroup(
+            jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey9Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel53)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey9Layout.setVerticalGroup(
+            jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey9Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel53)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey9, "card38");
+
+        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_0.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKey0Layout = new javax.swing.GroupLayout(jPanelKey0);
+        jPanelKey0.setLayout(jPanelKey0Layout);
+        jPanelKey0Layout.setHorizontalGroup(
+            jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey0Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel54)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey0Layout.setVerticalGroup(
+            jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey0Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel54)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey0, "card39");
+
+        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_del.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyDelLayout = new javax.swing.GroupLayout(jPanelKeyDel);
+        jPanelKeyDel.setLayout(jPanelKeyDelLayout);
+        jPanelKeyDelLayout.setHorizontalGroup(
+            jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyDelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel55)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyDelLayout.setVerticalGroup(
+            jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyDelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel55)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyDel, "card40");
+
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_prev.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyPrevLayout = new javax.swing.GroupLayout(jPanelKeyPrev);
+        jPanelKeyPrev.setLayout(jPanelKeyPrevLayout);
+        jPanelKeyPrevLayout.setHorizontalGroup(
+            jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyPrevLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel56)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyPrevLayout.setVerticalGroup(
+            jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyPrevLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel56)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyPrev, "card41");
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/alphaKeyBoard.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelAlphaKeyBoardLayout = new javax.swing.GroupLayout(jPanelAlphaKeyBoard);
+        jPanelAlphaKeyBoard.setLayout(jPanelAlphaKeyBoardLayout);
+        jPanelAlphaKeyBoardLayout.setHorizontalGroup(
+            jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelAlphaKeyBoardLayout.setVerticalGroup(
+            jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelKeyBoard.add(jPanelAlphaKeyBoard, "card42");
+
+        jPanelNumKeyBoard.setPreferredSize(new java.awt.Dimension(203, 212));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/numKeyBoard.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelNumKeyBoardLayout = new javax.swing.GroupLayout(jPanelNumKeyBoard);
+        jPanelNumKeyBoard.setLayout(jPanelNumKeyBoardLayout);
+        jPanelNumKeyBoardLayout.setHorizontalGroup(
+            jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelNumKeyBoardLayout.setVerticalGroup(
+            jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelKeyBoard.add(jPanelNumKeyBoard, "card43");
+
+        javax.swing.GroupLayout whereToPanelLayout = new javax.swing.GroupLayout(whereToPanel);
+        whereToPanel.setLayout(whereToPanelLayout);
+        whereToPanelLayout.setHorizontalGroup(
+            whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(whereToPanelLayout.createSequentialGroup()
+                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        whereToPanelLayout.setVerticalGroup(
+            whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 245, Short.MAX_VALUE)
+            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(whereToPanelLayout.createSequentialGroup()
+                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(0, 211, Short.MAX_VALUE)))
+            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whereToPanelLayout.createSequentialGroup()
+                    .addGap(0, 33, Short.MAX_VALUE)
+                    .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        screenPanel.add(whereToPanel, "card14");
 
         offPanel.setBackground(new java.awt.Color(0, 0, 0));
         screenPanel.add(offPanel, "card3");
@@ -395,1061 +1556,6 @@ public class XtrekUI extends javax.swing.JFrame {
         aboutPanel.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 50));
 
         screenPanel.add(aboutPanel, "card15");
-
-        whereToPanel.setPreferredSize(new java.awt.Dimension(203, 245));
-
-        jPanel2.setPreferredSize(new java.awt.Dimension(203, 34));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/text.png"))); // NOI18N
-
-        jTextField1.setPreferredSize(new java.awt.Dimension(200, 32));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addComponent(jLabel12)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel2Layout.createSequentialGroup()
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 2, Short.MAX_VALUE)))
-        );
-
-        jPanel3.setLayout(new java.awt.CardLayout());
-
-        jPanel5.setPreferredSize(new java.awt.Dimension(203, 212));
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_a.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel13))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel13))
-        );
-
-        jPanel3.add(jPanel5, "card2");
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_b.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel18)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel18)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel4, "card3");
-
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_c.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel3.add(jPanel7, "card4");
-
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_d.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel8Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel20)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel8Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel20)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel8, "card5");
-
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_e.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel9Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel21)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel9Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel21)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel9, "card6");
-
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_f.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel10Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel22)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel10Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel22)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel10, "card7");
-
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_g.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel11Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel23)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel11Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel23)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel11, "card8");
-
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_h.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel24)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel24)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel12, "card9");
-
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_i.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel13Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel25)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel13Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel25)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel13, "card10");
-
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_j.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel14Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel26)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel14Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel26)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel14, "card11");
-
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_k.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel15Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel27)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel15Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel27)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel15, "card12");
-
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_l.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel16Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel28)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel16Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel28)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel16, "card13");
-
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_m.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel17Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel29)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel17Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel29)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel17, "card14");
-
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_n.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel18Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel30)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel18Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel30)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel18, "card15");
-
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_o.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel19Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel31)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel19Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel31)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel19, "card16");
-
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_p.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel20Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel32)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel20Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel32)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel20, "card17");
-
-        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_q.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
-        jPanel21.setLayout(jPanel21Layout);
-        jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel21Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel33)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel21Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel33)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel21, "card18");
-
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_r.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel22Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel34)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel22Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel34)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel22, "card19");
-
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_s.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel23Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel35)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel23Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel35)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel23, "card20");
-
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_t.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
-        jPanel24.setLayout(jPanel24Layout);
-        jPanel24Layout.setHorizontalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel24Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel36)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel24Layout.setVerticalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel24Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel36)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel24, "card21");
-
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_u.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel25Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel37)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel25Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel37)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel25, "card22");
-
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_v.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
-        jPanel26.setLayout(jPanel26Layout);
-        jPanel26Layout.setHorizontalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel38)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel26Layout.setVerticalGroup(
-            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel38)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel26, "card23");
-
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_w.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
-        jPanel27.setLayout(jPanel27Layout);
-        jPanel27Layout.setHorizontalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel39)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel27Layout.setVerticalGroup(
-            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel39)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel27, "card24");
-
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_x.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
-        jPanel28.setLayout(jPanel28Layout);
-        jPanel28Layout.setHorizontalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel28Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel40)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel28Layout.setVerticalGroup(
-            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel28Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel40)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel28, "card25");
-
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_y.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
-        jPanel29.setLayout(jPanel29Layout);
-        jPanel29Layout.setHorizontalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel29Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel41)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel29Layout.setVerticalGroup(
-            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel29Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel41)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel29, "card26");
-
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_z.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
-        jPanel30.setLayout(jPanel30Layout);
-        jPanel30Layout.setHorizontalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel30Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel42)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel30Layout.setVerticalGroup(
-            jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel30Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel42)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel30, "card27");
-
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_space.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
-        jPanel31.setLayout(jPanel31Layout);
-        jPanel31Layout.setHorizontalGroup(
-            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel31Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel43)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel31Layout.setVerticalGroup(
-            jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel31Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel43)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel31, "card28");
-
-        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_next.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
-        jPanel32.setLayout(jPanel32Layout);
-        jPanel32Layout.setHorizontalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel32Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel44)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel32Layout.setVerticalGroup(
-            jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel32Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel44)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel32, "card29");
-
-        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_1.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
-        jPanel33.setLayout(jPanel33Layout);
-        jPanel33Layout.setHorizontalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel33Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel45)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel33Layout.setVerticalGroup(
-            jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel33Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel45)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel33, "card30");
-
-        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_2.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
-        jPanel34.setLayout(jPanel34Layout);
-        jPanel34Layout.setHorizontalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel46)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel34Layout.setVerticalGroup(
-            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel46)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel34, "card31");
-
-        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_3.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
-        jPanel35.setLayout(jPanel35Layout);
-        jPanel35Layout.setHorizontalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel35Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel47)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel35Layout.setVerticalGroup(
-            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel35Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel47)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel35, "card32");
-
-        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_4.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
-        jPanel36.setLayout(jPanel36Layout);
-        jPanel36Layout.setHorizontalGroup(
-            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel36Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel48)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel36Layout.setVerticalGroup(
-            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel36Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel48)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel36, "card33");
-
-        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_5.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
-        jPanel37.setLayout(jPanel37Layout);
-        jPanel37Layout.setHorizontalGroup(
-            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel37Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel49)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel37Layout.setVerticalGroup(
-            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel37Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel49)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel37, "card34");
-
-        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_6.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
-        jPanel38.setLayout(jPanel38Layout);
-        jPanel38Layout.setHorizontalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel38Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel50)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel38Layout.setVerticalGroup(
-            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel38Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel50)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel38, "card35");
-
-        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_7.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
-        jPanel39.setLayout(jPanel39Layout);
-        jPanel39Layout.setHorizontalGroup(
-            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel39Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel51)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel39Layout.setVerticalGroup(
-            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel39Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel51)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel39, "card36");
-
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_8.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
-        jPanel40.setLayout(jPanel40Layout);
-        jPanel40Layout.setHorizontalGroup(
-            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel40Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel52)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel40Layout.setVerticalGroup(
-            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel40Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel52)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel40, "card37");
-
-        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_9.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
-        jPanel41.setLayout(jPanel41Layout);
-        jPanel41Layout.setHorizontalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel41Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel53)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel41Layout.setVerticalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel41Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel53)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel41, "card38");
-
-        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_0.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
-        jPanel42.setLayout(jPanel42Layout);
-        jPanel42Layout.setHorizontalGroup(
-            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel42Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel54)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel42Layout.setVerticalGroup(
-            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel42Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel54)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel42, "card39");
-
-        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_del.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
-        jPanel43.setLayout(jPanel43Layout);
-        jPanel43Layout.setHorizontalGroup(
-            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel43Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel55)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel43Layout.setVerticalGroup(
-            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel43Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel55)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel43, "card40");
-
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_prev.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
-        jPanel44.setLayout(jPanel44Layout);
-        jPanel44Layout.setHorizontalGroup(
-            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel44Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel56)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel44Layout.setVerticalGroup(
-            jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel44Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel56)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanel3.add(jPanel44, "card41");
-
-        javax.swing.GroupLayout whereToPanelLayout = new javax.swing.GroupLayout(whereToPanel);
-        whereToPanel.setLayout(whereToPanelLayout);
-        whereToPanelLayout.setHorizontalGroup(
-            whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(whereToPanelLayout.createSequentialGroup()
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        whereToPanelLayout.setVerticalGroup(
-            whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 245, Short.MAX_VALUE)
-            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(whereToPanelLayout.createSequentialGroup()
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 211, Short.MAX_VALUE)))
-            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whereToPanelLayout.createSequentialGroup()
-                    .addGap(0, 33, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        screenPanel.add(whereToPanel, "card14");
 
         speechPanel.setLayout(new java.awt.CardLayout());
 
@@ -1748,411 +1854,345 @@ public class XtrekUI extends javax.swing.JFrame {
             }
            // change to whereTo mode
         } else if (situation == "whereTo"){
+            jPanelKeyBoard.removeAll();
+            jPanelKeyBoard.repaint();
+            jPanelKeyBoard.revalidate();
             switch(currentPanelName){
-            case 1: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 1: 
                     
-                    jPanel3.add(jPanel4);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyB);
+                    
                     
                     currentPanelName += 1;
                     break;
             
-            case 2: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 2: 
                     
-                    jPanel3.add(jPanel7);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyC);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 3: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 3: 
                     
-                    jPanel3.add(jPanel8);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyD);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 4: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 4: 
                     
-                    jPanel3.add(jPanel9);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyE);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 5: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 5: 
                     
-                    jPanel3.add(jPanel10);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyF);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 6: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 6: 
                     
-                    jPanel3.add(jPanel11);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyG);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 7: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 7: 
                     
-                    jPanel3.add(jPanel12);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyH);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 8: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 8: 
                     
-                    jPanel3.add(jPanel13);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyI);
+                    
                     
                     currentPanelName += 1;
                     break;   
-            case 9: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 9: 
                     
-                    jPanel3.add(jPanel14);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyJ);
+                    
                     
                     currentPanelName += 1;
                     break;  
-            case 10: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 10: 
                     
-                    jPanel3.add(jPanel15);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyK);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 11: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 11: 
                     
-                    jPanel3.add(jPanel16);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();  
+                    jPanelKeyBoard.add(jPanelKeyL);
+                     
                     
                     currentPanelName += 1;
                     break;
-            case 12: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 12: 
                     
-                    jPanel3.add(jPanel17);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyM);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 13: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 13: 
                     
-                    jPanel3.add(jPanel18);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyN);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 14: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 14: 
                     
-                    jPanel3.add(jPanel19);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyO);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 15: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 15: 
                     
-                    jPanel3.add(jPanel20);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyP);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 16: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 16: 
                     
-                    jPanel3.add(jPanel21);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyQ);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 17: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 17: 
                     
-                    jPanel3.add(jPanel22);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyR);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 18: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 18: 
                     
-                    jPanel3.add(jPanel23);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyS);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 19: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 19:
                     
-                    jPanel3.add(jPanel24);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyT);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 20: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 20: ;
                     
-                    jPanel3.add(jPanel25);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyU);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 21: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 21: 
                     
-                    jPanel3.add(jPanel26);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyV);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 22: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 22: 
                     
-                    jPanel3.add(jPanel27);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyW);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 23: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 23: 
                     
-                    jPanel3.add(jPanel28);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyX);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 24: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 24: 
                     
-                    jPanel3.add(jPanel29);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyY);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 25: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 25: 
                     
-                    jPanel3.add(jPanel30);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyZ);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 26: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 26: 
                     
-                    jPanel3.add(jPanel31);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeySpace);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 27: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 27: 
                     
-                    jPanel3.add(jPanel32);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyNext);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 28: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 28: 
                     
-                    jPanel3.add(jPanel5);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
                     
-                    currentPanelName = 1;
+                    jPanelKeyBoard.add(jPanelAlphaKeyBoard);
+                    
+                    
+                    jPanelSubmit.removeAll();
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    jPanelSubmit.add(jPanelSubmitHighlight);
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    currentPanelName += 1;
+                    break;
+            
+            case 29: 
+                    
+                    
+                    jPanelKeyBoard.add(jPanelKeyA);
+                    
+                    
+                    jPanelSubmit.removeAll();
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    jPanelSubmit.add(jPanelSubmitButton);
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    currentPanelName =1;
                     break;
                     
             //numeric keyboard
-            case 29: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 30: 
                     
-                    jPanel3.add(jPanel34);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKey2);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 30: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 31: 
+                    jPanelKeyBoard.add(jPanelKey3);
                     
-                    jPanel3.add(jPanel35);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
                     
                     currentPanelName += 1;
                     break;
-            case 31: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 32: 
                     
-                    jPanel3.add(jPanel36);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKey4);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 32: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 33: 
                     
-                    jPanel3.add(jPanel37);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKey5);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 33: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 34: 
                     
-                    jPanel3.add(jPanel38);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKey6);
+                   
                     
                     currentPanelName += 1;
                     break;
-            case 34: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 35: 
                     
-                    jPanel3.add(jPanel39);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKey7);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 35: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 36: 
                     
-                    jPanel3.add(jPanel40);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKey8);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 36: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 37: 
                     
-                    jPanel3.add(jPanel41);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKey9);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 37: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 38: 
                     
-                    jPanel3.add(jPanel42);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKey0);
                     
                     currentPanelName += 1;
                     break;
-            case 38: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 39: 
                     
-                    jPanel3.add(jPanel43);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyDel);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 39: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 40: 
                     
-                    jPanel3.add(jPanel44);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyPrev);
+                    
                     
                     currentPanelName += 1;
                     break;
-            case 40: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 41: 
                     
-                    jPanel3.add(jPanel33);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelNumKeyBoard);
                     
-                    currentPanelName = 29;
+                    
+                    jPanelSubmit.removeAll();
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    jPanelSubmit.add(jPanelSubmitHighlight);
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    
+                    currentPanelName += 1;
+                    break;
+                    
+            case 42:
+                    
+                    jPanelKeyBoard.add(jPanelKey1);
+                    
+                    
+                    jPanelSubmit.removeAll();
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    jPanelSubmit.add(jPanelSubmitButton);
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    currentPanelName = 30;
                     break;
         }
+            jPanelKeyBoard.repaint();
+            jPanelKeyBoard.revalidate();
          // change to speech mode   
         } else if (situation == "speech"){
             speechPanel.removeAll();
@@ -2260,407 +2300,473 @@ public class XtrekUI extends javax.swing.JFrame {
         //change to whereTo mode    
         } else if (situation == "whereTo" ){
             switch(currentPanelName){
-            case 1: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 1: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel32);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelAlphaKeyBoard);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    currentPanelName = 28;
+                    jPanelSubmit.removeAll();
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    jPanelSubmit.add(jPanelSubmitHighlight);
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    currentPanelName = 29;
                     break;
             
-            case 2: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 2: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel5);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 3: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel4);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyA);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 4: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 3: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel7);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 5: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel8);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyB);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 6: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 4: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel9);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 7: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel10);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyC);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 8: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 5: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel11);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyD);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 6: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyE);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 7: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyF);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 8: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyG);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;   
-            case 9: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 9: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel12);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyH);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;  
-            case 10: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 10: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel13);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 11: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel14);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();  
+                    jPanelKeyBoard.add(jPanelKeyI);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 12: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 11: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel15);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 13: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel16);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyJ);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();  
                     
                     currentPanelName -= 1;
                     break;
-            case 14: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 12: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel17);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 15: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel18);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyK);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 16: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 13: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel19);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 17: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel20);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyL);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 18: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 14: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel21);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 19: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel22);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyM);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 20: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 15: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel23);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 21: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel24);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyN);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 22: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 16: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel25);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 23: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel26);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyO);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 24: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 17: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel27);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 25: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel28);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyP);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 26: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 18: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel29);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 27: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel30);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyQ);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 28: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 19: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel31);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 29: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel44);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName = 40;
-                    break;
-            case 30: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel33);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyR);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 31: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 20: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel34);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 32: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel35);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyS);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 33: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 21: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel36);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 34: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel37);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyT);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 35: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 22: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel38);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 36: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel39);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyU);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 37: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 23: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel40);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 38: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel41);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyV);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
-            case 39: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 24: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel42);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    currentPanelName -= 1;
-                    break;
-            case 40: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
-                    
-                    jPanel3.add(jPanel43);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyW);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName -= 1;
                     break;
+            case 25: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyX);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 26: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyY);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 27: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyZ);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 28: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeySpace);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+                    
+            case 29: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyNext);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelSubmit.removeAll();
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    jPanelSubmit.add(jPanelSubmitButton);
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+                    
+            
+            
+            
+            
+            
+            
+            
+            
+            case 30: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelNumKeyBoard);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelSubmit.removeAll();
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    jPanelSubmit.add(jPanelSubmitHighlight);
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    currentPanelName = 42;
+                    break;
+                    
+                    
+            case 31: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey1);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 32: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey2);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 33: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey3);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 34: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey4);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 35: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey5);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 36: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey6);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 37: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey7);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 38: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey8);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 39: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey9);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 40: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKey0);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 41: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyDel);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+            case 42: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelKeyBoard.add(jPanelKeyPrev);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
+                    
+                    jPanelSubmit.removeAll();
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    jPanelSubmit.add(jPanelSubmitButton);
+                    jPanelSubmit.repaint();
+                    jPanelSubmit.revalidate();
+                    
+                    currentPanelName -= 1;
+                    break;
+                    
+                    
         }
         } else if (situation == "speech") {
             speechPanel.removeAll();
@@ -2838,141 +2944,149 @@ public class XtrekUI extends javax.swing.JFrame {
             
         } else if (situation == "whereTo") {
             switch(currentPanelName){
-            case 1: jTextField1.setText(textdisp + "A");
+            case 1: jTextFieldDestination.setText(textdisp + "A");
                     textdisp = textdisp + "A";
                     break;
-            case 2: jTextField1.setText(textdisp + "B");
+            case 2: jTextFieldDestination.setText(textdisp + "B");
                     textdisp = textdisp + "B";
                     break;    
-            case 3: jTextField1.setText(textdisp + "C");
+            case 3: jTextFieldDestination.setText(textdisp + "C");
                     textdisp = textdisp + "C";
                     break;
-            case 4: jTextField1.setText(textdisp + "D");
+            case 4: jTextFieldDestination.setText(textdisp + "D");
                     textdisp = textdisp + "D";
                     break;
-            case 5: jTextField1.setText(textdisp + "E");
+            case 5: jTextFieldDestination.setText(textdisp + "E");
                     textdisp = textdisp + "E";
                     break;
-            case 6: jTextField1.setText(textdisp + "F");
+            case 6: jTextFieldDestination.setText(textdisp + "F");
                     textdisp = textdisp + "F";
                     break;
-            case 7: jTextField1.setText(textdisp + "G");
+            case 7: jTextFieldDestination.setText(textdisp + "G");
                     textdisp = textdisp + "G";
                     break;
-            case 8: jTextField1.setText(textdisp + "H");
+            case 8: jTextFieldDestination.setText(textdisp + "H");
                     textdisp = textdisp + "H";
                     break;
-            case 9: jTextField1.setText(textdisp + "I");
+            case 9: jTextFieldDestination.setText(textdisp + "I");
                     textdisp = textdisp + "I";
                     break;
-            case 10: jTextField1.setText(textdisp + "J");
+            case 10: jTextFieldDestination.setText(textdisp + "J");
                     textdisp = textdisp + "J";
                     break;
-            case 11: jTextField1.setText(textdisp + "K");
+            case 11: jTextFieldDestination.setText(textdisp + "K");
                     textdisp = textdisp + "K";
                     break;
-            case 12: jTextField1.setText(textdisp + "L");
+            case 12: jTextFieldDestination.setText(textdisp + "L");
                     textdisp = textdisp + "L";
                     break;
-            case 13: jTextField1.setText(textdisp + "M");
+            case 13: jTextFieldDestination.setText(textdisp + "M");
                     textdisp = textdisp + "M";
                     break;
-            case 14: jTextField1.setText(textdisp + "N");
+            case 14: jTextFieldDestination.setText(textdisp + "N");
                     textdisp = textdisp + "N";
                     break;
-            case 15: jTextField1.setText(textdisp + "O");
+            case 15: jTextFieldDestination.setText(textdisp + "O");
                     textdisp = textdisp + "O";
                     break;
-            case 16: jTextField1.setText(textdisp + "P");
+            case 16: jTextFieldDestination.setText(textdisp + "P");
                     textdisp = textdisp + "P";
                     break;
-            case 17: jTextField1.setText(textdisp + "Q");
+            case 17: jTextFieldDestination.setText(textdisp + "Q");
                     textdisp = textdisp + "Q";
                     break;        
-            case 18: jTextField1.setText(textdisp + "R");
+            case 18: jTextFieldDestination.setText(textdisp + "R");
                     textdisp = textdisp + "R";
                     break;        
-            case 19: jTextField1.setText(textdisp + "S");
+            case 19: jTextFieldDestination.setText(textdisp + "S");
                     textdisp = textdisp + "S";
                     break;
-            case 20: jTextField1.setText(textdisp + "T");
+            case 20: jTextFieldDestination.setText(textdisp + "T");
                     textdisp = textdisp + "T";
                     break;
-            case 21: jTextField1.setText(textdisp + "U");
+            case 21: jTextFieldDestination.setText(textdisp + "U");
                     textdisp = textdisp + "U";
                     break;
-            case 22: jTextField1.setText(textdisp + "V");
+            case 22: jTextFieldDestination.setText(textdisp + "V");
                     textdisp = textdisp + "V";
                     break;
-            case 23: jTextField1.setText(textdisp + "W");
+            case 23: jTextFieldDestination.setText(textdisp + "W");
                     textdisp = textdisp + "W";
                     break;
-            case 24: jTextField1.setText(textdisp + "X");
+            case 24: jTextFieldDestination.setText(textdisp + "X");
                     textdisp = textdisp + "X";
                     break;
-            case 25: jTextField1.setText(textdisp + "Y");
+            case 25: jTextFieldDestination.setText(textdisp + "Y");
                     textdisp = textdisp + "Y";
                     break;
-            case 26: jTextField1.setText(textdisp + "Z");
+            case 26: jTextFieldDestination.setText(textdisp + "Z");
                     textdisp = textdisp + "Z";
                     break;
-            case 27: jTextField1.setText(textdisp + " ");
+            case 27: jTextFieldDestination.setText(textdisp + " ");
                     textdisp = textdisp + " ";
                     break;
-            case 28: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 28: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel44);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyPrev);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName = 40;
                     break;
-            case 29: jTextField1.setText(textdisp + "1");
+            case 29: jTextFieldDestination.setText(textdisp + "submit");
+                    textdisp = textdisp + " ";
+                    break;
+                    
+                    
+                    
+            case 30: jTextFieldDestination.setText(textdisp + "1");
                     textdisp = textdisp + "1";
                     break;
-            case 30: jTextField1.setText(textdisp + "2");
+            case 31: jTextFieldDestination.setText(textdisp + "2");
                     textdisp = textdisp + "2";
                     break;
-            case 31: jTextField1.setText(textdisp + "3");
+            case 32: jTextFieldDestination.setText(textdisp + "3");
                     textdisp = textdisp + "3";
                     break;
-            case 32: jTextField1.setText(textdisp + "4");
+            case 33: jTextFieldDestination.setText(textdisp + "4");
                     textdisp = textdisp + "4";
                     break;
-            case 33: jTextField1.setText(textdisp + "5");
+            case 34: jTextFieldDestination.setText(textdisp + "5");
                     textdisp = textdisp + "5";
                     break;
-            case 34: jTextField1.setText(textdisp + "6");
+            case 35: jTextFieldDestination.setText(textdisp + "6");
                     textdisp = textdisp + "6";
                     break;
-            case 35: jTextField1.setText(textdisp + "7");
+            case 36: jTextFieldDestination.setText(textdisp + "7");
                     textdisp = textdisp + "7";
                     break;
-            case 36: jTextField1.setText(textdisp + "8");
+            case 37: jTextFieldDestination.setText(textdisp + "8");
                     textdisp = textdisp + "8";
                     break;
-            case 37: jTextField1.setText(textdisp + "9");
+            case 38: jTextFieldDestination.setText(textdisp + "9");
                     textdisp = textdisp + "9";
                     break;
-            case 38: jTextField1.setText(textdisp + "0");
+            case 39: jTextFieldDestination.setText(textdisp + "0");
                     textdisp = textdisp + "0";
                     break;
-            case 39: textdisp = textdisp.substring(0, textdisp.length()-1);
-                    jTextField1.setText(textdisp);
+            case 40: textdisp = textdisp.substring(0, textdisp.length()-1);
+                    jTextFieldDestination.setText(textdisp);
                     break;
-            case 40: jPanel3.removeAll();
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+            case 41: jPanelKeyBoard.removeAll();
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
-                    jPanel3.add(jPanel32);
-                    jPanel3.repaint();
-                    jPanel3.revalidate();
+                    jPanelKeyBoard.add(jPanelKeyNext);
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName = 28;
                     break;
-                    
+            case 42: jTextFieldDestination.setText(textdisp + "submit");
+                    textdisp = textdisp + " ";
+                    break;     
         }
         } else if (situation == "speech"){
             try {
@@ -3112,6 +3226,10 @@ public class XtrekUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_timeDisplayActionPerformed
 
+    private void jTextFieldDestinationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDestinationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDestinationActionPerformed
+
     /**
      * @param args the command line arguments
      * @throws org.json.JSONException
@@ -3161,6 +3279,8 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JButton downButton;
     private javax.swing.JEditorPane jEditorPane1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -3216,52 +3336,59 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
-    private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel34;
-    private javax.swing.JPanel jPanel35;
-    private javax.swing.JPanel jPanel36;
-    private javax.swing.JPanel jPanel37;
-    private javax.swing.JPanel jPanel38;
-    private javax.swing.JPanel jPanel39;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel40;
-    private javax.swing.JPanel jPanel41;
-    private javax.swing.JPanel jPanel42;
-    private javax.swing.JPanel jPanel43;
-    private javax.swing.JPanel jPanel44;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jLabelTextDisplay;
+    private javax.swing.JPanel jPanelAlphaKeyBoard;
+    private javax.swing.JPanel jPanelKey0;
+    private javax.swing.JPanel jPanelKey1;
+    private javax.swing.JPanel jPanelKey2;
+    private javax.swing.JPanel jPanelKey3;
+    private javax.swing.JPanel jPanelKey4;
+    private javax.swing.JPanel jPanelKey5;
+    private javax.swing.JPanel jPanelKey6;
+    private javax.swing.JPanel jPanelKey7;
+    private javax.swing.JPanel jPanelKey8;
+    private javax.swing.JPanel jPanelKey9;
+    private javax.swing.JPanel jPanelKeyA;
+    private javax.swing.JPanel jPanelKeyB;
+    private javax.swing.JPanel jPanelKeyBoard;
+    private javax.swing.JPanel jPanelKeyC;
+    private javax.swing.JPanel jPanelKeyD;
+    private javax.swing.JPanel jPanelKeyDel;
+    private javax.swing.JPanel jPanelKeyE;
+    private javax.swing.JPanel jPanelKeyF;
+    private javax.swing.JPanel jPanelKeyG;
+    private javax.swing.JPanel jPanelKeyH;
+    private javax.swing.JPanel jPanelKeyI;
+    private javax.swing.JPanel jPanelKeyJ;
+    private javax.swing.JPanel jPanelKeyK;
+    private javax.swing.JPanel jPanelKeyL;
+    private javax.swing.JPanel jPanelKeyM;
+    private javax.swing.JPanel jPanelKeyN;
+    private javax.swing.JPanel jPanelKeyNext;
+    private javax.swing.JPanel jPanelKeyO;
+    private javax.swing.JPanel jPanelKeyP;
+    private javax.swing.JPanel jPanelKeyPrev;
+    private javax.swing.JPanel jPanelKeyQ;
+    private javax.swing.JPanel jPanelKeyR;
+    private javax.swing.JPanel jPanelKeyS;
+    private javax.swing.JPanel jPanelKeySpace;
+    private javax.swing.JPanel jPanelKeyT;
+    private javax.swing.JPanel jPanelKeyU;
+    private javax.swing.JPanel jPanelKeyV;
+    private javax.swing.JPanel jPanelKeyW;
+    private javax.swing.JPanel jPanelKeyX;
+    private javax.swing.JPanel jPanelKeyY;
+    private javax.swing.JPanel jPanelKeyZ;
+    private javax.swing.JPanel jPanelNumKeyBoard;
+    private javax.swing.JPanel jPanelSubmit;
+    private javax.swing.JPanel jPanelSubmitButton;
+    private javax.swing.JPanel jPanelSubmitHighlight;
+    private javax.swing.JPanel jPanelTextDisplay;
+    private javax.swing.JTextField jTextFieldDestination;
     private javax.swing.JPanel mapPanel;
     private javax.swing.JPanel menu1Panel;
     private javax.swing.JPanel menu2Panel;
@@ -3289,6 +3416,6 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JLabel tripComputerSpeed;
     private javax.swing.JLabel tripComputerTime;
     private javax.swing.JButton upButton;
-    private javax.swing.JPanel whereToPanel;
+    public static javax.swing.JPanel whereToPanel;
     // End of variables declaration//GEN-END:variables
 }
