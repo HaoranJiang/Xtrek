@@ -1,0 +1,33 @@
+Update on 17/02 20:00: 
+Can get latitude/longitude/time 
+Refresh every one seconds(need to improve to 2 mins)
+getCommmodemStatus failed problem occurs
+
+Output example:       
+
+Latitude: 50.72674116666667 Direction: N
+Time: 19:58:53
+Longitude: -3.5175308333333333 Direction: W
+Latitude: 50.7267415 Direction: N
+Time: 19:58:54
+Longitude: -3.5175276666666666 Direction: W
+Latitude: 50.726742 Direction: N
+Time: 19:58:55
+Longitude: -3.5175248333333333 Direction: W
+Latitude: 50.726742333333334 Direction: N
+Time: 19:58:56   
+
+Update on 18/02 17:08
+Refresh when Update button is clicked 
+Update-> display can correctly show location
+getCommodemStatus failed problem still occurs
+To be done:
+    Replace update button, when The Satellite mode is clicked, update automatically
+    Replcae display button, when updated, display. 
+
+Update on 18/02 18:38
+Deleted Update/Display buttons
+When the satellite is selected, can display location and time correctly.
+TO IMPROVE: dynamically change the location(maybe once per minite)
+
+            
