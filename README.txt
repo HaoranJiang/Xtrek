@@ -9,4 +9,6 @@ To use the satellite, please make sure that:
 5.Go to Settings->Privacy->Location and turn on the location service
 6.Depending on which opeating system using(currently only supports Win 32 and Win 64), please download the "rxtxSerial" file 
   under Win32/Win64 folder and place it under /lib folder.
+  
+ hi world£¡
 				
