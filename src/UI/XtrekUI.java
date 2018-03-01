@@ -18,6 +18,7 @@ import com.teamdev.jxbrowser.chromium.Browser;
 import com.teamdev.jxbrowser.chromium.swing.BrowserView;
 import java.awt.BorderLayout;
 import java.io.File;
+import java.io.UnsupportedEncodingException;
 import javaapplication1.SoundAndSpeech;
 
 /**
@@ -46,6 +47,7 @@ public class XtrekUI extends javax.swing.JFrame {
 
     /**
      * Creates new form XtrekUI
+     * @throws org.json.JSONException
      */
     public XtrekUI()throws JSONException {
         
@@ -1677,7 +1679,7 @@ public class XtrekUI extends javax.swing.JFrame {
         
         
         //add panel
-        if (situation == "off"){
+        if ("off".equals(situation)){
             screenPanel.add(menu1Panel);
             screenPanel.repaint();
             screenPanel.revalidate();
@@ -1694,62 +1696,63 @@ public class XtrekUI extends javax.swing.JFrame {
     }//GEN-LAST:event_onButtonActionPerformed
 
     private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButtonActionPerformed
-        // TODO add your handling code here:
         
         
-        if (situation == "menu") {
-             // TODO add your handling code here:
-        //remove panel
-            screenPanel.removeAll();
-            screenPanel.repaint();
-            screenPanel.revalidate();
-            
-        //add panel
-        // change to menu mode
-           switch (menuOrder) {
-                case 0:
-                    screenPanel.add(menu2Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 1;
-                    break;
-                case 1:
-                    screenPanel.add(menu3Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 2;
-                    break;
-                case 2:
-                    screenPanel.add(menu4Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 3;
-                    break;
-                case 3:
-                    screenPanel.add(menu5Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 4;
-                    break;
-                case 4:
-                    screenPanel.add(menu6Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 5;
-                    break;
-                case 5:
-                    screenPanel.add(menu1Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 0;
-                    break;
-                default:
-                    break;
-            }
-           // change to whereTo mode
-        } else if (situation == "whereTo"){
-            switch(currentPanelName){
-            case 1: jPanel3.removeAll();
+        if (null != situation) // TODO add your handling code here:
+        switch (situation) {
+            case "menu":
+                // TODO add your handling code here:
+                //remove panel
+                screenPanel.removeAll();
+                screenPanel.repaint();
+                screenPanel.revalidate();
+                //add panel
+                // change to menu mode
+                switch (menuOrder) {
+                    case 0:
+                        screenPanel.add(menu2Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 1;
+                        break;
+                    case 1:
+                        screenPanel.add(menu3Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 2;
+                        break;
+                    case 2:
+                        screenPanel.add(menu4Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 3;
+                        break;
+                    case 3:
+                        screenPanel.add(menu5Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 4;
+                        break;
+                    case 4:
+                        screenPanel.add(menu6Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 5;
+                        break;
+                    case 5:
+                        screenPanel.add(menu1Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 0;
+                        break;
+                    default:
+                        break;
+                }
+                // change to whereTo mode
+                break;
+            case "whereTo":
+                switch(currentPanelName){
+                    case 1: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1759,8 +1762,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            
-            case 2: jPanel3.removeAll();
+                    
+                    case 2: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1770,7 +1773,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 3: jPanel3.removeAll();
+                    case 3: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1780,7 +1783,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 4: jPanel3.removeAll();
+                    case 4: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1790,7 +1793,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 5: jPanel3.removeAll();
+                    case 5: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1800,7 +1803,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 6: jPanel3.removeAll();
+                    case 6: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1810,7 +1813,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 7: jPanel3.removeAll();
+                    case 7: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1820,7 +1823,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 8: jPanel3.removeAll();
+                    case 8: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1829,8 +1832,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     jPanel3.revalidate();
                     
                     currentPanelName += 1;
-                    break;   
-            case 9: jPanel3.removeAll();
+                    break;
+                    case 9: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1839,8 +1842,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     jPanel3.revalidate();
                     
                     currentPanelName += 1;
-                    break;  
-            case 10: jPanel3.removeAll();
+                    break;
+                    case 10: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1850,7 +1853,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 11: jPanel3.removeAll();
+                    case 11: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1860,7 +1863,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 12: jPanel3.removeAll();
+                    case 12: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1870,7 +1873,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 13: jPanel3.removeAll();
+                    case 13: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1880,7 +1883,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 14: jPanel3.removeAll();
+                    case 14: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1890,7 +1893,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 15: jPanel3.removeAll();
+                    case 15: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1900,7 +1903,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 16: jPanel3.removeAll();
+                    case 16: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1910,7 +1913,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 17: jPanel3.removeAll();
+                    case 17: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1920,7 +1923,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 18: jPanel3.removeAll();
+                    case 18: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1930,7 +1933,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 19: jPanel3.removeAll();
+                    case 19: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1940,7 +1943,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 20: jPanel3.removeAll();
+                    case 20: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1950,7 +1953,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 21: jPanel3.removeAll();
+                    case 21: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1960,7 +1963,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 22: jPanel3.removeAll();
+                    case 22: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1970,7 +1973,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 23: jPanel3.removeAll();
+                    case 23: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1980,7 +1983,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 24: jPanel3.removeAll();
+                    case 24: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -1990,7 +1993,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 25: jPanel3.removeAll();
+                    case 25: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2000,7 +2003,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 26: jPanel3.removeAll();
+                    case 26: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2010,7 +2013,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 27: jPanel3.removeAll();
+                    case 27: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2020,7 +2023,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 28: jPanel3.removeAll();
+                    case 28: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2031,8 +2034,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     currentPanelName = 1;
                     break;
                     
-            //numeric keyboard
-            case 29: jPanel3.removeAll();
+                    //numeric keyboard
+                    case 29: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2042,7 +2045,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 30: jPanel3.removeAll();
+                    case 30: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2052,7 +2055,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 31: jPanel3.removeAll();
+                    case 31: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2062,7 +2065,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 32: jPanel3.removeAll();
+                    case 32: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2072,7 +2075,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 33: jPanel3.removeAll();
+                    case 33: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2082,7 +2085,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 34: jPanel3.removeAll();
+                    case 34: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2092,7 +2095,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 35: jPanel3.removeAll();
+                    case 35: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2102,7 +2105,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 36: jPanel3.removeAll();
+                    case 36: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2112,7 +2115,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 37: jPanel3.removeAll();
+                    case 37: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2122,7 +2125,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 38: jPanel3.removeAll();
+                    case 38: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2132,7 +2135,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 39: jPanel3.removeAll();
+                    case 39: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2142,7 +2145,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName += 1;
                     break;
-            case 40: jPanel3.removeAll();
+                    case 40: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2152,115 +2155,122 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName = 29;
                     break;
-        }
-         // change to speech mode   
-        } else if (situation == "speech"){
-            speechPanel.removeAll();
-            speechPanel.repaint();
-            speechPanel.revalidate();
-            switch (speechOrder) {
-                case 0:
-                    speechPanel.add(smenu6Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 5;
-                    break;
-                case 1:
-                    speechPanel.add(smenu1Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 0;
-                    break;
-                case 2:
-                    speechPanel.add(smenu2Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 1;
-                    break;
-                case 3:
-                    speechPanel.add(smenu3Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 2;
-                    break;
-                case 4:
-                    speechPanel.add(smenu4Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 3;
-                    break;
-                case 5:
-                    speechPanel.add(smenu5Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 4;
-                    break;
-                default:
-                    break;
-            }
-            
-            //change to map mode
-        } else if (situation == "map"){
-            if (zoomValue > MIN_ZOOM) {//check whether zoom value is greater than min zoom
-
+                }
+                // change to speech mode   
+                break;
+            case "speech":
+                speechPanel.removeAll();
+                speechPanel.repaint();
+                speechPanel.revalidate();
+                switch (speechOrder) {
+                    case 0:
+                        speechPanel.add(smenu6Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 5;
+                        break;
+                    case 1:
+                        speechPanel.add(smenu1Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 0;
+                        break;
+                    case 2:
+                        speechPanel.add(smenu2Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 1;
+                        break;
+                    case 3:
+                        speechPanel.add(smenu3Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 2;
+                        break;
+                    case 4:
+                        speechPanel.add(smenu4Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 3;
+                        break;
+                    case 5:
+                        speechPanel.add(smenu5Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 4;
+                        break;
+                    default:
+                        break;
+                }
+                
+                //change to map mode
+                break;
+            case "map":
+                if (zoomValue > MIN_ZOOM) {//check whether zoom value is greater than min zoom
+                    
                     browser.executeJavaScript("map.setZoom(" + --zoomValue + ")");
 
                 }
+                break;
+            default:
+                break;
         }
     }//GEN-LAST:event_upButtonActionPerformed
 
     private void downButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downButtonActionPerformed
-        // TODO add your handling code here:
+        if (null != situation) // TODO add your handling code here:
         // change to menu mode
-        if (situation == "menu") {
-            screenPanel.removeAll();
-            screenPanel.repaint();
-            screenPanel.revalidate();
-            switch (menuOrder) {
-                case 0:
-                    screenPanel.add(menu6Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 5;
-                    break;
-                case 1:
-                    screenPanel.add(menu1Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 0;
-                    break;
-                case 2:
-                    screenPanel.add(menu2Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 1;
-                    break;
-                case 3:
-                    screenPanel.add(menu3Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 2;
-                    break;
-                case 4:
-                    screenPanel.add(menu4Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 3;
-                    break;
-                case 5:
-                    screenPanel.add(menu5Panel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    menuOrder = 4;
-                    break;
-                default:
-                    break;
-            }
-            
-        //change to whereTo mode    
-        } else if (situation == "whereTo" ){
-            switch(currentPanelName){
-            case 1: jPanel3.removeAll();
+        switch (situation) {
+            case "menu":
+                screenPanel.removeAll();
+                screenPanel.repaint();
+                screenPanel.revalidate();
+                switch (menuOrder) {
+                    case 0:
+                        screenPanel.add(menu6Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 5;
+                        break;
+                    case 1:
+                        screenPanel.add(menu1Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 0;
+                        break;
+                    case 2:
+                        screenPanel.add(menu2Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 1;
+                        break;
+                    case 3:
+                        screenPanel.add(menu3Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 2;
+                        break;
+                    case 4:
+                        screenPanel.add(menu4Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 3;
+                        break;
+                    case 5:
+                        screenPanel.add(menu5Panel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        menuOrder = 4;
+                        break;
+                    default:
+                        break;
+                }
+                
+                //change to whereTo mode    
+                break;
+            case "whereTo":
+                switch(currentPanelName){
+                    case 1: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2270,8 +2280,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName = 28;
                     break;
-            
-            case 2: jPanel3.removeAll();
+                    
+                    case 2: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2281,7 +2291,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 3: jPanel3.removeAll();
+                    case 3: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2291,7 +2301,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 4: jPanel3.removeAll();
+                    case 4: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2301,7 +2311,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 5: jPanel3.removeAll();
+                    case 5: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2311,7 +2321,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 6: jPanel3.removeAll();
+                    case 6: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2321,7 +2331,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 7: jPanel3.removeAll();
+                    case 7: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2331,7 +2341,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 8: jPanel3.removeAll();
+                    case 8: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2340,8 +2350,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     jPanel3.revalidate();
                     
                     currentPanelName -= 1;
-                    break;   
-            case 9: jPanel3.removeAll();
+                    break;
+                    case 9: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2350,8 +2360,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     jPanel3.revalidate();
                     
                     currentPanelName -= 1;
-                    break;  
-            case 10: jPanel3.removeAll();
+                    break;
+                    case 10: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2361,7 +2371,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 11: jPanel3.removeAll();
+                    case 11: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2371,7 +2381,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 12: jPanel3.removeAll();
+                    case 12: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2381,7 +2391,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 13: jPanel3.removeAll();
+                    case 13: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2391,7 +2401,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 14: jPanel3.removeAll();
+                    case 14: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2401,7 +2411,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 15: jPanel3.removeAll();
+                    case 15: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2411,7 +2421,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 16: jPanel3.removeAll();
+                    case 16: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2421,7 +2431,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 17: jPanel3.removeAll();
+                    case 17: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2431,7 +2441,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 18: jPanel3.removeAll();
+                    case 18: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2441,7 +2451,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 19: jPanel3.removeAll();
+                    case 19: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2451,7 +2461,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 20: jPanel3.removeAll();
+                    case 20: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2461,7 +2471,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 21: jPanel3.removeAll();
+                    case 21: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2471,7 +2481,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 22: jPanel3.removeAll();
+                    case 22: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2481,7 +2491,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 23: jPanel3.removeAll();
+                    case 23: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2491,7 +2501,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 24: jPanel3.removeAll();
+                    case 24: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2501,7 +2511,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 25: jPanel3.removeAll();
+                    case 25: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2511,7 +2521,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 26: jPanel3.removeAll();
+                    case 26: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2521,7 +2531,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 27: jPanel3.removeAll();
+                    case 27: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2531,7 +2541,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 28: jPanel3.removeAll();
+                    case 28: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2541,7 +2551,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 29: jPanel3.removeAll();
+                    case 29: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2551,7 +2561,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName = 40;
                     break;
-            case 30: jPanel3.removeAll();
+                    case 30: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2561,7 +2571,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 31: jPanel3.removeAll();
+                    case 31: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2571,7 +2581,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 32: jPanel3.removeAll();
+                    case 32: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2581,7 +2591,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 33: jPanel3.removeAll();
+                    case 33: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2591,7 +2601,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 34: jPanel3.removeAll();
+                    case 34: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2601,7 +2611,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 35: jPanel3.removeAll();
+                    case 35: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2611,7 +2621,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 36: jPanel3.removeAll();
+                    case 36: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2621,7 +2631,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 37: jPanel3.removeAll();
+                    case 37: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2631,7 +2641,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 38: jPanel3.removeAll();
+                    case 38: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2641,7 +2651,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 39: jPanel3.removeAll();
+                    case 39: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2651,7 +2661,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 40: jPanel3.removeAll();
+                    case 40: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2661,64 +2671,67 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-        }
-        } else if (situation == "speech") {
-            speechPanel.removeAll();
-            speechPanel.repaint();
-            speechPanel.revalidate();
-            switch (speechOrder) {
-                case 0:
-                    speechPanel.add(smenu2Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 1;
-                    break;
-                case 1:
-                    speechPanel.add(smenu3Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 2;
-                    break;
-                case 2:
-                    speechPanel.add(smenu4Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 3;
-                    break;
-                case 3:
-                    speechPanel.add(smenu5Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 4;
-                    break;
-                case 4:
-                    speechPanel.add(smenu6Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 5;
-                    break;
-                case 5:
-                    speechPanel.add(smenu1Panel);
-                    speechPanel.repaint();
-                    speechPanel.revalidate();
-                    speechOrder = 0;
-                    break;
-                default:
-                    break;
-            }
-        } else if (situation == "map"){
-             if (zoomValue < MAX_ZOOM) {//check whether zoom value is less than max zoom
+                }       break;
+            case "speech":
+                speechPanel.removeAll();
+                speechPanel.repaint();
+                speechPanel.revalidate();
+                switch (speechOrder) {
+                    case 0:
+                        speechPanel.add(smenu2Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 1;
+                        break;
+                    case 1:
+                        speechPanel.add(smenu3Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 2;
+                        break;
+                    case 2:
+                        speechPanel.add(smenu4Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 3;
+                        break;
+                    case 3:
+                        speechPanel.add(smenu5Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 4;
+                        break;
+                    case 4:
+                        speechPanel.add(smenu6Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 5;
+                        break;
+                    case 5:
+                        speechPanel.add(smenu1Panel);
+                        speechPanel.repaint();
+                        speechPanel.revalidate();
+                        speechOrder = 0;
+                        break;
+                    default:
+                        break;
+                }   break;
+            case "map":
+                if (zoomValue < MAX_ZOOM) {//check whether zoom value is less than max zoom
 
                     browser.executeJavaScript("map.setZoom(" + ++zoomValue + ")"); // calling setZoom of google.maps.Map JavaScript object
 
                 }
+                break;
+            default:
+                break;
         }
     }//GEN-LAST:event_downButtonActionPerformed
 
     private void menuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuButtonActionPerformed
         // TODO add your handling code here:
         // this button helps you to back to menu panel
-        if (situation != "menu" && situation != "off") {
+        if (!"menu".equals(situation) && !"off".equals(situation)) {
              // TODO add your handling code here:
         //remove panel
             screenPanel.removeAll();
@@ -2766,160 +2779,160 @@ public class XtrekUI extends javax.swing.JFrame {
     }//GEN-LAST:event_menuButtonActionPerformed
 
     private void selectButtonActionPerformed(java.awt.event.ActionEvent evt){//GEN-FIRST:event_selectButtonActionPerformed
-        // TODO add your handling code here:
-        if (situation == "menu") {
-            screenPanel.removeAll();
-            screenPanel.repaint();
-            screenPanel.revalidate();
-            switch (menuOrder) {
-                case 0:
-                    screenPanel.add(whereToPanel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    situation = "whereTo";
-                    break;
-                case 1:    
-                    if(tripComputerRun == false){
-                    String s0 ="50.735459,-3.533207";
-                    String s1 ="50.722932 -3.530193";
-                    
-            
-            {
-                try {
-                    displayOdem(s0,s1);
-                } catch (JSONException ex) {
-                    Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-                    movingTimeIncease();
-                    displaySpeed();
-                    tripComputerRun = true;
-                    }
-                    screenPanel.add(tripComputerPanel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    situation = "tripComputer";
-                    break;
-                case 2:
-                    File file =new File("map.html");
-                    String path = file.getAbsolutePath();
-                    System.out.print(path);
-                    BrowserView view = new BrowserView(browser);
-                    browser.loadURL(path);
-                    screenPanel.add(view, BorderLayout.CENTER);
-                    screenPanel.add(mapPanel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    situation = "map";
-                    break;
-                case 3:
-                    screenPanel.add(speechPanel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    situation = "speech";
-                    break;
-                case 4:
-                    screenPanel.add(TSPanel);
-                    SerialPortHandler.connect();
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    situation = "satellite";
-                    break;
-                case 5:
-                    screenPanel.add(aboutPanel);
-                    screenPanel.repaint();
-                    screenPanel.revalidate();
-                    situation = "about";
-                    break;
-                default:
-                    break;
-            
-            }
-            
-        } else if (situation == "whereTo") {
-            switch(currentPanelName){
-            case 1: jTextField1.setText(textdisp + "A");
+        if (null != situation) // TODO add your handling code here:
+        switch (situation) {
+            case "menu":
+                screenPanel.removeAll();
+                screenPanel.repaint();
+                screenPanel.revalidate();
+                switch (menuOrder) {
+                    case 0:
+                        screenPanel.add(whereToPanel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        situation = "whereTo";
+                        break;
+                    case 1:
+                        if(tripComputerRun == false){
+                            String s0 ="50.735459,-3.533207";
+                            String s1 ="50.722932 -3.530193";
+                            
+                            
+                            {
+                                try {
+                                    displayOdem(s0,s1);
+                                } catch (JSONException ex) {
+                                    Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                            movingTimeIncease();
+                            displaySpeed();
+                            tripComputerRun = true;
+                        }
+                        screenPanel.add(tripComputerPanel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        situation = "tripComputer";
+                        break;
+                    case 2:
+                        File file =new File("map.html");
+                        String path = file.getAbsolutePath();
+                        System.out.print(path);
+                        BrowserView view = new BrowserView(browser);
+                        browser.loadURL(path);
+                        screenPanel.add(view, BorderLayout.CENTER);
+                        screenPanel.add(mapPanel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        situation = "map";
+                        break;
+                    case 3:
+                        screenPanel.add(speechPanel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        situation = "speech";
+                        break;
+                    case 4:
+                        screenPanel.add(TSPanel);
+                        SerialPortHandler.connect();
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        situation = "satellite";
+                        break;
+                    case 5:
+                        screenPanel.add(aboutPanel);
+                        screenPanel.repaint();
+                        screenPanel.revalidate();
+                        situation = "about";
+                        break;
+                    default:
+                        break;
+                        
+                }   break;
+            case "whereTo":
+                switch(currentPanelName){
+                    case 1: jTextField1.setText(textdisp + "A");
                     textdisp = textdisp + "A";
                     break;
-            case 2: jTextField1.setText(textdisp + "B");
+                    case 2: jTextField1.setText(textdisp + "B");
                     textdisp = textdisp + "B";
-                    break;    
-            case 3: jTextField1.setText(textdisp + "C");
+                    break;
+                    case 3: jTextField1.setText(textdisp + "C");
                     textdisp = textdisp + "C";
                     break;
-            case 4: jTextField1.setText(textdisp + "D");
+                    case 4: jTextField1.setText(textdisp + "D");
                     textdisp = textdisp + "D";
                     break;
-            case 5: jTextField1.setText(textdisp + "E");
+                    case 5: jTextField1.setText(textdisp + "E");
                     textdisp = textdisp + "E";
                     break;
-            case 6: jTextField1.setText(textdisp + "F");
+                    case 6: jTextField1.setText(textdisp + "F");
                     textdisp = textdisp + "F";
                     break;
-            case 7: jTextField1.setText(textdisp + "G");
+                    case 7: jTextField1.setText(textdisp + "G");
                     textdisp = textdisp + "G";
                     break;
-            case 8: jTextField1.setText(textdisp + "H");
+                    case 8: jTextField1.setText(textdisp + "H");
                     textdisp = textdisp + "H";
                     break;
-            case 9: jTextField1.setText(textdisp + "I");
+                    case 9: jTextField1.setText(textdisp + "I");
                     textdisp = textdisp + "I";
                     break;
-            case 10: jTextField1.setText(textdisp + "J");
+                    case 10: jTextField1.setText(textdisp + "J");
                     textdisp = textdisp + "J";
                     break;
-            case 11: jTextField1.setText(textdisp + "K");
+                    case 11: jTextField1.setText(textdisp + "K");
                     textdisp = textdisp + "K";
                     break;
-            case 12: jTextField1.setText(textdisp + "L");
+                    case 12: jTextField1.setText(textdisp + "L");
                     textdisp = textdisp + "L";
                     break;
-            case 13: jTextField1.setText(textdisp + "M");
+                    case 13: jTextField1.setText(textdisp + "M");
                     textdisp = textdisp + "M";
                     break;
-            case 14: jTextField1.setText(textdisp + "N");
+                    case 14: jTextField1.setText(textdisp + "N");
                     textdisp = textdisp + "N";
                     break;
-            case 15: jTextField1.setText(textdisp + "O");
+                    case 15: jTextField1.setText(textdisp + "O");
                     textdisp = textdisp + "O";
                     break;
-            case 16: jTextField1.setText(textdisp + "P");
+                    case 16: jTextField1.setText(textdisp + "P");
                     textdisp = textdisp + "P";
                     break;
-            case 17: jTextField1.setText(textdisp + "Q");
+                    case 17: jTextField1.setText(textdisp + "Q");
                     textdisp = textdisp + "Q";
-                    break;        
-            case 18: jTextField1.setText(textdisp + "R");
+                    break;
+                    case 18: jTextField1.setText(textdisp + "R");
                     textdisp = textdisp + "R";
-                    break;        
-            case 19: jTextField1.setText(textdisp + "S");
+                    break;
+                    case 19: jTextField1.setText(textdisp + "S");
                     textdisp = textdisp + "S";
                     break;
-            case 20: jTextField1.setText(textdisp + "T");
+                    case 20: jTextField1.setText(textdisp + "T");
                     textdisp = textdisp + "T";
                     break;
-            case 21: jTextField1.setText(textdisp + "U");
+                    case 21: jTextField1.setText(textdisp + "U");
                     textdisp = textdisp + "U";
                     break;
-            case 22: jTextField1.setText(textdisp + "V");
+                    case 22: jTextField1.setText(textdisp + "V");
                     textdisp = textdisp + "V";
                     break;
-            case 23: jTextField1.setText(textdisp + "W");
+                    case 23: jTextField1.setText(textdisp + "W");
                     textdisp = textdisp + "W";
                     break;
-            case 24: jTextField1.setText(textdisp + "X");
+                    case 24: jTextField1.setText(textdisp + "X");
                     textdisp = textdisp + "X";
                     break;
-            case 25: jTextField1.setText(textdisp + "Y");
+                    case 25: jTextField1.setText(textdisp + "Y");
                     textdisp = textdisp + "Y";
                     break;
-            case 26: jTextField1.setText(textdisp + "Z");
+                    case 26: jTextField1.setText(textdisp + "Z");
                     textdisp = textdisp + "Z";
                     break;
-            case 27: jTextField1.setText(textdisp + " ");
+                    case 27: jTextField1.setText(textdisp + " ");
                     textdisp = textdisp + " ";
                     break;
-            case 28: jPanel3.removeAll();
+                    case 28: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2929,40 +2942,40 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName = 40;
                     break;
-            case 29: jTextField1.setText(textdisp + "1");
+                    case 29: jTextField1.setText(textdisp + "1");
                     textdisp = textdisp + "1";
                     break;
-            case 30: jTextField1.setText(textdisp + "2");
+                    case 30: jTextField1.setText(textdisp + "2");
                     textdisp = textdisp + "2";
                     break;
-            case 31: jTextField1.setText(textdisp + "3");
+                    case 31: jTextField1.setText(textdisp + "3");
                     textdisp = textdisp + "3";
                     break;
-            case 32: jTextField1.setText(textdisp + "4");
+                    case 32: jTextField1.setText(textdisp + "4");
                     textdisp = textdisp + "4";
                     break;
-            case 33: jTextField1.setText(textdisp + "5");
+                    case 33: jTextField1.setText(textdisp + "5");
                     textdisp = textdisp + "5";
                     break;
-            case 34: jTextField1.setText(textdisp + "6");
+                    case 34: jTextField1.setText(textdisp + "6");
                     textdisp = textdisp + "6";
                     break;
-            case 35: jTextField1.setText(textdisp + "7");
+                    case 35: jTextField1.setText(textdisp + "7");
                     textdisp = textdisp + "7";
                     break;
-            case 36: jTextField1.setText(textdisp + "8");
+                    case 36: jTextField1.setText(textdisp + "8");
                     textdisp = textdisp + "8";
                     break;
-            case 37: jTextField1.setText(textdisp + "9");
+                    case 37: jTextField1.setText(textdisp + "9");
                     textdisp = textdisp + "9";
                     break;
-            case 38: jTextField1.setText(textdisp + "0");
+                    case 38: jTextField1.setText(textdisp + "0");
                     textdisp = textdisp + "0";
                     break;
-            case 39: textdisp = textdisp.substring(0, textdisp.length()-1);
+                    case 39: textdisp = textdisp.substring(0, textdisp.length()-1);
                     jTextField1.setText(textdisp);
                     break;
-            case 40: jPanel3.removeAll();
+                    case 40: jPanel3.removeAll();
                     jPanel3.repaint();
                     jPanel3.revalidate();
                     
@@ -2973,57 +2986,61 @@ public class XtrekUI extends javax.swing.JFrame {
                     currentPanelName = 28;
                     break;
                     
-        }
-        } else if (situation == "speech"){
-            try {
-                NewSoundAndSpeech a = new NewSoundAndSpeech();
-                SoundAndSpeech b = new SoundAndSpeech();
-                switch(speechOrder){
-                    case 1:
-                        a.newOpen(1);
-                        break;
-                    case 2:
-                        a.newOpen(2);
-                        break;
-                    case 3:
-                        b.open(3);
-                        break;
-                    case 4:
-                        b.open(4);
-                        break;
-                    case 5:
-                        b.open(5);
-                        break;
-                        
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
-            }
+                }       break;
+            case "speech":
+                try {
+                    NewSoundAndSpeech a = new NewSoundAndSpeech();
+                    SoundAndSpeech b = new SoundAndSpeech();
+                    switch(speechOrder){
+                        case 1:
+                            NewSoundAndSpeech.newOpen(1);
+                            break;
+                        case 2:
+                            NewSoundAndSpeech.newOpen(2);
+                            break;
+                        case 3:
+                            SoundAndSpeech.open(3);
+                            break;
+                        case 4:
+                            SoundAndSpeech.open(4);
+                            break;
+                        case 5:
+                            SoundAndSpeech.open(5);
+                            break;
+                            
+                    }
+                } catch (Exception ex) {
+                    Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
+                }   break;
+            default:
+                break;
         } 
     }//GEN-LAST:event_selectButtonActionPerformed
 
     public void movingTimeIncease(){
         
-        Thread time = new Thread(){
-        public void run(){
-        for(;;){
-            String str_s = Integer.toString(second);
-            String str_m = Integer.toString(minute);
-            String str_h = Integer.toString(hour);
-            timeDisplay.setText(str_h+"Hour    "+str_m+"Min    "+str_s+"Sec");
-            try{sleep(1000);}catch(InterruptedException e){}
-            
-            second++;
-            if(second==60){
-                minute++;
-                second = 0;
+        Thread time;
+        time = new Thread(){
+            @Override
+            public void run(){
+                for(;;){
+                    String str_s = Integer.toString(second);
+                    String str_m = Integer.toString(minute);
+                    String str_h = Integer.toString(hour);
+                    timeDisplay.setText(str_h+"Hour    "+str_m+"Min    "+str_s+"Sec");
+                    try{sleep(1000);}catch(InterruptedException e){}
+                    
+                    second++;
+                    if(second==60){
+                        minute++;
+                        second = 0;
+                    }
+                    if(minute==60){
+                        hour++;
+                        minute = 0;
+                    }
+                }
             }
-            if(minute==60){
-                hour++;
-                minute = 0;
-            }
-        }
-        }
         };
         time.start();
     }
@@ -3045,7 +3062,7 @@ public class XtrekUI extends javax.swing.JFrame {
              = {};
             byte[] response = HttpConnect.httpConnect( method, url, headers, body );
             return response;
-            } catch ( Exception ex ) {return null;}
+            } catch ( UnsupportedEncodingException ex ) {return null;}
     }
     
     public String calculateOdem(String start,String end)throws JSONException{
@@ -3070,24 +3087,26 @@ public class XtrekUI extends javax.swing.JFrame {
     
     public void displaySpeed(){
         speedDisplay.setText("0   KM/H");
-        Thread speed = new Thread(){
+        Thread speed;
+        speed = new Thread(){
+            @Override
             public void run(){
-               for(;;){
-                   
-                   try{sleep(1000);}catch(InterruptedException e){}
-                   
-                   t++;
-                   
-                   String pureSpeed = odometer.substring(0,odometer.length()-3);
-                   Double distanceValue = Double.parseDouble(pureSpeed);
-                   Double speedValue = distanceValue/t*3600;
-                   String speedInKmh = Double.toString(speedValue) + "   KM/H";
-                   
-                   speedDisplay.setText(speedInKmh);
-               
-               
-               }
-            
+                for(;;){
+                    
+                    try{sleep(1000);}catch(InterruptedException e){}
+                    
+                    t++;
+                    
+                    String pureSpeed = odometer.substring(0,odometer.length()-3);
+                    Double distanceValue = Double.parseDouble(pureSpeed);
+                    Double speedValue = distanceValue/t*3600;
+                    String speedInKmh = Double.toString(speedValue) + "   KM/H";
+                    
+                    speedDisplay.setText(speedInKmh);
+                    
+                    
+                }
+                
             }
         };
         
@@ -3129,25 +3148,19 @@ public class XtrekUI extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(XtrekUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(XtrekUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(XtrekUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(XtrekUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        
+        //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run(){
-                try {
-                    new XtrekUI().setVisible(true);
-                } catch (JSONException ex) {
-                    Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
-                }
+        java.awt.EventQueue.invokeLater(() -> {
+            try {
+                new XtrekUI().setVisible(true);
+            } catch (JSONException ex) {
+                Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
             }
         });
     }
