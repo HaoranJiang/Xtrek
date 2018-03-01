@@ -70,6 +70,7 @@ public class XtrekUI extends javax.swing.JFrame {
         selectButton = new javax.swing.JButton();
         menuButton = new javax.swing.JButton();
         screenPanel = new javax.swing.JPanel();
+        offPanel = new javax.swing.JPanel();
         whereToPanel = new javax.swing.JPanel();
         jPanelTextDisplay = new javax.swing.JPanel();
         jLabelTextDisplay = new javax.swing.JLabel();
@@ -164,7 +165,6 @@ public class XtrekUI extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jPanelNumKeyBoard = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        offPanel = new javax.swing.JPanel();
         menu1Panel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         menu2Panel = new javax.swing.JPanel();
@@ -263,6 +263,9 @@ public class XtrekUI extends javax.swing.JFrame {
         screenPanel.setBackground(new java.awt.Color(255, 255, 255));
         screenPanel.setLayout(new java.awt.CardLayout());
 
+        offPanel.setBackground(new java.awt.Color(0, 0, 0));
+        screenPanel.add(offPanel, "card3");
+
         whereToPanel.setPreferredSize(new java.awt.Dimension(203, 245));
 
         jPanelTextDisplay.setPreferredSize(new java.awt.Dimension(203, 34));
@@ -286,34 +289,35 @@ public class XtrekUI extends javax.swing.JFrame {
         jPanelSubmitButton.setLayout(jPanelSubmitButtonLayout);
         jPanelSubmitButtonLayout.setHorizontalGroup(
             jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 56, Short.MAX_VALUE)
             .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelSubmitButtonLayout.createSequentialGroup()
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 2, Short.MAX_VALUE)))
         );
         jPanelSubmitButtonLayout.setVerticalGroup(
             jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 32, Short.MAX_VALUE)
             .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelSubmit.add(jPanelSubmitButton, "card2");
 
         jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_submit_highlight.png"))); // NOI18N
+        jLabel62.setPreferredSize(new java.awt.Dimension(54, 28));
 
         javax.swing.GroupLayout jPanelSubmitHighlightLayout = new javax.swing.GroupLayout(jPanelSubmitHighlight);
         jPanelSubmitHighlight.setLayout(jPanelSubmitHighlightLayout);
         jPanelSubmitHighlightLayout.setHorizontalGroup(
             jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
+            .addGap(0, 56, Short.MAX_VALUE)
             .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelSubmitHighlightLayout.createSequentialGroup()
-                    .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jLabel62, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
         );
         jPanelSubmitHighlightLayout.setVerticalGroup(
             jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
+            .addGap(0, 32, Short.MAX_VALUE)
             .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel62, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -336,24 +340,24 @@ public class XtrekUI extends javax.swing.JFrame {
                     .addContainerGap(48, Short.MAX_VALUE)))
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTextDisplayLayout.createSequentialGroup()
-                    .addGap(0, 153, Short.MAX_VALUE)
-                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 147, Short.MAX_VALUE)
+                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         jPanelTextDisplayLayout.setVerticalGroup(
             jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
                     .addComponent(jLabelTextDisplay)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 11, Short.MAX_VALUE)))
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
                     .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 2, Short.MAX_VALUE)))
+                    .addGap(0, 13, Short.MAX_VALUE)))
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 1, Short.MAX_VALUE)))
+                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
 
         jPanelKeyBoard.setLayout(new java.awt.CardLayout());
@@ -1405,7 +1409,7 @@ public class XtrekUI extends javax.swing.JFrame {
             .addGap(0, 245, Short.MAX_VALUE)
             .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(whereToPanelLayout.createSequentialGroup()
-                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 34, Short.MAX_VALUE)
                     .addGap(0, 211, Short.MAX_VALUE)))
             .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whereToPanelLayout.createSequentialGroup()
@@ -1414,9 +1418,6 @@ public class XtrekUI extends javax.swing.JFrame {
         );
 
         screenPanel.add(whereToPanel, "card14");
-
-        offPanel.setBackground(new java.awt.Color(0, 0, 0));
-        screenPanel.add(offPanel, "card3");
 
         menu1Panel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1861,7 +1862,8 @@ public class XtrekUI extends javax.swing.JFrame {
             case 1: 
                     
                     jPanelKeyBoard.add(jPanelKeyB);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
@@ -1869,182 +1871,208 @@ public class XtrekUI extends javax.swing.JFrame {
             case 2: 
                     
                     jPanelKeyBoard.add(jPanelKeyC);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 3: 
                     
                     jPanelKeyBoard.add(jPanelKeyD);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 4: 
                     
                     jPanelKeyBoard.add(jPanelKeyE);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 5: 
                     
                     jPanelKeyBoard.add(jPanelKeyF);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 6: 
                     
                     jPanelKeyBoard.add(jPanelKeyG);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 7: 
                     
                     jPanelKeyBoard.add(jPanelKeyH);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 8: 
                     
                     jPanelKeyBoard.add(jPanelKeyI);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;   
             case 9: 
                     
                     jPanelKeyBoard.add(jPanelKeyJ);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;  
             case 10: 
                     
                     jPanelKeyBoard.add(jPanelKeyK);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 11: 
                     
                     jPanelKeyBoard.add(jPanelKeyL);
-                     
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate(); 
                     
                     currentPanelName += 1;
                     break;
             case 12: 
                     
                     jPanelKeyBoard.add(jPanelKeyM);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 13: 
                     
                     jPanelKeyBoard.add(jPanelKeyN);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 14: 
                     
                     jPanelKeyBoard.add(jPanelKeyO);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 15: 
                     
                     jPanelKeyBoard.add(jPanelKeyP);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 16: 
                     
                     jPanelKeyBoard.add(jPanelKeyQ);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 17: 
                     
                     jPanelKeyBoard.add(jPanelKeyR);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 18: 
                     
                     jPanelKeyBoard.add(jPanelKeyS);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 19:
                     
                     jPanelKeyBoard.add(jPanelKeyT);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 20: ;
                     
                     jPanelKeyBoard.add(jPanelKeyU);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 21: 
                     
                     jPanelKeyBoard.add(jPanelKeyV);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 22: 
                     
                     jPanelKeyBoard.add(jPanelKeyW);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 23: 
                     
                     jPanelKeyBoard.add(jPanelKeyX);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 24: 
                     
                     jPanelKeyBoard.add(jPanelKeyY);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 25: 
                     
                     jPanelKeyBoard.add(jPanelKeyZ);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 26: 
                     
                     jPanelKeyBoard.add(jPanelKeySpace);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 27: 
                     
                     jPanelKeyBoard.add(jPanelKeyNext);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
@@ -2052,7 +2080,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     
                     jPanelKeyBoard.add(jPanelAlphaKeyBoard);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     jPanelSubmit.removeAll();
                     jPanelSubmit.repaint();
@@ -2069,7 +2098,8 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     
                     jPanelKeyBoard.add(jPanelKeyA);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     jPanelSubmit.removeAll();
                     jPanelSubmit.repaint();
@@ -2086,82 +2116,94 @@ public class XtrekUI extends javax.swing.JFrame {
             case 30: 
                     
                     jPanelKeyBoard.add(jPanelKey2);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 31: 
                     jPanelKeyBoard.add(jPanelKey3);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 32: 
                     
                     jPanelKeyBoard.add(jPanelKey4);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 33: 
                     
                     jPanelKeyBoard.add(jPanelKey5);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 34: 
                     
                     jPanelKeyBoard.add(jPanelKey6);
-                   
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 35: 
                     
                     jPanelKeyBoard.add(jPanelKey7);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 36: 
                     
                     jPanelKeyBoard.add(jPanelKey8);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 37: 
                     
                     jPanelKeyBoard.add(jPanelKey9);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 38: 
                     
                     jPanelKeyBoard.add(jPanelKey0);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     currentPanelName += 1;
                     break;
             case 39: 
                     
                     jPanelKeyBoard.add(jPanelKeyDel);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 40: 
                     
                     jPanelKeyBoard.add(jPanelKeyPrev);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     currentPanelName += 1;
                     break;
             case 41: 
                     
                     jPanelKeyBoard.add(jPanelNumKeyBoard);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     jPanelSubmit.removeAll();
                     jPanelSubmit.repaint();
@@ -2178,7 +2220,8 @@ public class XtrekUI extends javax.swing.JFrame {
             case 42:
                     
                     jPanelKeyBoard.add(jPanelKey1);
-                    
+                    jPanelKeyBoard.repaint();
+                    jPanelKeyBoard.revalidate();
                     
                     jPanelSubmit.removeAll();
                     jPanelSubmit.repaint();
@@ -2299,10 +2342,11 @@ public class XtrekUI extends javax.swing.JFrame {
             
         //change to whereTo mode    
         } else if (situation == "whereTo" ){
+            jPanelKeyBoard.removeAll();
+            jPanelKeyBoard.repaint();
+            jPanelKeyBoard.revalidate();
             switch(currentPanelName){
-            case 1: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 1: 
                     
                     jPanelKeyBoard.add(jPanelAlphaKeyBoard);
                     jPanelKeyBoard.repaint();
@@ -2319,9 +2363,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     currentPanelName = 29;
                     break;
             
-            case 2: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 2: 
                     
                     jPanelKeyBoard.add(jPanelKeyA);
                     jPanelKeyBoard.repaint();
@@ -2329,9 +2371,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 3: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 3: 
                     
                     jPanelKeyBoard.add(jPanelKeyB);
                     jPanelKeyBoard.repaint();
@@ -2339,9 +2379,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 4: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 4:
                     
                     jPanelKeyBoard.add(jPanelKeyC);
                     jPanelKeyBoard.repaint();
@@ -2349,9 +2387,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 5: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 5: 
                     
                     jPanelKeyBoard.add(jPanelKeyD);
                     jPanelKeyBoard.repaint();
@@ -2359,9 +2395,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 6: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 6: 
                     
                     jPanelKeyBoard.add(jPanelKeyE);
                     jPanelKeyBoard.repaint();
@@ -2369,9 +2403,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 7: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 7: 
                     
                     jPanelKeyBoard.add(jPanelKeyF);
                     jPanelKeyBoard.repaint();
@@ -2379,9 +2411,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 8: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 8: 
                     
                     jPanelKeyBoard.add(jPanelKeyG);
                     jPanelKeyBoard.repaint();
@@ -2389,9 +2419,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;   
-            case 9: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 9: 
                     
                     jPanelKeyBoard.add(jPanelKeyH);
                     jPanelKeyBoard.repaint();
@@ -2399,9 +2427,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;  
-            case 10: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 10: 
                     
                     jPanelKeyBoard.add(jPanelKeyI);
                     jPanelKeyBoard.repaint();
@@ -2409,9 +2435,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 11: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 11:
                     
                     jPanelKeyBoard.add(jPanelKeyJ);
                     jPanelKeyBoard.repaint();
@@ -2419,9 +2443,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 12: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 12:
                     
                     jPanelKeyBoard.add(jPanelKeyK);
                     jPanelKeyBoard.repaint();
@@ -2429,9 +2451,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 13: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 13:
                     
                     jPanelKeyBoard.add(jPanelKeyL);
                     jPanelKeyBoard.repaint();
@@ -2439,9 +2459,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 14: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 14:
                     
                     jPanelKeyBoard.add(jPanelKeyM);
                     jPanelKeyBoard.repaint();
@@ -2449,9 +2467,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 15: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 15:
                     
                     jPanelKeyBoard.add(jPanelKeyN);
                     jPanelKeyBoard.repaint();
@@ -2459,9 +2475,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 16: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 16:
                     
                     jPanelKeyBoard.add(jPanelKeyO);
                     jPanelKeyBoard.repaint();
@@ -2469,9 +2483,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 17: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 17:
                     
                     jPanelKeyBoard.add(jPanelKeyP);
                     jPanelKeyBoard.repaint();
@@ -2479,9 +2491,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 18: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 18:
                     
                     jPanelKeyBoard.add(jPanelKeyQ);
                     jPanelKeyBoard.repaint();
@@ -2489,9 +2499,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 19: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 19:
                     
                     jPanelKeyBoard.add(jPanelKeyR);
                     jPanelKeyBoard.repaint();
@@ -2499,9 +2507,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 20: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 20:
                     
                     jPanelKeyBoard.add(jPanelKeyS);
                     jPanelKeyBoard.repaint();
@@ -2509,9 +2515,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 21: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 21:
                     
                     jPanelKeyBoard.add(jPanelKeyT);
                     jPanelKeyBoard.repaint();
@@ -2519,9 +2523,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 22: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 22:
                     
                     jPanelKeyBoard.add(jPanelKeyU);
                     jPanelKeyBoard.repaint();
@@ -2529,9 +2531,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 23: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 23:
                     
                     jPanelKeyBoard.add(jPanelKeyV);
                     jPanelKeyBoard.repaint();
@@ -2539,9 +2539,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 24: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 24:
                     
                     jPanelKeyBoard.add(jPanelKeyW);
                     jPanelKeyBoard.repaint();
@@ -2549,9 +2547,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 25: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 25:
                     
                     jPanelKeyBoard.add(jPanelKeyX);
                     jPanelKeyBoard.repaint();
@@ -2559,9 +2555,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 26: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 26:
                     
                     jPanelKeyBoard.add(jPanelKeyY);
                     jPanelKeyBoard.repaint();
@@ -2569,9 +2563,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 27: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 27:
                     
                     jPanelKeyBoard.add(jPanelKeyZ);
                     jPanelKeyBoard.repaint();
@@ -2579,9 +2571,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 28: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 28:
                     
                     jPanelKeyBoard.add(jPanelKeySpace);
                     jPanelKeyBoard.repaint();
@@ -2590,9 +2580,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     currentPanelName -= 1;
                     break;
                     
-            case 29: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 29:
                     
                     jPanelKeyBoard.add(jPanelKeyNext);
                     jPanelKeyBoard.repaint();
@@ -2617,9 +2605,7 @@ public class XtrekUI extends javax.swing.JFrame {
             
             
             
-            case 30: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 30:
                     
                     jPanelKeyBoard.add(jPanelNumKeyBoard);
                     jPanelKeyBoard.repaint();
@@ -2637,9 +2623,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     break;
                     
                     
-            case 31: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 31:
                     
                     jPanelKeyBoard.add(jPanelKey1);
                     jPanelKeyBoard.repaint();
@@ -2647,9 +2631,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 32: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 32:
                     
                     jPanelKeyBoard.add(jPanelKey2);
                     jPanelKeyBoard.repaint();
@@ -2657,9 +2639,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 33: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 33:
                     
                     jPanelKeyBoard.add(jPanelKey3);
                     jPanelKeyBoard.repaint();
@@ -2667,9 +2647,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 34: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 34:
                     
                     jPanelKeyBoard.add(jPanelKey4);
                     jPanelKeyBoard.repaint();
@@ -2677,9 +2655,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 35: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 35:
                     
                     jPanelKeyBoard.add(jPanelKey5);
                     jPanelKeyBoard.repaint();
@@ -2687,9 +2663,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 36: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 36:
                     
                     jPanelKeyBoard.add(jPanelKey6);
                     jPanelKeyBoard.repaint();
@@ -2697,9 +2671,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 37: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 37:
                     
                     jPanelKeyBoard.add(jPanelKey7);
                     jPanelKeyBoard.repaint();
@@ -2707,9 +2679,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 38: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 38:
                     
                     jPanelKeyBoard.add(jPanelKey8);
                     jPanelKeyBoard.repaint();
@@ -2717,9 +2687,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 39: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 39:
                     
                     jPanelKeyBoard.add(jPanelKey9);
                     jPanelKeyBoard.repaint();
@@ -2727,9 +2695,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 40: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 40:
                     
                     jPanelKeyBoard.add(jPanelKey0);
                     jPanelKeyBoard.repaint();
@@ -2737,9 +2703,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 41: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 41:
                     
                     jPanelKeyBoard.add(jPanelKeyDel);
                     jPanelKeyBoard.repaint();
@@ -2747,9 +2711,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName -= 1;
                     break;
-            case 42: jPanelKeyBoard.removeAll();
-                    jPanelKeyBoard.repaint();
-                    jPanelKeyBoard.revalidate();
+            case 42:
                     
                     jPanelKeyBoard.add(jPanelKeyPrev);
                     jPanelKeyBoard.repaint();
