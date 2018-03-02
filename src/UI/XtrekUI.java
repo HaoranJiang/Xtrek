@@ -2797,7 +2797,7 @@ public class XtrekUI extends javax.swing.JFrame {
                         break;
                     case FIVE:
                         screenPanel.add(TSPanel);
-                        SerialPortHandler.connect();
+                        //SerialPortHandler.connect();
                         situation = Situation.SATELLITE;
                         break;
                     case SIX:
