@@ -1,11 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * @Author Harry
  */
 package UI;
 
-import UI.XtrekUI.*;
+
 import gnu.io.*;
 import java.io.IOException;
 import java.io.InputStream;
@@ -27,11 +25,12 @@ public class SerialPortHandler implements Runnable, SerialPortEventListener{
     static Thread readThread;
     static CommPortIdentifier portID;
     static Enumeration portList;
-    static double decimalDegrees; //latitude
+    static double latitude; //latitude
     static char direction;
-    static double dec; //longitude
+    static double longitude; //longitude
     static char dir;
     static String time;
+    static boolean signal;
     public SerialPortHandler(){        
        try{
             serialPort = (SerialPort)portID.open("TheSatellite",3000);
@@ -61,6 +60,7 @@ public class SerialPortHandler implements Runnable, SerialPortEventListener{
         }catch(InterruptedException e){System.out.println(e);};       
     }
     
+    @Override
     public void serialEvent(SerialPortEvent event){
         switch(event.getEventType()){
             case SerialPortEvent.BI:
@@ -90,48 +90,39 @@ public static void update(){
         s = new String( buffer, 0, n ); 
         //System.out.println(s);
         if (s.startsWith("$GPGLL,,,")){
-            XtrekUI.Latitude.setText("      No signal!");
-            XtrekUI.Latitude.setForeground(Color.red);
-            XtrekUI.Longitude.setText("      No signal!"); 
-            XtrekUI.Longitude.setForeground(Color.red);
+            displayNoSignal();
+            signal = false;
         }
         else if (s.startsWith("$GPGLL")){
             //System.out.println(s);
+            signal = true;
             Integer degrees  = Integer.valueOf(s.substring(7,9)); //latitude degrees
             Integer minites  = Integer.valueOf(s.substring(9,11));//latitude minutes		  
             double seconds  = 60*0.00001*(Integer.valueOf(s.substring(12,17))); //latitude seconds, returned 
                                                                                  //string is in the form of 0.xxxxx mins 
                                                                                 //therefore *60*0.00001 to convert to seconds 
             direction= s.charAt(18); // direnction of latitude 				   
-            decimalDegrees = degrees + minites/60.0 + seconds / 3600.0;
-        
-            XtrekUI.Latitude.setText("Latitude: "+round(decimalDegrees,4)+" , "+direction);
-            Font f = new Font("MS Reference San Serif",Font.BOLD,18);
-            XtrekUI.Latitude.setFont(f);
-            XtrekUI.Latitude.setForeground(Color.green);
+            latitude = degrees + minites/60.0 + seconds / 3600.0;
             if (direction=='S')
-                decimalDegrees = (-1) * decimalDegrees; // convert latitude to nagetive if direction is South 
-            time     = (((s.substring(34,36).concat(":")).
-                                concat(s.substring(36,38))).
-                                concat(":")).concat(s.substring(38,40));//time 
-            XtrekUI.Time.setText(time);
-            XtrekUI.Time.setForeground(Color.green);
-			                                          
+                latitude = (-1) * latitude; // convert latitude to nagetive if direction is South 
+            
             Integer deg  = Integer.valueOf(s.substring(20,23)); //longitude degrees
             Integer min  = Integer.valueOf(s.substring(23,25));//longitude minutes		  
             double sec  = 60*0.00001*(Integer.valueOf(s.substring(26,31))); //longitude seconds, returned 
 									 //string is in the form of 0.xxxxx mins 
 									//therefore *60*0.00001 to convert to seconds 
-            dir= s.charAt(32); // direnction of longitude			   
-            dec = deg + min/60.0 + sec / 3600.0;
-            XtrekUI.Longitude.setText("Longitude: "+round(dec,4)+" , "+dir);
-            XtrekUI.Longitude.setForeground(Color.green);
-            XtrekUI.Longitude.setFont(f);
+            dir = s.charAt(32); // direnction of longitude			   
+            longitude = deg + min/60.0 + sec / 3600.0;
+
             if (dir=='W')
-                dec = (-1) * dec; // convert longitude to nagetive if direction is West 
-            //System.out.println(dec);
+                longitude = (-1) * longitude; // convert longitude to nagetive if direction is West 
            
-           
+             time     = (((s.substring(34,36).concat(":")).
+                        concat(s.substring(36,38))).
+                        concat(":")).concat(s.substring(38,40));//time 
+            XtrekUI.Time.setText(time);
+            XtrekUI.Time.setForeground(Color.green);
+            displayPosition();  // display the updated postion to UI screen
         }
         }
         }catch(IOException e){System.out.println(e);}
@@ -146,15 +137,35 @@ public static double round(double value, int places) {
     bd = bd.setScale(places, RoundingMode.HALF_UP);
     return bd.doubleValue();
 }
+private static void displayNoSignal(){
+    XtrekUI.Latitude.setText("      No signal!");
+    XtrekUI.Latitude.setForeground(Color.red);
+    XtrekUI.Longitude.setText("      No signal!"); 
+    XtrekUI.Longitude.setForeground(Color.red);
+}
+
+private static void displayPosition(){
+    XtrekUI.Latitude.setText("Latitude: "+round(Math.abs(latitude),4)+" , "+direction);
+    Font f = new Font("MS Reference San Serif",Font.BOLD,18);
+    XtrekUI.Latitude.setFont(f);
+    XtrekUI.Latitude.setForeground(Color.green);
+    XtrekUI.Longitude.setText("Longitude: "+round(Math.abs(longitude),4)+" , "+dir);
+    XtrekUI.Longitude.setForeground(Color.green);
+    XtrekUI.Longitude.setFont(f);
+}
+
 
 public static double getLatitude(){
-        return (decimalDegrees); // get latitude withour direction 
+        return (latitude); // get latitude withour direction 
     }
 
 public static double getLongitude(){  
-        return(dec); // get longitude without direction 
+        return(longitude); // get longitude without direction 
     }
-
+public static String getPosition(){
+    String position = "" + latitude + ","+longitude;
+    return position;
+}
 public static String getTime(){
         return(time);
     }
@@ -163,6 +174,7 @@ public void disconnect(){
         serialPort.removeEventListener();
         serialPort.close();
         in.close();
+        signal = false;
     }catch(Exception e){}               
     }
 
