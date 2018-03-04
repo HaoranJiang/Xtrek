@@ -1,5 +1,5 @@
 /*
- * @Author Harry
+ * @Author harry
  */
 package UI;
 
@@ -158,7 +158,6 @@ private static void displayPosition(){
 public static double getLatitude(){
         return (latitude); // get latitude withour direction 
     }
-
 public static double getLongitude(){  
         return(longitude); // get longitude without direction 
     }
