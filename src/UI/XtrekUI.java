@@ -4,6 +4,7 @@ package UI;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+import MVC.SatelliteController;
 import javaapplication1.HttpConnect;
 import javaapplication1.NewSoundAndSpeech;
 import static java.lang.Thread.sleep;
@@ -3115,7 +3116,7 @@ public class XtrekUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(XtrekUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        SerialPortHandler.connect();
+        SatelliteController.connect();
         //</editor-fold>
 
         /* Create and display the form */

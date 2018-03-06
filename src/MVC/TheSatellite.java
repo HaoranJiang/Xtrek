@@ -1,4 +1,4 @@
-package Controllers;
+package MVC;
 
 import UI.*;
 import gnu.io.*;
@@ -13,7 +13,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 /**
- * @author Harry Sun (Group L WorkPackage 5)
+ * @author Yukun Sun (Group L WorkPackage 5)
  * @last_update 04/03/2018
  * @function open and read NMEA message from serial port, and display it on Satellite UI
  */
