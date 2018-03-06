@@ -6,7 +6,8 @@ package UI;
  */
 import javaapplication1.HttpConnect;
 import javaapplication1.NewSoundAndSpeech;
-import directionsdemo.tripComputer;
+
+//import directionsdemo.tripComputer;
 import static java.lang.Thread.sleep;
 import java.net.URLEncoder;
 import java.util.logging.Level;
@@ -41,6 +42,7 @@ public class XtrekUI extends javax.swing.JFrame {
     public static final int MIN_ZOOM = 0;
     public static final int MAX_ZOOM = 21;
     private static int zoomValue = 4;
+    static boolean submitClicked = false;
     Browser browser = new Browser();
     
 
@@ -1409,8 +1411,8 @@ public class XtrekUI extends javax.swing.JFrame {
             .addGap(0, 245, Short.MAX_VALUE)
             .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(whereToPanelLayout.createSequentialGroup()
-                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 34, Short.MAX_VALUE)
-                    .addGap(0, 211, Short.MAX_VALUE)))
+                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
+                    .addGap(0, 200, Short.MAX_VALUE)))
             .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whereToPanelLayout.createSequentialGroup()
                     .addGap(0, 33, Short.MAX_VALUE)
@@ -2847,22 +2849,6 @@ public class XtrekUI extends javax.swing.JFrame {
                     situation = "whereTo";
                     break;
                 case 1:    
-                    if(tripComputerRun == false){
-                    String s0 ="50.735459,-3.533207";
-                    String s1 ="50.722932 -3.530193";
-                    
-            
-            {
-                try {
-                    displayOdem(s0,s1);
-                } catch (JSONException ex) {
-                    Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-                    movingTimeIncease();
-                    displaySpeed();
-                    tripComputerRun = true;
-                    }
                     screenPanel.add(tripComputerPanel);
                     screenPanel.repaint();
                     screenPanel.revalidate();
@@ -2997,8 +2983,49 @@ public class XtrekUI extends javax.swing.JFrame {
                     
                     currentPanelName = 40;
                     break;
-            case 29: jTextFieldDestination.setText(textdisp + "submit");
-                    textdisp = textdisp + " ";
+            case 29: jTextFieldDestination.setText(textdisp);
+                    
+                    if(submitClicked == false){
+                        String s0 ="50.735459,-3.533207";
+                        String s1 ="50.722932 -3.530193";
+                    
+            
+                        {
+                            try {
+                                tripComputer.displayOdem(s0,s1);
+                                tripComputer.movingTimeIncease();
+                                tripComputer.displaySpeed();
+                                submitClicked = true;
+                                textdisp = "";
+                                jTextFieldDestination.setText(textdisp);
+                            } catch (JSONException ex) {
+                                Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                        
+                        
+                    }
+                    if(submitClicked == true){
+                        odometer = "0 KM";
+                        odemDisplay.setText(odometer);
+                        t = 0;
+                        String s0 ="50.735459,-3.533207";
+                        String s1 ="50.722932 -3.530193";
+                    
+            
+                        {
+                            try {
+                                tripComputer.displayOdem(s0,s1);
+                                
+                                
+                                textdisp = "";
+                                jTextFieldDestination.setText(textdisp);
+                            } catch (JSONException ex) {
+                                Logger.getLogger(XtrekUI.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                        
+                    }
                     break;
                     
                     
@@ -3047,7 +3074,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     currentPanelName = 28;
                     break;
             case 42: jTextFieldDestination.setText(textdisp + "submit");
-                    textdisp = textdisp + " ";
+                    textdisp = "";
                     break;     
         }
         } else if (situation == "speech"){
@@ -3078,99 +3105,9 @@ public class XtrekUI extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_selectButtonActionPerformed
 
-    public void movingTimeIncease(){
-        
-        Thread time = new Thread(){
-        public void run(){
-        for(;;){
-            String str_s = Integer.toString(second);
-            String str_m = Integer.toString(minute);
-            String str_h = Integer.toString(hour);
-            timeDisplay.setText(str_h+"Hour    "+str_m+"Min    "+str_s+"Sec");
-            try{sleep(1000);}catch(InterruptedException e){}
-            
-            second++;
-            if(second==60){
-                minute++;
-                second = 0;
-            }
-            if(minute==60){
-                hour++;
-                minute = 0;
-            }
-        }
-        }
-        };
-        time.start();
-    }
     
-    public byte[] readDirections(String start,String end){
-        try {
-            final String encOrigin      = URLEncoder.encode( start,      "UTF-8" );
-            final String encDestination = URLEncoder.encode( end, "UTF-8" );
-            final String method = "GET";
-            final String url 
-            = ( "https://maps.googleapis.com/maps/api/directions/json"
-              + "?" + "origin"      + "=" + encOrigin
-              + "&" + "destination" + "=" + encDestination
-              + "&" + "mode"        + "=" + MODE
-              );
-            final byte[] body
-             = {}; 
-            final String[][] headers
-             = {};
-            byte[] response = HttpConnect.httpConnect( method, url, headers, body );
-            return response;
-            } catch ( Exception ex ) {return null;}
-    }
     
-    public String calculateOdem(String start,String end)throws JSONException{
-        byte[] directions = readDirections(start,end);
-        String s = new String(directions);
-        JSONObject obj = new JSONObject(s);
-        JSONArray routes = (JSONArray) obj.get("routes");
-        JSONObject child1 = (JSONObject) routes.getJSONObject(0);
-        JSONArray legs = (JSONArray) child1.get("legs");
-        JSONObject child2 = (JSONObject) legs.getJSONObject(0);
-        JSONObject distance = (JSONObject) child2.get("distance");
-        String dis = distance.getString("text");
-        return dis;
-    }
     
-    public void displayOdem(String start,String end)throws JSONException{
-        String odem = calculateOdem(start,end);
-        odometer = odem;
-        odemDisplay.setText(odometer);
-    
-    }
-    
-    public void displaySpeed(){
-        speedDisplay.setText("0   KM/H");
-        Thread speed = new Thread(){
-            public void run(){
-               for(;;){
-                   
-                   try{sleep(1000);}catch(InterruptedException e){}
-                   
-                   t++;
-                   
-                   String pureSpeed = odometer.substring(0,odometer.length()-3);
-                   Double distanceValue = Double.parseDouble(pureSpeed);
-                   Double speedValue = distanceValue/t*3600;
-                   String speedInKmh = Double.toString(speedValue) + "   KM/H";
-                   
-                   speedDisplay.setText(speedInKmh);
-               
-               
-               }
-            
-            }
-        };
-        
-        speed.start();
-        
-        //speedDisplay.setText("");
-    }
     
     private void aboutPanelMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutPanelMouseMoved
 
@@ -3359,7 +3296,7 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JPanel menu5Panel;
     private javax.swing.JPanel menu6Panel;
     private javax.swing.JButton menuButton;
-    private javax.swing.JTextField odemDisplay;
+    public static javax.swing.JTextField odemDisplay;
     private javax.swing.JPanel offPanel;
     private javax.swing.JButton onButton;
     private javax.swing.JPanel screenPanel;
@@ -3371,8 +3308,8 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JPanel smenu5Panel;
     private javax.swing.JPanel smenu6Panel;
     private javax.swing.JPanel speechPanel;
-    private javax.swing.JTextField speedDisplay;
-    private javax.swing.JTextField timeDisplay;
+    public static javax.swing.JTextField speedDisplay;
+    public static javax.swing.JTextField timeDisplay;
     private javax.swing.JLabel tripComputerOdem;
     private javax.swing.JPanel tripComputerPanel;
     private javax.swing.JLabel tripComputerSpeed;
