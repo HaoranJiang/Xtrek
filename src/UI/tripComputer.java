@@ -69,9 +69,9 @@ public static void movingTimeIncease(){
         byte[] directions = readDirections(start,end);
         String s = new String(directions);
         JSONObject obj = new JSONObject(s);
-        JSONArray routes = (JSONArray) obj.get("routes");
+        JSONArray routes = (JSONArray) obj.getJSONArray("routes");
         JSONObject child1 = (JSONObject) routes.getJSONObject(0);
-        JSONArray legs = (JSONArray) child1.get("legs");
+        JSONArray legs = (JSONArray) child1.getJSONArray("legs");
         JSONObject child2 = (JSONObject) legs.getJSONObject(0);
         JSONObject distance = (JSONObject) child2.get("distance");
         String dis = distance.getString("text");

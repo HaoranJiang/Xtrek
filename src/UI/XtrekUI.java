@@ -103,10 +103,10 @@ public class XtrekUI extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jPanelKeyJ = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
-        jPanelKeyK = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
         jPanelKeyL = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
+        jPanelKeyK = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
         jPanelKeyM = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jPanelKeyN = new javax.swing.JPanel();
@@ -299,7 +299,7 @@ public class XtrekUI extends javax.swing.JFrame {
         );
         jPanelSubmitButtonLayout.setVerticalGroup(
             jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 32, Short.MAX_VALUE)
+            .addGap(0, 34, Short.MAX_VALUE)
             .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -319,7 +319,7 @@ public class XtrekUI extends javax.swing.JFrame {
         );
         jPanelSubmitHighlightLayout.setVerticalGroup(
             jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 32, Short.MAX_VALUE)
+            .addGap(0, 34, Short.MAX_VALUE)
             .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel62, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -351,7 +351,7 @@ public class XtrekUI extends javax.swing.JFrame {
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
                     .addComponent(jLabelTextDisplay)
-                    .addGap(0, 11, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
                     .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -378,9 +378,7 @@ public class XtrekUI extends javax.swing.JFrame {
         );
         jPanelKeyALayout.setVerticalGroup(
             jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKeyALayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel13))
+            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanelKeyBoard.add(jPanelKeyA, "card2");
@@ -604,6 +602,8 @@ public class XtrekUI extends javax.swing.JFrame {
 
         jPanelKeyBoard.add(jPanelKeyJ, "card11");
 
+        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_l.png"))); // NOI18N
+
         jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_k.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanelKeyKLayout = new javax.swing.GroupLayout(jPanelKeyK);
@@ -627,10 +627,6 @@ public class XtrekUI extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
-        jPanelKeyBoard.add(jPanelKeyK, "card12");
-
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_l.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanelKeyLLayout = new javax.swing.GroupLayout(jPanelKeyL);
         jPanelKeyL.setLayout(jPanelKeyLLayout);
         jPanelKeyLLayout.setHorizontalGroup(
@@ -641,6 +637,11 @@ public class XtrekUI extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jLabel28)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyLLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanelKeyK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyLLayout.setVerticalGroup(
             jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -649,6 +650,11 @@ public class XtrekUI extends javax.swing.JFrame {
                 .addGroup(jPanelKeyLLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jLabel28)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyLLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanelKeyK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -1400,9 +1406,7 @@ public class XtrekUI extends javax.swing.JFrame {
             whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(whereToPanelLayout.createSequentialGroup()
-                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -1411,8 +1415,8 @@ public class XtrekUI extends javax.swing.JFrame {
             .addGap(0, 245, Short.MAX_VALUE)
             .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(whereToPanelLayout.createSequentialGroup()
-                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addGap(0, 200, Short.MAX_VALUE)))
+                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 211, Short.MAX_VALUE)))
             .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whereToPanelLayout.createSequentialGroup()
                     .addGap(0, 33, Short.MAX_VALUE)
@@ -2981,7 +2985,7 @@ public class XtrekUI extends javax.swing.JFrame {
                     jPanelKeyBoard.repaint();
                     jPanelKeyBoard.revalidate();
                     
-                    currentPanelName = 40;
+                    currentPanelName = 41;
                     break;
             case 29: jTextFieldDestination.setText(textdisp);
                     
@@ -3296,7 +3300,7 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JPanel menu5Panel;
     private javax.swing.JPanel menu6Panel;
     private javax.swing.JButton menuButton;
-    public static javax.swing.JTextField odemDisplay;
+    private javax.swing.JTextField odemDisplay;
     private javax.swing.JPanel offPanel;
     private javax.swing.JButton onButton;
     private javax.swing.JPanel screenPanel;
@@ -3308,8 +3312,8 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JPanel smenu5Panel;
     private javax.swing.JPanel smenu6Panel;
     private javax.swing.JPanel speechPanel;
-    public static javax.swing.JTextField speedDisplay;
-    public static javax.swing.JTextField timeDisplay;
+    private javax.swing.JTextField speedDisplay;
+    private javax.swing.JTextField timeDisplay;
     private javax.swing.JLabel tripComputerOdem;
     private javax.swing.JPanel tripComputerPanel;
     private javax.swing.JLabel tripComputerSpeed;
