@@ -3,9 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/Controllers/TheSatellite.java</file>
+            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/TheSatellite.java</file>
+            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/SatelliteView.java</file>
+            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/SatelliteController.java</file>
+            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/SatelliteModel.java</file>
+            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/TSPanel.java</file>
             <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/UI/XtrekUI.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/UI/SerialPortHandler.java</file>
         </group>
     </open-files>
 </project-private>

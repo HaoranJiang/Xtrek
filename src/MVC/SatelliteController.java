@@ -83,19 +83,19 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     /* Read from the serial port, convert messages and update position */
     public void update(){
     try{
-        byte[] buffer  = new byte[ 1024 ];
+        byte[] buffer  = new byte[ 128 ];
         String s;
         int    n;             
         while( ( n = in.read( buffer ) ) > -1 ) {
         s = new String( buffer, 0, n ); 
-        
         // no available message.. 
         if (s.startsWith("$GPGLL,,,")){
-            signal = false;
-            model.updateSignal(false);
+            signal = false; 
+            model.updateSignal(false);      
         }
         // available message..
         else if (s.startsWith("$GPGLL")){
+            System.out.println("Updating...");
             signal = true;
             model.updateSignal(true);
             	
@@ -104,6 +104,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             double longitude = converter(s.substring(20,23),s.substring(23,25),s.substring(26,31));
             String time     =  convertTime(s.substring(34,36),s.substring(36,38),s.substring(38,40));
             model.updateLatitude(latitude, s.charAt(18));
+            
             model.updateLongitude(longitude,s.charAt(32));
             model.updateTime(time);
             }
