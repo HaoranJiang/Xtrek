@@ -18,34 +18,14 @@ import javax.swing.JPanel;
  *
  * @author Yukun Sun (Group L WorkPackage 5)
  */
-public class SatelliteView extends JPanel implements Observer{
-    private final SatelliteModel model;
-    public SatelliteView(SatelliteController controller, SatelliteModel model){
-        this.model = model;
-        model.addObserver(this);
+public class SatelliteView extends JPanel {
+   
+    public SatelliteView(){
+ 
     }
    
 
-    @Override
-    public void update(Observable o, Object arg) {
-       if (model ==o){
-           if (SatelliteModel.signal == true){                          // data available
-                Font f = new Font("MS Reference San Serif",Font.BOLD,18);
-                XtrekUI.Latitude.setText("Latitude: "+round(Math.abs(SatelliteModel.latitude),4)+" , "+SatelliteModel.dOLatitude);          
-                XtrekUI.Latitude.setFont(f);
-                XtrekUI.Latitude.setForeground(Color.green);
-                XtrekUI.Longitude.setText("Longitude: "+round(Math.abs(SatelliteModel.longitude),4)+" , "+SatelliteModel.dOLongitude);
-                XtrekUI.Longitude.setForeground(Color.green);
-                XtrekUI.Longitude.setFont(f);
-           }
-           else{                                            // no signal
-                XtrekUI.Latitude.setText("      No signal!");
-                XtrekUI.Latitude.setForeground(Color.red);
-                XtrekUI.Longitude.setText("      No signal!"); 
-                XtrekUI.Longitude.setForeground(Color.red);
-           }
-       }
-    }
+
     /* Round a value to certain decimal places */
     private double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();

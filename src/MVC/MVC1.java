@@ -13,11 +13,11 @@ import javax.swing.JFrame;
  */
 public class MVC1 {
     public static void main(String[] argv){
-
+        
+        SatellitePanel view = new SatellitePanel();
         SatelliteModel model = new SatelliteModel();
-        SatelliteController controller = new SatelliteController(model);
-        SatellitePanel view = new SatellitePanel(controller,model);
-       SatelliteController.connect();
+        SatelliteController controller = new SatelliteController(model,view);       
+        SatelliteController.connect();
         
         JFrame jframe = new JFrame();
         jframe.add(view);

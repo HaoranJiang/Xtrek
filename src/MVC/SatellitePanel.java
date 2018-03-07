@@ -11,15 +11,15 @@ import java.awt.Font;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Observable;
-import java.util.Observer;
+
 
 /**
  *
  * @author harry
  */
-public class SatellitePanel extends javax.swing.JPanel implements Observer {
+public class SatellitePanel extends javax.swing.JPanel {
 
-
+    public SatellitePanel(){ initComponents();}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -37,13 +37,16 @@ public class SatellitePanel extends javax.swing.JPanel implements Observer {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         latitude.setEditable(false);
-        add(latitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 176, 70));
+        latitude.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        add(latitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 100));
 
         longitude.setEditable(false);
-        add(longitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 88, 176, 70));
+        longitude.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
+        add(longitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 220, 100));
 
         time.setEditable(false);
-        add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 191, 176, 41));
+        time.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 220, 40));
     }// </editor-fold>//GEN-END:initComponents
 
 
@@ -52,39 +55,41 @@ public class SatellitePanel extends javax.swing.JPanel implements Observer {
     private javax.swing.JTextField longitude;
     private javax.swing.JTextField time;
     // End of variables declaration//GEN-END:variables
-    private final SatelliteModel model;
-    
-    public SatellitePanel(SatelliteController controller, SatelliteModel model){
-        initComponents();
-        this.model = model;
-        model.addObserver(this);
-    }
-   
 
-    @Override
-    public void update(Observable o, Object arg) {
- 
-       if (model ==o){
-           if (SatelliteModel.signal == true){                          // data available
-                Font f = new Font("MS Reference San Serif",Font.BOLD,18);
-                latitude.setText("Latitude: "+round(Math.abs(SatelliteModel.latitude),4)+" , "+SatelliteModel.dOLatitude);          
-                latitude.setFont(f);
-                latitude.setForeground(Color.green);
-                longitude.setText("Longitude: "+round(Math.abs(SatelliteModel.longitude),4)+" , "+SatelliteModel.dOLongitude);
-                longitude.setForeground(Color.green);
-                longitude.setFont(f);
-                time.setText(SatelliteModel.time);
-           }
-           else{                                            // no signal
-                latitude.setText("      No signal!");
-                latitude.setForeground(Color.red);
-                longitude.setText("      No signal!"); 
-                longitude.setForeground(Color.red);
-                time.setText("");
-           }
-       }
+    Font f = new Font("MS Reference San Serif",Font.BOLD,18);
+    
+    /**
+     *
+     * @param signal signal
+     * @param latitude latitude
+     * @param dOLatitude direction of latitude
+     * @param longitude longitude
+     * @param dOLongitude direction of longitude
+     * @param time   time
+     */
+    public void showPosition(boolean signal,double latitude,char dOLatitude,double longitude,
+            char dOLongitude, String time){
+        if( signal == true ){
+            this.latitude.setText("Latitude: "+round(Math.abs(latitude),4)+" , "+dOLatitude);
+            this.longitude.setText("Longitude: "+round(Math.abs(longitude),4)+" , "+dOLongitude);
+            this.latitude.setFont(f);
+            this.longitude.setFont(f);
+            this.latitude.setForeground(Color.green);
+            this.longitude.setForeground(Color.green);
+            this.time.setText(time);                 
+        }
+        else{
+            this.latitude.setText("       No signal!");
+            this.longitude.setText("       No signal!");
+            this.time.setText("Last signal at: "+this.time.getText());
+            this.latitude.setForeground(Color.red);
+            this.longitude.setForeground(Color.red);
+        }
     }
-    /* Round a value to certain decimal places */
+    
+    /**
+     * @ helper function : Round a value to certain decimal places 
+     */
     private double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
         
@@ -92,4 +97,6 @@ public class SatellitePanel extends javax.swing.JPanel implements Observer {
         bd = bd.setScale(places, RoundingMode.HALF_UP);
     return bd.doubleValue();
     }
+
+   
 }

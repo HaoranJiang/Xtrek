@@ -6,7 +6,6 @@
 package MVC;
 
 
-import java.util.Observable;
 
 
 
@@ -14,13 +13,13 @@ import java.util.Observable;
  *
  * @author Yukun Sun (Group L WorkPackage 5)
  */
-public class SatelliteModel extends Observable {
-    static double latitude;
-    static double longitude;
-    static char   dOLatitude;  // direction of latitude
-    static char   dOLongitude;  // direction of longitude
-    static boolean signal;
-    static String time;
+public class SatelliteModel {
+    private double latitude;
+    private double longitude;
+    private char   dOLatitude;  // direction of latitude
+    private char   dOLongitude;  // direction of longitude
+    private boolean signal;
+    private String time;
     
     public SatelliteModel(){
              
@@ -28,33 +27,44 @@ public class SatelliteModel extends Observable {
     
     
     public void updateSignal(boolean signal){
-        SatelliteModel.signal = signal;
-        setChanged();
-        notifyObservers();
+        this.signal = signal;
     }
     
-    public void updateLatitude(double latitude, char direction) {
-        SatelliteModel.latitude = latitude;
-        SatelliteModel.dOLatitude = direction;
-        if (dOLatitude =='S') 
-            latitude = (-1) * latitude;
-        setChanged();
-        notifyObservers( latitude );
-        notifyObservers( dOLatitude );
+    public void updateLatitude(double latitude, char direction) {      
+        if (dOLatitude =='S'){
+            this.latitude = (-1) * latitude;
+        }else{
+        this.latitude = latitude;
+        }
+        this.dOLatitude = direction;
+ 
+
     }
-    public void updateLongitude(double longitude, char direction) {
-        SatelliteModel.longitude = longitude;
-        SatelliteModel.dOLongitude = direction;
-        if (dOLongitude =='W') 
-            longitude = (-1) * longitude;
-        setChanged();
-        notifyObservers( longitude );
-        notifyObservers( dOLongitude );
+    
+    public void updateLongitude(double longitude, char direction) { 
+        if (dOLongitude =='W'){
+            this.longitude = (-1) * longitude;
+        }else{
+            this.longitude = longitude;
+        }
+        this.dOLongitude = direction;
+        
     }
+    
     public void updateTime(String time){
-        SatelliteModel.time = time;
-        setChanged();
-        notifyObservers( time );
+        this.time = time;
+
+    }
+    
+    public boolean getSignal(){return signal;}
+    public double  getLatitude(){return latitude;}
+    public double  getLongitude(){return longitude;}
+    public char    getDOLatitude(){return dOLatitude;}
+    public char    getDOLongitude(){return dOLongitude;}
+    public String  getTime(){return time;}
+    public String  getPosition(){
+        String position = "" + latitude + longitude;
+        return position;
     }
 
 }

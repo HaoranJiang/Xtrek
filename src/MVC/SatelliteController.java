@@ -20,6 +20,7 @@ import java.util.TooManyListenersException;
  */
 public class SatelliteController implements Runnable, SerialPortEventListener{
     private SatelliteModel model;
+    private static SatellitePanel view;
     private boolean signal;
     static SerialPort serialPort;
     static InputStream in;
@@ -27,10 +28,11 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     static CommPortIdentifier portID;
     static Enumeration portList;
     
-    public SatelliteController(SatelliteModel model){
+    public SatelliteController(SatelliteModel model,SatellitePanel view){
         this.model = model;
+        this.view = view;
     }
-        /* Open serial port*/
+    /* Open serial port*/
     public SatelliteController(){        
        try{
             serialPort = (SerialPort)portID.open("TheSatellite",3000);
@@ -90,13 +92,13 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
         s = new String( buffer, 0, n ); 
         // no available message.. 
         if (s.startsWith("$GPGLL,,,")){
-            signal = false; 
+            this.signal = false; 
             model.updateSignal(false);      
         }
         // available message..
         else if (s.startsWith("$GPGLL")){
             System.out.println("Updating...");
-            signal = true;
+            this.signal = true;
             model.updateSignal(true);
             	
             /* Convert NMEA message */
@@ -107,11 +109,16 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             
             model.updateLongitude(longitude,s.charAt(32));
             model.updateTime(time);
+            updateView();
             }
         }
     }catch(IOException e){}
    }
-    
+    /* update position in view*/   
+    public void updateView(){
+        view.showPosition(model.getSignal(),model.getLatitude(),model.getDOLatitude(),
+                model.getLongitude(),model.getDOLongitude(),model.getTime());
+    }
    /* Convert NMEA string message into decimal degrees */
     private double converter(String degree, String minute, String second){
         Integer degrees  = Integer.valueOf(degree);
@@ -135,18 +142,23 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             model.updateSignal(false);
         }catch(IOException e){}               
 }
-  /* Public method, to connect port and try to get GPS location */
+  /* Public static method, to connect port and try to get GPS location */
     public static void connect(){
       portList = CommPortIdentifier.getPortIdentifiers();
-      
+
       while(portList.hasMoreElements()){
           portID = (CommPortIdentifier)portList.nextElement();
           if (portID.getPortType() == CommPortIdentifier.PORT_SERIAL){
             if(portID.getName().equals("COM4")){
                 SatelliteController reader = new SatelliteController();
-            }
+                return;
+            }                  
       }
       }
+      // not connected with GPS device
+    
+      view.showPosition(false, 0, 'a', 0,'a', "");
+      
   }  
     
     
