@@ -14,7 +14,7 @@ public class whereToView extends javax.swing.JPanel {
     /**
      * Creates new form whereToPanel
      */
-    public whereToView() {
+    public whereToView(WP2Model model) {
         initComponents();
     }
 
