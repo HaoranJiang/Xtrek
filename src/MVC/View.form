@@ -17,7 +17,7 @@
     <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
-    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="9"/>
     <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,2,120,0,0,1,104"/>
   </AuxValues>
 
@@ -28,7 +28,7 @@
     <Component class="javax.swing.JButton" name="upButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/+.PNG"/>
+          <Image iconType="3" name="/UI/+.PNG"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
@@ -46,7 +46,7 @@
     <Component class="javax.swing.JButton" name="onButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Xtrek - &#x526f;&#x672c; (2).PNG"/>
+          <Image iconType="3" name="/UI/on.PNG"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
@@ -64,7 +64,7 @@
     <Component class="javax.swing.JButton" name="downButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/-.PNG"/>
+          <Image iconType="3" name="/UI/-.PNG"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
@@ -82,7 +82,7 @@
     <Component class="javax.swing.JButton" name="selectButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/select.PNG"/>
+          <Image iconType="3" name="/UI/select.PNG"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
@@ -100,7 +100,7 @@
     <Component class="javax.swing.JButton" name="menuButton">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/back.PNG"/>
+          <Image iconType="3" name="/UI/back.PNG"/>
         </Property>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="null"/>
@@ -121,6 +121,9 @@
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="80" y="240" width="203" height="245"/>
@@ -169,11 +172,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel2">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/menu1.PNG"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -198,11 +196,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel3">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/menu2.PNG"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -227,11 +220,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel4">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/menu3.PNG"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -256,11 +244,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel5">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/menu4.PNG"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -285,11 +268,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel6">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/menu5.PNG"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -314,11 +292,6 @@
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel7">
-              <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/menu6.PNG"/>
-                </Property>
-              </Properties>
             </Component>
           </SubComponents>
         </Container>
@@ -378,7 +351,7 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="203" max="32767" attributes="0"/>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLabel12" max="32767" attributes="0"/>
@@ -414,11 +387,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel12">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/text.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextField1">
                   <Properties>
@@ -465,11 +433,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel13">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_a.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -508,11 +471,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel18">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_b.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -543,11 +501,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel19">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_c.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -586,11 +539,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel20">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_d.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -629,11 +577,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel21">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_e.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -672,11 +615,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel22">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_f.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -715,11 +653,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel23">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_g.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -758,11 +691,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel24">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_h.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -801,11 +729,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel25">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_i.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -844,11 +767,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel26">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_j.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -887,11 +805,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel27">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_k.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -930,11 +843,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel28">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_l.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -973,11 +881,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel29">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_m.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1016,11 +919,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel30">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_n.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1059,11 +957,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel31">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_o.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1102,11 +995,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel32">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_p.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1145,11 +1033,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel33">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_q.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1188,11 +1071,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel34">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_r.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1231,11 +1109,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel35">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_s.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1274,11 +1147,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel36">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_t.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1317,11 +1185,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel37">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_u.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1360,11 +1223,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel38">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_v.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1403,11 +1261,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel39">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_w.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1446,11 +1299,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel40">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_x.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1489,11 +1337,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel41">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_y.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1532,11 +1375,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel42">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_z.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1575,11 +1413,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel43">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_space.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1618,11 +1451,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel44">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_next.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1661,11 +1489,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel45">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_1.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1704,11 +1527,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel46">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_2.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1747,11 +1565,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel47">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_3.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1790,11 +1603,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel48">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_4.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1833,11 +1641,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel49">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_5.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1876,11 +1679,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel50">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_6.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1919,11 +1717,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel51">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_7.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1962,11 +1755,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel52">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_8.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2005,11 +1793,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel53">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_9.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2048,11 +1831,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel54">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_0.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2091,11 +1869,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel55">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_del.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2134,11 +1907,6 @@
                   </Layout>
                   <SubComponents>
                     <Component class="javax.swing.JLabel" name="jLabel56">
-                      <Properties>
-                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/key_prev.png"/>
-                        </Property>
-                      </Properties>
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2245,9 +2013,6 @@
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel8">
                   <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/speech1.png"/>
-                    </Property>
                     <Property name="alignmentX" type="float" value="4.0"/>
                     <Property name="alignmentY" type="float" value="2.0"/>
                   </Properties>
@@ -2278,11 +2043,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel57">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/speech2.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -2310,11 +2070,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel58">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/speech3.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -2342,11 +2097,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel59">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/speech4.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -2374,11 +2124,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel60">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/speech5.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -2406,11 +2151,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel61">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/speech6.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
               </SubComponents>
             </Container>
@@ -2555,7 +2295,7 @@
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/Xtrek - &#x526f;&#x672c; - &#x526f;&#x672c;.PNG"/>
+          <Image iconType="3" name="/UI/blank.PNG"/>
         </Property>
       </Properties>
       <Constraints>

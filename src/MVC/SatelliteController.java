@@ -1,7 +1,7 @@
 
 package MVC;
 
-import YSWP5.*;
+
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
 import gnu.io.SerialPortEvent;

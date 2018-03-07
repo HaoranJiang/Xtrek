@@ -1,7 +1,6 @@
 package MVC;
 
 
-
 /**
  *@MVC - view. Display latitude/longitude/time. Refreshed by controller.
  * @authorYukun Sun (Group L WorkPackage 5)

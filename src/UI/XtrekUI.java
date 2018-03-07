@@ -19,8 +19,7 @@ import java.awt.BorderLayout;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
 import javaapplication1.SoundAndSpeech;
-import UI.Situation;
-import UI.Menu;
+
 
 /**
  *

@@ -5,6 +5,10 @@
  */
 package MVC;
 
+import MVC.Model.Menu;
+import MVC.Model.Situation;
+import static MVC.View.TSPanel;
+
 
 
 /**

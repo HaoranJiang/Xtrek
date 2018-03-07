@@ -1,9 +1,8 @@
 package MVC;
 
 
-import MVC.Model;
-import static MVC.View.*;
 
+import static MVC.View.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 /**

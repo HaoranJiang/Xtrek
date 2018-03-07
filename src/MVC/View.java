@@ -5,8 +5,7 @@ import MVC.Model;
 import MVC.Controller;
 import static MVC.Model.situation;
 import static MVC.Model.menu;
-import YSWP5.AboutModePanel;
-import YSWP5.SatellitePanel;
+
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
@@ -20,6 +19,8 @@ public class View extends javax.swing.JFrame {
 
     /**
      * Creates new form View
+     * @param model
+     * @param controller
      */
     public View(Model model, Controller controller) {
         initComponents();
@@ -168,7 +169,7 @@ public class View extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        upButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/+.PNG"))); // NOI18N
+        upButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/+.PNG"))); // NOI18N
         upButton.setBorder(null);
         upButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -177,7 +178,7 @@ public class View extends javax.swing.JFrame {
         });
         getContentPane().add(upButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 74, 46, 55));
 
-        onButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Xtrek - 副本 (2).PNG"))); // NOI18N
+        onButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/on.PNG"))); // NOI18N
         onButton.setBorder(null);
         onButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,7 +187,7 @@ public class View extends javax.swing.JFrame {
         });
         getContentPane().add(onButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 60, 60));
 
-        downButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/-.PNG"))); // NOI18N
+        downButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/-.PNG"))); // NOI18N
         downButton.setBorder(null);
         downButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +196,7 @@ public class View extends javax.swing.JFrame {
         });
         getContentPane().add(downButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 131, 44, 53));
 
-        selectButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.PNG"))); // NOI18N
+        selectButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/select.PNG"))); // NOI18N
         selectButton.setBorder(null);
         selectButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,7 +205,7 @@ public class View extends javax.swing.JFrame {
         });
         getContentPane().add(selectButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 204, 50, 71));
 
-        menuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/back.PNG"))); // NOI18N
+        menuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/back.PNG"))); // NOI18N
         menuButton.setBorder(null);
         menuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,8 +222,6 @@ public class View extends javax.swing.JFrame {
 
         menu1Panel.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu1.PNG"))); // NOI18N
-
         javax.swing.GroupLayout menu1PanelLayout = new javax.swing.GroupLayout(menu1Panel);
         menu1Panel.setLayout(menu1PanelLayout);
         menu1PanelLayout.setHorizontalGroup(
@@ -235,8 +234,6 @@ public class View extends javax.swing.JFrame {
         );
 
         screenPanel.add(menu1Panel, "card4");
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu2.PNG"))); // NOI18N
 
         javax.swing.GroupLayout menu2PanelLayout = new javax.swing.GroupLayout(menu2Panel);
         menu2Panel.setLayout(menu2PanelLayout);
@@ -251,8 +248,6 @@ public class View extends javax.swing.JFrame {
 
         screenPanel.add(menu2Panel, "card4");
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu3.PNG"))); // NOI18N
-
         javax.swing.GroupLayout menu3PanelLayout = new javax.swing.GroupLayout(menu3Panel);
         menu3Panel.setLayout(menu3PanelLayout);
         menu3PanelLayout.setHorizontalGroup(
@@ -265,8 +260,6 @@ public class View extends javax.swing.JFrame {
         );
 
         screenPanel.add(menu3Panel, "card5");
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu4.PNG"))); // NOI18N
 
         javax.swing.GroupLayout menu4PanelLayout = new javax.swing.GroupLayout(menu4Panel);
         menu4Panel.setLayout(menu4PanelLayout);
@@ -281,8 +274,6 @@ public class View extends javax.swing.JFrame {
 
         screenPanel.add(menu4Panel, "card5");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu5.PNG"))); // NOI18N
-
         javax.swing.GroupLayout menu5PanelLayout = new javax.swing.GroupLayout(menu5Panel);
         menu5Panel.setLayout(menu5PanelLayout);
         menu5PanelLayout.setHorizontalGroup(
@@ -295,8 +286,6 @@ public class View extends javax.swing.JFrame {
         );
 
         screenPanel.add(menu5Panel, "card5");
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/menu6.PNG"))); // NOI18N
 
         javax.swing.GroupLayout menu6PanelLayout = new javax.swing.GroupLayout(menu6Panel);
         menu6Panel.setLayout(menu6PanelLayout);
@@ -315,15 +304,13 @@ public class View extends javax.swing.JFrame {
 
         jPanel2.setPreferredSize(new java.awt.Dimension(203, 34));
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/text.png"))); // NOI18N
-
         jTextField1.setPreferredSize(new java.awt.Dimension(200, 32));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -351,8 +338,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel5.setPreferredSize(new java.awt.Dimension(203, 212));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_a.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
@@ -369,8 +354,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel5, "card2");
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_b.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -395,8 +378,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel4, "card3");
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_c.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -413,8 +394,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel7, "card4");
-
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_d.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -439,8 +418,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel8, "card5");
 
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_e.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -463,8 +440,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel9, "card6");
-
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_f.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -489,8 +464,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel10, "card7");
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_g.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -513,8 +486,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel11, "card8");
-
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_h.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -539,8 +510,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel12, "card9");
 
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_i.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
@@ -563,8 +532,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel13, "card10");
-
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_j.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
@@ -589,8 +556,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel14, "card11");
 
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_k.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
@@ -613,8 +578,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel15, "card12");
-
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_l.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
         jPanel16.setLayout(jPanel16Layout);
@@ -639,8 +602,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel16, "card13");
 
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_m.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
@@ -663,8 +624,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel17, "card14");
-
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_n.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
         jPanel18.setLayout(jPanel18Layout);
@@ -689,8 +648,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel18, "card15");
 
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_o.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
         jPanel19Layout.setHorizontalGroup(
@@ -713,8 +670,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel19, "card16");
-
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_p.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -739,8 +694,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel20, "card17");
 
-        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_q.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
         jPanel21.setLayout(jPanel21Layout);
         jPanel21Layout.setHorizontalGroup(
@@ -763,8 +716,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel21, "card18");
-
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_r.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
@@ -789,8 +740,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel22, "card19");
 
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_s.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
@@ -813,8 +762,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel23, "card20");
-
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_t.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
@@ -839,8 +786,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel24, "card21");
 
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_u.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
@@ -863,8 +808,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel25, "card22");
-
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_v.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
         jPanel26.setLayout(jPanel26Layout);
@@ -889,8 +832,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel26, "card23");
 
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_w.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
         jPanel27Layout.setHorizontalGroup(
@@ -913,8 +854,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel27, "card24");
-
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_x.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -939,8 +878,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel28, "card25");
 
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_y.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
         jPanel29Layout.setHorizontalGroup(
@@ -963,8 +900,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel29, "card26");
-
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_z.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel30Layout = new javax.swing.GroupLayout(jPanel30);
         jPanel30.setLayout(jPanel30Layout);
@@ -989,8 +924,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel30, "card27");
 
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_space.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel31Layout = new javax.swing.GroupLayout(jPanel31);
         jPanel31.setLayout(jPanel31Layout);
         jPanel31Layout.setHorizontalGroup(
@@ -1013,8 +946,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel31, "card28");
-
-        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_next.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel32Layout = new javax.swing.GroupLayout(jPanel32);
         jPanel32.setLayout(jPanel32Layout);
@@ -1039,8 +970,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel32, "card29");
 
-        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_1.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel33Layout = new javax.swing.GroupLayout(jPanel33);
         jPanel33.setLayout(jPanel33Layout);
         jPanel33Layout.setHorizontalGroup(
@@ -1063,8 +992,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel33, "card30");
-
-        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_2.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
         jPanel34.setLayout(jPanel34Layout);
@@ -1089,8 +1016,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel34, "card31");
 
-        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_3.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
         jPanel35.setLayout(jPanel35Layout);
         jPanel35Layout.setHorizontalGroup(
@@ -1113,8 +1038,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel35, "card32");
-
-        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_4.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
         jPanel36.setLayout(jPanel36Layout);
@@ -1139,8 +1062,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel36, "card33");
 
-        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_5.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
         jPanel37Layout.setHorizontalGroup(
@@ -1163,8 +1084,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel37, "card34");
-
-        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_6.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
         jPanel38.setLayout(jPanel38Layout);
@@ -1189,8 +1108,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel38, "card35");
 
-        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_7.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
         jPanel39.setLayout(jPanel39Layout);
         jPanel39Layout.setHorizontalGroup(
@@ -1213,8 +1130,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel39, "card36");
-
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_8.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
         jPanel40.setLayout(jPanel40Layout);
@@ -1239,8 +1154,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel40, "card37");
 
-        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_9.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
         jPanel41.setLayout(jPanel41Layout);
         jPanel41Layout.setHorizontalGroup(
@@ -1263,8 +1176,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel41, "card38");
-
-        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_0.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
         jPanel42.setLayout(jPanel42Layout);
@@ -1289,8 +1200,6 @@ public class View extends javax.swing.JFrame {
 
         jPanel3.add(jPanel42, "card39");
 
-        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_del.png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
         jPanel43.setLayout(jPanel43Layout);
         jPanel43Layout.setHorizontalGroup(
@@ -1313,8 +1222,6 @@ public class View extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel43, "card40");
-
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_prev.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel44Layout = new javax.swing.GroupLayout(jPanel44);
         jPanel44.setLayout(jPanel44Layout);
@@ -1407,7 +1314,6 @@ public class View extends javax.swing.JFrame {
 
         speechPanel.setLayout(new java.awt.CardLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/speech1.png"))); // NOI18N
         jLabel8.setAlignmentX(4.0F);
         jLabel8.setAlignmentY(2.0F);
 
@@ -1424,8 +1330,6 @@ public class View extends javax.swing.JFrame {
 
         speechPanel.add(smenu1Panel, "card2");
 
-        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/speech2.png"))); // NOI18N
-
         javax.swing.GroupLayout smenu2PanelLayout = new javax.swing.GroupLayout(smenu2Panel);
         smenu2Panel.setLayout(smenu2PanelLayout);
         smenu2PanelLayout.setHorizontalGroup(
@@ -1440,8 +1344,6 @@ public class View extends javax.swing.JFrame {
         );
 
         speechPanel.add(smenu2Panel, "card3");
-
-        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/speech3.png"))); // NOI18N
 
         javax.swing.GroupLayout smenu3PanelLayout = new javax.swing.GroupLayout(smenu3Panel);
         smenu3Panel.setLayout(smenu3PanelLayout);
@@ -1458,8 +1360,6 @@ public class View extends javax.swing.JFrame {
 
         speechPanel.add(smenu3Panel, "card4");
 
-        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/speech4.png"))); // NOI18N
-
         javax.swing.GroupLayout smenu4PanelLayout = new javax.swing.GroupLayout(smenu4Panel);
         smenu4Panel.setLayout(smenu4PanelLayout);
         smenu4PanelLayout.setHorizontalGroup(
@@ -1475,8 +1375,6 @@ public class View extends javax.swing.JFrame {
 
         speechPanel.add(smenu4Panel, "card5");
 
-        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/speech5.png"))); // NOI18N
-
         javax.swing.GroupLayout smenu5PanelLayout = new javax.swing.GroupLayout(smenu5Panel);
         smenu5Panel.setLayout(smenu5PanelLayout);
         smenu5PanelLayout.setHorizontalGroup(
@@ -1491,8 +1389,6 @@ public class View extends javax.swing.JFrame {
         );
 
         speechPanel.add(smenu5Panel, "card6");
-
-        jLabel61.setIcon(new javax.swing.ImageIcon(getClass().getResource("/speech6.png"))); // NOI18N
 
         javax.swing.GroupLayout smenu6PanelLayout = new javax.swing.GroupLayout(smenu6Panel);
         smenu6Panel.setLayout(smenu6PanelLayout);
@@ -1602,7 +1498,7 @@ public class View extends javax.swing.JFrame {
 
         getContentPane().add(screenPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 203, 245));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Xtrek - 副本 - 副本.PNG"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/blank.PNG"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 360, 630));
 
         pack();
@@ -1648,134 +1544,134 @@ public class View extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    static SatellitePanel TSPanel;
-    static AboutModePanel aboutPanel;
-    private javax.swing.JButton downButton;
-    private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel60;
-    private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
-    private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel34;
-    private javax.swing.JPanel jPanel35;
-    private javax.swing.JPanel jPanel36;
-    private javax.swing.JPanel jPanel37;
-    private javax.swing.JPanel jPanel38;
-    private javax.swing.JPanel jPanel39;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel40;
-    private javax.swing.JPanel jPanel41;
-    private javax.swing.JPanel jPanel42;
-    private javax.swing.JPanel jPanel43;
-    private javax.swing.JPanel jPanel44;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JPanel mapPanel;
-    private javax.swing.JPanel menu1Panel;
-    private javax.swing.JPanel menu2Panel;
-    private javax.swing.JPanel menu3Panel;
-    private javax.swing.JPanel menu4Panel;
-    private javax.swing.JPanel menu5Panel;
-    private javax.swing.JPanel menu6Panel;
-    private javax.swing.JButton menuButton;
-    private javax.swing.JTextField odemDisplay;
-    private javax.swing.JPanel offPanel;
-    private javax.swing.JButton onButton;
-    private javax.swing.JPanel screenPanel;
-    private javax.swing.JButton selectButton;
-    private javax.swing.JPanel smenu1Panel;
-    private javax.swing.JPanel smenu2Panel;
-    private javax.swing.JPanel smenu3Panel;
-    private javax.swing.JPanel smenu4Panel;
-    private javax.swing.JPanel smenu5Panel;
-    private javax.swing.JPanel smenu6Panel;
-    private javax.swing.JPanel speechPanel;
-    private javax.swing.JTextField speedDisplay;
-    private javax.swing.JTextField timeDisplay;
-    private javax.swing.JLabel tripComputerOdem;
-    private javax.swing.JPanel tripComputerPanel;
-    private javax.swing.JLabel tripComputerSpeed;
-    private javax.swing.JLabel tripComputerTime;
-    private javax.swing.JButton upButton;
-    private javax.swing.JPanel whereToPanel;
+    static javax.swing.JPanel TSPanel;
+    static javax.swing.JPanel aboutPanel;
+    public static javax.swing.JButton downButton;
+    public static javax.swing.JEditorPane jEditorPane1;
+    public static javax.swing.JLabel jLabel1;
+    public static javax.swing.JLabel jLabel12;
+    public static javax.swing.JLabel jLabel13;
+    public static javax.swing.JLabel jLabel18;
+    public static javax.swing.JLabel jLabel19;
+    public static javax.swing.JLabel jLabel2;
+    public static javax.swing.JLabel jLabel20;
+    public static javax.swing.JLabel jLabel21;
+    public static javax.swing.JLabel jLabel22;
+    public static javax.swing.JLabel jLabel23;
+    public static javax.swing.JLabel jLabel24;
+    public static javax.swing.JLabel jLabel25;
+    public static javax.swing.JLabel jLabel26;
+    public static javax.swing.JLabel jLabel27;
+    public static javax.swing.JLabel jLabel28;
+    public static javax.swing.JLabel jLabel29;
+    public static javax.swing.JLabel jLabel3;
+    public static javax.swing.JLabel jLabel30;
+    public static javax.swing.JLabel jLabel31;
+    public static javax.swing.JLabel jLabel32;
+    public static javax.swing.JLabel jLabel33;
+    public static javax.swing.JLabel jLabel34;
+    public static javax.swing.JLabel jLabel35;
+    public static javax.swing.JLabel jLabel36;
+    public static javax.swing.JLabel jLabel37;
+    public static javax.swing.JLabel jLabel38;
+    public static javax.swing.JLabel jLabel39;
+    public static javax.swing.JLabel jLabel4;
+    public static javax.swing.JLabel jLabel40;
+    public static javax.swing.JLabel jLabel41;
+    public static javax.swing.JLabel jLabel42;
+    public static javax.swing.JLabel jLabel43;
+    public static javax.swing.JLabel jLabel44;
+    public static javax.swing.JLabel jLabel45;
+    public static javax.swing.JLabel jLabel46;
+    public static javax.swing.JLabel jLabel47;
+    public static javax.swing.JLabel jLabel48;
+    public static javax.swing.JLabel jLabel49;
+    public static javax.swing.JLabel jLabel5;
+    public static javax.swing.JLabel jLabel50;
+    public static javax.swing.JLabel jLabel51;
+    public static javax.swing.JLabel jLabel52;
+    public static javax.swing.JLabel jLabel53;
+    public static javax.swing.JLabel jLabel54;
+    public static javax.swing.JLabel jLabel55;
+    public static javax.swing.JLabel jLabel56;
+    public static javax.swing.JLabel jLabel57;
+    public static javax.swing.JLabel jLabel58;
+    public static javax.swing.JLabel jLabel59;
+    public static javax.swing.JLabel jLabel6;
+    public static javax.swing.JLabel jLabel60;
+    public static javax.swing.JLabel jLabel61;
+    public static javax.swing.JLabel jLabel7;
+    public static javax.swing.JLabel jLabel8;
+    public static javax.swing.JPanel jPanel10;
+    public static javax.swing.JPanel jPanel11;
+    public static javax.swing.JPanel jPanel12;
+    public static javax.swing.JPanel jPanel13;
+    public static javax.swing.JPanel jPanel14;
+    public static javax.swing.JPanel jPanel15;
+    public static javax.swing.JPanel jPanel16;
+    public static javax.swing.JPanel jPanel17;
+    public static javax.swing.JPanel jPanel18;
+    public static javax.swing.JPanel jPanel19;
+    public static javax.swing.JPanel jPanel2;
+    public static javax.swing.JPanel jPanel20;
+    public static javax.swing.JPanel jPanel21;
+    public static javax.swing.JPanel jPanel22;
+    public static javax.swing.JPanel jPanel23;
+    public static javax.swing.JPanel jPanel24;
+    public static javax.swing.JPanel jPanel25;
+    public static javax.swing.JPanel jPanel26;
+    public static javax.swing.JPanel jPanel27;
+    public static javax.swing.JPanel jPanel28;
+    public static javax.swing.JPanel jPanel29;
+    public static javax.swing.JPanel jPanel3;
+    public static javax.swing.JPanel jPanel30;
+    public static javax.swing.JPanel jPanel31;
+    public static javax.swing.JPanel jPanel32;
+    public static javax.swing.JPanel jPanel33;
+    public static javax.swing.JPanel jPanel34;
+    public static javax.swing.JPanel jPanel35;
+    public static javax.swing.JPanel jPanel36;
+    public static javax.swing.JPanel jPanel37;
+    public static javax.swing.JPanel jPanel38;
+    public static javax.swing.JPanel jPanel39;
+    public static javax.swing.JPanel jPanel4;
+    public static javax.swing.JPanel jPanel40;
+    public static javax.swing.JPanel jPanel41;
+    public static javax.swing.JPanel jPanel42;
+    public static javax.swing.JPanel jPanel43;
+    public static javax.swing.JPanel jPanel44;
+    public static javax.swing.JPanel jPanel5;
+    public static javax.swing.JPanel jPanel7;
+    public static javax.swing.JPanel jPanel8;
+    public static javax.swing.JPanel jPanel9;
+    public static javax.swing.JTextField jTextField1;
+    public static javax.swing.JPanel mapPanel;
+    public static javax.swing.JPanel menu1Panel;
+    public static javax.swing.JPanel menu2Panel;
+    public static javax.swing.JPanel menu3Panel;
+    public static javax.swing.JPanel menu4Panel;
+    public static javax.swing.JPanel menu5Panel;
+    public static javax.swing.JPanel menu6Panel;
+    public static javax.swing.JButton menuButton;
+    public static javax.swing.JTextField odemDisplay;
+    public static javax.swing.JPanel offPanel;
+    public static javax.swing.JButton onButton;
+    public static javax.swing.JPanel screenPanel;
+    public static javax.swing.JButton selectButton;
+    public static javax.swing.JPanel smenu1Panel;
+    public static javax.swing.JPanel smenu2Panel;
+    public static javax.swing.JPanel smenu3Panel;
+    public static javax.swing.JPanel smenu4Panel;
+    public static javax.swing.JPanel smenu5Panel;
+    public static javax.swing.JPanel smenu6Panel;
+    public static javax.swing.JPanel speechPanel;
+    public static javax.swing.JTextField speedDisplay;
+    public static javax.swing.JTextField timeDisplay;
+    public static javax.swing.JLabel tripComputerOdem;
+    public static javax.swing.JPanel tripComputerPanel;
+    public static javax.swing.JLabel tripComputerSpeed;
+    public static javax.swing.JLabel tripComputerTime;
+    public static javax.swing.JButton upButton;
+    public static javax.swing.JPanel whereToPanel;
     // End of variables declaration//GEN-END:variables
 }

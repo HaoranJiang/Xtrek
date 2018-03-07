@@ -1,7 +1,20 @@
 package MVC;
-import MVC.View.*;
 
 
+
+import static MVC.View.TSPanel;
+import static MVC.View.aboutPanel;
+import static MVC.View.mapPanel;
+import static MVC.View.menu1Panel;
+import static MVC.View.menu2Panel;
+import static MVC.View.menu3Panel;
+import static MVC.View.menu4Panel;
+import static MVC.View.menu5Panel;
+import static MVC.View.menu6Panel;
+import static MVC.View.screenPanel;
+import static MVC.View.speechPanel;
+import static MVC.View.tripComputerPanel;
+import static MVC.View.whereToPanel;
 
 
 /**
@@ -38,16 +51,16 @@ public class Model{
     public Model(){}
     public void openAndClose(){
         
-        screenPanel.removeAll();
-        screenPanel.repaint();
-        screenPanel.revalidate(); 
+        View.screenPanel.removeAll();
+        View.screenPanel.repaint();
+        View.screenPanel.revalidate(); 
         if (situation == Situation.OFF){  
-            screenPanel.add(menu1Panel);
+            View.screenPanel.add(View.menu1Panel);
             situation = Situation.MENU;
             
         } else {         
             situation = Situation.OFF;
-            screenPanel.add(offPanel);
+            View.screenPanel.add(View.offPanel);
         }
         
         menu = Menu.ONE;
