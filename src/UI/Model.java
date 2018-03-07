@@ -39,9 +39,6 @@ public class Model extends Observable{
     public Model(Menu menu, Situation situation){
         this.menu = menu;
         this.situation = situation;
-        setChanged(); 
-        notifyObservers(menu);
-        notifyObservers(situation);      
     }
     
     public void openAndClose(){
@@ -59,9 +56,6 @@ public class Model extends Observable{
         }
         
         menu = Menu.ONE;
-        setChanged(); 
-        notifyObservers(menu);
-        notifyObservers(situation); 
         screenPanel.repaint();
         screenPanel.revalidate();
         
@@ -106,10 +100,7 @@ public class Model extends Observable{
 
                 default:
                     break;
-            }
-            setChanged(); 
-            notifyObservers(menu);
-            notifyObservers(situation);                 
+            }            
             screenPanel.repaint();
             screenPanel.revalidate();
             
@@ -154,10 +145,7 @@ public class Model extends Observable{
 
                 default:
                     break;
-            }
-            setChanged(); 
-            notifyObservers(menu);
-            notifyObservers(situation);    
+            }   
             screenPanel.removeAll();
             screenPanel.repaint();
             screenPanel.revalidate();
@@ -203,9 +191,6 @@ public class Model extends Observable{
             }
             screenPanel.repaint();
             screenPanel.revalidate();
-            setChanged(); 
-            notifyObservers(menu);
-            notifyObservers(situation);   
         }
         
     }
@@ -251,9 +236,6 @@ public class Model extends Observable{
                     default:
                         break;
             }
-            setChanged(); 
-            notifyObservers(menu);
-            notifyObservers(situation);   
         }
     }
     
