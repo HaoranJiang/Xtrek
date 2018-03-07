@@ -126,9 +126,7 @@ public class WhereToView extends javax.swing.JPanel {
         jPanelTextDisplay.setPreferredSize(new java.awt.Dimension(150, 33));
 
         jLabelTextDisplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/text_adv.png"))); // NOI18N
-        jLabelTextDisplay.setPreferredSize(new java.awt.Dimension(150, 33));
 
-        jTextFieldDestination.setText("jTextField1");
         jTextFieldDestination.setPreferredSize(new java.awt.Dimension(130, 24));
 
         javax.swing.GroupLayout jPanelTextDisplayLayout = new javax.swing.GroupLayout(jPanelTextDisplay);
@@ -139,7 +137,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTextDisplay)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
@@ -153,7 +151,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelTextDisplay)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
@@ -168,7 +166,6 @@ public class WhereToView extends javax.swing.JPanel {
         jPanelKeyA.setPreferredSize(new java.awt.Dimension(203, 212));
 
         jLabelKeyA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_a.png"))); // NOI18N
-        jLabelKeyA.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyALayout = new javax.swing.GroupLayout(jPanelKeyA);
         jPanelKeyA.setLayout(jPanelKeyALayout);
@@ -178,7 +175,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyALayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyA)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyALayout.setVerticalGroup(
@@ -187,7 +184,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyALayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyA)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -196,7 +193,6 @@ public class WhereToView extends javax.swing.JPanel {
         jPanelKeyB.setPreferredSize(new java.awt.Dimension(203, 212));
 
         jLabelKeyB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_b.png"))); // NOI18N
-        jLabelKeyB.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyBLayout = new javax.swing.GroupLayout(jPanelKeyB);
         jPanelKeyB.setLayout(jPanelKeyBLayout);
@@ -206,7 +202,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyBLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyB)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyBLayout.setVerticalGroup(
@@ -215,14 +211,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyBLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyB)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyB, "card3");
 
         jLabelKeyC.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_c.png"))); // NOI18N
-        jLabelKeyC.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyCLayout = new javax.swing.GroupLayout(jPanelKeyC);
         jPanelKeyC.setLayout(jPanelKeyCLayout);
@@ -232,7 +227,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyCLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyC)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyCLayout.setVerticalGroup(
@@ -241,14 +236,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyCLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyC)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyC, "card4");
 
         jLabelKeyD.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_d.png"))); // NOI18N
-        jLabelKeyD.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyDLayout = new javax.swing.GroupLayout(jPanelKeyD);
         jPanelKeyD.setLayout(jPanelKeyDLayout);
@@ -258,7 +252,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyDLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyD)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyDLayout.setVerticalGroup(
@@ -267,14 +261,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyDLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyD)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyD, "card5");
 
         jLabelKeyE.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_e.png"))); // NOI18N
-        jLabelKeyE.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyELayout = new javax.swing.GroupLayout(jPanelKeyE);
         jPanelKeyE.setLayout(jPanelKeyELayout);
@@ -284,7 +277,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyELayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyELayout.setVerticalGroup(
@@ -293,14 +286,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyELayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyE, "card6");
 
         jLabelKeyF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_f.png"))); // NOI18N
-        jLabelKeyF.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyFLayout = new javax.swing.GroupLayout(jPanelKeyF);
         jPanelKeyF.setLayout(jPanelKeyFLayout);
@@ -310,7 +302,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyFLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyF)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyFLayout.setVerticalGroup(
@@ -319,14 +311,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyFLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyF)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyF, "card7");
 
         jLabelKeyG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_g.png"))); // NOI18N
-        jLabelKeyG.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyGLayout = new javax.swing.GroupLayout(jPanelKeyG);
         jPanelKeyG.setLayout(jPanelKeyGLayout);
@@ -336,7 +327,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyGLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyG)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyGLayout.setVerticalGroup(
@@ -345,14 +336,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyGLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyG)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyG, "card8");
 
         jLabelKeyH.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_h.png"))); // NOI18N
-        jLabelKeyH.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyHLayout = new javax.swing.GroupLayout(jPanelKeyH);
         jPanelKeyH.setLayout(jPanelKeyHLayout);
@@ -362,7 +352,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyHLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyH)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyHLayout.setVerticalGroup(
@@ -371,14 +361,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyHLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyH)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyH, "card9");
 
         jLabelKeyI.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_i.png"))); // NOI18N
-        jLabelKeyI.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyILayout = new javax.swing.GroupLayout(jPanelKeyI);
         jPanelKeyI.setLayout(jPanelKeyILayout);
@@ -388,7 +377,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyILayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyI)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyILayout.setVerticalGroup(
@@ -397,14 +386,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyILayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyI)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyI, "card10");
 
         jLabelKeyJ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_j.png"))); // NOI18N
-        jLabelKeyJ.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyJLayout = new javax.swing.GroupLayout(jPanelKeyJ);
         jPanelKeyJ.setLayout(jPanelKeyJLayout);
@@ -414,7 +402,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyJLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyJ)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyJLayout.setVerticalGroup(
@@ -423,14 +411,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyJLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyJ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyJ)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyJ, "card11");
 
         jLabelKeyK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_k.png"))); // NOI18N
-        jLabelKeyK.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyKLayout = new javax.swing.GroupLayout(jPanelKeyK);
         jPanelKeyK.setLayout(jPanelKeyKLayout);
@@ -440,7 +427,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyKLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyK)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyKLayout.setVerticalGroup(
@@ -449,14 +436,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyKLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyK)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyK, "card12");
 
         jLabelKeyL.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_l.png"))); // NOI18N
-        jLabelKeyL.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyLLayout = new javax.swing.GroupLayout(jPanelKeyL);
         jPanelKeyL.setLayout(jPanelKeyLLayout);
@@ -466,7 +452,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyLLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyL)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyLLayout.setVerticalGroup(
@@ -475,14 +461,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyLLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyL)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyL, "card13");
 
         jLabelKeyM.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_m.png"))); // NOI18N
-        jLabelKeyM.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyMLayout = new javax.swing.GroupLayout(jPanelKeyM);
         jPanelKeyM.setLayout(jPanelKeyMLayout);
@@ -492,7 +477,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyMLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyM)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyMLayout.setVerticalGroup(
@@ -501,14 +486,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyMLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyM)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyM, "card14");
 
         jLabelKeyN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_n.png"))); // NOI18N
-        jLabelKeyN.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyNLayout = new javax.swing.GroupLayout(jPanelKeyN);
         jPanelKeyN.setLayout(jPanelKeyNLayout);
@@ -518,7 +502,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyNLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyN)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyNLayout.setVerticalGroup(
@@ -527,14 +511,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyNLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyN)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyN, "card15");
 
         jLabelKeyO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_o.png"))); // NOI18N
-        jLabelKeyO.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyOLayout = new javax.swing.GroupLayout(jPanelKeyO);
         jPanelKeyO.setLayout(jPanelKeyOLayout);
@@ -544,7 +527,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyOLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyO)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyOLayout.setVerticalGroup(
@@ -553,14 +536,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyOLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyO)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyO, "card16");
 
         jLabelKeyP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_p.png"))); // NOI18N
-        jLabelKeyP.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyPLayout = new javax.swing.GroupLayout(jPanelKeyP);
         jPanelKeyP.setLayout(jPanelKeyPLayout);
@@ -570,7 +552,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyPLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyP)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyPLayout.setVerticalGroup(
@@ -579,14 +561,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyPLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyP)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyP, "card17");
 
         jLabelKeyQ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_q.png"))); // NOI18N
-        jLabelKeyQ.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyQLayout = new javax.swing.GroupLayout(jPanelKeyQ);
         jPanelKeyQ.setLayout(jPanelKeyQLayout);
@@ -596,7 +577,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyQLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyQ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyQ)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyQLayout.setVerticalGroup(
@@ -605,14 +586,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyQLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyQ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyQ)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyQ, "card18");
 
         jLabelKeyR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_r.png"))); // NOI18N
-        jLabelKeyR.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyRLayout = new javax.swing.GroupLayout(jPanelKeyR);
         jPanelKeyR.setLayout(jPanelKeyRLayout);
@@ -622,7 +602,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyRLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyR)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyRLayout.setVerticalGroup(
@@ -631,14 +611,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyRLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyR, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyR)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyR, "card19");
 
         jLabelKeyS.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_s.png"))); // NOI18N
-        jLabelKeyS.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeySLayout = new javax.swing.GroupLayout(jPanelKeyS);
         jPanelKeyS.setLayout(jPanelKeySLayout);
@@ -648,7 +627,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeySLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyS)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeySLayout.setVerticalGroup(
@@ -657,14 +636,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeySLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyS)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyS, "card20");
 
         jLabelKeyT.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_t.png"))); // NOI18N
-        jLabelKeyT.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyTLayout = new javax.swing.GroupLayout(jPanelKeyT);
         jPanelKeyT.setLayout(jPanelKeyTLayout);
@@ -674,7 +652,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyTLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyT)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyTLayout.setVerticalGroup(
@@ -683,14 +661,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyTLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyT)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyT, "card21");
 
         jLabelKeyU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_u.png"))); // NOI18N
-        jLabelKeyU.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyULayout = new javax.swing.GroupLayout(jPanelKeyU);
         jPanelKeyU.setLayout(jPanelKeyULayout);
@@ -700,7 +677,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyULayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyU)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyULayout.setVerticalGroup(
@@ -709,14 +686,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyULayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyU)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyU, "card22");
 
         jLabelKeyV.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_v.png"))); // NOI18N
-        jLabelKeyV.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyVLayout = new javax.swing.GroupLayout(jPanelKeyV);
         jPanelKeyV.setLayout(jPanelKeyVLayout);
@@ -726,7 +702,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyVLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyV)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyVLayout.setVerticalGroup(
@@ -735,14 +711,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyVLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyV)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyV, "card23");
 
         jLabelKeyW.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_w.png"))); // NOI18N
-        jLabelKeyW.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyWLayout = new javax.swing.GroupLayout(jPanelKeyW);
         jPanelKeyW.setLayout(jPanelKeyWLayout);
@@ -752,7 +727,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyWLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyW)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyWLayout.setVerticalGroup(
@@ -761,14 +736,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyWLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyW, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyW)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyW, "card24");
 
         jLabelKeyX.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_x.png"))); // NOI18N
-        jLabelKeyX.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyXLayout = new javax.swing.GroupLayout(jPanelKeyX);
         jPanelKeyX.setLayout(jPanelKeyXLayout);
@@ -778,7 +752,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyXLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyX)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyXLayout.setVerticalGroup(
@@ -787,14 +761,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyXLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyX)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyX, "card25");
 
         jLabelKeyY.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_y.png"))); // NOI18N
-        jLabelKeyY.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyYLayout = new javax.swing.GroupLayout(jPanelKeyY);
         jPanelKeyY.setLayout(jPanelKeyYLayout);
@@ -804,7 +777,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyYLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyY)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyYLayout.setVerticalGroup(
@@ -813,14 +786,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyYLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyY)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyY, "card26");
 
         jLabelKeyZ.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_z.png"))); // NOI18N
-        jLabelKeyZ.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyZLayout = new javax.swing.GroupLayout(jPanelKeyZ);
         jPanelKeyZ.setLayout(jPanelKeyZLayout);
@@ -830,7 +802,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyZLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyZ)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyZLayout.setVerticalGroup(
@@ -839,14 +811,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyZLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyZ, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyZ)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyZ, "card27");
 
         jLabelKeySpace.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_space.png"))); // NOI18N
-        jLabelKeySpace.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeySpaceLayout = new javax.swing.GroupLayout(jPanelKeySpace);
         jPanelKeySpace.setLayout(jPanelKeySpaceLayout);
@@ -856,7 +827,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeySpaceLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeySpace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeySpace)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeySpaceLayout.setVerticalGroup(
@@ -865,14 +836,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeySpaceLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeySpace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeySpace)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeySpace, "card28");
 
         jLabelKeyNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_next.png"))); // NOI18N
-        jLabelKeyNext.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyNextLayout = new javax.swing.GroupLayout(jPanelKeyNext);
         jPanelKeyNext.setLayout(jPanelKeyNextLayout);
@@ -882,7 +852,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyNextLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyNext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyNext)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyNextLayout.setVerticalGroup(
@@ -891,14 +861,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyNextLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyNext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyNext)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyNext, "card29");
 
         jLabelKeyOne.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_1.png"))); // NOI18N
-        jLabelKeyOne.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyOneLayout = new javax.swing.GroupLayout(jPanelKeyOne);
         jPanelKeyOne.setLayout(jPanelKeyOneLayout);
@@ -908,7 +877,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyOneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyOne, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyOne)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyOneLayout.setVerticalGroup(
@@ -917,14 +886,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyOneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyOneLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyOne, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyOne)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyOne, "card30");
 
         jLabelKeyTwo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_2.png"))); // NOI18N
-        jLabelKeyTwo.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyTwoLayout = new javax.swing.GroupLayout(jPanelKeyTwo);
         jPanelKeyTwo.setLayout(jPanelKeyTwoLayout);
@@ -934,7 +902,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyTwoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyTwoLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyTwo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyTwo)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyTwoLayout.setVerticalGroup(
@@ -943,14 +911,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyTwoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyTwoLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyTwo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyTwo)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyTwo, "card31");
 
         jLabelKeyThree.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_3.png"))); // NOI18N
-        jLabelKeyThree.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyThreeLayout = new javax.swing.GroupLayout(jPanelKeyThree);
         jPanelKeyThree.setLayout(jPanelKeyThreeLayout);
@@ -960,7 +927,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyThreeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyThreeLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyThree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyThree)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyThreeLayout.setVerticalGroup(
@@ -969,14 +936,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyThreeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyThreeLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyThree, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyThree)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyThree, "card32");
 
         jLabelKeyFour.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_4.png"))); // NOI18N
-        jLabelKeyFour.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyFourLayout = new javax.swing.GroupLayout(jPanelKeyFour);
         jPanelKeyFour.setLayout(jPanelKeyFourLayout);
@@ -986,7 +952,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyFourLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyFourLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyFour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyFour)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyFourLayout.setVerticalGroup(
@@ -995,14 +961,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyFourLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyFourLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyFour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyFour)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyFour, "card33");
 
         jLabelKeyFive.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_5.png"))); // NOI18N
-        jLabelKeyFive.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyFiveLayout = new javax.swing.GroupLayout(jPanelKeyFive);
         jPanelKeyFive.setLayout(jPanelKeyFiveLayout);
@@ -1012,7 +977,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyFiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyFiveLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyFive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyFive)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyFiveLayout.setVerticalGroup(
@@ -1021,14 +986,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyFiveLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyFiveLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyFive, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyFive)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyFive, "card34");
 
         jLabelKeySix.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_6.png"))); // NOI18N
-        jLabelKeySix.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeySixLayout = new javax.swing.GroupLayout(jPanelKeySix);
         jPanelKeySix.setLayout(jPanelKeySixLayout);
@@ -1038,7 +1002,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeySixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeySixLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeySix, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeySix)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeySixLayout.setVerticalGroup(
@@ -1047,14 +1011,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeySixLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeySixLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeySix, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeySix)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeySix, "card35");
 
         jLabelKeySeven.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_7.png"))); // NOI18N
-        jLabelKeySeven.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeySevenLayout = new javax.swing.GroupLayout(jPanelKeySeven);
         jPanelKeySeven.setLayout(jPanelKeySevenLayout);
@@ -1064,7 +1027,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeySevenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeySevenLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeySeven, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeySeven)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeySevenLayout.setVerticalGroup(
@@ -1073,14 +1036,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeySevenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeySevenLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeySeven, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeySeven)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeySeven, "card36");
 
         jLabelKeyEight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_8.png"))); // NOI18N
-        jLabelKeyEight.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyEightLayout = new javax.swing.GroupLayout(jPanelKeyEight);
         jPanelKeyEight.setLayout(jPanelKeyEightLayout);
@@ -1090,7 +1052,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyEightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyEightLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyEight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyEight)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyEightLayout.setVerticalGroup(
@@ -1099,14 +1061,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyEightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyEightLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyEight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyEight)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyEight, "card37");
 
         jLabelKeyNine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_9.png"))); // NOI18N
-        jLabelKeyNine.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyNineLayout = new javax.swing.GroupLayout(jPanelKeyNine);
         jPanelKeyNine.setLayout(jPanelKeyNineLayout);
@@ -1116,7 +1077,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyNineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyNineLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyNine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyNine)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyNineLayout.setVerticalGroup(
@@ -1125,14 +1086,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyNineLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyNineLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyNine, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyNine)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyNine, "card38");
 
         jLabelKeyZero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_0.png"))); // NOI18N
-        jLabelKeyZero.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyZeroLayout = new javax.swing.GroupLayout(jPanelKeyZero);
         jPanelKeyZero.setLayout(jPanelKeyZeroLayout);
@@ -1142,7 +1102,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyZeroLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyZero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyZero)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyZeroLayout.setVerticalGroup(
@@ -1151,14 +1111,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyZeroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyZeroLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyZero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyZero)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyZero, "card39");
 
         jLabelKeyDel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_del.png"))); // NOI18N
-        jLabelKeyDel.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyDelLayout = new javax.swing.GroupLayout(jPanelKeyDel);
         jPanelKeyDel.setLayout(jPanelKeyDelLayout);
@@ -1168,7 +1127,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyDelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyDel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyDel)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyDelLayout.setVerticalGroup(
@@ -1177,14 +1136,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyDelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyDel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyDel)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyDel, "card40");
 
         jLabelKeyPrev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_prev.png"))); // NOI18N
-        jLabelKeyPrev.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelKeyPrevLayout = new javax.swing.GroupLayout(jPanelKeyPrev);
         jPanelKeyPrev.setLayout(jPanelKeyPrevLayout);
@@ -1194,7 +1152,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyPrevLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyPrev, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyPrev)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelKeyPrevLayout.setVerticalGroup(
@@ -1203,14 +1161,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelKeyPrevLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelKeyPrev, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelKeyPrev)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelKeyPrev, "card41");
 
         jLabelAlphaKeyBoard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/alphaKeyBoard.png"))); // NOI18N
-        jLabelAlphaKeyBoard.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelAlphaKeyBoardLayout = new javax.swing.GroupLayout(jPanelAlphaKeyBoard);
         jPanelAlphaKeyBoard.setLayout(jPanelAlphaKeyBoardLayout);
@@ -1220,7 +1177,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelAlphaKeyBoardLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelAlphaKeyBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAlphaKeyBoard)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelAlphaKeyBoardLayout.setVerticalGroup(
@@ -1229,14 +1186,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelAlphaKeyBoardLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelAlphaKeyBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelAlphaKeyBoard)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelKeyBoard.add(jPanelAlphaKeyBoard, "card42");
 
         jLabelNumKeyBoard.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/numKeyBoard.png"))); // NOI18N
-        jLabelNumKeyBoard.setPreferredSize(new java.awt.Dimension(203, 212));
 
         javax.swing.GroupLayout jPanelNumKeyBoardLayout = new javax.swing.GroupLayout(jPanelNumKeyBoard);
         jPanelNumKeyBoard.setLayout(jPanelNumKeyBoardLayout);
@@ -1246,7 +1202,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelNumKeyBoardLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelNumKeyBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelNumKeyBoard)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelNumKeyBoardLayout.setVerticalGroup(
@@ -1255,7 +1211,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelNumKeyBoardLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelNumKeyBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelNumKeyBoard)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
@@ -1267,7 +1223,6 @@ public class WhereToView extends javax.swing.JPanel {
         jPanelSubmitButton.setPreferredSize(new java.awt.Dimension(53, 33));
 
         jLabelSubmitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/sub_btn.png"))); // NOI18N
-        jLabelSubmitButton.setPreferredSize(new java.awt.Dimension(53, 33));
 
         javax.swing.GroupLayout jPanelSubmitButtonLayout = new javax.swing.GroupLayout(jPanelSubmitButton);
         jPanelSubmitButton.setLayout(jPanelSubmitButtonLayout);
@@ -1277,7 +1232,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelSubmitButtonLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelSubmitButton)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelSubmitButtonLayout.setVerticalGroup(
@@ -1286,14 +1241,13 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelSubmitButtonLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelSubmitButton)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelSubmit.add(jPanelSubmitButton, "card2");
 
         jLabelSubmitHighlight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/sub_btn_high.png"))); // NOI18N
-        jLabelSubmitHighlight.setPreferredSize(new java.awt.Dimension(53, 33));
 
         javax.swing.GroupLayout jPanelSubmitHighlightLayout = new javax.swing.GroupLayout(jPanelSubmitHighlight);
         jPanelSubmitHighlight.setLayout(jPanelSubmitHighlightLayout);
@@ -1303,7 +1257,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelSubmitHighlightLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelSubmitHighlight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelSubmitHighlight)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelSubmitHighlightLayout.setVerticalGroup(
@@ -1312,7 +1266,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelSubmitHighlightLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelSubmitHighlight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelSubmitHighlight)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 

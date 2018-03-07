@@ -33,9 +33,11 @@ public class View extends javax.swing.JFrame {
         TSPanel = new SatellitePanel();
         aboutPanel = new AboutModePanel();
         whereToPanel = new WhereToView();
+        tripComputerPanel = new TripComputerView();
         screenPanel.add(TSPanel,"card 7");
         screenPanel.add(aboutPanel,"card15");
         screenPanel.add(whereToPanel,"card16");
+        screenPanel.add(tripComputerPanel,"card18");
     }
 
     @SuppressWarnings("unchecked")
@@ -76,13 +78,6 @@ public class View extends javax.swing.JFrame {
         jLabel60 = new javax.swing.JLabel();
         smenu6Panel = new javax.swing.JPanel();
         jLabel61 = new javax.swing.JLabel();
-        tripComputerPanel = new javax.swing.JPanel();
-        tripComputerTime = new javax.swing.JLabel();
-        timeDisplay = new javax.swing.JTextField();
-        tripComputerOdem = new javax.swing.JLabel();
-        odemDisplay = new javax.swing.JTextField();
-        tripComputerSpeed = new javax.swing.JLabel();
-        speedDisplay = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -345,82 +340,6 @@ public class View extends javax.swing.JFrame {
 
         screenPanel.add(speechPanel, "card13");
 
-        tripComputerPanel.setPreferredSize(new java.awt.Dimension(203, 245));
-
-        tripComputerTime.setText("moving time");
-
-        timeDisplay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                timeDisplayActionPerformed(evt);
-            }
-        });
-
-        tripComputerOdem.setText("trip odem");
-        tripComputerOdem.setToolTipText("");
-
-        odemDisplay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                odemDisplayActionPerformed(evt);
-            }
-        });
-
-        tripComputerSpeed.setText("speed");
-
-        speedDisplay.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                speedDisplayActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout tripComputerPanelLayout = new javax.swing.GroupLayout(tripComputerPanel);
-        tripComputerPanel.setLayout(tripComputerPanelLayout);
-        tripComputerPanelLayout.setHorizontalGroup(
-            tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(tripComputerTime, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(timeDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(tripComputerOdem, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(odemDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(tripComputerSpeed, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(speedDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
-        );
-        tripComputerPanelLayout.setVerticalGroup(
-            tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(tripComputerPanelLayout.createSequentialGroup()
-                .addGap(165, 165, 165)
-                .addComponent(tripComputerTime, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tripComputerPanelLayout.createSequentialGroup()
-                    .addGap(0, 198, Short.MAX_VALUE)
-                    .addComponent(timeDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(tripComputerPanelLayout.createSequentialGroup()
-                    .addComponent(tripComputerOdem, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 213, Short.MAX_VALUE)))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tripComputerPanelLayout.createSequentialGroup()
-                    .addContainerGap(33, Short.MAX_VALUE)
-                    .addComponent(odemDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(162, Short.MAX_VALUE)))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tripComputerPanelLayout.createSequentialGroup()
-                    .addContainerGap(83, Short.MAX_VALUE)
-                    .addComponent(tripComputerSpeed, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(133, Short.MAX_VALUE)))
-            .addGroup(tripComputerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tripComputerPanelLayout.createSequentialGroup()
-                    .addContainerGap(113, Short.MAX_VALUE)
-                    .addComponent(speedDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(82, Short.MAX_VALUE)))
-        );
-
-        screenPanel.add(tripComputerPanel, "card14");
-
         getContentPane().add(screenPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 203, 245));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/blank.PNG"))); // NOI18N
@@ -431,18 +350,6 @@ public class View extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    private void timeDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeDisplayActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_timeDisplayActionPerformed
-
-    private void odemDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_odemDisplayActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_odemDisplayActionPerformed
-
-    private void speedDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_speedDisplayActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_speedDisplayActionPerformed
-
     private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upButtonActionPerformed
 
     }//GEN-LAST:event_upButtonActionPerformed
@@ -489,7 +396,6 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JLabel menu6;
     public static javax.swing.JPanel menu6Panel;
     public static javax.swing.JButton menuButton;
-    public static javax.swing.JTextField odemDisplay;
     public static javax.swing.JPanel offPanel;
     public static javax.swing.JButton onButton;
     public static javax.swing.JPanel screenPanel;
@@ -501,15 +407,10 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JPanel smenu5Panel;
     public static javax.swing.JPanel smenu6Panel;
     public static javax.swing.JPanel speechPanel;
-    public static javax.swing.JTextField speedDisplay;
-    public static javax.swing.JTextField timeDisplay;
-    public static javax.swing.JLabel tripComputerOdem;
-    public static javax.swing.JPanel tripComputerPanel;
-    public static javax.swing.JLabel tripComputerSpeed;
-    public static javax.swing.JLabel tripComputerTime;
     public static javax.swing.JButton upButton;
     // End of variables declaration//GEN-END:variables
     public static SatellitePanel TSPanel;
     public static AboutModePanel aboutPanel;
     public static WhereToView whereToPanel; 
+    public static TripComputerView tripComputerPanel;
 }

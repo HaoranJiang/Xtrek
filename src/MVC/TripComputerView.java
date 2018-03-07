@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI;
+package MVC;
 
 /**
  *
  * @author 20521
  */
-public class tripComputerPanel extends javax.swing.JPanel {
+public class TripComputerView extends javax.swing.JPanel {
 
     /**
      * Creates new form tripComputerView
      */
-    public tripComputerPanel() {
+    public TripComputerView() {
         initComponents();
     }
 
