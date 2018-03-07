@@ -30,6 +30,10 @@ public class View extends javax.swing.JFrame {
         downButton.addActionListener((ActionListener) controller);
         selectButton.addActionListener((ActionListener) controller);
         menuButton.addActionListener((ActionListener) controller);
+        TSPanel = new SatellitePanel();
+        aboutPanel = new AboutModePanel();
+        screenPanel.add(TSPanel,"card 7");
+        screenPanel.add(aboutPanel,"card15");
     }
 
     @SuppressWarnings("unchecked")
@@ -44,17 +48,17 @@ public class View extends javax.swing.JFrame {
         screenPanel = new javax.swing.JPanel();
         offPanel = new javax.swing.JPanel();
         menu1Panel = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        menu1 = new javax.swing.JLabel();
         menu2Panel = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        menu2 = new javax.swing.JLabel();
         menu3Panel = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        menu3 = new javax.swing.JLabel();
         menu4Panel = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        menu4 = new javax.swing.JLabel();
         menu5Panel = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
+        menu5 = new javax.swing.JLabel();
         menu6Panel = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        menu6 = new javax.swing.JLabel();
         whereToPanel = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -140,7 +144,6 @@ public class View extends javax.swing.JFrame {
         jLabel55 = new javax.swing.JLabel();
         jPanel44 = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
-        aboutPanel = new AboutModePanel();
         mapPanel = new javax.swing.JPanel();
         jEditorPane1 = new javax.swing.JEditorPane();
         speechPanel = new javax.swing.JPanel();
@@ -163,13 +166,12 @@ public class View extends javax.swing.JFrame {
         odemDisplay = new javax.swing.JTextField();
         tripComputerSpeed = new javax.swing.JLabel();
         speedDisplay = new javax.swing.JTextField();
-        TSPanel = new SatellitePanel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        upButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/+.PNG"))); // NOI18N
+        upButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/up.PNG"))); // NOI18N
         upButton.setBorder(null);
         upButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,7 +189,7 @@ public class View extends javax.swing.JFrame {
         });
         getContentPane().add(onButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 60, 60));
 
-        downButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/-.PNG"))); // NOI18N
+        downButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/down.PNG"))); // NOI18N
         downButton.setBorder(null);
         downButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -221,81 +223,95 @@ public class View extends javax.swing.JFrame {
         screenPanel.add(offPanel, "card3");
 
         menu1Panel.setBackground(new java.awt.Color(255, 255, 255));
+        menu1Panel.setRequestFocusEnabled(false);
+
+        menu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/menu1.PNG"))); // NOI18N
 
         javax.swing.GroupLayout menu1PanelLayout = new javax.swing.GroupLayout(menu1Panel);
         menu1Panel.setLayout(menu1PanelLayout);
         menu1PanelLayout.setHorizontalGroup(
             menu1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menu1PanelLayout.setVerticalGroup(
             menu1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         screenPanel.add(menu1Panel, "card4");
+        menu1Panel.getAccessibleContext().setAccessibleDescription("");
+
+        menu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/menu2.PNG"))); // NOI18N
 
         javax.swing.GroupLayout menu2PanelLayout = new javax.swing.GroupLayout(menu2Panel);
         menu2Panel.setLayout(menu2PanelLayout);
         menu2PanelLayout.setHorizontalGroup(
             menu2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menu2PanelLayout.setVerticalGroup(
             menu2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         screenPanel.add(menu2Panel, "card4");
+
+        menu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/menu3.PNG"))); // NOI18N
 
         javax.swing.GroupLayout menu3PanelLayout = new javax.swing.GroupLayout(menu3Panel);
         menu3Panel.setLayout(menu3PanelLayout);
         menu3PanelLayout.setHorizontalGroup(
             menu3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menu3PanelLayout.setVerticalGroup(
             menu3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         screenPanel.add(menu3Panel, "card5");
+
+        menu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/menu4.PNG"))); // NOI18N
 
         javax.swing.GroupLayout menu4PanelLayout = new javax.swing.GroupLayout(menu4Panel);
         menu4Panel.setLayout(menu4PanelLayout);
         menu4PanelLayout.setHorizontalGroup(
             menu4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menu4PanelLayout.setVerticalGroup(
             menu4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         screenPanel.add(menu4Panel, "card5");
+
+        menu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/menu5.PNG")));
 
         javax.swing.GroupLayout menu5PanelLayout = new javax.swing.GroupLayout(menu5Panel);
         menu5Panel.setLayout(menu5PanelLayout);
         menu5PanelLayout.setHorizontalGroup(
             menu5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menu5PanelLayout.setVerticalGroup(
             menu5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         screenPanel.add(menu5Panel, "card5");
+
+        menu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/menu6.PNG"))); // NOI18N
 
         javax.swing.GroupLayout menu6PanelLayout = new javax.swing.GroupLayout(menu6Panel);
         menu6Panel.setLayout(menu6PanelLayout);
         menu6PanelLayout.setHorizontalGroup(
             menu6PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         menu6PanelLayout.setVerticalGroup(
             menu6PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(menu6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         screenPanel.add(menu6Panel, "card5");
@@ -343,7 +359,7 @@ public class View extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
+                .addGap(0, 203, Short.MAX_VALUE)
                 .addComponent(jLabel13))
         );
         jPanel5Layout.setVerticalGroup(
@@ -362,9 +378,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel18)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -384,7 +400,7 @@ public class View extends javax.swing.JFrame {
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,9 +418,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel8Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel20)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -425,9 +441,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel9Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel21)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -448,9 +464,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel10Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel22)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -471,9 +487,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel11Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel23)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -494,9 +510,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel12Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel24)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel12Layout.setVerticalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -517,9 +533,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel13Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel25)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -540,9 +556,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel14Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel26)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -563,9 +579,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel15Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel27)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -586,9 +602,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel16Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel28)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -609,9 +625,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel17Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel29)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -632,9 +648,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel18Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel30)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -655,9 +671,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel19Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel31)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -678,9 +694,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel20Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel32)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -701,9 +717,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel21Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel33)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -724,9 +740,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel22Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel34)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -747,9 +763,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel23Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel35)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -770,9 +786,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel24Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel36)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -793,9 +809,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel25Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel37)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -816,9 +832,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel26Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel38)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -839,9 +855,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel27Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel39)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -862,9 +878,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel28Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel40)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel28Layout.setVerticalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -885,9 +901,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel29Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel41)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -908,9 +924,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel30Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel42)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel30Layout.setVerticalGroup(
             jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -931,9 +947,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel31Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel43)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel31Layout.setVerticalGroup(
             jPanel31Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -954,9 +970,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel32Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel44)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel32Layout.setVerticalGroup(
             jPanel32Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -977,9 +993,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel33Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel45)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel33Layout.setVerticalGroup(
             jPanel33Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1000,9 +1016,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel34Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel46)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel34Layout.setVerticalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1023,9 +1039,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel35Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel47)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel35Layout.setVerticalGroup(
             jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1046,9 +1062,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel36Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel48)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel36Layout.setVerticalGroup(
             jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1069,9 +1085,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel37Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel49)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel37Layout.setVerticalGroup(
             jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1092,9 +1108,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel38Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel50)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel38Layout.setVerticalGroup(
             jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1115,9 +1131,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel39Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel51)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel39Layout.setVerticalGroup(
             jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1138,9 +1154,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel40Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel52)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel40Layout.setVerticalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1161,9 +1177,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel41Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel53)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel41Layout.setVerticalGroup(
             jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1184,9 +1200,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel42Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel54)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel42Layout.setVerticalGroup(
             jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1207,9 +1223,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel43Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel55)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel43Layout.setVerticalGroup(
             jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1230,9 +1246,9 @@ public class View extends javax.swing.JFrame {
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel44Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 101, Short.MAX_VALUE)
                     .addComponent(jLabel56)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 102, Short.MAX_VALUE)))
         );
         jPanel44Layout.setVerticalGroup(
             jPanel44Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1272,28 +1288,6 @@ public class View extends javax.swing.JFrame {
         );
 
         screenPanel.add(whereToPanel, "card14");
-
-        aboutPanel.setMaximumSize(new java.awt.Dimension(203, 245));
-        aboutPanel.setMinimumSize(new java.awt.Dimension(203, 245));
-        aboutPanel.setPreferredSize(new java.awt.Dimension(203, 245));
-        aboutPanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseMoved(java.awt.event.MouseEvent evt) {
-                aboutPanelMouseMoved(evt);
-            }
-        });
-
-        javax.swing.GroupLayout aboutPanelLayout = new javax.swing.GroupLayout(aboutPanel);
-        aboutPanel.setLayout(aboutPanelLayout);
-        aboutPanelLayout.setHorizontalGroup(
-            aboutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-        );
-        aboutPanelLayout.setVerticalGroup(
-            aboutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 245, Short.MAX_VALUE)
-        );
-
-        screenPanel.add(aboutPanel, "card15");
 
         javax.swing.GroupLayout mapPanelLayout = new javax.swing.GroupLayout(mapPanel);
         mapPanel.setLayout(mapPanelLayout);
@@ -1336,7 +1330,7 @@ public class View extends javax.swing.JFrame {
             smenu2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(smenu2PanelLayout.createSequentialGroup()
                 .addComponent(jLabel57)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 203, Short.MAX_VALUE))
         );
         smenu2PanelLayout.setVerticalGroup(
             smenu2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1483,19 +1477,6 @@ public class View extends javax.swing.JFrame {
 
         screenPanel.add(tripComputerPanel, "card14");
 
-        javax.swing.GroupLayout TSPanelLayout = new javax.swing.GroupLayout(TSPanel);
-        TSPanel.setLayout(TSPanelLayout);
-        TSPanelLayout.setHorizontalGroup(
-            TSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        TSPanelLayout.setVerticalGroup(
-            TSPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        screenPanel.add(TSPanel, "card14");
-
         getContentPane().add(screenPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 203, 245));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/blank.PNG"))); // NOI18N
@@ -1506,10 +1487,6 @@ public class View extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     
-    private void aboutPanelMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_aboutPanelMouseMoved
-
-    }//GEN-LAST:event_aboutPanelMouseMoved
-
     private void timeDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeDisplayActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_timeDisplayActionPerformed
@@ -1543,9 +1520,8 @@ public class View extends javax.swing.JFrame {
     }//GEN-LAST:event_menuButtonActionPerformed
 
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    static javax.swing.JPanel TSPanel;
-    static javax.swing.JPanel aboutPanel;
     public static javax.swing.JButton downButton;
     public static javax.swing.JEditorPane jEditorPane1;
     public static javax.swing.JLabel jLabel1;
@@ -1553,7 +1529,6 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel13;
     public static javax.swing.JLabel jLabel18;
     public static javax.swing.JLabel jLabel19;
-    public static javax.swing.JLabel jLabel2;
     public static javax.swing.JLabel jLabel20;
     public static javax.swing.JLabel jLabel21;
     public static javax.swing.JLabel jLabel22;
@@ -1564,7 +1539,6 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel27;
     public static javax.swing.JLabel jLabel28;
     public static javax.swing.JLabel jLabel29;
-    public static javax.swing.JLabel jLabel3;
     public static javax.swing.JLabel jLabel30;
     public static javax.swing.JLabel jLabel31;
     public static javax.swing.JLabel jLabel32;
@@ -1575,7 +1549,6 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel37;
     public static javax.swing.JLabel jLabel38;
     public static javax.swing.JLabel jLabel39;
-    public static javax.swing.JLabel jLabel4;
     public static javax.swing.JLabel jLabel40;
     public static javax.swing.JLabel jLabel41;
     public static javax.swing.JLabel jLabel42;
@@ -1586,7 +1559,6 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel47;
     public static javax.swing.JLabel jLabel48;
     public static javax.swing.JLabel jLabel49;
-    public static javax.swing.JLabel jLabel5;
     public static javax.swing.JLabel jLabel50;
     public static javax.swing.JLabel jLabel51;
     public static javax.swing.JLabel jLabel52;
@@ -1597,10 +1569,8 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JLabel jLabel57;
     public static javax.swing.JLabel jLabel58;
     public static javax.swing.JLabel jLabel59;
-    public static javax.swing.JLabel jLabel6;
     public static javax.swing.JLabel jLabel60;
     public static javax.swing.JLabel jLabel61;
-    public static javax.swing.JLabel jLabel7;
     public static javax.swing.JLabel jLabel8;
     public static javax.swing.JPanel jPanel10;
     public static javax.swing.JPanel jPanel11;
@@ -1646,11 +1616,17 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JPanel jPanel9;
     public static javax.swing.JTextField jTextField1;
     public static javax.swing.JPanel mapPanel;
+    public static javax.swing.JLabel menu1;
     public static javax.swing.JPanel menu1Panel;
+    public static javax.swing.JLabel menu2;
     public static javax.swing.JPanel menu2Panel;
+    public static javax.swing.JLabel menu3;
     public static javax.swing.JPanel menu3Panel;
+    public static javax.swing.JLabel menu4;
     public static javax.swing.JPanel menu4Panel;
+    public static javax.swing.JLabel menu5;
     public static javax.swing.JPanel menu5Panel;
+    public static javax.swing.JLabel menu6;
     public static javax.swing.JPanel menu6Panel;
     public static javax.swing.JButton menuButton;
     public static javax.swing.JTextField odemDisplay;
@@ -1674,4 +1650,6 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JButton upButton;
     public static javax.swing.JPanel whereToPanel;
     // End of variables declaration//GEN-END:variables
+    public static SatellitePanel TSPanel;
+    public static AboutModePanel aboutPanel;
 }

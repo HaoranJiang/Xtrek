@@ -47,8 +47,9 @@ public class Model{
     public Model(Menu menu, Situation situation){
         this.menu = menu;
         this.situation = situation;
+        time = "";
     }
-    public Model(){}
+
     public void openAndClose(){
         
         View.screenPanel.removeAll();

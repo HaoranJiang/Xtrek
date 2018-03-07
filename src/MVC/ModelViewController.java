@@ -22,9 +22,8 @@ public class ModelViewController {
     public static void main( String[] argv ) {
         Model model = new Model(menu, situation);
         Controller controller = new Controller(model);
-        View view = new View(model, controller);
-        
-       SatelliteController SatelliteController = new SatelliteController(model,TSPanel);          
+        View view = new View(model, controller);     
+        SatelliteController SatelliteController = new SatelliteController(model,TSPanel);          
         SatelliteController.connect();
         
 

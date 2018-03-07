@@ -23,6 +23,7 @@ public class AboutModePanel extends javax.swing.JPanel {
         university = new javax.swing.JLabel();
         XTrek = new javax.swing.JLabel();
         group = new javax.swing.JLabel();
+        icon = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(203, 245));
         setMinimumSize(new java.awt.Dimension(203, 245));
@@ -34,8 +35,8 @@ public class AboutModePanel extends javax.swing.JPanel {
 
         university.setText("ECM2415 University of Exeter");
         add(university, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
-
-
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/AM.PNG")));
+        add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70 ));
         XTrek.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         XTrek.setText("XTrek");
         add(XTrek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 145, 73));
