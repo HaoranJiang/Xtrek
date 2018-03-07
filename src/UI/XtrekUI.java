@@ -73,100 +73,6 @@ public class XtrekUI extends javax.swing.JFrame {
         menuButton = new javax.swing.JButton();
         screenPanel = new javax.swing.JPanel();
         offPanel = new javax.swing.JPanel();
-        whereToPanel = new javax.swing.JPanel();
-        jPanelTextDisplay = new javax.swing.JPanel();
-        jLabelTextDisplay = new javax.swing.JLabel();
-        jTextFieldDestination = new javax.swing.JTextField();
-        jPanelSubmit = new javax.swing.JPanel();
-        jPanelSubmitButton = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jPanelSubmitHighlight = new javax.swing.JPanel();
-        jLabel62 = new javax.swing.JLabel();
-        jPanelKeyBoard = new javax.swing.JPanel();
-        jPanelKeyA = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jPanelKeyB = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanelKeyC = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jPanelKeyD = new javax.swing.JPanel();
-        jLabel20 = new javax.swing.JLabel();
-        jPanelKeyE = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
-        jPanelKeyF = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
-        jPanelKeyG = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jPanelKeyH = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jPanelKeyI = new javax.swing.JPanel();
-        jLabel25 = new javax.swing.JLabel();
-        jPanelKeyJ = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        jPanelKeyL = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jPanelKeyK = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jPanelKeyM = new javax.swing.JPanel();
-        jLabel29 = new javax.swing.JLabel();
-        jPanelKeyN = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
-        jPanelKeyO = new javax.swing.JPanel();
-        jLabel31 = new javax.swing.JLabel();
-        jPanelKeyP = new javax.swing.JPanel();
-        jLabel32 = new javax.swing.JLabel();
-        jPanelKeyQ = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
-        jPanelKeyR = new javax.swing.JPanel();
-        jLabel34 = new javax.swing.JLabel();
-        jPanelKeyS = new javax.swing.JPanel();
-        jLabel35 = new javax.swing.JLabel();
-        jPanelKeyT = new javax.swing.JPanel();
-        jLabel36 = new javax.swing.JLabel();
-        jPanelKeyU = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
-        jPanelKeyV = new javax.swing.JPanel();
-        jLabel38 = new javax.swing.JLabel();
-        jPanelKeyW = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jPanelKeyX = new javax.swing.JPanel();
-        jLabel40 = new javax.swing.JLabel();
-        jPanelKeyY = new javax.swing.JPanel();
-        jLabel41 = new javax.swing.JLabel();
-        jPanelKeyZ = new javax.swing.JPanel();
-        jLabel42 = new javax.swing.JLabel();
-        jPanelKeySpace = new javax.swing.JPanel();
-        jLabel43 = new javax.swing.JLabel();
-        jPanelKeyNext = new javax.swing.JPanel();
-        jLabel44 = new javax.swing.JLabel();
-        jPanelKey1 = new javax.swing.JPanel();
-        jLabel45 = new javax.swing.JLabel();
-        jPanelKey2 = new javax.swing.JPanel();
-        jLabel46 = new javax.swing.JLabel();
-        jPanelKey3 = new javax.swing.JPanel();
-        jLabel47 = new javax.swing.JLabel();
-        jPanelKey4 = new javax.swing.JPanel();
-        jLabel48 = new javax.swing.JLabel();
-        jPanelKey5 = new javax.swing.JPanel();
-        jLabel49 = new javax.swing.JLabel();
-        jPanelKey6 = new javax.swing.JPanel();
-        jLabel50 = new javax.swing.JLabel();
-        jPanelKey7 = new javax.swing.JPanel();
-        jLabel51 = new javax.swing.JLabel();
-        jPanelKey8 = new javax.swing.JPanel();
-        jLabel52 = new javax.swing.JLabel();
-        jPanelKey9 = new javax.swing.JPanel();
-        jLabel53 = new javax.swing.JLabel();
-        jPanelKey0 = new javax.swing.JPanel();
-        jLabel54 = new javax.swing.JLabel();
-        jPanelKeyDel = new javax.swing.JPanel();
-        jLabel55 = new javax.swing.JLabel();
-        jPanelKeyPrev = new javax.swing.JPanel();
-        jLabel56 = new javax.swing.JLabel();
-        jPanelAlphaKeyBoard = new javax.swing.JPanel();
-        jLabel10 = new javax.swing.JLabel();
-        jPanelNumKeyBoard = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
         menu1Panel = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         menu2Panel = new javax.swing.JPanel();
@@ -211,6 +117,100 @@ public class XtrekUI extends javax.swing.JFrame {
         Longitude = new javax.swing.JTextArea();
         jLabel9 = new javax.swing.JLabel();
         Time = new javax.swing.JTextArea();
+        whereToPanel = new javax.swing.JPanel();
+        jPanelTextDisplay = new javax.swing.JPanel();
+        jLabelTextDisplay = new javax.swing.JLabel();
+        jTextFieldDestination = new javax.swing.JTextField();
+        jPanelSubmit = new javax.swing.JPanel();
+        jPanelSubmitButton = new javax.swing.JPanel();
+        jLabelSubmitButton = new javax.swing.JLabel();
+        jPanelSubmitHighlight = new javax.swing.JPanel();
+        jLabelSubmitHighlight = new javax.swing.JLabel();
+        jPanelKeyBoard = new javax.swing.JPanel();
+        jPanelKeyA = new javax.swing.JPanel();
+        jLabel63 = new javax.swing.JLabel();
+        jPanelKeyB = new javax.swing.JPanel();
+        jLabel64 = new javax.swing.JLabel();
+        jPanelKeyC = new javax.swing.JPanel();
+        jLabel65 = new javax.swing.JLabel();
+        jPanelKeyD = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jPanelKeyE = new javax.swing.JPanel();
+        jLabel67 = new javax.swing.JLabel();
+        jPanelKeyF = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
+        jPanelKeyG = new javax.swing.JPanel();
+        jLabel69 = new javax.swing.JLabel();
+        jPanelKeyH = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanelKeyI = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
+        jPanelKeyJ = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jPanelKeyK = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jPanelKeyL = new javax.swing.JPanel();
+        jLabel70 = new javax.swing.JLabel();
+        jPanelKeyM = new javax.swing.JPanel();
+        jLabel71 = new javax.swing.JLabel();
+        jPanelKeyN = new javax.swing.JPanel();
+        jLabel72 = new javax.swing.JLabel();
+        jPanelKeyO = new javax.swing.JPanel();
+        jLabel73 = new javax.swing.JLabel();
+        jPanelKeyP = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jPanelKeyQ = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jPanelKeyR = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jPanelKeyS = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jPanelKeyT = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jPanelKeyU = new javax.swing.JPanel();
+        jLabel23 = new javax.swing.JLabel();
+        jPanelKeyV = new javax.swing.JPanel();
+        jLabel24 = new javax.swing.JLabel();
+        jPanelKeyW = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jPanelKeyX = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        jPanelKeyY = new javax.swing.JPanel();
+        jLabel27 = new javax.swing.JLabel();
+        jPanelKeyZ = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jPanelKeySpace = new javax.swing.JPanel();
+        jLabel29 = new javax.swing.JLabel();
+        jPanelKeyNext = new javax.swing.JPanel();
+        jLabel30 = new javax.swing.JLabel();
+        jPanelKey1 = new javax.swing.JPanel();
+        jLabel31 = new javax.swing.JLabel();
+        jPanelKey2 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        jPanelKey3 = new javax.swing.JPanel();
+        jLabel33 = new javax.swing.JLabel();
+        jPanelKey4 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
+        jPanelKey5 = new javax.swing.JPanel();
+        jLabel35 = new javax.swing.JLabel();
+        jPanelKey6 = new javax.swing.JPanel();
+        jLabel36 = new javax.swing.JLabel();
+        jPanelKey7 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        jPanelKey8 = new javax.swing.JPanel();
+        jLabel38 = new javax.swing.JLabel();
+        jPanelKey9 = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanelKey0 = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jPanelKeyDel = new javax.swing.JPanel();
+        jLabel41 = new javax.swing.JLabel();
+        jPanelKeyPrev = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
+        jPanelAlphaKeyBoard = new javax.swing.JPanel();
+        jLabel74 = new javax.swing.JLabel();
+        jPanelNumKeyBoard = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -218,7 +218,6 @@ public class XtrekUI extends javax.swing.JFrame {
         setAlwaysOnTop(true);
         setAutoRequestFocus(false);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMaximumSize(new java.awt.Dimension(360, 631));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -267,1163 +266,6 @@ public class XtrekUI extends javax.swing.JFrame {
 
         offPanel.setBackground(new java.awt.Color(0, 0, 0));
         screenPanel.add(offPanel, "card3");
-
-        whereToPanel.setPreferredSize(new java.awt.Dimension(203, 245));
-
-        jPanelTextDisplay.setPreferredSize(new java.awt.Dimension(203, 34));
-
-        jLabelTextDisplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/text.png"))); // NOI18N
-
-        jTextFieldDestination.setPreferredSize(new java.awt.Dimension(200, 32));
-        jTextFieldDestination.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldDestinationActionPerformed(evt);
-            }
-        });
-
-        jPanelSubmit.setLayout(new java.awt.CardLayout());
-
-        jPanelSubmitButton.setPreferredSize(new java.awt.Dimension(64, 34));
-
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_submit.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelSubmitButtonLayout = new javax.swing.GroupLayout(jPanelSubmitButton);
-        jPanelSubmitButton.setLayout(jPanelSubmitButtonLayout);
-        jPanelSubmitButtonLayout.setHorizontalGroup(
-            jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 56, Short.MAX_VALUE)
-            .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelSubmitButtonLayout.createSequentialGroup()
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 2, Short.MAX_VALUE)))
-        );
-        jPanelSubmitButtonLayout.setVerticalGroup(
-            jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
-            .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelSubmit.add(jPanelSubmitButton, "card2");
-
-        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_submit_highlight.png"))); // NOI18N
-        jLabel62.setPreferredSize(new java.awt.Dimension(54, 28));
-
-        javax.swing.GroupLayout jPanelSubmitHighlightLayout = new javax.swing.GroupLayout(jPanelSubmitHighlight);
-        jPanelSubmitHighlight.setLayout(jPanelSubmitHighlightLayout);
-        jPanelSubmitHighlightLayout.setHorizontalGroup(
-            jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 56, Short.MAX_VALUE)
-            .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel62, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
-        );
-        jPanelSubmitHighlightLayout.setVerticalGroup(
-            jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
-            .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel62, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelSubmit.add(jPanelSubmitHighlight, "card3");
-
-        javax.swing.GroupLayout jPanelTextDisplayLayout = new javax.swing.GroupLayout(jPanelTextDisplay);
-        jPanelTextDisplay.setLayout(jPanelTextDisplayLayout);
-        jPanelTextDisplayLayout.setHorizontalGroup(
-            jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addComponent(jLabelTextDisplay)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(48, Short.MAX_VALUE)))
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTextDisplayLayout.createSequentialGroup()
-                    .addGap(0, 147, Short.MAX_VALUE)
-                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-        jPanelTextDisplayLayout.setVerticalGroup(
-            jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addComponent(jLabelTextDisplay)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 13, Short.MAX_VALUE)))
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
-                    .addContainerGap()))
-        );
-
-        jPanelKeyBoard.setLayout(new java.awt.CardLayout());
-
-        jPanelKeyA.setPreferredSize(new java.awt.Dimension(203, 212));
-
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_a.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyALayout = new javax.swing.GroupLayout(jPanelKeyA);
-        jPanelKeyA.setLayout(jPanelKeyALayout);
-        jPanelKeyALayout.setHorizontalGroup(
-            jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelKeyALayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel13))
-        );
-        jPanelKeyALayout.setVerticalGroup(
-            jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        jPanelKeyBoard.add(jPanelKeyA, "card2");
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_b.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyBLayout = new javax.swing.GroupLayout(jPanelKeyB);
-        jPanelKeyB.setLayout(jPanelKeyBLayout);
-        jPanelKeyBLayout.setHorizontalGroup(
-            jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyBLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel18)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyBLayout.setVerticalGroup(
-            jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyBLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel18)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyB, "card3");
-
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_c.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyCLayout = new javax.swing.GroupLayout(jPanelKeyC);
-        jPanelKeyC.setLayout(jPanelKeyCLayout);
-        jPanelKeyCLayout.setHorizontalGroup(
-            jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelKeyCLayout.setVerticalGroup(
-            jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyC, "card4");
-
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_d.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyDLayout = new javax.swing.GroupLayout(jPanelKeyD);
-        jPanelKeyD.setLayout(jPanelKeyDLayout);
-        jPanelKeyDLayout.setHorizontalGroup(
-            jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyDLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel20)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyDLayout.setVerticalGroup(
-            jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyDLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel20)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyD, "card5");
-
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_e.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyELayout = new javax.swing.GroupLayout(jPanelKeyE);
-        jPanelKeyE.setLayout(jPanelKeyELayout);
-        jPanelKeyELayout.setHorizontalGroup(
-            jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyELayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel21)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyELayout.setVerticalGroup(
-            jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyELayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel21)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyE, "card6");
-
-        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_f.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyFLayout = new javax.swing.GroupLayout(jPanelKeyF);
-        jPanelKeyF.setLayout(jPanelKeyFLayout);
-        jPanelKeyFLayout.setHorizontalGroup(
-            jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyFLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel22)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyFLayout.setVerticalGroup(
-            jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyFLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel22)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyF, "card7");
-
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_g.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyGLayout = new javax.swing.GroupLayout(jPanelKeyG);
-        jPanelKeyG.setLayout(jPanelKeyGLayout);
-        jPanelKeyGLayout.setHorizontalGroup(
-            jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyGLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel23)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyGLayout.setVerticalGroup(
-            jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyGLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel23)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyG, "card8");
-
-        jLabel24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_h.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyHLayout = new javax.swing.GroupLayout(jPanelKeyH);
-        jPanelKeyH.setLayout(jPanelKeyHLayout);
-        jPanelKeyHLayout.setHorizontalGroup(
-            jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyHLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel24)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyHLayout.setVerticalGroup(
-            jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyHLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel24)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyH, "card9");
-
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_i.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyILayout = new javax.swing.GroupLayout(jPanelKeyI);
-        jPanelKeyI.setLayout(jPanelKeyILayout);
-        jPanelKeyILayout.setHorizontalGroup(
-            jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyILayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel25)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyILayout.setVerticalGroup(
-            jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyILayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel25)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyI, "card10");
-
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_j.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyJLayout = new javax.swing.GroupLayout(jPanelKeyJ);
-        jPanelKeyJ.setLayout(jPanelKeyJLayout);
-        jPanelKeyJLayout.setHorizontalGroup(
-            jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyJLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel26)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyJLayout.setVerticalGroup(
-            jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyJLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel26)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyJ, "card11");
-
-        jLabel28.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_l.png"))); // NOI18N
-
-        jLabel27.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_k.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyKLayout = new javax.swing.GroupLayout(jPanelKeyK);
-        jPanelKeyK.setLayout(jPanelKeyKLayout);
-        jPanelKeyKLayout.setHorizontalGroup(
-            jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyKLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel27)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyKLayout.setVerticalGroup(
-            jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyKLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel27)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        javax.swing.GroupLayout jPanelKeyLLayout = new javax.swing.GroupLayout(jPanelKeyL);
-        jPanelKeyL.setLayout(jPanelKeyLLayout);
-        jPanelKeyLLayout.setHorizontalGroup(
-            jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyLLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel28)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyLLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanelKeyK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyLLayout.setVerticalGroup(
-            jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyLLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel28)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyLLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanelKeyK, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyL, "card13");
-
-        jLabel29.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_m.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyMLayout = new javax.swing.GroupLayout(jPanelKeyM);
-        jPanelKeyM.setLayout(jPanelKeyMLayout);
-        jPanelKeyMLayout.setHorizontalGroup(
-            jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyMLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel29)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyMLayout.setVerticalGroup(
-            jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyMLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel29)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyM, "card14");
-
-        jLabel30.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_n.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyNLayout = new javax.swing.GroupLayout(jPanelKeyN);
-        jPanelKeyN.setLayout(jPanelKeyNLayout);
-        jPanelKeyNLayout.setHorizontalGroup(
-            jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyNLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel30)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyNLayout.setVerticalGroup(
-            jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyNLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel30)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyN, "card15");
-
-        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_o.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyOLayout = new javax.swing.GroupLayout(jPanelKeyO);
-        jPanelKeyO.setLayout(jPanelKeyOLayout);
-        jPanelKeyOLayout.setHorizontalGroup(
-            jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyOLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel31)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyOLayout.setVerticalGroup(
-            jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyOLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel31)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyO, "card16");
-
-        jLabel32.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_p.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyPLayout = new javax.swing.GroupLayout(jPanelKeyP);
-        jPanelKeyP.setLayout(jPanelKeyPLayout);
-        jPanelKeyPLayout.setHorizontalGroup(
-            jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyPLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel32)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyPLayout.setVerticalGroup(
-            jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyPLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel32)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyP, "card17");
-
-        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_q.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyQLayout = new javax.swing.GroupLayout(jPanelKeyQ);
-        jPanelKeyQ.setLayout(jPanelKeyQLayout);
-        jPanelKeyQLayout.setHorizontalGroup(
-            jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyQLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel33)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyQLayout.setVerticalGroup(
-            jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyQLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel33)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyQ, "card18");
-
-        jLabel34.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_r.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyRLayout = new javax.swing.GroupLayout(jPanelKeyR);
-        jPanelKeyR.setLayout(jPanelKeyRLayout);
-        jPanelKeyRLayout.setHorizontalGroup(
-            jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyRLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel34)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyRLayout.setVerticalGroup(
-            jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyRLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel34)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyR, "card19");
-
-        jLabel35.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_s.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeySLayout = new javax.swing.GroupLayout(jPanelKeyS);
-        jPanelKeyS.setLayout(jPanelKeySLayout);
-        jPanelKeySLayout.setHorizontalGroup(
-            jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeySLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel35)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeySLayout.setVerticalGroup(
-            jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeySLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel35)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyS, "card20");
-
-        jLabel36.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_t.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyTLayout = new javax.swing.GroupLayout(jPanelKeyT);
-        jPanelKeyT.setLayout(jPanelKeyTLayout);
-        jPanelKeyTLayout.setHorizontalGroup(
-            jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyTLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel36)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyTLayout.setVerticalGroup(
-            jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyTLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel36)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyT, "card21");
-
-        jLabel37.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_u.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyULayout = new javax.swing.GroupLayout(jPanelKeyU);
-        jPanelKeyU.setLayout(jPanelKeyULayout);
-        jPanelKeyULayout.setHorizontalGroup(
-            jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyULayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel37)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyULayout.setVerticalGroup(
-            jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyULayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel37)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyU, "card22");
-
-        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_v.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyVLayout = new javax.swing.GroupLayout(jPanelKeyV);
-        jPanelKeyV.setLayout(jPanelKeyVLayout);
-        jPanelKeyVLayout.setHorizontalGroup(
-            jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyVLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel38)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyVLayout.setVerticalGroup(
-            jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyVLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel38)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyV, "card23");
-
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_w.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyWLayout = new javax.swing.GroupLayout(jPanelKeyW);
-        jPanelKeyW.setLayout(jPanelKeyWLayout);
-        jPanelKeyWLayout.setHorizontalGroup(
-            jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyWLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel39)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyWLayout.setVerticalGroup(
-            jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyWLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel39)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyW, "card24");
-
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_x.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyXLayout = new javax.swing.GroupLayout(jPanelKeyX);
-        jPanelKeyX.setLayout(jPanelKeyXLayout);
-        jPanelKeyXLayout.setHorizontalGroup(
-            jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyXLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel40)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyXLayout.setVerticalGroup(
-            jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyXLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel40)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyX, "card25");
-
-        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_y.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyYLayout = new javax.swing.GroupLayout(jPanelKeyY);
-        jPanelKeyY.setLayout(jPanelKeyYLayout);
-        jPanelKeyYLayout.setHorizontalGroup(
-            jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyYLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel41)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyYLayout.setVerticalGroup(
-            jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyYLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel41)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyY, "card26");
-
-        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_z.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyZLayout = new javax.swing.GroupLayout(jPanelKeyZ);
-        jPanelKeyZ.setLayout(jPanelKeyZLayout);
-        jPanelKeyZLayout.setHorizontalGroup(
-            jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyZLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel42)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyZLayout.setVerticalGroup(
-            jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyZLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel42)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyZ, "card27");
-
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_space.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeySpaceLayout = new javax.swing.GroupLayout(jPanelKeySpace);
-        jPanelKeySpace.setLayout(jPanelKeySpaceLayout);
-        jPanelKeySpaceLayout.setHorizontalGroup(
-            jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeySpaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel43)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeySpaceLayout.setVerticalGroup(
-            jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeySpaceLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel43)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeySpace, "card28");
-
-        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_next.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyNextLayout = new javax.swing.GroupLayout(jPanelKeyNext);
-        jPanelKeyNext.setLayout(jPanelKeyNextLayout);
-        jPanelKeyNextLayout.setHorizontalGroup(
-            jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyNextLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel44)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyNextLayout.setVerticalGroup(
-            jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyNextLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel44)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyNext, "card29");
-
-        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_1.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey1Layout = new javax.swing.GroupLayout(jPanelKey1);
-        jPanelKey1.setLayout(jPanelKey1Layout);
-        jPanelKey1Layout.setHorizontalGroup(
-            jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel45)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey1Layout.setVerticalGroup(
-            jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey1Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel45)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey1, "card30");
-
-        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_2.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey2Layout = new javax.swing.GroupLayout(jPanelKey2);
-        jPanelKey2.setLayout(jPanelKey2Layout);
-        jPanelKey2Layout.setHorizontalGroup(
-            jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey2Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel46)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey2Layout.setVerticalGroup(
-            jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey2Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel46)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey2, "card31");
-
-        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_3.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey3Layout = new javax.swing.GroupLayout(jPanelKey3);
-        jPanelKey3.setLayout(jPanelKey3Layout);
-        jPanelKey3Layout.setHorizontalGroup(
-            jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel47)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey3Layout.setVerticalGroup(
-            jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey3Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel47)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey3, "card32");
-
-        jLabel48.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_4.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey4Layout = new javax.swing.GroupLayout(jPanelKey4);
-        jPanelKey4.setLayout(jPanelKey4Layout);
-        jPanelKey4Layout.setHorizontalGroup(
-            jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel48)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey4Layout.setVerticalGroup(
-            jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey4Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel48)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey4, "card33");
-
-        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_5.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey5Layout = new javax.swing.GroupLayout(jPanelKey5);
-        jPanelKey5.setLayout(jPanelKey5Layout);
-        jPanelKey5Layout.setHorizontalGroup(
-            jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey5Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel49)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey5Layout.setVerticalGroup(
-            jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey5Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel49)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey5, "card34");
-
-        jLabel50.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_6.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey6Layout = new javax.swing.GroupLayout(jPanelKey6);
-        jPanelKey6.setLayout(jPanelKey6Layout);
-        jPanelKey6Layout.setHorizontalGroup(
-            jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey6Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel50)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey6Layout.setVerticalGroup(
-            jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey6Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel50)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey6, "card35");
-
-        jLabel51.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_7.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey7Layout = new javax.swing.GroupLayout(jPanelKey7);
-        jPanelKey7.setLayout(jPanelKey7Layout);
-        jPanelKey7Layout.setHorizontalGroup(
-            jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey7Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel51)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey7Layout.setVerticalGroup(
-            jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey7Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel51)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey7, "card36");
-
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_8.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey8Layout = new javax.swing.GroupLayout(jPanelKey8);
-        jPanelKey8.setLayout(jPanelKey8Layout);
-        jPanelKey8Layout.setHorizontalGroup(
-            jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey8Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel52)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey8Layout.setVerticalGroup(
-            jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey8Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel52)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey8, "card37");
-
-        jLabel53.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_9.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey9Layout = new javax.swing.GroupLayout(jPanelKey9);
-        jPanelKey9.setLayout(jPanelKey9Layout);
-        jPanelKey9Layout.setHorizontalGroup(
-            jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey9Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel53)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey9Layout.setVerticalGroup(
-            jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey9Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel53)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey9, "card38");
-
-        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_0.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKey0Layout = new javax.swing.GroupLayout(jPanelKey0);
-        jPanelKey0.setLayout(jPanelKey0Layout);
-        jPanelKey0Layout.setHorizontalGroup(
-            jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey0Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel54)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKey0Layout.setVerticalGroup(
-            jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKey0Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel54)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKey0, "card39");
-
-        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_del.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyDelLayout = new javax.swing.GroupLayout(jPanelKeyDel);
-        jPanelKeyDel.setLayout(jPanelKeyDelLayout);
-        jPanelKeyDelLayout.setHorizontalGroup(
-            jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyDelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel55)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyDelLayout.setVerticalGroup(
-            jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyDelLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel55)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyDel, "card40");
-
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key_prev.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelKeyPrevLayout = new javax.swing.GroupLayout(jPanelKeyPrev);
-        jPanelKeyPrev.setLayout(jPanelKeyPrevLayout);
-        jPanelKeyPrevLayout.setHorizontalGroup(
-            jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyPrevLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel56)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelKeyPrevLayout.setVerticalGroup(
-            jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelKeyPrevLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel56)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelKeyBoard.add(jPanelKeyPrev, "card41");
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/alphaKeyBoard.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelAlphaKeyBoardLayout = new javax.swing.GroupLayout(jPanelAlphaKeyBoard);
-        jPanelAlphaKeyBoard.setLayout(jPanelAlphaKeyBoardLayout);
-        jPanelAlphaKeyBoardLayout.setHorizontalGroup(
-            jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelAlphaKeyBoardLayout.setVerticalGroup(
-            jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelKeyBoard.add(jPanelAlphaKeyBoard, "card42");
-
-        jPanelNumKeyBoard.setPreferredSize(new java.awt.Dimension(203, 212));
-
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/numKeyBoard.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelNumKeyBoardLayout = new javax.swing.GroupLayout(jPanelNumKeyBoard);
-        jPanelNumKeyBoard.setLayout(jPanelNumKeyBoardLayout);
-        jPanelNumKeyBoardLayout.setHorizontalGroup(
-            jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelNumKeyBoardLayout.setVerticalGroup(
-            jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 212, Short.MAX_VALUE)
-            .addGroup(jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelKeyBoard.add(jPanelNumKeyBoard, "card43");
-
-        javax.swing.GroupLayout whereToPanelLayout = new javax.swing.GroupLayout(whereToPanel);
-        whereToPanel.setLayout(whereToPanelLayout);
-        whereToPanelLayout.setHorizontalGroup(
-            whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        whereToPanelLayout.setVerticalGroup(
-            whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 245, Short.MAX_VALUE)
-            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(whereToPanelLayout.createSequentialGroup()
-                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 211, Short.MAX_VALUE)))
-            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whereToPanelLayout.createSequentialGroup()
-                    .addGap(0, 33, Short.MAX_VALUE)
-                    .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
-        screenPanel.add(whereToPanel, "card14");
 
         menu1Panel.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1771,6 +613,1075 @@ public class XtrekUI extends javax.swing.JFrame {
         TSPanel.add(Time, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 180, 30));
 
         screenPanel.add(TSPanel, "card14");
+
+        whereToPanel.setPreferredSize(new java.awt.Dimension(203, 245));
+
+        jPanelTextDisplay.setPreferredSize(new java.awt.Dimension(203, 34));
+
+        jTextFieldDestination.setEditable(false);
+        jTextFieldDestination.setFont(new java.awt.Font("微软雅黑 Light", 1, 18)); // NOI18N
+        jTextFieldDestination.setPreferredSize(new java.awt.Dimension(200, 32));
+
+        jPanelSubmit.setPreferredSize(new java.awt.Dimension(50, 28));
+        jPanelSubmit.setLayout(new java.awt.CardLayout());
+
+        jPanelSubmitButton.setPreferredSize(new java.awt.Dimension(60, 35));
+
+        jLabelSubmitButton.setPreferredSize(new java.awt.Dimension(60, 35));
+
+        javax.swing.GroupLayout jPanelSubmitButtonLayout = new javax.swing.GroupLayout(jPanelSubmitButton);
+        jPanelSubmitButton.setLayout(jPanelSubmitButtonLayout);
+        jPanelSubmitButtonLayout.setHorizontalGroup(
+            jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabelSubmitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelSubmitButtonLayout.setVerticalGroup(
+            jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+            .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelSubmitButtonLayout.createSequentialGroup()
+                    .addComponent(jLabelSubmitButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelSubmit.add(jPanelSubmitButton, "card2");
+
+        javax.swing.GroupLayout jPanelSubmitHighlightLayout = new javax.swing.GroupLayout(jPanelSubmitHighlight);
+        jPanelSubmitHighlight.setLayout(jPanelSubmitHighlightLayout);
+        jPanelSubmitHighlightLayout.setHorizontalGroup(
+            jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 60, Short.MAX_VALUE)
+            .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabelSubmitHighlight, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE))
+        );
+        jPanelSubmitHighlightLayout.setVerticalGroup(
+            jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 35, Short.MAX_VALUE)
+            .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabelSubmitHighlight, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
+        );
+
+        jPanelSubmit.add(jPanelSubmitHighlight, "card3");
+
+        javax.swing.GroupLayout jPanelTextDisplayLayout = new javax.swing.GroupLayout(jPanelTextDisplay);
+        jPanelTextDisplay.setLayout(jPanelTextDisplayLayout);
+        jPanelTextDisplayLayout.setHorizontalGroup(
+            jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addComponent(jLabelTextDisplay, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(65, Short.MAX_VALUE)))
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelTextDisplayLayout.createSequentialGroup()
+                    .addContainerGap(143, Short.MAX_VALUE)
+                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+        );
+        jPanelTextDisplayLayout.setVerticalGroup(
+            jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addComponent(jLabelTextDisplay)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
+                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.setLayout(new java.awt.CardLayout());
+
+        jPanelKeyA.setPreferredSize(new java.awt.Dimension(203, 212));
+
+        jLabel63.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/key_a.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanelKeyALayout = new javax.swing.GroupLayout(jPanelKeyA);
+        jPanelKeyA.setLayout(jPanelKeyALayout);
+        jPanelKeyALayout.setHorizontalGroup(
+            jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyALayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel63)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyALayout.setVerticalGroup(
+            jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyALayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyALayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel63)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyA, "card2");
+
+        javax.swing.GroupLayout jPanelKeyBLayout = new javax.swing.GroupLayout(jPanelKeyB);
+        jPanelKeyB.setLayout(jPanelKeyBLayout);
+        jPanelKeyBLayout.setHorizontalGroup(
+            jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyBLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel64)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyBLayout.setVerticalGroup(
+            jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyBLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyBLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel64)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyB, "card3");
+
+        javax.swing.GroupLayout jPanelKeyCLayout = new javax.swing.GroupLayout(jPanelKeyC);
+        jPanelKeyC.setLayout(jPanelKeyCLayout);
+        jPanelKeyCLayout.setHorizontalGroup(
+            jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel65, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelKeyCLayout.setVerticalGroup(
+            jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel65, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyC, "card4");
+
+        javax.swing.GroupLayout jPanelKeyDLayout = new javax.swing.GroupLayout(jPanelKeyD);
+        jPanelKeyD.setLayout(jPanelKeyDLayout);
+        jPanelKeyDLayout.setHorizontalGroup(
+            jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyDLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel66)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyDLayout.setVerticalGroup(
+            jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyDLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyDLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel66)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyD, "card5");
+
+        javax.swing.GroupLayout jPanelKeyELayout = new javax.swing.GroupLayout(jPanelKeyE);
+        jPanelKeyE.setLayout(jPanelKeyELayout);
+        jPanelKeyELayout.setHorizontalGroup(
+            jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyELayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel67)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyELayout.setVerticalGroup(
+            jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyELayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyELayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel67)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyE, "card6");
+
+        javax.swing.GroupLayout jPanelKeyFLayout = new javax.swing.GroupLayout(jPanelKeyF);
+        jPanelKeyF.setLayout(jPanelKeyFLayout);
+        jPanelKeyFLayout.setHorizontalGroup(
+            jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyFLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel68)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyFLayout.setVerticalGroup(
+            jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyFLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel68)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyF, "card7");
+
+        javax.swing.GroupLayout jPanelKeyGLayout = new javax.swing.GroupLayout(jPanelKeyG);
+        jPanelKeyG.setLayout(jPanelKeyGLayout);
+        jPanelKeyGLayout.setHorizontalGroup(
+            jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyGLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel69)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyGLayout.setVerticalGroup(
+            jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyGLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyGLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel69)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyG, "card8");
+
+        javax.swing.GroupLayout jPanelKeyHLayout = new javax.swing.GroupLayout(jPanelKeyH);
+        jPanelKeyH.setLayout(jPanelKeyHLayout);
+        jPanelKeyHLayout.setHorizontalGroup(
+            jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyHLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel10)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyHLayout.setVerticalGroup(
+            jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyHLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyHLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel10)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyH, "card9");
+
+        javax.swing.GroupLayout jPanelKeyILayout = new javax.swing.GroupLayout(jPanelKeyI);
+        jPanelKeyI.setLayout(jPanelKeyILayout);
+        jPanelKeyILayout.setHorizontalGroup(
+            jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyILayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel11)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyILayout.setVerticalGroup(
+            jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyILayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyILayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel11)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyI, "card10");
+
+        javax.swing.GroupLayout jPanelKeyJLayout = new javax.swing.GroupLayout(jPanelKeyJ);
+        jPanelKeyJ.setLayout(jPanelKeyJLayout);
+        jPanelKeyJLayout.setHorizontalGroup(
+            jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyJLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel12)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyJLayout.setVerticalGroup(
+            jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyJLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyJLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel12)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyJ, "card11");
+
+        javax.swing.GroupLayout jPanelKeyKLayout = new javax.swing.GroupLayout(jPanelKeyK);
+        jPanelKeyK.setLayout(jPanelKeyKLayout);
+        jPanelKeyKLayout.setHorizontalGroup(
+            jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyKLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel13)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyKLayout.setVerticalGroup(
+            jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyKLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel13)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyK, "card12");
+
+        javax.swing.GroupLayout jPanelKeyLLayout = new javax.swing.GroupLayout(jPanelKeyL);
+        jPanelKeyL.setLayout(jPanelKeyLLayout);
+        jPanelKeyLLayout.setHorizontalGroup(
+            jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyLLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel70)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyLLayout.setVerticalGroup(
+            jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyLLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyLLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel70)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyL, "card13");
+
+        javax.swing.GroupLayout jPanelKeyMLayout = new javax.swing.GroupLayout(jPanelKeyM);
+        jPanelKeyM.setLayout(jPanelKeyMLayout);
+        jPanelKeyMLayout.setHorizontalGroup(
+            jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyMLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel71)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyMLayout.setVerticalGroup(
+            jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyMLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyMLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel71)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyM, "card14");
+
+        javax.swing.GroupLayout jPanelKeyNLayout = new javax.swing.GroupLayout(jPanelKeyN);
+        jPanelKeyN.setLayout(jPanelKeyNLayout);
+        jPanelKeyNLayout.setHorizontalGroup(
+            jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyNLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel72)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyNLayout.setVerticalGroup(
+            jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyNLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyNLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel72)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyN, "card15");
+
+        javax.swing.GroupLayout jPanelKeyOLayout = new javax.swing.GroupLayout(jPanelKeyO);
+        jPanelKeyO.setLayout(jPanelKeyOLayout);
+        jPanelKeyOLayout.setHorizontalGroup(
+            jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyOLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel73)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyOLayout.setVerticalGroup(
+            jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyOLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel73)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyO, "card16");
+
+        javax.swing.GroupLayout jPanelKeyPLayout = new javax.swing.GroupLayout(jPanelKeyP);
+        jPanelKeyP.setLayout(jPanelKeyPLayout);
+        jPanelKeyPLayout.setHorizontalGroup(
+            jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyPLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel18)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyPLayout.setVerticalGroup(
+            jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyPLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel18)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyP, "card17");
+
+        javax.swing.GroupLayout jPanelKeyQLayout = new javax.swing.GroupLayout(jPanelKeyQ);
+        jPanelKeyQ.setLayout(jPanelKeyQLayout);
+        jPanelKeyQLayout.setHorizontalGroup(
+            jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyQLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel19)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyQLayout.setVerticalGroup(
+            jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyQLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyQLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel19)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyQ, "card18");
+
+        javax.swing.GroupLayout jPanelKeyRLayout = new javax.swing.GroupLayout(jPanelKeyR);
+        jPanelKeyR.setLayout(jPanelKeyRLayout);
+        jPanelKeyRLayout.setHorizontalGroup(
+            jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyRLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel20)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyRLayout.setVerticalGroup(
+            jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyRLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyRLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel20)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyR, "card19");
+
+        javax.swing.GroupLayout jPanelKeySLayout = new javax.swing.GroupLayout(jPanelKeyS);
+        jPanelKeyS.setLayout(jPanelKeySLayout);
+        jPanelKeySLayout.setHorizontalGroup(
+            jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeySLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel21)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeySLayout.setVerticalGroup(
+            jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeySLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeySLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel21)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyS, "card20");
+
+        javax.swing.GroupLayout jPanelKeyTLayout = new javax.swing.GroupLayout(jPanelKeyT);
+        jPanelKeyT.setLayout(jPanelKeyTLayout);
+        jPanelKeyTLayout.setHorizontalGroup(
+            jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyTLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel22)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyTLayout.setVerticalGroup(
+            jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyTLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel22)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyT, "card21");
+
+        javax.swing.GroupLayout jPanelKeyULayout = new javax.swing.GroupLayout(jPanelKeyU);
+        jPanelKeyU.setLayout(jPanelKeyULayout);
+        jPanelKeyULayout.setHorizontalGroup(
+            jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyULayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel23)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyULayout.setVerticalGroup(
+            jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyULayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyULayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel23)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyU, "card22");
+
+        javax.swing.GroupLayout jPanelKeyVLayout = new javax.swing.GroupLayout(jPanelKeyV);
+        jPanelKeyV.setLayout(jPanelKeyVLayout);
+        jPanelKeyVLayout.setHorizontalGroup(
+            jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyVLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel24)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyVLayout.setVerticalGroup(
+            jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyVLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel24)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyV, "card23");
+
+        javax.swing.GroupLayout jPanelKeyWLayout = new javax.swing.GroupLayout(jPanelKeyW);
+        jPanelKeyW.setLayout(jPanelKeyWLayout);
+        jPanelKeyWLayout.setHorizontalGroup(
+            jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyWLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel25)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyWLayout.setVerticalGroup(
+            jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyWLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyWLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel25)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyW, "card24");
+
+        javax.swing.GroupLayout jPanelKeyXLayout = new javax.swing.GroupLayout(jPanelKeyX);
+        jPanelKeyX.setLayout(jPanelKeyXLayout);
+        jPanelKeyXLayout.setHorizontalGroup(
+            jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyXLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel26)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyXLayout.setVerticalGroup(
+            jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyXLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel26)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyX, "card25");
+
+        javax.swing.GroupLayout jPanelKeyYLayout = new javax.swing.GroupLayout(jPanelKeyY);
+        jPanelKeyY.setLayout(jPanelKeyYLayout);
+        jPanelKeyYLayout.setHorizontalGroup(
+            jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyYLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel27)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyYLayout.setVerticalGroup(
+            jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyYLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyYLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel27)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyY, "card26");
+
+        javax.swing.GroupLayout jPanelKeyZLayout = new javax.swing.GroupLayout(jPanelKeyZ);
+        jPanelKeyZ.setLayout(jPanelKeyZLayout);
+        jPanelKeyZLayout.setHorizontalGroup(
+            jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyZLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel28)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyZLayout.setVerticalGroup(
+            jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyZLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyZLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel28)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyZ, "card27");
+
+        javax.swing.GroupLayout jPanelKeySpaceLayout = new javax.swing.GroupLayout(jPanelKeySpace);
+        jPanelKeySpace.setLayout(jPanelKeySpaceLayout);
+        jPanelKeySpaceLayout.setHorizontalGroup(
+            jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeySpaceLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel29)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeySpaceLayout.setVerticalGroup(
+            jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeySpaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeySpaceLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel29)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeySpace, "card28");
+
+        javax.swing.GroupLayout jPanelKeyNextLayout = new javax.swing.GroupLayout(jPanelKeyNext);
+        jPanelKeyNext.setLayout(jPanelKeyNextLayout);
+        jPanelKeyNextLayout.setHorizontalGroup(
+            jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyNextLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel30)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyNextLayout.setVerticalGroup(
+            jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyNextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyNextLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel30)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyNext, "card29");
+
+        javax.swing.GroupLayout jPanelKey1Layout = new javax.swing.GroupLayout(jPanelKey1);
+        jPanelKey1.setLayout(jPanelKey1Layout);
+        jPanelKey1Layout.setHorizontalGroup(
+            jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel31)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey1Layout.setVerticalGroup(
+            jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel31)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey1, "card30");
+
+        javax.swing.GroupLayout jPanelKey2Layout = new javax.swing.GroupLayout(jPanelKey2);
+        jPanelKey2.setLayout(jPanelKey2Layout);
+        jPanelKey2Layout.setHorizontalGroup(
+            jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel32)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey2Layout.setVerticalGroup(
+            jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey2Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel32)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey2, "card31");
+
+        javax.swing.GroupLayout jPanelKey3Layout = new javax.swing.GroupLayout(jPanelKey3);
+        jPanelKey3.setLayout(jPanelKey3Layout);
+        jPanelKey3Layout.setHorizontalGroup(
+            jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel33)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey3Layout.setVerticalGroup(
+            jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey3Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel33)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey3, "card32");
+
+        javax.swing.GroupLayout jPanelKey4Layout = new javax.swing.GroupLayout(jPanelKey4);
+        jPanelKey4.setLayout(jPanelKey4Layout);
+        jPanelKey4Layout.setHorizontalGroup(
+            jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel34)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey4Layout.setVerticalGroup(
+            jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey4Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel34)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey4, "card33");
+
+        javax.swing.GroupLayout jPanelKey5Layout = new javax.swing.GroupLayout(jPanelKey5);
+        jPanelKey5.setLayout(jPanelKey5Layout);
+        jPanelKey5Layout.setHorizontalGroup(
+            jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey5Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel35)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey5Layout.setVerticalGroup(
+            jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey5Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel35)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey5, "card34");
+
+        javax.swing.GroupLayout jPanelKey6Layout = new javax.swing.GroupLayout(jPanelKey6);
+        jPanelKey6.setLayout(jPanelKey6Layout);
+        jPanelKey6Layout.setHorizontalGroup(
+            jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey6Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel36)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey6Layout.setVerticalGroup(
+            jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey6Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel36)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey6, "card35");
+
+        javax.swing.GroupLayout jPanelKey7Layout = new javax.swing.GroupLayout(jPanelKey7);
+        jPanelKey7.setLayout(jPanelKey7Layout);
+        jPanelKey7Layout.setHorizontalGroup(
+            jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey7Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel37)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey7Layout.setVerticalGroup(
+            jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey7Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel37)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey7, "card36");
+
+        javax.swing.GroupLayout jPanelKey8Layout = new javax.swing.GroupLayout(jPanelKey8);
+        jPanelKey8.setLayout(jPanelKey8Layout);
+        jPanelKey8Layout.setHorizontalGroup(
+            jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey8Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel38)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey8Layout.setVerticalGroup(
+            jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey8Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel38)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey8, "card37");
+
+        javax.swing.GroupLayout jPanelKey9Layout = new javax.swing.GroupLayout(jPanelKey9);
+        jPanelKey9.setLayout(jPanelKey9Layout);
+        jPanelKey9Layout.setHorizontalGroup(
+            jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey9Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel39)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey9Layout.setVerticalGroup(
+            jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey9Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel39)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey9, "card38");
+
+        javax.swing.GroupLayout jPanelKey0Layout = new javax.swing.GroupLayout(jPanelKey0);
+        jPanelKey0.setLayout(jPanelKey0Layout);
+        jPanelKey0Layout.setHorizontalGroup(
+            jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey0Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel40)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKey0Layout.setVerticalGroup(
+            jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKey0Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKey0Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel40)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKey0, "card39");
+
+        javax.swing.GroupLayout jPanelKeyDelLayout = new javax.swing.GroupLayout(jPanelKeyDel);
+        jPanelKeyDel.setLayout(jPanelKeyDelLayout);
+        jPanelKeyDelLayout.setHorizontalGroup(
+            jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyDelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel41)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyDelLayout.setVerticalGroup(
+            jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyDelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyDelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel41)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyDel, "card40");
+
+        javax.swing.GroupLayout jPanelKeyPrevLayout = new javax.swing.GroupLayout(jPanelKeyPrev);
+        jPanelKeyPrev.setLayout(jPanelKeyPrevLayout);
+        jPanelKeyPrevLayout.setHorizontalGroup(
+            jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyPrevLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel42)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanelKeyPrevLayout.setVerticalGroup(
+            jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelKeyPrevLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelKeyPrevLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel42)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+
+        jPanelKeyBoard.add(jPanelKeyPrev, "card41");
+
+        javax.swing.GroupLayout jPanelAlphaKeyBoardLayout = new javax.swing.GroupLayout(jPanelAlphaKeyBoard);
+        jPanelAlphaKeyBoard.setLayout(jPanelAlphaKeyBoardLayout);
+        jPanelAlphaKeyBoardLayout.setHorizontalGroup(
+            jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelAlphaKeyBoardLayout.setVerticalGroup(
+            jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelAlphaKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelKeyBoard.add(jPanelAlphaKeyBoard, "card42");
+
+        javax.swing.GroupLayout jPanelNumKeyBoardLayout = new javax.swing.GroupLayout(jPanelNumKeyBoard);
+        jPanelNumKeyBoard.setLayout(jPanelNumKeyBoardLayout);
+        jPanelNumKeyBoardLayout.setHorizontalGroup(
+            jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanelNumKeyBoardLayout.setVerticalGroup(
+            jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 212, Short.MAX_VALUE)
+            .addGroup(jPanelNumKeyBoardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelKeyBoard.add(jPanelNumKeyBoard, "card43");
+
+        javax.swing.GroupLayout whereToPanelLayout = new javax.swing.GroupLayout(whereToPanel);
+        whereToPanel.setLayout(whereToPanelLayout);
+        whereToPanelLayout.setHorizontalGroup(
+            whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(whereToPanelLayout.createSequentialGroup()
+                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        whereToPanelLayout.setVerticalGroup(
+            whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 245, Short.MAX_VALUE)
+            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(whereToPanelLayout.createSequentialGroup()
+                    .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 211, Short.MAX_VALUE)))
+            .addGroup(whereToPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, whereToPanelLayout.createSequentialGroup()
+                    .addGap(0, 33, Short.MAX_VALUE)
+                    .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        screenPanel.add(whereToPanel, "card14");
 
         getContentPane().add(screenPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 203, 245));
 
@@ -3129,10 +3040,6 @@ public class XtrekUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_timeDisplayActionPerformed
 
-    private void jTextFieldDestinationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDestinationActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldDestinationActionPerformed
-
     /**
      * @param args the command line arguments
      * @throws org.json.JSONException
@@ -3219,30 +3126,30 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
-    private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelSubmitButton;
+    private javax.swing.JLabel jLabelSubmitHighlight;
     private javax.swing.JLabel jLabelTextDisplay;
     private javax.swing.JPanel jPanelAlphaKeyBoard;
     private javax.swing.JPanel jPanelKey0;
@@ -3319,6 +3226,6 @@ public class XtrekUI extends javax.swing.JFrame {
     private javax.swing.JLabel tripComputerSpeed;
     private javax.swing.JLabel tripComputerTime;
     private javax.swing.JButton upButton;
-    public static javax.swing.JPanel whereToPanel;
+    private javax.swing.JPanel whereToPanel;
     // End of variables declaration//GEN-END:variables
 }
