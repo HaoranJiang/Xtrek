@@ -30,19 +30,25 @@ public class SatellitePanel extends javax.swing.JPanel {
         longitude = new javax.swing.JTextField();
         time = new javax.swing.JTextField();
 
+        setMaximumSize(new java.awt.Dimension(203, 245));
+        setMinimumSize(new java.awt.Dimension(203, 245));
+        setPreferredSize(new java.awt.Dimension(203, 245));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         latitude.setEditable(false);
         latitude.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        add(latitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 100));
+        latitude.setBorder(null);
+        add(latitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 200, 60));
 
         longitude.setEditable(false);
         longitude.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        add(longitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 220, 100));
+        longitude.setBorder(null);
+        add(longitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 200, 50));
 
         time.setEditable(false);
         time.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 220, 40));
+        time.setBorder(null);
+        add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 200, 40));
     }// </editor-fold>//GEN-END:initComponents
 
 

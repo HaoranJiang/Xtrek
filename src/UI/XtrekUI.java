@@ -3116,7 +3116,7 @@ public class XtrekUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(XtrekUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        SatelliteController.connect();
+
         //</editor-fold>
 
         /* Create and display the form */

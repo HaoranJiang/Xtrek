@@ -154,7 +154,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
         else{
             SatellitePanel.latitude.setText("       No signal!");
             SatellitePanel.longitude.setText("       No signal!");
-            SatellitePanel.time.setText("Last signal at: "+SatelliteModel.time);
+            SatellitePanel.time.setText("  Last signal at: "+SatelliteModel.time);
             SatellitePanel.latitude.setForeground(Color.red);
             SatellitePanel.longitude.setForeground(Color.red);
         }
