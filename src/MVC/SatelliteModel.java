@@ -27,49 +27,9 @@ public class SatelliteModel {
         dOLatitude= 'a';
         dOLongitude='a';
         signal = false;
-        time = "";
-        
-        
+        time = "";              
     }
-    
-    
-    public void updateSignal(boolean signal){
-        SatelliteModel.signal = signal;
-        System.out.println("Updated");
-    }
-    
-    public void updateLatitude(double latitude, char direction) {      
-        if (dOLatitude =='S'){
-            this.latitude = (-1) * latitude;
-        }else{
-        this.latitude = latitude;
-        }
-        this.dOLatitude = direction;
- 
 
-    }
-    
-    public void updateLongitude(double longitude, char direction) { 
-        if (dOLongitude =='W'){
-            this.longitude = (-1) * longitude;
-        }else{
-            this.longitude = longitude;
-        }
-        this.dOLongitude = direction;
-        
-    }
-    
-    public void updateTime(String time){
-        this.time = time;
-
-    }
-    
-    public boolean getSignal(){return signal;}
-    public double  getLatitude(){return latitude;}
-    public double  getLongitude(){return longitude;}
-    public char    getDOLatitude(){return dOLatitude;}
-    public char    getDOLongitude(){return dOLongitude;}
-    public String  getTime(){return time;}
     public String  getPosition(){
         String position = "" + latitude + longitude;
         return position;

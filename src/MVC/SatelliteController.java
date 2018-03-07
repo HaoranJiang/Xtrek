@@ -185,7 +185,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             serialPort.removeEventListener();
             serialPort.close();
             in.close();
-            model.updateSignal(false);
+            SatelliteModel.signal = false;
         }catch(IOException e){}               
 }
 
