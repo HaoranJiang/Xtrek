@@ -12,7 +12,11 @@ import gnu.io.SerialPortEventListener;
 import java.io.InputStream;
 import java.util.Enumeration;
 import gnu.io.*;
+import java.awt.Color;
+import java.awt.Font;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.TooManyListenersException;
 /**
  *
@@ -20,8 +24,8 @@ import java.util.TooManyListenersException;
  */
 public class SatelliteController implements Runnable, SerialPortEventListener{
     private SatelliteModel model;
-    private static SatellitePanel view;
-    private boolean signal;
+    private SatellitePanel view;
+    
     static SerialPort serialPort;
     static InputStream in;
     static Thread readThread;
@@ -32,6 +36,23 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
         this.model = model;
         this.view = view;
     }
+    
+      /* Public static method, to connect port and try to get GPS location */
+    public void connect(){
+      portList = CommPortIdentifier.getPortIdentifiers();
+
+      while(portList.hasMoreElements()){
+          portID = (CommPortIdentifier)portList.nextElement();
+          if (portID.getPortType() == CommPortIdentifier.PORT_SERIAL){
+            if(portID.getName().equals("COM4")){
+                SatelliteController reader = new SatelliteController();
+                return;
+            }  
+          }
+     }
+      // not connected with GPS device
+      updateView(false, 0, 'a', 0,'a', "");     
+    } 
     /* Open serial port*/
     public SatelliteController(){        
        try{
@@ -92,33 +113,59 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
         s = new String( buffer, 0, n ); 
         // no available message.. 
         if (s.startsWith("$GPGLL,,,")){
-            this.signal = false; 
-            model.updateSignal(false);      
+            SatelliteModel.signal = false; 
+            updateView(false, 0, 'a', 0,'a', ""); 
         }
         // available message..
-        else if (s.startsWith("$GPGLL")){
-            System.out.println("Updating...");
-            this.signal = true;
-            model.updateSignal(true);
-            	
+        else if (s.startsWith("$GPGLL")){       
+            //System.out.println("Updating...");
+            SatelliteModel.signal = true;
             /* Convert NMEA message */
             double latitude  = converter(s.substring(7,9),s.substring(9,11),s.substring(12,17));
             double longitude = converter(s.substring(20,23),s.substring(23,25),s.substring(26,31));
             String time     =  convertTime(s.substring(34,36),s.substring(36,38),s.substring(38,40));
-            model.updateLatitude(latitude, s.charAt(18));
-            
-            model.updateLongitude(longitude,s.charAt(32));
-            model.updateTime(time);
-            updateView();
+            SatelliteModel.latitude = latitude;
+            SatelliteModel.dOLatitude= s.charAt(18);
+            SatelliteModel.longitude= longitude;
+            SatelliteModel.dOLongitude=s.charAt(32);
+            SatelliteModel.time    = time;
+            updateView(true, latitude, SatelliteModel.dOLatitude, longitude, SatelliteModel.dOLongitude, time);
             }
         }
     }catch(IOException e){}
    }
     /* update position in view*/   
-    public void updateView(){
-        view.showPosition(model.getSignal(),model.getLatitude(),model.getDOLatitude(),
-                model.getLongitude(),model.getDOLongitude(),model.getTime());
+    public void updateView(boolean signal,double latitude,char dOLatitude,double longitude,
+            char dOLongitude, String time){
+        Font f = new Font("MS Reference San Serif",Font.BOLD,18);
+        if( signal == true ){
+            SatellitePanel.latitude.setText("Latitude: "+round(Math.abs(latitude),4)+" , "+dOLatitude);
+            SatellitePanel.longitude.setText("Longitude: "+round(Math.abs(longitude),4)+" , "+dOLongitude);
+            SatellitePanel.latitude.setFont(f);
+            SatellitePanel.longitude.setFont(f);
+            SatellitePanel.latitude.setForeground(Color.green);
+            SatellitePanel.longitude.setForeground(Color.green);
+            SatellitePanel.time.setText(time);                 
+        }
+        else{
+            SatellitePanel.latitude.setText("       No signal!");
+            SatellitePanel.longitude.setText("       No signal!");
+            SatellitePanel.time.setText("Last signal at: "+SatelliteModel.time);
+            SatellitePanel.latitude.setForeground(Color.red);
+            SatellitePanel.longitude.setForeground(Color.red);
+        }
     }
+        /**
+     * @ helper function : Round a value to certain decimal places 
+     */
+    private double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+        
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+    return bd.doubleValue();
+    }
+
    /* Convert NMEA string message into decimal degrees */
     private double converter(String degree, String minute, String second){
         Integer degrees  = Integer.valueOf(degree);
@@ -138,28 +185,10 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             serialPort.removeEventListener();
             serialPort.close();
             in.close();
-            signal = false;
             model.updateSignal(false);
         }catch(IOException e){}               
 }
-  /* Public static method, to connect port and try to get GPS location */
-    public static void connect(){
-      portList = CommPortIdentifier.getPortIdentifiers();
 
-      while(portList.hasMoreElements()){
-          portID = (CommPortIdentifier)portList.nextElement();
-          if (portID.getPortType() == CommPortIdentifier.PORT_SERIAL){
-            if(portID.getName().equals("COM4")){
-                SatelliteController reader = new SatelliteController();
-                return;
-            }                  
-      }
-      }
-      // not connected with GPS device
-    
-      view.showPosition(false, 0, 'a', 0,'a', "");
-      
-  }  
     
     
 }

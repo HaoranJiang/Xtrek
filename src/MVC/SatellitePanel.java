@@ -6,16 +6,12 @@
 package MVC;
 
 
-import java.awt.Color;
-import java.awt.Font;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Observable;
+
 
 
 /**
  *
- * @author harry
+ * @authorYukun Sun (Group L WorkPackage 5)
  */
 public class SatellitePanel extends javax.swing.JPanel {
 
@@ -51,52 +47,14 @@ public class SatellitePanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField latitude;
-    private javax.swing.JTextField longitude;
-    private javax.swing.JTextField time;
+    static javax.swing.JTextField latitude;
+    static javax.swing.JTextField longitude;
+    static javax.swing.JTextField time;
     // End of variables declaration//GEN-END:variables
 
-    Font f = new Font("MS Reference San Serif",Font.BOLD,18);
+
     
-    /**
-     *
-     * @param signal signal
-     * @param latitude latitude
-     * @param dOLatitude direction of latitude
-     * @param longitude longitude
-     * @param dOLongitude direction of longitude
-     * @param time   time
-     */
-    public void showPosition(boolean signal,double latitude,char dOLatitude,double longitude,
-            char dOLongitude, String time){
-        if( signal == true ){
-            this.latitude.setText("Latitude: "+round(Math.abs(latitude),4)+" , "+dOLatitude);
-            this.longitude.setText("Longitude: "+round(Math.abs(longitude),4)+" , "+dOLongitude);
-            this.latitude.setFont(f);
-            this.longitude.setFont(f);
-            this.latitude.setForeground(Color.green);
-            this.longitude.setForeground(Color.green);
-            this.time.setText(time);                 
-        }
-        else{
-            this.latitude.setText("       No signal!");
-            this.longitude.setText("       No signal!");
-            this.time.setText("Last signal at: "+this.time.getText());
-            this.latitude.setForeground(Color.red);
-            this.longitude.setForeground(Color.red);
-        }
-    }
-    
-    /**
-     * @ helper function : Round a value to certain decimal places 
-     */
-    private double round(double value, int places) {
-        if (places < 0) throw new IllegalArgumentException();
-        
-        BigDecimal bd = new BigDecimal(value);
-        bd = bd.setScale(places, RoundingMode.HALF_UP);
-    return bd.doubleValue();
-    }
+
 
    
 }

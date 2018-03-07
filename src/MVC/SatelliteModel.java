@@ -14,20 +14,28 @@ package MVC;
  * @author Yukun Sun (Group L WorkPackage 5)
  */
 public class SatelliteModel {
-    private double latitude;
-    private double longitude;
-    private char   dOLatitude;  // direction of latitude
-    private char   dOLongitude;  // direction of longitude
-    private boolean signal;
-    private String time;
+    static double latitude;
+    static double longitude;
+    static char   dOLatitude;  // direction of latitude
+    static char   dOLongitude;  // direction of longitude
+    static boolean signal;
+    static String time;
     
     public SatelliteModel(){
-             
+        latitude = 0;
+        longitude= 0;
+        dOLatitude= 'a';
+        dOLongitude='a';
+        signal = false;
+        time = "";
+        
+        
     }
     
     
     public void updateSignal(boolean signal){
-        this.signal = signal;
+        SatelliteModel.signal = signal;
+        System.out.println("Updated");
     }
     
     public void updateLatitude(double latitude, char direction) {      
