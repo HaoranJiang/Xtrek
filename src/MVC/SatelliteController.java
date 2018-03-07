@@ -128,6 +128,10 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             SatelliteModel.dOLatitude= s.charAt(18);
             SatelliteModel.longitude= longitude;
             SatelliteModel.dOLongitude=s.charAt(32);
+            if (SatelliteModel.dOLatitude == 'S')
+                SatelliteModel.latitude *= -1;
+            if (SatelliteModel.dOLongitude == 'W')
+                SatelliteModel.longitude *= -1;
             SatelliteModel.time    = time;
             updateView(true, latitude, SatelliteModel.dOLatitude, longitude, SatelliteModel.dOLongitude, time);
             }
