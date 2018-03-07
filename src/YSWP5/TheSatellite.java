@@ -1,4 +1,4 @@
-package MVC;
+package YSWP5;
 
 import UI.*;
 import gnu.io.*;
@@ -14,7 +14,6 @@ import java.awt.Font;
 
 /**
  * @author Yukun Sun (Group L WorkPackage 5)
- * @last_update 04/03/2018
  * @function open and read NMEA message from serial port, and display it on Satellite UI
  */
 public class TheSatellite implements Runnable, SerialPortEventListener{

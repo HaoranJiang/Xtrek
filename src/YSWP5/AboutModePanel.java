@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MVC;
+package YSWP5;
 
 /**
  *
- * @author harry
+ * @author Yukun Sun (Group L WorkPackage 5)
  */
 public class AboutModePanel extends javax.swing.JPanel {
 

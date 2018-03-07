@@ -4,7 +4,7 @@ package UI;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-import MVC.SatelliteController;
+import YSWP5.SatelliteController;
 import javaapplication1.HttpConnect;
 import javaapplication1.NewSoundAndSpeech;
 import static java.lang.Thread.sleep;
