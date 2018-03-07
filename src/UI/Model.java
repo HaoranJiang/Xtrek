@@ -146,7 +146,6 @@ public class Model extends Observable{
                 default:
                     break;
             }   
-            screenPanel.removeAll();
             screenPanel.repaint();
             screenPanel.revalidate();
         }   

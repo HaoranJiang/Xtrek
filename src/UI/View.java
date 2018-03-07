@@ -1,3 +1,4 @@
+
 package UI;
 
 import static UI.Model.situation;
@@ -172,6 +173,7 @@ public class View extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         upButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/+.PNG"))); // NOI18N
+        upButton.setBorder(null);
         upButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 upButtonActionPerformed(evt);
@@ -180,6 +182,7 @@ public class View extends javax.swing.JFrame {
         getContentPane().add(upButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(9, 74, 46, 55));
 
         onButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Xtrek - 副本 (2).PNG"))); // NOI18N
+        onButton.setBorder(null);
         onButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 onButtonActionPerformed(evt);
@@ -188,6 +191,7 @@ public class View extends javax.swing.JFrame {
         getContentPane().add(onButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 130, 60, 60));
 
         downButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/-.PNG"))); // NOI18N
+        downButton.setBorder(null);
         downButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 downButtonActionPerformed(evt);
@@ -196,6 +200,7 @@ public class View extends javax.swing.JFrame {
         getContentPane().add(downButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 131, 44, 53));
 
         selectButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.PNG"))); // NOI18N
+        selectButton.setBorder(null);
         selectButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 selectButtonActionPerformed(evt);
@@ -204,6 +209,7 @@ public class View extends javax.swing.JFrame {
         getContentPane().add(selectButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 204, 50, 71));
 
         menuButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/back.PNG"))); // NOI18N
+        menuButton.setBorder(null);
         menuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 menuButtonActionPerformed(evt);
@@ -1625,6 +1631,7 @@ public class View extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 360, 630));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     public void onButton(){
