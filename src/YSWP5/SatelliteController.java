@@ -19,7 +19,9 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.TooManyListenersException;
 /**
- *
+ * @MVC - Controller: SatelliteController controls model and view(SatellitePanel)
+ * It has functions of updating latitude/longitude/direction in model, and displaying
+ * them in the panel(view). 
  * @author Yukun Sun (Group L WorkPackage 5)
  */
 public class SatelliteController implements Runnable, SerialPortEventListener{

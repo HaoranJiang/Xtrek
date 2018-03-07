@@ -10,7 +10,7 @@ package YSWP5;
 
 
 /**
- *
+ * @MVC - model. Stores latitude/longitude/direction, updated by controller.
  * @author Yukun Sun (Group L WorkPackage 5)
  */
 public class SatelliteModel {

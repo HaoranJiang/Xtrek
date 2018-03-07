@@ -10,7 +10,7 @@ package YSWP5;
 
 
 /**
- *
+ *@MVC - view. Display latitude/longitude/time. Refreshed by controller.
  * @authorYukun Sun (Group L WorkPackage 5)
  */
 public class SatellitePanel extends javax.swing.JPanel {
