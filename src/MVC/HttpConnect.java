@@ -1,6 +1,6 @@
 package MVC;
 
-import javaapplication1.*;
+
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.DataInputStream;

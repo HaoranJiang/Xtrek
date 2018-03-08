@@ -1,29 +1,32 @@
-package javaapplication1;
+package MVC;
 
-import javaapplication1.HttpConnect;
+import static MVC.Model.getPosition;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.DataOutputStream;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
+import java.util.HashMap;
+import java.util.concurrent.TimeUnit; 
+
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
-import javaapplication1.SoundAndSpeech;
-import javaapplication1.Translator;
-import javaapplication1.OutputCapturer;
+
 
 /*
  * Speech generation using Microsoft Cognitive Services.
+ *
+ *
+ * @author Charles Roberts, 2018.
+ *
  */
 public class NewSoundAndSpeech {
   final static String KEY1 = "5bfb30a4061e46afb5c4d832555dc8ae";
   final static String KEY2 = "091446841a3040408c7400aebbbca030";
   
-  static String TEXT   = "Frankly, my dear, I don't give a damn!";
+  static String TEXT;
   static String LANG;
   static String GENDER;
   static String ARTIST;
@@ -33,6 +36,27 @@ public class NewSoundAndSpeech {
   
   final static String OUTPUT = "output.wav";
   final static String FORMAT = "riff-16khz-16bit-mono-pcm";
+  
+  // I have created my own route
+  static HashMap<String,String> route = new HashMap<String,String>();
+  
+  
+  // I have added custom key and value pairs to this route
+  public static void addKeyValuePair() {
+  
+    route.put("50.7269971,-3.5180801", "Turn right");
+    route.put("50.7269972,-3.5180801", "Turn right");
+    route.put("50.7269973,-3.5180801", "Turn right");
+    route.put("50.7269974,-3.5180801", "Turn right");
+    route.put("50.7269975,-3.5180801", "Turn right");
+    route.put("50.7269976,-3.5180801", "Turn right");
+    route.put("50.7269977,-3.5180801", "Turn right");
+  }
+  
+  /* I have created a variable called currentLocation to hold a fake current 
+  location.
+  */
+ 
 
   /*
    * Renew an access token --- they expire after 10 minutes.
@@ -59,7 +83,7 @@ public class NewSoundAndSpeech {
     final String method = "POST";
     final String url = "https://speech.platform.bing.com/synthesize";
     final byte[] body
-      = ( "<speak version='1.0' xml:lang='en-US'>"
+      = ( "<speak version='1.0' xml:lang='en-GB'>"
         + "<voice xml:lang='" + lang   + "' "
         + "xml:gender='"      + gender + "' "
         + "name='Microsoft Server Speech Text to Speech Voice "
@@ -259,6 +283,9 @@ public class NewSoundAndSpeech {
     }
   }
   
+  /*
+   * Changes what language that the text is read as. 
+   */
   public static void changeLanguage( int s ){
 	  switch(s){
 		case 1:
@@ -296,50 +323,60 @@ public class NewSoundAndSpeech {
 	  }
   }
   
+  /*
+   * Translates and speaks the text. 
+   */
   public static void open(int ss) throws Exception {
     changeLanguage(ss);
     token  = renewAccessToken( KEY1 );
     switch(ss) {
 		case 1:
                     speech = generateEnglishSpeech( token,  TEXT,   LANG
-                                        , GENDER, ARTIST, FORMAT );	
+                                        , GENDER, ARTIST, FORMAT );
                     break;
 		  
 		case 2:
+                    
+                    String frenchText;
                     Translator frenchTranslator = new Translator();
                     OutputCapturer.start();
                     frenchTranslator.translate("en", "fr", TEXT);
-                    TEXT = OutputCapturer.stop();  
+                    frenchText = OutputCapturer.stop();  
                     
-                    speech = generateFrenchSpeech( token,  TEXT,   LANG
+                    speech = generateFrenchSpeech( token,  frenchText,   LANG
                                         , GENDER, ARTIST, FORMAT );	
                     break;
 			
 		case 3:
+                    String germanText;
                     Translator germanTranslator = new Translator();
                     OutputCapturer.start();
                     germanTranslator.translate("en", "de", TEXT);
-                    TEXT = OutputCapturer.stop();  
-                    speech = generateGermanSpeech( token,  TEXT,   LANG
+                    germanText = OutputCapturer.stop();  
+                    
+                    speech = generateGermanSpeech( token,  germanText,   LANG
                                         , GENDER, ARTIST, FORMAT );
                     break;
 			
 		case 4:
+                    String italianText;
                     Translator italianTranslator = new Translator();
                     OutputCapturer.start();
                     italianTranslator.translate("en", "it", TEXT);
-                    TEXT = OutputCapturer.stop();  
+                    italianText = OutputCapturer.stop();  
                     
-                    speech = generateItalianSpeech( token,  TEXT,   LANG
+                    speech = generateItalianSpeech( token,  italianText,   LANG
                                         , GENDER, ARTIST, FORMAT );
                     break;
 			
 		case 5:
+                    String spanishText;
                     Translator spanishTranslator = new Translator();
                     OutputCapturer.start();
                     spanishTranslator.translate("en", "es", TEXT);
-                    TEXT = OutputCapturer.stop();  
-                    speech = generateSpanishSpeech( token,  TEXT,   LANG
+                    spanishText = OutputCapturer.stop();  
+                    
+                    speech = generateSpanishSpeech( token,  spanishText,   LANG
                                         , GENDER, ARTIST, FORMAT );
                     break;
 		
@@ -351,32 +388,107 @@ public class NewSoundAndSpeech {
     playStream( stm, readStream( stm ) );
   }
   
-    public static void newOpen(int ss) throws Exception {
-        switch(ss) {
-            case 1:
-                        open(1);
-                        break;
-                    case 2:
-                        open(2);
-                        break;
-                    case 3:
-                        open(3);
-                        break;
-                    case 4:
-                        open(4);
-                        break;
-                    case 5:
-                        open(5);
-                        break;
-                        
-        }
-    }
   
-   /*
+  /*
+   * Speaks the directions in English.
+   * Waits 30 seconds before repeating the command. 
+   */
+  public static void englishDirectionsReader() throws Exception {
+      while (true) {
+          String currentLocation = getPosition();
+          for (String key : route.keySet()) {
+              String value = route.get(key);
+              String englishText = String.valueOf(value);
+              if (currentLocation.equals(key)) {
+                  TEXT = englishText;
+                  open(1);
+                  TimeUnit.SECONDS.sleep(30);
+              }
+          }
+      }
+  }
+  
+  /*
+   * Speaks the directions in French.
+   * Waits 30 seconds before repeating the command. 
+   */
+  public static void frenchDirectionsReader() throws Exception {
+      while (true) {
+          String currentLocation = getPosition();
+          for (String key : route.keySet()) {
+              String value = route.get(key);
+              String englishText = String.valueOf(value);
+              if (currentLocation.equals(key)) {
+                  TEXT = englishText;
+                  open(2);
+                  TimeUnit.SECONDS.sleep(30);
+              }
+          }
+      }
+  }
+  
+  /*
+   * Speaks the directions in German.
+   * Waits 30 seconds before repeating the command.
+   */
+  public static void germanDirectionsReader() throws Exception {
+      while (true) {
+          String currentLocation = getPosition();
+          for (String key : route.keySet()) {
+              String value = route.get(key);
+              String englishText = String.valueOf(value);
+              if (currentLocation.equals(key)) {
+                  TEXT = englishText;
+                  open(3);
+                  TimeUnit.SECONDS.sleep(30);
+              }
+          }
+      }
+  }
+  
+  /*
+   * Speaks the directions in Italian.
+   * Waits 30 seconds before repeating the command.
+   */
+  public static void italianDirectionsReader() throws Exception {
+      while (true) {
+          String currentLocation = getPosition();
+          for (String key : route.keySet()) {
+              String value = route.get(key);
+              String englishText = String.valueOf(value);
+              if (currentLocation.equals(key)) {
+                  TEXT = englishText;
+                  open(4);
+                  TimeUnit.SECONDS.sleep(30);
+              }
+          }
+      }
+  }
+  
+  /*
+   * Speaks the directions in Spanish.
+   * Waits 30 seconds before repeating the command.
+   */
+  public static void spanishDirectionsReader() throws Exception {
+      while (true) {
+          String currentLocation = getPosition();
+          for (String key : route.keySet()) {
+              String value = route.get(key);
+              String englishText = String.valueOf(value);
+              if (currentLocation.equals(key)) {
+                  TEXT = englishText;
+                  open(5);
+                  TimeUnit.SECONDS.sleep(30);
+              }
+          }
+      }
+  }
+  
+  /*
    * Generate sound.
    */
   public static void main( String[] argv ) throws Exception {
-	open(2);
-      
+      addKeyValuePair();
+      spanishDirectionsReader();
   }
 } 

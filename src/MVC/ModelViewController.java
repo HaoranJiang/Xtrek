@@ -7,6 +7,7 @@ package MVC;
 import MVC.Model.Keys;
 import MVC.Model.Menu;
 import MVC.Model.Situation;
+import static MVC.Model.speechMenu;
 import static MVC.View.TSPanel;
 
 
@@ -20,7 +21,7 @@ public class ModelViewController {
     private static Situation situation = Situation.OFF;
     private static Keys keys = Keys.KEY_A;
     public static void main( String[] argv ) {
-        Model model = new Model(menu, situation,keys);
+        Model model = new Model(menu, situation,keys,speechMenu);
         Controller controller = new Controller(model);
         View view = new View(model, controller);     
         SatelliteController SatController = new SatelliteController(model,TSPanel);          

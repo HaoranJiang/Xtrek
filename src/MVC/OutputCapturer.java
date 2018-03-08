@@ -1,8 +1,7 @@
-package javaapplication1;
+package MVC;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.IOException;
 import java.io.PrintStream;
 
 /** A class with static methods for capturing console output.

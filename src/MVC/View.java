@@ -34,10 +34,12 @@ public class View extends javax.swing.JFrame {
         aboutPanel = new AboutModePanel();
         whereToPanel = new WhereToView();
         tripComputerPanel = new TripComputerView();
+        speechPanel = new SpeechPanel();
         screenPanel.add(TSPanel,"card 7");
         screenPanel.add(aboutPanel,"card15");
         screenPanel.add(whereToPanel,"card16");
         screenPanel.add(tripComputerPanel,"card18");
+        screenPanel.add(speechPanel,"card19");
     }
 
     @SuppressWarnings("unchecked")
@@ -65,19 +67,6 @@ public class View extends javax.swing.JFrame {
         menu6 = new javax.swing.JLabel();
         mapPanel = new javax.swing.JPanel();
         jEditorPane1 = new javax.swing.JEditorPane();
-        speechPanel = new javax.swing.JPanel();
-        smenu1Panel = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        smenu2Panel = new javax.swing.JPanel();
-        jLabel57 = new javax.swing.JLabel();
-        smenu3Panel = new javax.swing.JPanel();
-        jLabel58 = new javax.swing.JLabel();
-        smenu4Panel = new javax.swing.JPanel();
-        jLabel59 = new javax.swing.JLabel();
-        smenu5Panel = new javax.swing.JPanel();
-        jLabel60 = new javax.swing.JLabel();
-        smenu6Panel = new javax.swing.JPanel();
-        jLabel61 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -245,101 +234,6 @@ public class View extends javax.swing.JFrame {
 
         screenPanel.add(mapPanel, "card5");
 
-        speechPanel.setLayout(new java.awt.CardLayout());
-
-        jLabel8.setAlignmentX(4.0F);
-        jLabel8.setAlignmentY(2.0F);
-
-        javax.swing.GroupLayout smenu1PanelLayout = new javax.swing.GroupLayout(smenu1Panel);
-        smenu1Panel.setLayout(smenu1PanelLayout);
-        smenu1PanelLayout.setHorizontalGroup(
-            smenu1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel8)
-        );
-        smenu1PanelLayout.setVerticalGroup(
-            smenu1PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel8)
-        );
-
-        speechPanel.add(smenu1Panel, "card2");
-
-        javax.swing.GroupLayout smenu2PanelLayout = new javax.swing.GroupLayout(smenu2Panel);
-        smenu2Panel.setLayout(smenu2PanelLayout);
-        smenu2PanelLayout.setHorizontalGroup(
-            smenu2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(smenu2PanelLayout.createSequentialGroup()
-                .addComponent(jLabel57)
-                .addGap(0, 203, Short.MAX_VALUE))
-        );
-        smenu2PanelLayout.setVerticalGroup(
-            smenu2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel57, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-
-        speechPanel.add(smenu2Panel, "card3");
-
-        javax.swing.GroupLayout smenu3PanelLayout = new javax.swing.GroupLayout(smenu3Panel);
-        smenu3Panel.setLayout(smenu3PanelLayout);
-        smenu3PanelLayout.setHorizontalGroup(
-            smenu3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel58)
-        );
-        smenu3PanelLayout.setVerticalGroup(
-            smenu3PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, smenu3PanelLayout.createSequentialGroup()
-                .addComponent(jLabel58)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        speechPanel.add(smenu3Panel, "card4");
-
-        javax.swing.GroupLayout smenu4PanelLayout = new javax.swing.GroupLayout(smenu4Panel);
-        smenu4Panel.setLayout(smenu4PanelLayout);
-        smenu4PanelLayout.setHorizontalGroup(
-            smenu4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel59)
-        );
-        smenu4PanelLayout.setVerticalGroup(
-            smenu4PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, smenu4PanelLayout.createSequentialGroup()
-                .addComponent(jLabel59)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        speechPanel.add(smenu4Panel, "card5");
-
-        javax.swing.GroupLayout smenu5PanelLayout = new javax.swing.GroupLayout(smenu5Panel);
-        smenu5Panel.setLayout(smenu5PanelLayout);
-        smenu5PanelLayout.setHorizontalGroup(
-            smenu5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel60)
-        );
-        smenu5PanelLayout.setVerticalGroup(
-            smenu5PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, smenu5PanelLayout.createSequentialGroup()
-                .addComponent(jLabel60)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        speechPanel.add(smenu5Panel, "card6");
-
-        javax.swing.GroupLayout smenu6PanelLayout = new javax.swing.GroupLayout(smenu6Panel);
-        smenu6Panel.setLayout(smenu6PanelLayout);
-        smenu6PanelLayout.setHorizontalGroup(
-            smenu6PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel61)
-        );
-        smenu6PanelLayout.setVerticalGroup(
-            smenu6PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, smenu6PanelLayout.createSequentialGroup()
-                .addComponent(jLabel61)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        speechPanel.add(smenu6Panel, "card7");
-
-        screenPanel.add(speechPanel, "card13");
-
         getContentPane().add(screenPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 203, 245));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/blank.PNG"))); // NOI18N
@@ -376,12 +270,6 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JButton downButton;
     public static javax.swing.JEditorPane jEditorPane1;
     public static javax.swing.JLabel jLabel1;
-    public static javax.swing.JLabel jLabel57;
-    public static javax.swing.JLabel jLabel58;
-    public static javax.swing.JLabel jLabel59;
-    public static javax.swing.JLabel jLabel60;
-    public static javax.swing.JLabel jLabel61;
-    public static javax.swing.JLabel jLabel8;
     public static javax.swing.JPanel mapPanel;
     public static javax.swing.JLabel menu1;
     public static javax.swing.JPanel menu1Panel;
@@ -400,17 +288,11 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JButton onButton;
     public static javax.swing.JPanel screenPanel;
     public static javax.swing.JButton selectButton;
-    public static javax.swing.JPanel smenu1Panel;
-    public static javax.swing.JPanel smenu2Panel;
-    public static javax.swing.JPanel smenu3Panel;
-    public static javax.swing.JPanel smenu4Panel;
-    public static javax.swing.JPanel smenu5Panel;
-    public static javax.swing.JPanel smenu6Panel;
-    public static javax.swing.JPanel speechPanel;
     public static javax.swing.JButton upButton;
     // End of variables declaration//GEN-END:variables
     public static SatellitePanel TSPanel;
     public static AboutModePanel aboutPanel;
     public static WhereToView whereToPanel; 
     public static TripComputerView tripComputerPanel;
+    public static SpeechPanel speechPanel;
 }

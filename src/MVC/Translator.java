@@ -1,4 +1,4 @@
-package javaapplication1; 
+package MVC;
 
 import java.io.BufferedReader;
 import java.io.OutputStream;
@@ -7,24 +7,24 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /*
- * Translates the directions to German.
+ * Translates text to different languages.
 */
-public class GermanTranslator {
+public class Translator {
   // TODO: If you have your own Premium account credentials, put them down here:
-  private static final String CLIENT_ID = "FREE_TRIAL_ACCOUNT";
-  private static final String CLIENT_SECRET = "PUBLIC_SECRET";
+  private static final String CLIENT_ID = "charlierobs127@aol.com";
+  private static final String CLIENT_SECRET = "e3e8b08392b14c14ba88eaddcd9164a1";
   private static final String ENDPOINT = "http://api.whatsmate.net/v1/translation/translate";
 
-  static String fromLang = "en";
-  static String toLang = "fr";
-  static String text = "Frankly, my dear, I don't give a damn!";
+  static String fromLang;
+  static String toLang;
+  static String text;
   
   /**
    * Entry Point
    */
   public static void main(String[] args) throws Exception {
     // TODO: Specify your translation requirements here:
-    GermanTranslator.translate(fromLang, toLang, text);
+    Translator.translate(fromLang, toLang, text);
   }
 
   /**
@@ -60,7 +60,6 @@ public class GermanTranslator {
     os.close();
 
     int statusCode = conn.getResponseCode();
-    System.out.println("Status Code: " + statusCode);
     BufferedReader br = new BufferedReader(new InputStreamReader(
         (statusCode == 200) ? conn.getInputStream() : conn.getErrorStream()
       ));

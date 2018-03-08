@@ -2,6 +2,13 @@ package MVC;
 
 
 
+import static MVC.SpeechPanel.smenu1;
+import static MVC.SpeechPanel.smenu2;
+import static MVC.SpeechPanel.smenu3;
+import static MVC.SpeechPanel.smenu4;
+import static MVC.SpeechPanel.smenu5;
+import static MVC.SpeechPanel.smenu6;
+import static MVC.SpeechPanel.speP;
 import static MVC.View.TSPanel;
 import static MVC.View.aboutPanel;
 import static MVC.View.mapPanel;
@@ -15,6 +22,7 @@ import static MVC.View.screenPanel;
 import static MVC.View.speechPanel;
 import static MVC.View.tripComputerPanel;
 import static MVC.View.whereToPanel;
+import static MVC.speechModel.speechMenuOrder;
 
 //
 import java.net.URLEncoder;
@@ -41,6 +49,7 @@ public class Model{
     static Menu menu;
     static Situation situation;
     static Keys keys;
+    static SpeechMenuOrder speechMenu = SpeechMenuOrder.ONE;
     static String textdisp;
     static boolean firstClickedWT;
     static boolean submitClicked;
@@ -61,6 +70,7 @@ public class Model{
     static enum Keys{KEY_A,KEY_B,KEY_C,KEY_D,KEY_E,KEY_F,KEY_G,KEY_H,KEY_I,KEY_J,KEY_K,KEY_L,KEY_M,KEY_N,KEY_O,
          KEY_P,KEY_Q,KEY_R,KEY_S,KEY_T,KEY_U,KEY_V,KEY_W,KEY_X,KEY_Y,KEY_Z,KEY_SPACE,KEY_NEXT,KEY_SUB1,
          KEY_ONE,KEY_TWO,KEY_THREE,KEY_FOUR,KEY_FIVE,KEY_SIX,KEY_SEVEN,KEY_EIGHT,KEY_NINE,KEY_ZERO,KEY_DELETE,KEY_PREV,KEY_SUB2};
+    static enum SpeechMenuOrder {ONE, TWO, THREE, FOUR, FIVE, SIX};
     static HashMap<String,String> route;
     /**
      *
@@ -68,15 +78,13 @@ public class Model{
      * @param situation
      */
 
-    public Model(Menu menu, Situation situation){
-        Model.menu = menu;
-        Model.situation = situation;
-    }
+    
 
-    public Model(Menu menu, Situation situation,Keys keys){
+    public Model(Menu menu, Situation situation,Keys keys, SpeechMenuOrder speechMenuOrder){
         Model.menu = menu;
         Model.situation = situation;
-        Model.keys = keys;
+        Model.keys = keys; 
+        Model.speechMenu = speechMenuOrder;
         time = "";
         textdisp = "";
         firstClickedWT = true;
@@ -157,7 +165,7 @@ public class Model{
             
             }
             
-            case WHERETO:
+            case WHERETO:{
                 
                 WhereToView.jPanelKeyBoard.removeAll();
                 WhereToView.jPanelKeyBoard.repaint();
@@ -302,7 +310,7 @@ public class Model{
                             break;
                     case KEY_P: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jTextFieldDestination.setText(textdisp);
                             View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyQ);
                             View.whereToPanel.jPanelKeyBoard.repaint();
                             View.whereToPanel.jPanelKeyBoard.revalidate();
@@ -476,8 +484,8 @@ public class Model{
                     case KEY_FOUR: 
                             screenPanel.add(whereToPanel);
                             whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyFive);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyFive);
+                            WhereToView.jPanelKeyBoard.repaint();
                             View.whereToPanel.jPanelKeyBoard.revalidate();
                     
                             keys = Keys.KEY_FIVE;
@@ -582,12 +590,61 @@ public class Model{
                             keys = Keys.KEY_ONE;
                             break;
                 }
+            }
                 screenPanel.repaint();
                 screenPanel.revalidate();
-            }
+        
+            case SPEECH :{
+                 speP.removeAll();
+                speP.repaint();
+                 speP.revalidate();
+           switch (speechMenu) {
+                case ONE:
+                    speP.add(smenu2);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.TWO;
+                    break;
+                case TWO:
+                    speP.add(smenu3);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.THREE;
+                    break;
+                case THREE:
+                    speP.add(smenu4);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.FOUR;
+                    break;
+                case FOUR:
+                    speP.add(smenu5);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.FIVE;
+                    break;
+                case FIVE:
+                    speP.add(smenu6);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.SIX;
+                    break;
+                case SIX:
+                    speP.add(smenu1);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.ONE;
+                    break;
+                default:
+                    break;
+        
+           
+            } screenPanel.repaint();
+            screenPanel.revalidate();
+        }
         
         
-    }
+    }}
     
     public void goDown(){
         screenPanel.removeAll();
@@ -1059,7 +1116,57 @@ public class Model{
                 }
                 screenPanel.repaint();
                 screenPanel.revalidate();
+                
+                case SPEECH:
+                    //speP.removeAll();
+                    speP.repaint();
+                    speP.revalidate();
+                    switch (speechMenuOrder) {
+                case ONE:
+                    speP.add(smenu6);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.SIX;
+                    break;
+                case TWO:
+                    speP.add(smenu1);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.ONE;
+                    break;
+                case THREE:
+                    speP.add(smenu2);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.TWO;
+                    break;
+                case FOUR:
+                    speP.add(smenu3);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.THREE;
+                    break;
+                case FIVE:
+                    speP.add(smenu4);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.FOUR;
+                    break;
+                case SIX:
+                    speP.add(smenu5);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenuOrder = MVC.SpeechMenuOrder.FIVE;
+                    break;
+                default:
+                    break;
+                    
+                }
+               screenPanel.repaint();
+                screenPanel.revalidate();
         }
+        
+        
     }
     
     public void backMenu(){
@@ -1131,7 +1238,7 @@ public class Model{
                         break;
 
                     case FOUR:
-                        screenPanel.add(speechPanel);
+                        screenPanel.add(speP);
                         situation = Situation.SPEECH;
                         break;
 
@@ -1449,10 +1556,50 @@ public class Model{
                 screenPanel.repaint();
                 screenPanel.revalidate();
                 }
+            case SPEECH:
+                 switch(speechMenuOrder){
+            case TWO:
+                try {
+                    NewSoundAndSpeech.englishDirectionsReader();
+                } catch (Exception e) {
+                    ;
+                }
+                break;
+            case THREE:
+                try {
+                    NewSoundAndSpeech.frenchDirectionsReader();
+                } catch (Exception e) {
+                    ;
+                }
+                break;
+            case FOUR:
+                try {
+                    NewSoundAndSpeech.germanDirectionsReader();
+                } catch (Exception e) {
+                    ;
+                }
+                break;
+            case FIVE:
+                try {
+                    NewSoundAndSpeech.italianDirectionsReader();
+                } catch (Exception e) {
+                    ;
+                }
+                break;
+            case SIX:
+                 try {
+                    NewSoundAndSpeech.spanishDirectionsReader();
+                } catch (Exception e) {
+                    ;
+                }
+                break;   
+        }
+                screenPanel.repaint();
+                screenPanel.revalidate();
         }
     }
-    public String  getPosition(){
-        String position = "" + latitude + longitude;
+    public static String  getPosition(){
+        String position = "" + latitude +","+ longitude;
         return position;
     }
     
@@ -1582,9 +1729,7 @@ public class Model{
         }
     }
             
-            
-            
-            
+       
             
         
             
