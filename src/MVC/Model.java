@@ -17,6 +17,17 @@ import static MVC.View.tripComputerPanel;
 import static MVC.View.whereToPanel;
 
 
+//
+import java.net.URLEncoder;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.json.*;
+import org.apache.commons.lang.StringEscapeUtils;
+import org.jsoup.*;
+import java.util.*;
+import java.io.IOException;
+
+
 /**
  *
  * Model.
@@ -34,6 +45,13 @@ public class Model{
     static Keys keys;
     static String textdisp;
     static boolean firstClickedWT;
+    static boolean submitClicked;
+    static int second;
+    static int minute;
+    static int hour;
+    static String MODE;
+    static String odometer;
+    static int t;
     static double latitude;
     static double longitude;
     static char   dOLatitude;  // direction of latitude
@@ -45,6 +63,7 @@ public class Model{
     static enum Keys{KEY_A,KEY_B,KEY_C,KEY_D,KEY_E,KEY_F,KEY_G,KEY_H,KEY_I,KEY_J,KEY_K,KEY_L,KEY_M,KEY_N,KEY_O,
          KEY_P,KEY_Q,KEY_R,KEY_S,KEY_T,KEY_U,KEY_V,KEY_W,KEY_X,KEY_Y,KEY_Z,KEY_SPACE,KEY_NEXT,KEY_SUB1,
          KEY_ONE,KEY_TWO,KEY_THREE,KEY_FOUR,KEY_FIVE,KEY_SIX,KEY_SEVEN,KEY_EIGHT,KEY_NINE,KEY_ZERO,KEY_DELETE,KEY_PREV,KEY_SUB2};
+    static HashMap<String,String> route;
     /**
      *
      * @param menu
@@ -57,6 +76,14 @@ public class Model{
         time = "";
         textdisp = "";
         firstClickedWT = true;
+        submitClicked = false;
+        second = 0;
+        minute = 0;
+        hour = 0;
+        MODE = "walking";
+        odometer = "0";
+        t = 0;
+        route = new HashMap<String,String>();
     }
 
     public void openAndClose(){
@@ -1243,11 +1270,62 @@ public class Model{
                             whereToPanel.jTextFieldDestination.setText(textdisp);
                             
                             keys = Keys.KEY_PREV;
+                            
                             break;
             
                     case KEY_SUB1: 
-                            whereToPanel.jTextFieldDestination.setText(textdisp + "submit");
-                            textdisp = textdisp + "";
+                            whereToPanel.jTextFieldDestination.setText(textdisp);
+                            route.clear();
+                            if(submitClicked == false){
+                                String s0 ="50.735459,-3.533207";
+                                String s1 ="CATHEDRAL GREEN EXETER";
+                    
+            
+                                
+                            try {
+                                displayOdem(s0,s1);
+                                movingTimeIncease();
+                                displaySpeed();
+                                System.out.println(textdisp);
+                                
+                                findInstruction(s0,textdisp);
+                                
+                                submitClicked = true;
+                                textdisp = "";
+                                whereToPanel.jTextFieldDestination.setText(textdisp);
+                            } catch (JSONException ex) {
+                                Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                              
+                            System.out.println(route);
+                                    
+                        
+                        
+                            }
+                            else{
+                                odometer = "0 KM";
+                                tripComputerPanel.odemDisplay.setText(odometer);
+                                t = 0;
+                                String s0 ="50.735459,-3.533207";
+                                String s1 ="50.722932 -3.530193";
+                    
+            
+                                {   
+                                    try {
+                                        displayOdem(s0,textdisp);
+                                        System.out.println(textdisp);
+                                
+                                        findInstruction(s0,textdisp);
+                                
+                                        textdisp = "";
+                                        whereToPanel.jTextFieldDestination.setText(textdisp);
+                                    } catch (JSONException ex) {
+                                        Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                }
+                                System.out.println(route);
+                        
+                            }
                             
                             break;
                     
@@ -1310,8 +1388,57 @@ public class Model{
                             break;
                     
                     case KEY_SUB2:
-                            whereToPanel.jTextFieldDestination.setText(textdisp + "submit");
-                            textdisp = textdisp + "";
+                            whereToPanel.jTextFieldDestination.setText(textdisp);
+                            route.clear();
+                            if(submitClicked == false){
+                                String s0 ="50.735459,-3.533207";
+                                String s1 ="CATHEDRAL GREEN EXETER";
+                    
+            
+                                
+                            try {
+                                displayOdem(s0,s1);
+                                movingTimeIncease();
+                                displaySpeed();
+                                System.out.println(textdisp);
+                                
+                                findInstruction(s0,textdisp);
+                                
+                                submitClicked = true;
+                                textdisp = "";
+                                whereToPanel.jTextFieldDestination.setText(textdisp);
+                            } catch (JSONException ex) {
+                                Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                              
+                            System.out.println(route);
+                                    
+                        
+                        
+                            }
+                            else{
+                                odometer = "0 KM";
+                                tripComputerPanel.odemDisplay.setText(odometer);
+                                t = 0;
+                                String s0 ="50.735459,-3.533207";
+                                String s1 ="50.722932 -3.530193";
+                    
+            
+                                {   
+                                    try {
+                                        displayOdem(s0,textdisp);
+                                        System.out.println(textdisp);
+                                
+                                        findInstruction(s0,textdisp);
+                                
+                                        textdisp = "";
+                                        whereToPanel.jTextFieldDestination.setText(textdisp);
+                                    } catch (JSONException ex) {
+                                        Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                }
+                                System.out.println(route);
+                            } 
                             break;
                 }
                 screenPanel.repaint();
@@ -1323,5 +1450,139 @@ public class Model{
         String position = "" + latitude + longitude;
         return position;
     }
+    
+    public void movingTimeIncease(){
+        
+        Thread time = new Thread(){
+        public void run(){
+        for(;;){
+            String str_s = Integer.toString(second);
+            String str_m = Integer.toString(minute);
+            String str_h = Integer.toString(hour);
+            tripComputerPanel.timeDisplay.setText(str_h+"Hour    "+str_m+"Min    "+str_s+"Sec");
+            try{sleep(1000);}catch(InterruptedException e){}
+            
+            second++;
+            if(second==60){
+                minute++;
+                second = 0;
+            }
+            if(minute==60){
+                hour++;
+                minute = 0;
+            }
+        }
+        }
+        };
+        time.start();
+    }
+    
+    public byte[] readDirections(String start,String end){
+        try {
+            final String encOrigin      = URLEncoder.encode( start,      "UTF-8" );
+            final String encDestination = URLEncoder.encode( end, "UTF-8" );
+            final String method = "GET";
+            final String url 
+            = ( "https://maps.googleapis.com/maps/api/directions/json"
+              + "?" + "origin"      + "=" + encOrigin
+              + "&" + "destination" + "=" + encDestination
+              + "&" + "mode"        + "=" + MODE
+              + "&" + "key"         + "=" + "AIzaSyCMMwL7rLUZdfDuB-_X6R11jQ57ZzMN0Xg"
+              );
+            final byte[] body
+             = {}; 
+            final String[][] headers
+             = {};
+            byte[] response = HttpConnect.httpConnect( method, url, headers, body );
+            return response;
+            } catch ( Exception ex ) {System.out.println( ex ); System.exit( 1 ); return null;}
+    }
+    
+    
+    public String calculateOdem(String start,String end)throws JSONException{
+        byte[] directions = readDirections(start,end);
+        String s = new String(directions);
+        JSONObject obj = new JSONObject(s);
+        JSONArray routes = (JSONArray) obj.getJSONArray("routes");
+        JSONObject child1 = (JSONObject) routes.getJSONObject(0);
+        JSONArray legs = (JSONArray) child1.getJSONArray("legs");
+        JSONObject child2 = (JSONObject) legs.getJSONObject(0);
+        JSONObject distance = (JSONObject) child2.get("distance");
+        String dis = distance.getString("text");
+        return dis;
+    }
+    
+    
+    
+    public void displayOdem(String start,String end)throws JSONException{
+        String odem = calculateOdem(start,end);
+        odometer = odem;
+        tripComputerPanel.odemDisplay.setText(odometer);
+        
+    }
+    
+    public void displaySpeed(){
+        
+        Thread speed = new Thread(){
+            public void run(){
+               for(;;){
+                   
+                   try{sleep(1000);}catch(InterruptedException e){}
+                   
+                   t++;
+                   
+                   String pureSpeed = odometer.substring(0,odometer.length()-3);
+                   Double distanceValue = Double.parseDouble(pureSpeed);
+                   Double speedValue = distanceValue/t*3600;
+                   String speedInKmh = Double.toString(speedValue) + "   KM/H";
+                   
+                   tripComputerPanel.speedDisplay.setText(speedInKmh);
+               
+               
+               }
+            
+            }
+        };
+        
+        speed.start();
+        
+        //speedDisplay.setText("");
+    }
+    
+    public void findInstruction(String s1,String s2) throws JSONException{
+        String s = new String(readDirections(s1, s2));
+        System.out.println(s);
+        JSONObject obj = new JSONObject(s);
+        JSONArray routes = (JSONArray) obj.get("routes");
+        JSONObject child1 = (JSONObject) routes.getJSONObject(0);
+        JSONArray legs = (JSONArray) child1.get("legs");
+        JSONObject child2 = (JSONObject) legs.getJSONObject(0);
+        JSONArray steps = (JSONArray)child2.getJSONArray("steps");
+        
+        
+        for(int i = 0;i<steps.length();i++){
+            JSONObject step = steps.getJSONObject(i);
+            //end location
+            JSONObject end_location = (JSONObject)step.getJSONObject("end_location");
+            String lat = Double.toString(end_location.getDouble("lat"));
+            String lng = Double.toString(end_location.getDouble("lng"));
+            String location = lat+","+lng;
+            
+            //instruction
+            String html_instruction = StringEscapeUtils.unescapeJava(step.getString("html_instructions"));
+            String instruction = Jsoup.parse(html_instruction).text();
+            
+            //add map
+            route.put(location,instruction);
+        }
+    }
+            
+            
+            
+            
+            
+        
+            
+       
     
 }
