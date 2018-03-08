@@ -45,9 +45,9 @@ public class Model{
      * @param situation
      */
     public Model(Menu menu, Situation situation){
-        this.menu = menu;
-        this.situation = situation;
-        time = "";
+        Model.menu = menu;
+        Model.situation = situation;
+        
     }
 
     public void openAndClose(){
@@ -61,7 +61,7 @@ public class Model{
             
         } else {         
             situation = Situation.OFF;
-            View.screenPanel.add(View.offPanel);
+            View.screenPanel.add(View.offPanel);           
         }
         
         menu = Menu.ONE;

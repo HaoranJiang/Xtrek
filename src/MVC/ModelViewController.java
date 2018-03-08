@@ -23,8 +23,8 @@ public class ModelViewController {
         Model model = new Model(menu, situation);
         Controller controller = new Controller(model);
         View view = new View(model, controller);     
-        SatelliteController SatelliteController = new SatelliteController(model,TSPanel);          
-        SatelliteController.connect();
+        SatelliteController SatController = new SatelliteController(model,TSPanel);          
+        SatController.connect();
         
 
         

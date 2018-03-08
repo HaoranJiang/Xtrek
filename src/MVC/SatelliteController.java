@@ -19,7 +19,7 @@ import java.util.TooManyListenersException;
  * @MVC - Controller: SatelliteController controls model and view(SatellitePanel)
  * It has functions of updating latitude/longitude/direction in model, and displaying
  * them in the panel(view). 
- * @author Yukun Sun (Group L WorkPackage 5)
+ * @author - Yukun Sun (Group L WorkPackage 5)
  */
 public class SatelliteController implements Runnable, SerialPortEventListener{
     private MVC.Model model;
@@ -50,9 +50,9 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
           }
      }
       // not connected with GPS device
-      updateView(false, 0, 'a', 0,'a', "");     
+      SatellitePanel.updateView(false, 0, 'a', 0,'a', false);     
     } 
-    /* Open serial port*/
+    /* Open serial port and start a reading thread */
     public SatelliteController(){        
        try{
             serialPort = (SerialPort)portID.open("TheSatellite",3000);
@@ -110,14 +110,14 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
         int    n;             
         while( ( n = in.read( buffer ) ) > -1 ) {
         s = new String( buffer, 0, n ); 
+
         // no available message.. 
         if (s.startsWith("$GPGLL,,,")){
-            model.signal = false; 
-            updateView(false, 0, 'a', 0,'a', ""); 
+            Model.signal = false; 
+            SatellitePanel.updateView(false, 0, 'a', 0,'a',true); 
         }
-        // available message..
+        // available message.. update model and view
         else if (s.startsWith("$GPGLL")){       
-            //System.out.println("Updating...");
             Model.signal = true;
             /* Convert NMEA message */
             double latitude  = converter(s.substring(7,9),s.substring(9,11),s.substring(12,17));
@@ -132,42 +132,12 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             if (Model.dOLongitude == 'W')
                 Model.longitude *= -1;
             Model.time    = time;
-            updateView(true, latitude, Model.dOLatitude, longitude, Model.dOLongitude, time);
+            SatellitePanel.updateView(true, latitude, Model.dOLatitude, longitude, Model.dOLongitude,true);
             }
         }
     }catch(IOException e){}
    }
-    /* update position in view*/   
-    public void updateView(boolean signal,double latitude,char dOLatitude,double longitude,
-            char dOLongitude, String time){
-        Font f = new Font("MS Reference San Serif",Font.BOLD,18);
-        if( signal == true ){
-            SatellitePanel.latitude.setText("Latitude: "+round(Math.abs(latitude),4)+" , "+dOLatitude);
-            SatellitePanel.longitude.setText("Longitude: "+round(Math.abs(longitude),4)+" , "+dOLongitude);
-            SatellitePanel.latitude.setFont(f);
-            SatellitePanel.longitude.setFont(f);
-            SatellitePanel.latitude.setForeground(Color.green);
-            SatellitePanel.longitude.setForeground(Color.green);
-            SatellitePanel.time.setText(time);                 
-        }
-        else{
-            SatellitePanel.latitude.setText("       No signal!");
-            SatellitePanel.longitude.setText("       No signal!");
-            SatellitePanel.time.setText("  Last signal at: "+Model.time);
-            SatellitePanel.latitude.setForeground(Color.red);
-            SatellitePanel.longitude.setForeground(Color.red);
-        }
-    }
-        /**
-     * @ helper function : Round a value to certain decimal places 
-     */
-    private double round(double value, int places) {
-        if (places < 0) throw new IllegalArgumentException();
-        
-        BigDecimal bd = new BigDecimal(value);
-        bd = bd.setScale(places, RoundingMode.HALF_UP);
-    return bd.doubleValue();
-    }
+
 
    /* Convert NMEA string message into decimal degrees */
     private double converter(String degree, String minute, String second){
