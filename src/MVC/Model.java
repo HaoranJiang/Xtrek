@@ -16,7 +16,6 @@ import static MVC.View.speechPanel;
 import static MVC.View.tripComputerPanel;
 import static MVC.View.whereToPanel;
 
-
 //
 import java.net.URLEncoder;
 import java.util.logging.Level;
@@ -25,7 +24,6 @@ import org.json.*;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.jsoup.*;
 import java.util.*;
-import java.io.IOException;
 
 
 /**
@@ -76,9 +74,9 @@ public class Model{
     }
 
     public Model(Menu menu, Situation situation,Keys keys){
-        this.menu = menu;
-        this.situation = situation;
-        this.keys = keys;
+        Model.menu = menu;
+        Model.situation = situation;
+        Model.keys = keys;
         time = "";
         textdisp = "";
         firstClickedWT = true;
@@ -89,7 +87,7 @@ public class Model{
         MODE = "walking";
         odometer = "0";
         t = 0;
-        route = new HashMap<String,String>();
+        route = new HashMap<>();
 
     }
 
@@ -161,16 +159,16 @@ public class Model{
             
             case WHERETO:
                 
-                whereToPanel.jPanelKeyBoard.removeAll();
-                whereToPanel.jPanelKeyBoard.repaint();
-                whereToPanel.jPanelKeyBoard.revalidate();
+                WhereToView.jPanelKeyBoard.removeAll();
+                WhereToView.jPanelKeyBoard.repaint();
+                WhereToView.jPanelKeyBoard.revalidate();
                 switch(keys){
                     case KEY_A: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            whereToPanel.jPanelKeyBoard.add(whereToPanel.jPanelKeyB);
-                            whereToPanel.jPanelKeyBoard.repaint();
-                            whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyB);
+                            WhereToView.jPanelKeyBoard.repaint();
+                            WhereToView.jPanelKeyBoard.revalidate();
                             
                             
                             keys = Keys.KEY_B;
@@ -178,37 +176,37 @@ public class Model{
             
                     case KEY_B: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyC);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyC);
+                            WhereToView.jPanelKeyBoard.repaint();
+                            WhereToView.jPanelKeyBoard.revalidate();
                     
                             keys = Keys.KEY_C;
                             break;
                     case KEY_C: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyD);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyD);
+                            WhereToView.jPanelKeyBoard.repaint();
+                            WhereToView.jPanelKeyBoard.revalidate();
                     
                             keys = Keys.KEY_D;
                             break;
                     case KEY_D: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyE);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyE);
+                            WhereToView.jPanelKeyBoard.repaint();
+                            WhereToView.jPanelKeyBoard.revalidate();
                     
                             keys = Keys.KEY_E;
                             break;
                     case KEY_E: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyF);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyF);
+                            WhereToView.jPanelKeyBoard.repaint();
+                            WhereToView.jPanelKeyBoard.revalidate();
                     
                             keys = Keys.KEY_F;
                             break;
@@ -635,7 +633,7 @@ public class Model{
             screenPanel.revalidate();
         }   
             case WHERETO:
-                whereToPanel.jPanelKeyBoard.removeAll();
+                WhereToView.jPanelKeyBoard.removeAll();
                 whereToPanel.jPanelKeyBoard.repaint();
                 whereToPanel.jPanelKeyBoard.revalidate();
                 switch(keys){
@@ -1267,7 +1265,7 @@ public class Model{
                             textdisp = textdisp + " ";
                             break;
                     case KEY_NEXT: 
-                            whereToPanel.jPanelKeyBoard.removeAll();
+                            WhereToView.jPanelKeyBoard.removeAll();
                             whereToPanel.jPanelKeyBoard.repaint();
                             whereToPanel.jPanelKeyBoard.revalidate();
                     
