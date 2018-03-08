@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package MVC;
-
+import MVC.Model.Keys;
 import MVC.Model.Menu;
 import MVC.Model.Situation;
 import static MVC.View.TSPanel;
@@ -18,9 +18,9 @@ import static MVC.View.TSPanel;
 public class ModelViewController {
     private static Menu menu = Menu.ONE;
     private static Situation situation = Situation.OFF;
-    
+    private static Keys keys = Keys.KEY_A;
     public static void main( String[] argv ) {
-        Model model = new Model(menu, situation);
+        Model model = new Model(menu, situation,keys);
         Controller controller = new Controller(model);
         View view = new View(model, controller);     
         SatelliteController SatelliteController = new SatelliteController(model,TSPanel);          
