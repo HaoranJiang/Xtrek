@@ -20,13 +20,14 @@ import static MVC.SpeechPanel.speP;
  * @author Charles Roberts, 2018.
  */
 
-enum SpeechMenuOrder {ONE, TWO, THREE, FOUR, FIVE, SIX};
+
 
 public class speechModel {
     static SpeechMenuOrder speechMenuOrder;
+    
 
     public speechModel( SpeechMenuOrder speechMenuOrder ){
-        this.speechMenuOrder = speechMenuOrder;
+        speechModel.speechMenuOrder = speechMenuOrder;
     }
     
     public void speechGoUp(){

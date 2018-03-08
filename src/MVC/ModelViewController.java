@@ -4,9 +4,7 @@
  * and open the template in the editor.
  */
 package MVC;
-import MVC.Model.Keys;
-import MVC.Model.Menu;
-import MVC.Model.Situation;
+
 import static MVC.Model.speechMenu;
 import static MVC.View.TSPanel;
 
@@ -20,6 +18,7 @@ public class ModelViewController {
     private static Menu menu = Menu.ONE;
     private static Situation situation = Situation.OFF;
     private static Keys keys = Keys.KEY_A;
+    private static SpeechMenuOrder speechMenu = SpeechMenuOrder.ONE;
     public static void main( String[] argv ) {
         Model model = new Model(menu, situation,keys,speechMenu);
         Controller controller = new Controller(model);

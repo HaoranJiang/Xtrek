@@ -20,9 +20,10 @@ import static MVC.View.menu5Panel;
 import static MVC.View.menu6Panel;
 import static MVC.View.screenPanel;
 import static MVC.View.speechPanel;
+
 import static MVC.View.tripComputerPanel;
 import static MVC.View.whereToPanel;
-import static MVC.speechModel.speechMenuOrder;
+
 
 //
 import java.net.URLEncoder;
@@ -43,13 +44,18 @@ import java.util.*;
 
 
 
-
+enum Menu {ONE, TWO, THREE, FOUR, FIVE, SIX};
+enum Situation {OFF, MENU, WHERETO, TRIPCOMPUTER, MAP, SPEECH, SATELLITE, ABOUTME};
+enum Keys{KEY_A,KEY_B,KEY_C,KEY_D,KEY_E,KEY_F,KEY_G,KEY_H,KEY_I,KEY_J,KEY_K,KEY_L,KEY_M,KEY_N,KEY_O,
+         KEY_P,KEY_Q,KEY_R,KEY_S,KEY_T,KEY_U,KEY_V,KEY_W,KEY_X,KEY_Y,KEY_Z,KEY_SPACE,KEY_NEXT,KEY_SUB1,
+         KEY_ONE,KEY_TWO,KEY_THREE,KEY_FOUR,KEY_FIVE,KEY_SIX,KEY_SEVEN,KEY_EIGHT,KEY_NINE,KEY_ZERO,KEY_DELETE,KEY_PREV,KEY_SUB2};
+ enum SpeechMenuOrder {ONE, TWO, THREE, FOUR, FIVE, SIX};
 
 public class Model{
     static Menu menu;
     static Situation situation;
     static Keys keys;
-    static SpeechMenuOrder speechMenu = SpeechMenuOrder.ONE;
+    static SpeechMenuOrder speechMenu ;
     static String textdisp;
     static boolean firstClickedWT;
     static boolean submitClicked;
@@ -65,12 +71,8 @@ public class Model{
     static char   dOLongitude;  // direction of longitude
     static boolean signal;
     static String time;
-    static enum Menu {ONE, TWO, THREE, FOUR, FIVE, SIX};
-    static enum Situation {OFF, MENU, WHERETO, TRIPCOMPUTER, MAP, SPEECH, SATELLITE, ABOUTME};
-    static enum Keys{KEY_A,KEY_B,KEY_C,KEY_D,KEY_E,KEY_F,KEY_G,KEY_H,KEY_I,KEY_J,KEY_K,KEY_L,KEY_M,KEY_N,KEY_O,
-         KEY_P,KEY_Q,KEY_R,KEY_S,KEY_T,KEY_U,KEY_V,KEY_W,KEY_X,KEY_Y,KEY_Z,KEY_SPACE,KEY_NEXT,KEY_SUB1,
-         KEY_ONE,KEY_TWO,KEY_THREE,KEY_FOUR,KEY_FIVE,KEY_SIX,KEY_SEVEN,KEY_EIGHT,KEY_NINE,KEY_ZERO,KEY_DELETE,KEY_PREV,KEY_SUB2};
-    static enum SpeechMenuOrder {ONE, TWO, THREE, FOUR, FIVE, SIX};
+
+  
     static HashMap<String,String> route;
     /**
      *
@@ -80,11 +82,11 @@ public class Model{
 
     
 
-    public Model(Menu menu, Situation situation,Keys keys, SpeechMenuOrder speechMenuOrder){
+    public Model(Menu menu, Situation situation,Keys keys, SpeechMenuOrder speechMenu){
         Model.menu = menu;
         Model.situation = situation;
         Model.keys = keys; 
-        Model.speechMenu = speechMenuOrder;
+        this.speechMenu = speechMenu;
         time = "";
         textdisp = "";
         firstClickedWT = true;
@@ -96,6 +98,7 @@ public class Model{
         odometer = "0";
         t = 0;
         route = new HashMap<>();
+        speechMenu = SpeechMenuOrder.ONE;
 
     }
 
@@ -589,51 +592,64 @@ public class Model{
                     
                             keys = Keys.KEY_ONE;
                             break;
+                    default:
+                        break;
                 }
+               
             }
                 screenPanel.repaint();
                 screenPanel.revalidate();
         
             case SPEECH :{
-                 speP.removeAll();
+                System.out.println(1);
+                speP.removeAll();
                 speP.repaint();
-                 speP.revalidate();
-           switch (speechMenu) {
+                speP.revalidate();
+                 switch (speechMenu) {
+                
                 case ONE:
                     speP.add(smenu2);
+                    screenPanel.add(speP);
+                    //speP.add(smenu2);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.TWO;
+                    speechMenu = SpeechMenuOrder.TWO;
                     break;
                 case TWO:
                     speP.add(smenu3);
+                    screenPanel.add(speP);
+                    //speP.add(smenu3);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.THREE;
+                    speechMenu = SpeechMenuOrder.THREE;
                     break;
                 case THREE:
+                    screenPanel.add(speP);
                     speP.add(smenu4);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.FOUR;
+                    speechMenu = SpeechMenuOrder.FOUR;
                     break;
                 case FOUR:
+                    screenPanel.add(speP);
                     speP.add(smenu5);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.FIVE;
+                    speechMenu = SpeechMenuOrder.FIVE;
                     break;
                 case FIVE:
+                    screenPanel.add(speP);
                     speP.add(smenu6);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.SIX;
+                    speechMenu = SpeechMenuOrder.SIX;
                     break;
                 case SIX:
+                    screenPanel.add(speP);
                     speP.add(smenu1);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.ONE;
+                    speechMenu = SpeechMenuOrder.ONE;
                     break;
                 default:
                     break;
@@ -689,7 +705,7 @@ public class Model{
             screenPanel.repaint();
             screenPanel.revalidate();
         }   
-            case WHERETO:
+            case WHERETO:{
                 WhereToView.jPanelKeyBoard.removeAll();
                 whereToPanel.jPanelKeyBoard.repaint();
                 whereToPanel.jPanelKeyBoard.revalidate();
@@ -1114,54 +1130,55 @@ public class Model{
                             keys = Keys.KEY_PREV;
                             break;
                 }
+            }
                 screenPanel.repaint();
                 screenPanel.revalidate();
                 
-                case SPEECH:
-                    //speP.removeAll();
+                case SPEECH:{
+                    speP.removeAll();
                     speP.repaint();
                     speP.revalidate();
-                    switch (speechMenuOrder) {
+                    switch (speechMenu) {
                 case ONE:
                     speP.add(smenu6);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.SIX;
+                    speechMenu = SpeechMenuOrder.SIX;
                     break;
                 case TWO:
                     speP.add(smenu1);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.ONE;
+                    speechMenu =SpeechMenuOrder.ONE;
                     break;
                 case THREE:
                     speP.add(smenu2);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.TWO;
+                    speechMenu = SpeechMenuOrder.TWO;
                     break;
                 case FOUR:
                     speP.add(smenu3);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.THREE;
+                    speechMenu = SpeechMenuOrder.THREE;
                     break;
                 case FIVE:
                     speP.add(smenu4);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.FOUR;
+                    speechMenu = SpeechMenuOrder.FOUR;
                     break;
                 case SIX:
                     speP.add(smenu5);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenuOrder = MVC.SpeechMenuOrder.FIVE;
+                    speechMenu = SpeechMenuOrder.FIVE;
                     break;
                 default:
                     break;
                     
-                }
+                }}
                screenPanel.repaint();
                 screenPanel.revalidate();
         }
@@ -1238,7 +1255,7 @@ public class Model{
                         break;
 
                     case FOUR:
-                        screenPanel.add(speP);
+                        screenPanel.add(speechPanel);
                         situation = Situation.SPEECH;
                         break;
 
@@ -1256,7 +1273,7 @@ public class Model{
                         break;
             }
                 
-            case WHERETO:
+            case WHERETO:{
                 if(firstClickedWT){screenPanel.add(whereToPanel);
                 whereToPanel.jTextFieldDestination.setText(textdisp);
                 firstClickedWT = false;}else{
@@ -1552,12 +1569,12 @@ public class Model{
                                 System.out.println(route);
                             } 
                             break;
-                }
+                }}
                 screenPanel.repaint();
                 screenPanel.revalidate();
                 }
             case SPEECH:
-                 switch(speechMenuOrder){
+                 switch(speechMenu){
             case TWO:
                 try {
                     NewSoundAndSpeech.englishDirectionsReader();
