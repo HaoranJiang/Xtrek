@@ -69,12 +69,12 @@ public class Model{
      * @param menu
      * @param situation
      */
-<<<<<<< HEAD
+
     public Model(Menu menu, Situation situation){
         Model.menu = menu;
         Model.situation = situation;
-        
-=======
+    }
+
     public Model(Menu menu, Situation situation,Keys keys){
         this.menu = menu;
         this.situation = situation;
@@ -90,7 +90,7 @@ public class Model{
         odometer = "0";
         t = 0;
         route = new HashMap<String,String>();
->>>>>>> 1f5826b9440a01ed07b8226fc61bf9848bc130aa
+
     }
 
     public void openAndClose(){
