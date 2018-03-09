@@ -8,6 +8,7 @@ package MVC;
 import static MVC.Maps.zoomOut;
 import static MVC.Maps.zoomIn;
 import static MVC.Maps.getMap;
+import java.io.File;
 import javax.swing.ImageIcon;
 
 
@@ -51,8 +52,8 @@ public class image extends javax.swing.JFrame {
 
         mapPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/maps/Webp.net-resizeimage.png"))); // NOI18N
-        mapPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 125, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Webp.net-resizeimage.png"))); // NOI18N
+        mapPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, -1, -1));
 
         in.setText("zoom in");
         in.addActionListener(new java.awt.event.ActionListener() {
@@ -60,7 +61,7 @@ public class image extends javax.swing.JFrame {
                 inActionPerformed(evt);
             }
         });
-        mapPanel.add(in, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 80, -1));
+        mapPanel.add(in, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, -1));
 
         out.setText("zoom out");
         out.addActionListener(new java.awt.event.ActionListener() {
@@ -68,10 +69,10 @@ public class image extends javax.swing.JFrame {
                 outActionPerformed(evt);
             }
         });
-        mapPanel.add(out, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 80, -1));
+        mapPanel.add(out, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 80, -1));
 
-        image.setIcon(new javax.swing.ImageIcon("U:\\My Documents\\NetBeansProjects\\Maps\\output.png")); // NOI18N
-        mapPanel.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        image.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MVC/output.png"))); // NOI18N
+        mapPanel.add(image, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -98,7 +99,9 @@ public class image extends javax.swing.JFrame {
         
         zoomOut();
         getMap();
-        ImageIcon icon = new ImageIcon("U:\\My Documents\\NetBeansProjects\\Maps\\output.png");
+        File file =new File("output.png");
+        String path = file.getAbsolutePath();
+        ImageIcon icon = new ImageIcon(path);
         icon.getImage().flush();
         image.setIcon(icon); 
         image.repaint();
@@ -109,7 +112,9 @@ public class image extends javax.swing.JFrame {
         // TODO add your handling code here:
         zoomIn();
         getMap();
-        ImageIcon icon = new ImageIcon("U:\\My Documents\\NetBeansProjects\\Maps\\output.png");
+        File file =new File("output.png");
+        String path = file.getAbsolutePath();
+        ImageIcon icon = new ImageIcon(path);
         icon.getImage().flush();
         image.setIcon(icon); 
         image.repaint();

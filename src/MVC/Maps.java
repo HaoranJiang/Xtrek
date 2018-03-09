@@ -18,7 +18,7 @@ public class Maps {
   static String LATITUDE  = "50.7371";     /* Exeter, latitude  */
   static String LONGITUDE = "-3.5351";     /* Exeter, longitude */
   static String ZOOM      = "13";          /* 0 .. 21           */
-  final static String SIZE      = "300x300";     /* Size              */
+  final static String SIZE      = "203x245";     /* Size              */
  
 
           
