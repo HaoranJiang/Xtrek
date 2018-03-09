@@ -680,7 +680,7 @@ public class Model{
         }
             
             case MAP:{
-                 zoomOut();
+                zoomOut();
                 getMap();
                 File file =new File("output.png");
                 String path = file.getAbsolutePath();
