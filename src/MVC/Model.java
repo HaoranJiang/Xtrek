@@ -2,6 +2,9 @@ package MVC;
 
 
 
+import static MVC.Maps.getMap;
+import static MVC.Maps.zoomIn;
+import static MVC.Maps.zoomOut;
 import static MVC.SpeechPanel.smenu1;
 import static MVC.SpeechPanel.smenu2;
 import static MVC.SpeechPanel.smenu3;
@@ -11,6 +14,7 @@ import static MVC.SpeechPanel.smenu6;
 import static MVC.SpeechPanel.speP;
 import static MVC.View.TSPanel;
 import static MVC.View.aboutPanel;
+import static MVC.View.mapImage;
 import static MVC.View.mapPanel;
 import static MVC.View.menu1Panel;
 import static MVC.View.menu2Panel;
@@ -23,6 +27,7 @@ import static MVC.View.speechPanel;
 
 import static MVC.View.tripComputerPanel;
 import static MVC.View.whereToPanel;
+import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -35,6 +40,7 @@ import org.json.*;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.jsoup.*;
 import java.util.*;
+import javax.swing.ImageIcon;
 
 
 /**
@@ -125,12 +131,14 @@ public class Model{
     }
     
     public void goUp(){
-        screenPanel.removeAll();
-        screenPanel.repaint();
-        screenPanel.revalidate(); 
+         
         
         switch(situation){
+            
             case MENU:{
+                screenPanel.removeAll();
+                screenPanel.repaint();
+                screenPanel.revalidate();
             switch (menu) {
                 case ONE:
                     screenPanel.add(menu2Panel);
@@ -172,6 +180,9 @@ public class Model{
             }
             
             case WHERETO:{
+                screenPanel.removeAll();
+                screenPanel.repaint();
+                screenPanel.revalidate();
                 
                 WhereToView.jPanelKeyBoard.removeAll();
                 WhereToView.jPanelKeyBoard.repaint();
@@ -605,6 +616,9 @@ public class Model{
                 break;
         
             case SPEECH :{
+                screenPanel.removeAll();
+                screenPanel.repaint();
+                screenPanel.revalidate();
                 
                 speP.removeAll();
                 speP.repaint();
@@ -664,16 +678,29 @@ public class Model{
             screenPanel.revalidate();
             break;
         }
+            
+            case MAP:{
+                 zoomOut();
+                getMap();
+                File file =new File("output.png");
+                String path = file.getAbsolutePath();
+                ImageIcon icon = new ImageIcon(path);
+                icon.getImage().flush();
+                mapImage.setIcon(icon); 
+                mapImage.repaint();
+            }
         
         
     }}
     
     public void goDown(){
-        screenPanel.removeAll();
-        screenPanel.repaint();
-        screenPanel.revalidate();
+        
         switch(situation){
+            
             case MENU:{
+                screenPanel.removeAll();
+                screenPanel.repaint();
+                screenPanel.revalidate();
             switch (menu) {
                 case ONE:
                     screenPanel.add(menu6Panel);
@@ -713,6 +740,9 @@ public class Model{
             break;
         }   
             case WHERETO:{
+                screenPanel.removeAll();
+                screenPanel.repaint();
+                screenPanel.revalidate();
                 WhereToView.jPanelKeyBoard.removeAll();
                 whereToPanel.jPanelKeyBoard.repaint();
                 whereToPanel.jPanelKeyBoard.revalidate();
@@ -1143,6 +1173,9 @@ public class Model{
                 break;
                 
                 case SPEECH:{
+                    screenPanel.removeAll();
+                    screenPanel.repaint();
+                    screenPanel.revalidate();
            
                     speP.removeAll();
                 speP.repaint();
@@ -1201,7 +1234,19 @@ public class Model{
             screenPanel.repaint();
             screenPanel.revalidate();
             break;
+            
+            
         }
+                case MAP:{
+                    zoomIn();
+                    getMap();
+                    File file =new File("output.png");
+                    String path = file.getAbsolutePath();
+                    ImageIcon icon = new ImageIcon(path);
+                    icon.getImage().flush();
+                    mapImage.setIcon(icon); 
+                    mapImage.repaint();
+                }
         
         
     }}

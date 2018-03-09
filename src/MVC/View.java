@@ -61,7 +61,8 @@ public class View extends javax.swing.JFrame {
         menu6Panel = new javax.swing.JPanel();
         menu6 = new javax.swing.JLabel();
         mapPanel = new javax.swing.JPanel();
-        jEditorPane1 = new javax.swing.JEditorPane();
+        mark = new javax.swing.JLabel();
+        mapImage = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -212,19 +213,37 @@ public class View extends javax.swing.JFrame {
 
         screenPanel.add(menu6Panel, "card5");
 
+        mark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Webp.net-resizeimage.png"))); // NOI18N
+
+        mapImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MVC/output.png"))); // NOI18N
+
         javax.swing.GroupLayout mapPanelLayout = new javax.swing.GroupLayout(mapPanel);
         mapPanel.setLayout(mapPanelLayout);
         mapPanelLayout.setHorizontalGroup(
             mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jEditorPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE))
+                .addGroup(mapPanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(mapPanelLayout.createSequentialGroup()
+                            .addGap(90, 90, 90)
+                            .addComponent(mark))
+                        .addComponent(mapImage, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         mapPanelLayout.setVerticalGroup(
             mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 245, Short.MAX_VALUE)
             .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jEditorPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE))
+                .addGroup(mapPanelLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(mapPanelLayout.createSequentialGroup()
+                            .addGap(100, 100, 100)
+                            .addComponent(mark))
+                        .addComponent(mapImage, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         screenPanel.add(mapPanel, "card5");
@@ -263,9 +282,10 @@ public class View extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton downButton;
-    public static javax.swing.JEditorPane jEditorPane1;
     public static javax.swing.JLabel jLabel1;
+    public static javax.swing.JLabel mapImage;
     public static javax.swing.JPanel mapPanel;
+    public static javax.swing.JLabel mark;
     public static javax.swing.JLabel menu1;
     public static javax.swing.JPanel menu1Panel;
     public static javax.swing.JLabel menu2;
