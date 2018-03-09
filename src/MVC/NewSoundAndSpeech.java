@@ -38,7 +38,7 @@ public class NewSoundAndSpeech {
   final static String FORMAT = "riff-16khz-16bit-mono-pcm";
   
   // I have created my own route
-  static HashMap<String,String> route = new HashMap<String,String>();
+  static HashMap<String,String> route = Model.route;
   
   
   // I have added custom key and value pairs to this route
@@ -80,6 +80,7 @@ public class NewSoundAndSpeech {
   static byte[] generateEnglishSpeech( String token,  String text
                               , String lang,   String gender
                               , String artist, String format ) {
+      
     final String method = "POST";
     final String url = "https://speech.platform.bing.com/synthesize";
     final byte[] body
@@ -394,8 +395,10 @@ public class NewSoundAndSpeech {
    * Waits 30 seconds before repeating the command. 
    */
   public static void englishDirectionsReader() throws Exception {
+      String currentLocation = "50.727,-3.518"; 
       while (true) {
-          String currentLocation = getPosition();
+          //TimeUnit.SECONDS.sleep(30);
+
           for (String key : route.keySet()) {
               String value = route.get(key);
               String englishText = String.valueOf(value);
@@ -403,7 +406,9 @@ public class NewSoundAndSpeech {
                   TEXT = englishText;
                   open(1);
                   TimeUnit.SECONDS.sleep(30);
+               
               }
+              
           }
       }
   }
@@ -413,8 +418,9 @@ public class NewSoundAndSpeech {
    * Waits 30 seconds before repeating the command. 
    */
   public static void frenchDirectionsReader() throws Exception {
+      String currentLocation = "50.727,-3.518"; 
       while (true) {
-          String currentLocation = getPosition();
+          //String currentLocation = getPosition();
           for (String key : route.keySet()) {
               String value = route.get(key);
               String englishText = String.valueOf(value);
@@ -432,8 +438,9 @@ public class NewSoundAndSpeech {
    * Waits 30 seconds before repeating the command.
    */
   public static void germanDirectionsReader() throws Exception {
+      String currentLocation = "50.727,-3.518"; 
       while (true) {
-          String currentLocation = getPosition();
+          //String currentLocation = getPosition();
           for (String key : route.keySet()) {
               String value = route.get(key);
               String englishText = String.valueOf(value);
@@ -451,8 +458,9 @@ public class NewSoundAndSpeech {
    * Waits 30 seconds before repeating the command.
    */
   public static void italianDirectionsReader() throws Exception {
+      String currentLocation = "50.727,-3.518"; 
       while (true) {
-          String currentLocation = getPosition();
+          //String currentLocation = getPosition();
           for (String key : route.keySet()) {
               String value = route.get(key);
               String englishText = String.valueOf(value);
@@ -470,8 +478,9 @@ public class NewSoundAndSpeech {
    * Waits 30 seconds before repeating the command.
    */
   public static void spanishDirectionsReader() throws Exception {
+      String currentLocation = "50.727,-3.518"; 
       while (true) {
-          String currentLocation = getPosition();
+          //String currentLocation = getPosition();
           for (String key : route.keySet()) {
               String value = route.get(key);
               String englishText = String.valueOf(value);

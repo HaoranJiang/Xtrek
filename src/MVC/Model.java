@@ -23,6 +23,8 @@ import static MVC.View.speechPanel;
 
 import static MVC.View.tripComputerPanel;
 import static MVC.View.whereToPanel;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 
 //
@@ -165,6 +167,7 @@ public class Model{
             }            
             screenPanel.repaint();
             screenPanel.revalidate();
+            break;
             
             }
             
@@ -592,20 +595,21 @@ public class Model{
                     
                             keys = Keys.KEY_ONE;
                             break;
-                    default:
-                        break;
+                   
                 }
-               
+                
+              
             }
                 screenPanel.repaint();
                 screenPanel.revalidate();
+                break;
         
             case SPEECH :{
-                System.out.println(1);
+                
                 speP.removeAll();
                 speP.repaint();
                 speP.revalidate();
-                 switch (speechMenu) {
+                switch (speechMenu) {
                 
                 case ONE:
                     speP.add(smenu2);
@@ -613,7 +617,7 @@ public class Model{
                     //speP.add(smenu2);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenu = SpeechMenuOrder.TWO;
+                    speechMenu = SpeechMenuOrder.SIX;
                     break;
                 case TWO:
                     speP.add(smenu3);
@@ -621,42 +625,44 @@ public class Model{
                     //speP.add(smenu3);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenu = SpeechMenuOrder.THREE;
+                    speechMenu = SpeechMenuOrder.ONE;
                     break;
                 case THREE:
                     screenPanel.add(speP);
                     speP.add(smenu4);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenu = SpeechMenuOrder.FOUR;
+                    speechMenu = SpeechMenuOrder.TWO;
                     break;
                 case FOUR:
                     screenPanel.add(speP);
                     speP.add(smenu5);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenu = SpeechMenuOrder.FIVE;
+                    speechMenu = SpeechMenuOrder.THREE;
                     break;
                 case FIVE:
                     screenPanel.add(speP);
                     speP.add(smenu6);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenu = SpeechMenuOrder.SIX;
+                    speechMenu = SpeechMenuOrder.FOUR;
                     break;
                 case SIX:
                     screenPanel.add(speP);
                     speP.add(smenu1);
                     speP.repaint();
                     speP.revalidate();
-                    speechMenu = SpeechMenuOrder.ONE;
+                    speechMenu = SpeechMenuOrder.FIVE;
                     break;
                 default:
                     break;
         
            
-            } screenPanel.repaint();
+            } 
+            screenPanel.repaint();
             screenPanel.revalidate();
+            break;
         }
         
         
@@ -704,6 +710,7 @@ public class Model{
             }   
             screenPanel.repaint();
             screenPanel.revalidate();
+            break;
         }   
             case WHERETO:{
                 WhereToView.jPanelKeyBoard.removeAll();
@@ -1133,58 +1140,71 @@ public class Model{
             }
                 screenPanel.repaint();
                 screenPanel.revalidate();
+                break;
                 
                 case SPEECH:{
+           
                     speP.removeAll();
-                    speP.repaint();
-                    speP.revalidate();
-                    switch (speechMenu) {
+                speP.repaint();
+                speP.revalidate();
+                switch (speechMenu) {
+                
                 case ONE:
-                    speP.add(smenu6);
-                    speP.repaint();
-                    speP.revalidate();
-                    speechMenu = SpeechMenuOrder.SIX;
-                    break;
-                case TWO:
-                    speP.add(smenu1);
-                    speP.repaint();
-                    speP.revalidate();
-                    speechMenu =SpeechMenuOrder.ONE;
-                    break;
-                case THREE:
                     speP.add(smenu2);
+                    screenPanel.add(speP);
+                    //speP.add(smenu2);
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.TWO;
                     break;
-                case FOUR:
+                case TWO:
                     speP.add(smenu3);
+                    screenPanel.add(speP);
+                    //speP.add(smenu3);
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.THREE;
                     break;
-                case FIVE:
+                case THREE:
+                    screenPanel.add(speP);
                     speP.add(smenu4);
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.FOUR;
                     break;
-                case SIX:
+                case FOUR:
+                    screenPanel.add(speP);
                     speP.add(smenu5);
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.FIVE;
                     break;
+                case FIVE:
+                    screenPanel.add(speP);
+                    speP.add(smenu6);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenu = SpeechMenuOrder.SIX;
+                    break;
+                case SIX:
+                    screenPanel.add(speP);
+                    speP.add(smenu1);
+                    speP.repaint();
+                    speP.revalidate();
+                    speechMenu = SpeechMenuOrder.ONE;
+                    break;
                 default:
                     break;
-                    
-                }}
-               screenPanel.repaint();
-                screenPanel.revalidate();
+        
+           
+            } 
+            screenPanel.repaint();
+            screenPanel.revalidate();
+            break;
         }
         
         
-    }
+    }}
     
     public void backMenu(){
         if (situation != Situation.MENU && situation != Situation.OFF) {
@@ -1271,7 +1291,9 @@ public class Model{
 
                     default:
                         break;
-            }
+            }                screenPanel.repaint();
+                screenPanel.revalidate();
+                break;
                 
             case WHERETO:{
                 if(firstClickedWT){screenPanel.add(whereToPanel);
@@ -1406,9 +1428,9 @@ public class Model{
                             whereToPanel.jTextFieldDestination.setText(textdisp);
                             route.clear();
                             if(submitClicked == false){
-                                String s0 ="50.735459,-3.533207";
+                                String s0 =getPosition();
                                 String s1 ="CATHEDRAL GREEN EXETER";
-                    
+                                textdisp = "EX1 2EG";
             
                                 
                             try {
@@ -1572,6 +1594,7 @@ public class Model{
                 }}
                 screenPanel.repaint();
                 screenPanel.revalidate();
+                break;
                 }
             case SPEECH:
                  switch(speechMenu){
@@ -1613,10 +1636,11 @@ public class Model{
         }
                 screenPanel.repaint();
                 screenPanel.revalidate();
+                
         }
     }
     public static String  getPosition(){
-        String position = "" + latitude +","+ longitude;
+        String position = "" + round(latitude,3) +","+ round(longitude,3);
         return position;
     }
     
@@ -1733,8 +1757,8 @@ public class Model{
             JSONObject step = steps.getJSONObject(i);
             //end location
             JSONObject end_location = (JSONObject)step.getJSONObject("end_location");
-            String lat = Double.toString(end_location.getDouble("lat"));
-            String lng = Double.toString(end_location.getDouble("lng"));
+            String lat = Double.toString(round((end_location.getDouble("lat")),3));
+            String lng = Double.toString(round((end_location.getDouble("lng")),3));
             String location = lat+","+lng;
             
             //instruction
@@ -1746,7 +1770,16 @@ public class Model{
         }
     }
             
-       
+   /**
+     * @ helper function - Round a value to certain decimal places 
+     */
+    private static double round(double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+        
+        BigDecimal bd = new BigDecimal(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+    return bd.doubleValue();
+    }    
             
         
             
