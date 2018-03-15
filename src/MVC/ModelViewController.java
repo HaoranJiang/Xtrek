@@ -11,20 +11,21 @@ import static MVC.View.TSPanel;
 
 
 /**
- *
  * @author Haoran Jiang 2018.
  */
+
 public class ModelViewController {
     private static Menu menu = Menu.ONE;
     private static Situation situation = Situation.OFF;
     private static Keys keys = Keys.KEY_A;
     private static SpeechMenuOrder speechMenu = SpeechMenuOrder.ONE;
+    public static SatelliteController SatController;
     public static void main( String[] argv ) {
         Model model = new Model(menu, situation,keys,speechMenu);
         Controller controller = new Controller(model);
         View view = new View(model, controller);     
-        SatelliteController SatController = new SatelliteController(model,TSPanel);          
-        SatController.connect();
+        SatController = new SatelliteController(model,TSPanel);          
+        
         
 
         

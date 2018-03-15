@@ -5,6 +5,7 @@ package MVC;
 import static MVC.Maps.getMap;
 import static MVC.Maps.zoomIn;
 import static MVC.Maps.zoomOut;
+import static MVC.ModelViewController.SatController;
 import static MVC.SpeechPanel.smenu1;
 import static MVC.SpeechPanel.smenu2;
 import static MVC.SpeechPanel.smenu3;
@@ -118,10 +119,12 @@ public class Model{
         if (situation == Situation.OFF){  
             screenPanel.add(View.menu1Panel);
             situation = Situation.MENU;
+            SatController.connect();
             
         } else {         
             situation = Situation.OFF;
-            View.screenPanel.add(View.offPanel);           
+            View.screenPanel.add(View.offPanel);   
+            SatController.disconnect();
         }
         
         menu = Menu.ONE;

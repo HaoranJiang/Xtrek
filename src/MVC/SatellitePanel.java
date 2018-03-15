@@ -56,7 +56,7 @@ public class SatellitePanel extends javax.swing.JPanel {
             char dOLongitude,boolean connected){
 
         if( signal == true ){                           // connected and have signal
-            SatellitePanel.latitude.setText(round(Math.abs(latitude),4)+"  "+dOLatitude);
+            SatellitePanel.latitude.setText(round(Math.abs(latitude),4)+"  "+dOLatitude); // round output view into 4 decimals
             SatellitePanel.longitude.setText(" "+round(Math.abs(longitude),4)+"  "+dOLongitude);   
             SatellitePanel.latitude.setFont(new Font("Arial", Font.BOLD, 40));
             SatellitePanel.longitude.setFont(new Font("Arial", Font.BOLD, 40));
@@ -73,9 +73,9 @@ public class SatellitePanel extends javax.swing.JPanel {
         }
         else{                                            // not connected
             SatellitePanel.latitude.setText(" Cannot determine position!");
-            SatellitePanel.longitude.setText("Not connected!");
+            SatellitePanel.longitude.setText(" Not connected!");
             SatellitePanel.latitude.setFont(new Font("Trebuchet MS", Font.BOLD, 15));
-            SatellitePanel.longitude.setFont(new Font("Trebuchet MS", Font.BOLD, 28));
+            SatellitePanel.longitude.setFont(new Font("Trebuchet MS", Font.BOLD, 26));
             SatellitePanel.latitude.setForeground(Color.red);
             SatellitePanel.longitude.setForeground(Color.red);             
         }

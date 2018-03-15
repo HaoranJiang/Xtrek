@@ -9,18 +9,16 @@ import gnu.io.SerialPortEventListener;
 import java.io.InputStream;
 import java.util.Enumeration;
 import gnu.io.*;
-import java.awt.Color;
-import java.awt.Font;
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.TooManyListenersException;
+
 /**
  * @MVC - Controller: SatelliteController controls model and view(SatellitePanel)
  * It has functions of updating latitude/longitude/direction in model, and displaying
  * them in the panel(view). 
  * @author - Yukun Sun (Group L WorkPackage 5)
  */
+
 public class SatelliteController implements Runnable, SerialPortEventListener{
     private MVC.Model model;
     private SatellitePanel view;
@@ -36,8 +34,12 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
         this.view = view;
     }
     
-      /* Public static method, to connect port and try to get GPS location */
+  /** 
+    * Public static method, to connect port and try to get GPS location 
+    */
+    
     public void connect(){
+    try{
       portList = CommPortIdentifier.getPortIdentifiers();
 
       while(portList.hasMoreElements()){
@@ -48,21 +50,23 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
                 return;
             }  
           }
-     }
+        }
+        }catch(UnsatisfiedLinkError e){System.out.println("rxtxSerial File has wrong version! Please read the README.txt and change it.");System.exit(1);} 
       // not connected with GPS device
       SatellitePanel.updateView(false, 0, 'a', 0,'a', false);     
+      Model.signal = false;
     } 
     /* Open serial port and start a reading thread */
     public SatelliteController(){        
        try{
             serialPort = (SerialPort)portID.open("TheSatellite",3000);
-       }catch(PortInUseException e){System.out.println(e);}
+       }catch(PortInUseException e){System.out.println("Port is being used by another application! Please turn off and restart! ");}
        try{
            in  = serialPort.getInputStream();
        }catch(IOException e){System.out.println(e);}
        try{
            serialPort.addEventListener(this);
-        }catch(TooManyListenersException e){System.out.println(e);}
+        }catch(TooManyListenersException e){System.out.println("Too many listener added!");}
         serialPort.notifyOnDataAvailable(true);     
         try{
             serialPort.setSerialPortParams(
@@ -71,7 +75,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
                 SerialPort.PARITY_NONE);
             
             serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_NONE);
-        }catch(UnsupportedCommOperationException e){System.out.println(e);}
+        }catch(UnsupportedCommOperationException e){System.exit(1);}
             readThread = new Thread(this);
             readThread.start();    
      
@@ -81,7 +85,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     public void run() {
         try{
             Thread.sleep(20000);
-        }catch(InterruptedException e){System.out.println(e);};   
+        }catch(InterruptedException e){System.exit(1);};   
     }
 
     /* Read data from serial port, only read the message when there is data available */
@@ -135,7 +139,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             SatellitePanel.updateView(true, latitude, Model.dOLatitude, longitude, Model.dOLongitude,true);
             }
         }
-    }catch(IOException e){}
+    }catch(Exception e){}
    }
 
 
@@ -154,10 +158,12 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
 }
     /* Disconnect the port */
     public void disconnect(){
-        try{
-            serialPort.removeEventListener();
-            serialPort.close();
-            in.close();
+        try{ 
+            if(Model.signal == true){
+                serialPort.removeEventListener();                 
+                serialPort.close();
+                in .close();
+            }
             Model.signal = false;
         }catch(IOException e){}               
 }

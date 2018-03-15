@@ -7,6 +7,11 @@ To use the satellite, please make sure that:
 4.If it successed, go to Device Manager and check for "u-blox 7 GPS/GNSS Location Sensor" under "sensor" 
 				and "u-blox Virtual COM Port" under "COM AND LPT"(Win 10 will be COM4)
 5.Go to Settings->Privacy->Location and turn on the location service
-6.Depending on which opeating system using(currently only supports Win 32 and Win 64), please download the "rxtxSerial" file 
-  under Win32/Win64 folder and place it under /lib folder.
+6.Depending on which opeating system using(currently only supports Win 32 and Win 64), please replace the "rxtxSerial.dll" and "RXTXcomm.jar"
+  under /lib folder with win32/win64 folder. 
+7.Aftering building the project, there should be an executable named "Xtrek.jar" under /dist folder. To run the project, please copy the "rxtxSerial.dll" file
+  in /lib folder and paste it in /dist folder. 
+ Then in command line, type in 
+ "java -jar Xtrek.jar"
+ to run it.
 				

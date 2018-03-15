@@ -35,7 +35,7 @@ public class AboutModePanel extends javax.swing.JPanel {
 
         university.setText("ECM2415 University of Exeter");
         add(university, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
-        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/AM.PNG")));
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/AM.png")));
         add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70 ));
         XTrek.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         XTrek.setText("XTrek");
