@@ -92,7 +92,7 @@ public class NewSoundAndSpeech {
    * place.
    */
   public static double realDistance(String place) {
-      
+      String currentLocation = Model.getPosition();
       List splitCurrentLocation = splitPlace(currentLocation);
       
       List splitPlace = splitPlace(place);

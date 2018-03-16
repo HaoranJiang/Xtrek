@@ -6,6 +6,8 @@ import static MVC.Maps.getMap;
 import static MVC.Maps.zoomIn;
 import static MVC.Maps.zoomOut;
 import static MVC.ModelViewController.SatController;
+import static MVC.NewSoundAndSpeech.distance;
+import static MVC.NewSoundAndSpeech.splitPlace;
 import static MVC.SpeechPanel.smenu1;
 import static MVC.SpeechPanel.smenu2;
 import static MVC.SpeechPanel.smenu3;
@@ -73,7 +75,7 @@ public class Model{
     static int minute;
     static int hour;
     static String MODE;
-    static int odometer;
+    static Double odometer;
     static Double odemInKM;
     static int t;
     static String currentPosition;
@@ -109,7 +111,7 @@ public class Model{
         minute = 0;
         hour = 0;
         MODE = "walking";
-        odometer = 0;
+        odometer = 0.0;
         odemInKM = 0.0;
         t = 0;
         currentPosition = "";
@@ -1489,7 +1491,7 @@ public class Model{
                             whereToPanel.jTextFieldDestination.setText(textdisp);
                             route.clear();
                             t = 0;
-                            odometer = 0;
+                            odometer = 0.0;
                             if(submitClicked == false){
                                 initialPosition =getPosition();
                                 
@@ -1497,13 +1499,14 @@ public class Model{
             
                                 
                             try {
-                                displayOdem(initialPosition);
+                                findInstruction(initialPosition,textdisp);
+                                displayOdem();
                                 movingTimeIncease();
                                 dynamicTime();
                                 displaySpeed();
                                 
                                 
-                                findInstruction(initialPosition,textdisp);
+                                
                                 
                                 submitClicked = true;
                                 textdisp = "";
@@ -1604,7 +1607,7 @@ public class Model{
                             whereToPanel.jTextFieldDestination.setText(textdisp);
                             route.clear();
                             t = 0;
-                            odometer = 0;
+                            odometer = 0.0;
                             if(submitClicked == false){
                                 initialPosition =getPosition();
                                 
@@ -1612,13 +1615,14 @@ public class Model{
             
                                 
                             try {
-                                displayOdem(initialPosition);
+                                findInstruction(initialPosition,textdisp);
+                                displayOdem();
                                 movingTimeIncease();
                                 dynamicTime();
                                 displaySpeed();
                                 
                                 
-                                findInstruction(initialPosition,textdisp);
+                                
                                 
                                 submitClicked = true;
                                 textdisp = "";
@@ -1704,7 +1708,7 @@ public class Model{
         }
     }
     public static String  getPosition(){
-        String position = "" + round(latitude,3) +","+ round(longitude,3);
+        String position = "" + latitude +","+ longitude;
         return position;
     }
     
@@ -1772,24 +1776,18 @@ public class Model{
     
     
     
-    public void displayOdem(String start)throws JSONException{
+    public void displayOdem()throws JSONException{
         Thread odemInReal = new Thread(){
             public void run(){
                 for(;;){
-                    try{sleep(1000);}catch(InterruptedException e){}
+                    try{sleep(6000);}catch(InterruptedException e){}
                     
                     currentPosition = getPosition();
                     System.out.println(currentPosition);
-                    synchronized(lock){
-                    try {
-                        odometer = calculateOdem(start,currentPosition);
-                    } catch (JSONException ex) {
-                        Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    odemInKM = (Double)1.0*odometer/1000;
+                    odometer = odometer+realDist(initialPosition,currentPosition);
+                    odemInKM = 1.0*odometer/1000;
                     tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
-                    lock.notify();
-                    }
+                    initialPosition = currentPosition;
                 }
             }
         };
@@ -1801,8 +1799,8 @@ public class Model{
         Thread speed = new Thread(){
             public void run(){
                    for(;;){
-                   synchronized(lock){
-                   try{lock.wait();}catch(InterruptedException e){}
+                   
+                   try{sleep(6000);}catch(InterruptedException e){}
                    
                    
                    
@@ -1813,7 +1811,7 @@ public class Model{
                    
                    tripComputerPanel.speedDisplay.setText(speedInKmh);
                    
-                   }
+                   
                    }
                }
             
@@ -1821,6 +1819,31 @@ public class Model{
         speed.start();
     }
     
+    public double realDist(String positionA,String positionB) {
+      
+      List splitPlaceA = splitPlace(positionA);
+      
+      List splitPlaceB = splitPlace(positionB);
+      
+      String placeALattitude = splitPlaceA.get(0).toString();
+              
+      String placeALongitude = splitPlaceA.get(1).toString();
+              
+      String placeBLattitude = splitPlaceB.get(0).toString();
+              
+      String placeBLongitude = splitPlaceB.get(1).toString();
+      
+      double placeALattitudeValue = Double.parseDouble(placeALattitude);
+      
+      double placeALongitudeValue = Double.parseDouble(placeALongitude);
+      
+      double placeBLattitudeValue = Double.parseDouble(placeBLattitude);
+      
+      double placeBLongitudeValue = Double.parseDouble(placeBLongitude);
+      
+      return distance(placeBLattitudeValue, placeBLongitudeValue, placeALattitudeValue, placeALongitudeValue, 'M');
+      
+  }
     
     public  void dynamicTime(){
         Thread dt = new Thread(){
