@@ -1492,6 +1492,7 @@ public class Model{
                             route.clear();
                             t = 0;
                             odometer = 0.0;
+                            String s1 = "Cathedral Green, Exeter";
                             if(submitClicked == false){
                                 initialPosition =getPosition();
                                 
@@ -1499,7 +1500,7 @@ public class Model{
             
                                 
                             try {
-                                findInstruction(initialPosition,textdisp);
+                                findInstruction(initialPosition,s1);
                                 displayOdem();
                                 movingTimeIncease();
                                 dynamicTime();
