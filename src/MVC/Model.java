@@ -1688,7 +1688,7 @@ public class Model{
         }
     }
     public static String  getPosition(){
-        String position = "" + round(latitude,3) +","+ round(longitude,3);
+        String position = "" + latitude +","+ longitude;
         return position;
     }
     
