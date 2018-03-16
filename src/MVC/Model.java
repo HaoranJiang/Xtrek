@@ -5,7 +5,6 @@ package MVC;
 import static MVC.Maps.getMap;
 import static MVC.Maps.zoomIn;
 import static MVC.Maps.zoomOut;
-import static MVC.ModelViewController.SatController;
 import static MVC.SpeechPanel.smenu1;
 import static MVC.SpeechPanel.smenu2;
 import static MVC.SpeechPanel.smenu3;
@@ -29,6 +28,7 @@ import static MVC.View.speechPanel;
 import static MVC.View.tripComputerPanel;
 import static MVC.View.whereToPanel;
 import java.io.File;
+import static java.lang.Thread.sleep;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -72,8 +72,12 @@ public class Model{
     static int minute;
     static int hour;
     static String MODE;
-    static String odometer;
+    static int odometer;
+    static Double odemInKM;
     static int t;
+    static String currentPosition;
+    static String initialPosition;
+    private final Object lock;
     static double latitude;
     static double longitude;
     static char   dOLatitude;  // direction of latitude
@@ -104,8 +108,12 @@ public class Model{
         minute = 0;
         hour = 0;
         MODE = "walking";
-        odometer = "0";
+        odometer = 0;
+        odemInKM = 0.0;
         t = 0;
+        currentPosition = "";
+        initialPosition = "";
+        lock = new Object();
         route = new HashMap<>();
         speechMenu = SpeechMenuOrder.ONE;
 
@@ -119,12 +127,10 @@ public class Model{
         if (situation == Situation.OFF){  
             screenPanel.add(View.menu1Panel);
             situation = Situation.MENU;
-            SatController.connect();
             
         } else {         
             situation = Situation.OFF;
-            View.screenPanel.add(View.offPanel);   
-            SatController.disconnect();
+            View.screenPanel.add(View.offPanel);           
         }
         
         menu = Menu.ONE;
@@ -182,7 +188,7 @@ public class Model{
             
             }
             
-            case WHERETO:{
+            case WHERETO:{                                                 //siqi wang line 191-625
                 screenPanel.removeAll();
                 screenPanel.repaint();
                 screenPanel.revalidate();
@@ -742,7 +748,7 @@ public class Model{
             screenPanel.revalidate();
             break;
         }   
-            case WHERETO:{
+            case WHERETO:{                                              //siqi wang line751-1182
                 screenPanel.removeAll();
                 screenPanel.repaint();
                 screenPanel.revalidate();
@@ -1271,23 +1277,27 @@ public class Model{
                     
                 case TWO:
                     screenPanel.add(menu2Panel);
-                    
+                    firstClickedWT = true;
                     break;
                     
                 case THREE:
                     screenPanel.add(menu3Panel);
+                    firstClickedWT = true;
                     break;
                     
                 case FOUR:
                     screenPanel.add(menu4Panel);
+                    firstClickedWT = true;
                     break;
                     
                 case FIVE:
                     screenPanel.add(menu5Panel);
+                    firstClickedWT = true;
                     break;
                     
                 case SIX:
                     screenPanel.add(menu6Panel);
+                    firstClickedWT = true;
                     break;
                     
                 default:
@@ -1343,7 +1353,7 @@ public class Model{
                 screenPanel.revalidate();
                 break;
                 
-            case WHERETO:{
+            case WHERETO:{                                                         //siqi wang line1356-1659
                 if(firstClickedWT){screenPanel.add(whereToPanel);
                 whereToPanel.jTextFieldDestination.setText(textdisp);
                 firstClickedWT = false;}else{
@@ -1475,19 +1485,22 @@ public class Model{
                     case KEY_SUB1: 
                             whereToPanel.jTextFieldDestination.setText(textdisp);
                             route.clear();
+                            t = 0;
+                            odometer = 0;
                             if(submitClicked == false){
-                                String s0 =getPosition();
-                                String s1 ="CATHEDRAL GREEN EXETER";
-                                textdisp = "EX1 2EG";
+                                initialPosition =getPosition();
+                                
+                                
             
                                 
                             try {
-                                displayOdem(s0,s1);
+                                displayOdem(initialPosition);
                                 movingTimeIncease();
+                                dynamicTime();
                                 displaySpeed();
-                                System.out.println(textdisp);
                                 
-                                findInstruction(s0,textdisp);
+                                
+                                findInstruction(initialPosition,textdisp);
                                 
                                 submitClicked = true;
                                 textdisp = "";
@@ -1502,19 +1515,17 @@ public class Model{
                         
                             }
                             else{
-                                odometer = "0 KM";
-                                tripComputerPanel.odemDisplay.setText(odometer);
+                                tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
                                 t = 0;
-                                String s0 ="50.735459,-3.533207";
-                                String s1 ="50.722932 -3.530193";
+                                
                     
             
                                 {   
                                     try {
-                                        displayOdem(s0,textdisp);
-                                        System.out.println(textdisp);
+                                        initialPosition = getPosition();
+                                        findInstruction(initialPosition,textdisp);
                                 
-                                        findInstruction(s0,textdisp);
+                                        
                                 
                                         textdisp = "";
                                         whereToPanel.jTextFieldDestination.setText(textdisp);
@@ -1589,19 +1600,22 @@ public class Model{
                     case KEY_SUB2:
                             whereToPanel.jTextFieldDestination.setText(textdisp);
                             route.clear();
+                            t = 0;
+                            odometer = 0;
                             if(submitClicked == false){
-                                String s0 ="50.735459,-3.533207";
-                                String s1 ="CATHEDRAL GREEN EXETER";
-                    
+                                initialPosition =getPosition();
+                                
+                                
             
                                 
                             try {
-                                displayOdem(s0,s1);
+                                displayOdem(initialPosition);
                                 movingTimeIncease();
+                                dynamicTime();
                                 displaySpeed();
-                                System.out.println(textdisp);
                                 
-                                findInstruction(s0,textdisp);
+                                
+                                findInstruction(initialPosition,textdisp);
                                 
                                 submitClicked = true;
                                 textdisp = "";
@@ -1616,19 +1630,17 @@ public class Model{
                         
                             }
                             else{
-                                odometer = "0 KM";
-                                tripComputerPanel.odemDisplay.setText(odometer);
+                                tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
                                 t = 0;
-                                String s0 ="50.735459,-3.533207";
-                                String s1 ="50.722932 -3.530193";
+                                
                     
             
                                 {   
                                     try {
-                                        displayOdem(s0,textdisp);
-                                        System.out.println(textdisp);
+                                        initialPosition = getPosition();
+                                        findInstruction(initialPosition,textdisp);
                                 
-                                        findInstruction(s0,textdisp);
+                                        
                                 
                                         textdisp = "";
                                         whereToPanel.jTextFieldDestination.setText(textdisp);
@@ -1637,7 +1649,8 @@ public class Model{
                                     }
                                 }
                                 System.out.println(route);
-                            } 
+                        
+                            }
                             break;
                 }}
                 screenPanel.repaint();
@@ -1688,11 +1701,11 @@ public class Model{
         }
     }
     public static String  getPosition(){
-        String position = "" + latitude +","+ longitude;
+        String position = "" + round(latitude,3) +","+ round(longitude,3);
         return position;
     }
     
-    public void movingTimeIncease(){
+    public void movingTimeIncease(){                                                         //siqi wang line1708-1865
         
         Thread time = new Thread(){
         public void run(){
@@ -1740,7 +1753,7 @@ public class Model{
     }
     
     
-    public String calculateOdem(String start,String end)throws JSONException{
+    public int calculateOdem(String start,String end)throws JSONException{
         byte[] directions = readDirections(start,end);
         String s = new String(directions);
         JSONObject obj = new JSONObject(s);
@@ -1749,46 +1762,79 @@ public class Model{
         JSONArray legs = (JSONArray) child1.getJSONArray("legs");
         JSONObject child2 = (JSONObject) legs.getJSONObject(0);
         JSONObject distance = (JSONObject) child2.get("distance");
-        String dis = distance.getString("text");
+        int dis = distance.getInt("value");
+        
         return dis;
     }
     
     
     
-    public void displayOdem(String start,String end)throws JSONException{
-        String odem = calculateOdem(start,end);
-        odometer = odem;
-        tripComputerPanel.odemDisplay.setText(odometer);
-        
+    public void displayOdem(String start)throws JSONException{
+        Thread odemInReal = new Thread(){
+            public void run(){
+                for(;;){
+                    try{sleep(1000);}catch(InterruptedException e){}
+                    
+                    currentPosition = getPosition();
+                    System.out.println(currentPosition);
+                    synchronized(lock){
+                    try {
+                        odometer = calculateOdem(start,currentPosition);
+                    } catch (JSONException ex) {
+                        Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    odemInKM = (Double)1.0*odometer/1000;
+                    tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
+                    lock.notify();
+                    }
+                }
+            }
+        };
+        odemInReal.start();
     }
     
     public void displaySpeed(){
         
         Thread speed = new Thread(){
             public void run(){
-               for(;;){
+                   for(;;){
+                   synchronized(lock){
+                   try{lock.wait();}catch(InterruptedException e){}
                    
-                   try{sleep(1000);}catch(InterruptedException e){}
                    
-                   t++;
                    
-                   String pureSpeed = odometer.substring(0,odometer.length()-3);
-                   Double distanceValue = Double.parseDouble(pureSpeed);
-                   Double speedValue = distanceValue/t*3600;
+                   //String pureSpeed = odometer.substring(0,odometer.length()-3);
+                   //Double distanceValue = Double.parseDouble(pureSpeed);
+                   Double speedValue = odometer/t*3.6;
                    String speedInKmh = Double.toString(speedValue) + "   KM/H";
                    
                    tripComputerPanel.speedDisplay.setText(speedInKmh);
-               
-               
+                   
+                   }
+                   }
                }
             
-            }
-        };
-        
+            };
         speed.start();
-        
-        //speedDisplay.setText("");
     }
+    
+    
+    public  void dynamicTime(){
+        Thread dt = new Thread(){
+            public void run(){
+                for(;;){
+                    try{sleep(1000);}catch(InterruptedException e){}
+                    t++;
+                }
+            
+            }
+        
+        };
+        dt.start();
+    
+    }
+    
+    
     
     public void findInstruction(String s1,String s2) throws JSONException{
         String s = new String(readDirections(s1, s2));
