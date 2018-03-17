@@ -11,6 +11,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.*;
 import java.lang.*;
 import java.io.*;
+import java.util.function.Consumer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
@@ -37,7 +40,7 @@ public class NewSoundAndSpeech {
   
   static String token;
   static byte[] speech;
-  
+  static Thread readEnglish;
   final static String OUTPUT = "output.wav";
   final static String FORMAT = "riff-16khz-16bit-mono-pcm";
   static final double NAUTICAL_MILE = 1.15077945;
@@ -92,7 +95,7 @@ public class NewSoundAndSpeech {
    * place.
    */
   public static double realDistance(String place) {
-      String currentLocation = Model.getPosition();
+      //String currentLocation = Model.getPosition();
       List splitCurrentLocation = splitPlace(currentLocation);
       
       List splitPlace = splitPlace(place);
@@ -481,50 +484,67 @@ public class NewSoundAndSpeech {
    */
   public static void englishDirectionsReader() throws Exception {
        
-
-      /* If the distance to a destination is greater than 5m 
-       * then the directions are spoken.
-       */
-      while (realDistance(destination) > DEST_DISTANCE) {
-          //String currentLocation = getPosition();
-          for (String key : route.keySet()) {
-              String value = route.get(key);
-              String englishText = String.valueOf(value);
-              // Search the directions String here for Rd or Ln
-              String keyword1 = "Rd";
-              String keyword2 = "Ln";
-              /*
-               * If the String contains "Rd" then this is changed to "Road" and
-               * if the String contains "Ln" then this is changed to "Road". 
-               */
-              Boolean foundOne = Arrays.asList(englishText.split(" ")).contains(keyword1);
-              if(foundOne){
-                  String newKeyword1 = "Road";
-                  englishText = englishText.replaceAll("Rd", newKeyword1);
+      readEnglish = new Thread(){
+          @Override
+          public void run(){
+              try {
+                  while (realDistance(destination) > DEST_DISTANCE) {
+                      //String currentLocation = getPosition();
+                      route.keySet().forEach(new Consumer<String>() {
+                          @Override
+                          public void accept(String key) {
+                              String value = route.get(key);
+                              String englishText = String.valueOf(value);
+                              // Search the directions String here for Rd or Ln
+                              String keyword1 = "Rd";
+                              String keyword2 = "Ln";
+                              /*
+                              * If the String contains "Rd" then this is changed to "Road" and
+                              * if the String contains "Ln" then this is changed to "Road".
+                              */
+                              Boolean foundOne = Arrays.asList(englishText.split(" ")).contains(keyword1);
+                              if(foundOne){
+                                  String newKeyword1 = "Road";
+                                  englishText = englishText.replaceAll("Rd", newKeyword1);
+                              }
+                              Boolean foundTwo = Arrays.asList(englishText.split(" ")).contains(keyword2);
+                              if (foundTwo) {
+                                  String newKeyword2 = "Lane";
+                                  englishText = englishText.replaceAll("Ln", newKeyword2);
+                              }
+                              /* If the distance to a route point is less than or
+                              * equal to 10m then the corresponding directions are spoken.
+                              */
+                              if (realDistance(key) <= ROUTE_DISTANCE) {
+                                  try {
+                                      Text = englishText;
+                                      open(1);
+                                  } catch (Exception ex) {
+                                      Logger.getLogger(NewSoundAndSpeech.class.getName()).log(Level.SEVERE, null, ex);
+                                  }
+                              }
+                          }
+                      });
+                  }
+                  // When the current location is within 5m of the destination.
+                  Text = "You have reached your destination";
+                  open(1);} catch (Exception ex) {
+                  Logger.getLogger(NewSoundAndSpeech.class.getName()).log(Level.SEVERE, null, ex);
               }
-              
-              Boolean foundTwo = Arrays.asList(englishText.split(" ")).contains(keyword2);
-              if(foundTwo){
-                  String newKeyword2 = "Lane";
-                  englishText = englishText.replaceAll("Ln", newKeyword2);
-              }
-              
- 
-              /* If the distance to a route point is less than or 
-               * equal to 10m then the corresponding directions are spoken.
-               */
-              if (realDistance(key) <= ROUTE_DISTANCE) {
-                  Text = englishText;
-                  open(1);
-              }
-          }
       }
-      // When the current location is within 5m of the destination. 
-      Text = "You have reached your destination";
-      open(1);
+      };
+      
+        stopAll();
+        
+        readEnglish.start();
+      //readEnglish.notify();
       
   }
-  
+  private static void stopAll(){
+        try{
+          
+      }catch(Exception e){}
+  }
   /*
    * Speaks the directions in French.
    */
@@ -725,9 +745,11 @@ public class NewSoundAndSpeech {
    * Generate sound.
    */
   public static void main( String[] argv ) throws Exception {
-      addKeyValuePair();
-      spanishDirectionsReader();
+      
+      addKeyValuePair(); 
       englishDirectionsReader();
+      //spanishDirectionsReader();
+     
       
  
   }

@@ -1669,35 +1669,35 @@ public class Model{
                  switch(speechMenu){
             case TWO:
                 try {
-                    NewSoundAndSpeech.englishDirectionsReader();
+                    SoundController.englishDirectionsReader();
                 } catch (Exception e) {
                     ;
                 }
                 break;
             case THREE:
                 try {
-                    NewSoundAndSpeech.frenchDirectionsReader();
+                    SoundController.frenchDirectionsReader();
                 } catch (Exception e) {
                     ;
                 }
                 break;
             case FOUR:
                 try {
-                    NewSoundAndSpeech.germanDirectionsReader();
+                    SoundController.germanDirectionsReader();
                 } catch (Exception e) {
                     ;
                 }
                 break;
             case FIVE:
                 try {
-                    NewSoundAndSpeech.italianDirectionsReader();
+                    SoundController.ItalianDirectionsReader();
                 } catch (Exception e) {
                     ;
                 }
                 break;
             case SIX:
                  try {
-                    NewSoundAndSpeech.spanishDirectionsReader();
+                    SoundController.spanishDirectionsReader();
                 } catch (Exception e) {
                     ;
                 }
@@ -1708,6 +1708,7 @@ public class Model{
                 
         }
     }
+    /* Return position in String form "(latitude,longitude)" */
     public static String  getPosition(){
         String position = "" + latitude +","+ longitude;
         return position;
