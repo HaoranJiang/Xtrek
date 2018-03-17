@@ -63,7 +63,7 @@ public class View extends javax.swing.JFrame {
         mapPanel = new javax.swing.JPanel();
         mark = new javax.swing.JLabel();
         mapImage = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -250,8 +250,8 @@ public class View extends javax.swing.JFrame {
 
         getContentPane().add(screenPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 203, 245));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/blank.PNG"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 360, 630));
+        background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/blank.PNG"))); // NOI18N
+        getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 360, 630));
 
         pack();
         setLocationRelativeTo(null);
@@ -281,8 +281,8 @@ public class View extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JLabel background;
     public static javax.swing.JButton downButton;
-    public static javax.swing.JLabel jLabel1;
     public static javax.swing.JLabel mapImage;
     public static javax.swing.JPanel mapPanel;
     public static javax.swing.JLabel mark;
