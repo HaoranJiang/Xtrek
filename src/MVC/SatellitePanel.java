@@ -56,7 +56,7 @@ public class SatellitePanel extends javax.swing.JPanel {
             char dOLongitude,boolean connected){
 
         if( signal == true ){                           // connected and have signal
-            SatellitePanel.latitude.setText(round(Math.abs(latitude),4)+"  "+dOLatitude); // round output view into 4 decimals
+            SatellitePanel.latitude.setText(round(Math.abs(latitude),4)+"  "+dOLatitude); // round output view into 4 decimals and take the absolute value
             SatellitePanel.longitude.setText(" "+round(Math.abs(longitude),4)+"  "+dOLongitude);   
             SatellitePanel.latitude.setFont(new Font("Arial", Font.BOLD, 40));
             SatellitePanel.longitude.setFont(new Font("Arial", Font.BOLD, 40));

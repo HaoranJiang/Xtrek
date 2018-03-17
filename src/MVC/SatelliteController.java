@@ -124,32 +124,32 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     public void update(){
     try{
         byte[] buffer  = new byte[ 128 ];
-        String s;
+        String msg;
         int    n;             
         while( ( n = in.read( buffer ) ) > -1 ) {
-        s = new String( buffer, 0, n ); 
+        msg = new String( buffer, 0, n ); 
 
         // no available message.. 
-        if (s.startsWith("$GPGLL,,,")){
+        if (msg.startsWith("$GPGLL,,,")){
             Model.signal = false; 
             SatellitePanel.updateView(false, 0, 'a', 0,'a',true); // connected but no signal
         }
         // available message.. update model and view
-        else if (s.startsWith("$GPGLL")){       
+        else if (msg.startsWith("$GPGLL")){       
             Model.signal = true;
             // Convert NMEA latitude, longitude message.
-            // An example NMEA message:
-            // substring index of 7-9/20-23 : degree of latitude/longitude
-            // substring index of 9-11/23-25: minite of latitude/longitude
-            // substring index of 12-17/38-40 : seconds of latitude/longitude
-            // index of 18/32: direction of latitude/longitude
-            double latitude  = converter(s.substring(7,9),s.substring(9,11),s.substring(12,17));
-            double longitude = converter(s.substring(20,23),s.substring(23,25),s.substring(26,31));
+            // An example NMEA message:$GPGLL,5043.61007,N,00331.04761,W,204703.00,A,A*7E
+            // substring index of 7-9/20-23 : degree of latitude/longitude (50,003 in the example)
+            // substring index of 9-11/23-25: minite of latitude/longitude (43,31 in the example)
+            // substring index of 12-17/38-40 : seconds of latitude/longitude (61007,04761 in the example)
+            // index of 18/32: direction of latitude/longitude (N and W in the example)
+            double latitude  = converter(msg.substring(7,9),msg.substring(9,11),msg.substring(12,17));
+            double longitude = converter(msg.substring(20,23),msg.substring(23,25),msg.substring(26,31));
             // String time     =  convertTime(s.substring(34,36),s.substring(36,38),s.substring(38,40));
             Model.latitude = latitude;
-            Model.dOLatitude= s.charAt(18);
+            Model.dOLatitude= msg.charAt(18);
             Model.longitude= longitude;
-            Model.dOLongitude=s.charAt(32);
+            Model.dOLongitude=msg.charAt(32);
             if (Model.dOLatitude == 'S') // change to negative for South and West
                 Model.latitude *= -1;
             if (Model.dOLongitude == 'W')
@@ -168,7 +168,9 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     private double converter(String degree, String minute, String second){
         Integer degrees  = Integer.valueOf(degree);
         Integer minites  = Integer.valueOf(minute);
-        /* TODO: NMEA seconds String message is 5 digit long, divide by 100000 */
+       // NMEA seconds String message is 5 digit long, and it represents seconds in 0.***** minute form. 
+       // Therefore, for example, 61007 will be divide by 100000 first becoming 0.61007 and 
+       // then multiply by 60 because 60 seconds in one minute, and then we get the seconds
         double seconds  = 60/100000*(Integer.valueOf(second));  
         double posi = degrees + minites/60.0 + seconds / 3600.0; // Decimal Degrees = degrees + (minutes/60) + (seconds/3600)
 
