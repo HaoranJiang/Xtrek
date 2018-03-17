@@ -18,26 +18,6 @@ class Controller implements ActionListener{
         this.model = model;
     }
     
-    private void onButtonActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        model.openAndClose();
-    }        
-    
-    private void upButtonActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        model.goUp();
-    }
-    
-    private void downButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        model.goDown();
-    }  
-    
-    private void selectButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        model.select();
-    }
-    
-    private void menuButtonActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        model.backMenu();
-    }
-
     @Override
     public void actionPerformed(ActionEvent evt) {
         if (evt.getSource()== onButton)
