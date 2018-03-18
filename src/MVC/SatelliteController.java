@@ -98,7 +98,8 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
 
    /**
      * Handling events.Read and update data when data is available .
-     * @param event serial port event
+     * @param event serial port event containing 11 fields
+     * @see https://docs.oracle.com/cd/E17802_01/products/products/javacomm/reference/api/javax/comm/SerialPortEvent.html
      */
     @Override
     public void serialEvent(SerialPortEvent event){
@@ -150,7 +151,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             Model.dOLatitude= msg.charAt(18);
             Model.longitude= longitude;
             Model.dOLongitude=msg.charAt(32);
-            if (Model.dOLatitude == 'S') // change to negative for South and West
+            if (Model.dOLatitude == 'S') // South and West coordinates should be negative
                 Model.latitude *= -1;
             if (Model.dOLongitude == 'W')
                 Model.longitude *= -1;
@@ -178,7 +179,8 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
 } 
 
     /**
-     * Disconnect the port, remove listeners and close input stream.
+     * Disconnect the port, remove listeners and close input stream,
+     * Force quit without calling the disconnect() method will procude "getCommModelFailed" error. 
      * @exception IOException input/output exception
      */
     public void disconnect(){

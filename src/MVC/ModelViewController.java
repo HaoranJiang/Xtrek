@@ -26,8 +26,14 @@ public class ModelViewController {
         View view = new View(model, controller);     
         SatController = new SatelliteController(model,TSPanel);          
         
+        Runtime.getRuntime().addShutdownHook(new Thread() { // when the application is forced quit, execute this thread
+              @Override
+              public void run() {
+                  System.out.println("Closing... Thanks for using!"); 
+                  SatController.disconnect();       // disconnect the serial port to prevent getCommModemFailed error
+              }
+        });
         
-
         
         view.setVisible( true );
         
