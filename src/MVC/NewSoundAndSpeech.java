@@ -1,6 +1,7 @@
 package MVC;
 
 import static MVC.Model.getPosition;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.DataOutputStream;
@@ -38,9 +39,13 @@ public class NewSoundAndSpeech {
   static String Gender;
   static String Artist;
   
+  static String text;
+  
+  public static Thread read;
+  
   static String token;
   static byte[] speech;
-  static Thread readEnglish;
+  
   final static String OUTPUT = "output.wav";
   final static String FORMAT = "riff-16khz-16bit-mono-pcm";
   static final double NAUTICAL_MILE = 1.15077945;
@@ -49,26 +54,76 @@ public class NewSoundAndSpeech {
   static final int ROUTE_DISTANCE = 5;
   
   // I have created my own route
-  static HashMap<String,String> route = new HashMap<String,String>();
+  static HashMap<String,String> my_route = new HashMap<String,String>();
   
   
   // I have added custom key and value pairs to this route
   public static void addKeyValuePair() {
   
-    route.put("50.7269971,-3.5180801", "Turn right");
-    //route.put("50.7269972,-3.5180801", "Turn right");
-    //route.put("50.7269973,-3.5180801", "Turn right");
-    //route.put("50.7269974,-3.5180801", "Turn right");
-    //route.put("50.7269975,-3.5180801", "Turn right");
-    //route.put("50.7269976,-3.5180801", "Turn right");
-    route.put("50.7269977,-3.5180801", "Turn right on Sylvan Rd or left on Loopy Ln");
+    // route.put("50.7269971,-3.5180801", "Turn right");
+    // route.put("50.7269972,-3.5180801", "Turn right");
+    // route.put("50.7269973,-3.5180801", "Turn right");
+    // route.put("50.7269974,-3.5180801", "Turn right");
+    // route.put("50.7269975,-3.5180801", "Turn right");
+    // route.put("50.7269976,-3.5180801", "Turn right");
+    my_route.put("50.7269977,-3.5180801", "Turn S on Sylvan Rd or left on Soopy Ln");
+  }
+  
+  public static String alterText(String text) {
+      // Search the directions String here for Rd or Ln
+      String keyword1 = "Rd";
+      String keyword2 = "Ln";
+      String keyword3 = "W";
+      String keyword4 = "N";
+      String keyword5 = "E";
+      String keyword6 = "S";
+      /*
+       * If the String contains "Rd" then this is changed to "Road" and
+       * if the String contains "Ln" then this is changed to "Road".
+       */
+      Boolean foundOne = Arrays.asList(text.split(" ")).contains(keyword1);
+      if(foundOne){
+      String newKeyword1 = "Road";
+        text = text.replaceAll("Rd", newKeyword1);
+      }
+      Boolean foundTwo = Arrays.asList(text.split(" ")).contains(keyword2);
+      if (foundTwo) {
+        String newKeyword2 = "Lane";
+        text = text.replaceAll("Ln", newKeyword2);
+      }
+      Boolean foundThree = Arrays.asList(text.split(" ")).contains(keyword3);
+      if(foundThree){
+        String newKeyword3 = "West";
+        text = text.replaceAll(" W ", newKeyword3);
+      }
+
+      Boolean foundFour = Arrays.asList(text.split(" ")).contains(keyword4);
+      if(foundFour){
+        String newKeyword4 = "North";
+        text = text.replaceAll(" N ", newKeyword4);
+      }
+
+      Boolean foundFive = Arrays.asList(text.split(" ")).contains(keyword5);
+      if(foundFive){
+        String newKeyword5 = "East";
+        text = text.replaceAll(" E ", newKeyword5);
+      }
+
+      Boolean foundSix = Arrays.asList(text.split(" ")).contains(keyword6);
+      if(foundSix){
+        String newKeyword6 = "South";
+        text = text.replaceAll(" S ", newKeyword6);
+      }
+      return text;
   }
   
   // I have created my own currentLocation
-  public static String currentLocation = "50.7269977,-3.5180801";
+  public static String currentLocation = Model.getPosition();
   
   // I have created my own destination 
-  public static String destination = "50.1269977,-3.1180801";
+  public static String destination = "50.7260866,-3.5163002";
+  
+  
   
   /*  
    * This function returns a list containing the lattitude and longitude
@@ -95,7 +150,7 @@ public class NewSoundAndSpeech {
    * place.
    */
   public static double realDistance(String place) {
-      //String currentLocation = Model.getPosition();
+      
       List splitCurrentLocation = splitPlace(currentLocation);
       
       List splitPlace = splitPlace(place);
@@ -164,7 +219,7 @@ public class NewSoundAndSpeech {
     byte[] response = HttpConnect.httpConnect( method, url, headers, body );
     return new String( response ); 
   }
-
+  
   /*
    * Synthesize English text to English Speech.
    */
@@ -377,33 +432,33 @@ public class NewSoundAndSpeech {
   /*
    * Changes what language that the text is read as. 
    */
-  public static void changeLanguage( int s ){
-	  switch(s){
-		case 1:
+  public static void changeLanguage(Language language){
+	  switch(language){
+		case ENGLISH:
 			Lang   = "en-GB";
 			Gender = "Male";
 			Artist = "(en-GB, George, Apollo)";	
 			break;
 		  
-		case 2:
+		case FRENCH:
 			Lang   = "fr-FR";
 			Gender = "Female";
 			Artist = "(fr-FR, HortenseRUS)";
 			break;
 			
-		case 3:
+		case GERMAN:
 			Lang   = "de-DE";
 			Gender = "Male";
 			Artist = "(de-DE, Stefan, Apollo)";
 			break;
 			
-		case 4:
+		case ITALIAN:
 			Lang   = "it-IT";
 			Gender = "Male";
 			Artist = "(it-IT, Cosimo, Apollo)";
 			break;
 			
-		case 5:
+		case SPANISH:
 			Lang   = "es-ES";
 			Gender = "Male";
 			Artist = "(es-ES, Pablo, Apollo)";
@@ -417,16 +472,17 @@ public class NewSoundAndSpeech {
   /*
    * Translates and speaks the text. 
    */
-  public static void open(int ss) throws Exception {
-    changeLanguage(ss);
+  public static void open(Language language) throws Exception {
+    changeLanguage(language);
     token  = renewAccessToken( KEY1 );
-    switch(ss) {
-		case 1:
+    while(!Thread.currentThread().isInterrupted()){
+    switch(language) {
+		case ENGLISH:
                     speech = generateEnglishSpeech( token,  Text,   Lang
                                         , Gender, Artist, FORMAT );
                     break;
 		  
-		case 2:
+		case FRENCH:
                     
                     String frenchText;
                     Translator frenchTranslator = new Translator();
@@ -434,40 +490,40 @@ public class NewSoundAndSpeech {
                     frenchTranslator.translate("en", "fr", Text);
                     frenchText = OutputCapturer.stop();  
                     
-                    speech = generateFrenchSpeech( token,  Text,   Lang
+                    speech = generateFrenchSpeech( token,  frenchText,   Lang
                                         , Gender, Artist, FORMAT );	
                     break;
 			
-		case 3:
+		case GERMAN:
                     String germanText;
                     Translator germanTranslator = new Translator();
                     OutputCapturer.start();
                     germanTranslator.translate("en", "de", Text);
                     germanText = OutputCapturer.stop();  
                     
-                    speech = generateGermanSpeech( token,  Text,   Lang
+                    speech = generateGermanSpeech( token,  germanText,   Lang
                                         , Gender, Artist, FORMAT );
                     break;
 			
-		case 4:
+		case ITALIAN:
                     String italianText;
                     Translator italianTranslator = new Translator();
                     OutputCapturer.start();
                     italianTranslator.translate("en", "it", Text);
                     italianText = OutputCapturer.stop();  
                     
-                    speech = generateItalianSpeech( token,  Text,   Lang
+                    speech = generateItalianSpeech( token,  italianText,   Lang
                                         , Gender, Artist, FORMAT );
                     break;
 			
-		case 5:
+		case SPANISH:
                     String spanishText;
                     Translator spanishTranslator = new Translator();
                     OutputCapturer.start();
                     spanishTranslator.translate("en", "es", Text);
                     spanishText = OutputCapturer.stop();  
                     
-                    speech = generateSpanishSpeech( token,  Text,   Lang
+                    speech = generateSpanishSpeech( token,  spanishText,   Lang
                                         , Gender, Artist, FORMAT );
                     break;
 		
@@ -478,278 +534,71 @@ public class NewSoundAndSpeech {
     AudioInputStream stm = setupStream( FILENAME );
     playStream( stm, readStream( stm ) );
   }
+  }
+  
+
   
   /*
-   * Speaks the directions in English.
+   * Speaks the directions in the desird language. 
    */
-  public static void englishDirectionsReader() throws Exception {
-       
-      readEnglish = new Thread(){
+  public static synchronized void directionsReader(Language language) throws Exception {
+      read = new Thread(){
           @Override
           public void run(){
-              try {
+              while(!Thread.currentThread().isInterrupted()){
+                try {
                   while (realDistance(destination) > DEST_DISTANCE) {
                       //String currentLocation = getPosition();
-                      route.keySet().forEach(new Consumer<String>() {
+                      my_route.keySet().forEach(new Consumer<String>() {
                           @Override
                           public void accept(String key) {
-                              String value = route.get(key);
-                              String englishText = String.valueOf(value);
-                              // Search the directions String here for Rd or Ln
-                              String keyword1 = "Rd";
-                              String keyword2 = "Ln";
-                              /*
-                              * If the String contains "Rd" then this is changed to "Road" and
-                              * if the String contains "Ln" then this is changed to "Road".
-                              */
-                              Boolean foundOne = Arrays.asList(englishText.split(" ")).contains(keyword1);
-                              if(foundOne){
-                                  String newKeyword1 = "Road";
-                                  englishText = englishText.replaceAll("Rd", newKeyword1);
-                              }
-                              Boolean foundTwo = Arrays.asList(englishText.split(" ")).contains(keyword2);
-                              if (foundTwo) {
-                                  String newKeyword2 = "Lane";
-                                  englishText = englishText.replaceAll("Ln", newKeyword2);
-                              }
+                              String value = my_route.get(key);
+                              String text = String.valueOf(value);
+                              text = alterText(text);
                               /* If the distance to a route point is less than or
                               * equal to 10m then the corresponding directions are spoken.
                               */
                               if (realDistance(key) <= ROUTE_DISTANCE) {
                                   try {
-                                      Text = englishText;
-                                      open(1);
+                                      Text = text;
+                                      open(language);
+                                      TimeUnit.SECONDS.sleep(5);
+                                      
                                   } catch (Exception ex) {
                                       Logger.getLogger(NewSoundAndSpeech.class.getName()).log(Level.SEVERE, null, ex);
                                   }
                               }
+                              
+                              
                           }
                       });
                   }
+                
                   // When the current location is within 5m of the destination.
                   Text = "You have reached your destination";
-                  open(1);} catch (Exception ex) {
+                  open(language);
+                  
+		 } catch (Exception ex) {
                   Logger.getLogger(NewSoundAndSpeech.class.getName()).log(Level.SEVERE, null, ex);
-              }
+              }}
       }
       };
-      
-        stopAll();
-        
-        readEnglish.start();
-      //readEnglish.notify();
-      
-  }
-  private static void stopAll(){
-        try{
-          
-      }catch(Exception e){}
-  }
-  /*
-   * Speaks the directions in French.
-   */
-  public static void frenchDirectionsReader() throws Exception {
-       
-
-      /* If the distance to a destination is greater than 5m 
-       * then the directions are spoken.
-       */
-      while (realDistance(destination) > DEST_DISTANCE) {
-          //String currentLocation = getPosition();
-          for (String key : route.keySet()) {
-              String value = route.get(key);
-              String frenchText = String.valueOf(value);
-              // Search the directions String here for Rd or Ln
-              String keyword1 = "Rd";
-              String keyword2 = "Ln";
-              /*
-               * If the String contains "Rd" then this is changed to "Road" and
-               * if the String contains "Ln" then this is changed to "Road". 
-               */
-              Boolean foundOne = Arrays.asList(frenchText.split(" ")).contains(keyword1);
-              if(foundOne){
-                  String newKeyword1 = "Road";
-                  frenchText = frenchText.replaceAll("Rd", newKeyword1);
-              }
-              
-              Boolean foundTwo = Arrays.asList(frenchText.split(" ")).contains(keyword2);
-              if(foundTwo){
-                  String newKeyword2 = "Lane";
-                  frenchText = frenchText.replaceAll("Ln", newKeyword2);
-              }
-              
-          
-              /* If the distance to a route point is less than or 
-               * equal to 10m then the corresponding directions are spoken.
-               */
-              if (realDistance(key) <= ROUTE_DISTANCE) {
-                  Text = frenchText;
-                  open(2);
-              }
-          }
-      }
-      // When the current location is within 5m of the destination. 
-      Text = "You have reached your destination";
-      open(2);
-      
-  }
-  
-  /*
-   * Speaks the directions in German.
-   */
-  public static void germanDirectionsReader() throws Exception {
-       
-
-      /* If the distance to a destination is greater than 5m 
-       * then the directions are spoken.
-       */
-      while (realDistance(destination) > DEST_DISTANCE) {
-          //String currentLocation = getPosition();
-          for (String key : route.keySet()) {
-              String value = route.get(key);
-              String germanText = String.valueOf(value);
-              // Search the directions String here for Rd or Ln
-              String keyword1 = "Rd";
-              String keyword2 = "Ln";
-              /*
-               * If the String contains "Rd" then this is changed to "Road" and
-               * if the String contains "Ln" then this is changed to "Road". 
-               */
-              Boolean foundOne = Arrays.asList(germanText.split(" ")).contains(keyword1);
-              if(foundOne){
-                  String newKeyword1 = "Road";
-                  germanText = germanText.replaceAll("Rd", newKeyword1);
-              }
-              
-              Boolean foundTwo = Arrays.asList(germanText.split(" ")).contains(keyword2);
-              if(foundTwo){
-                  String newKeyword2 = "Lane";
-                  germanText = germanText.replaceAll("Ln", newKeyword2);
-              }
-              
-
-              /* If the distance to a route point is less than or 
-               * equal to 10m then the corresponding directions are spoken.
-               */
-              if (realDistance(key) <= ROUTE_DISTANCE) {
-                  Text = germanText;
-                  open(3);
-              }
-          }
-      }
-      // When the current location is within 5m of the destination. 
-      Text = "You have reached your destination";
-      open(3);
-      
-  }
-  
-  /*
-   * Speaks the directions in Italian.
-   */
-  public static void italianDirectionsReader() throws Exception {
-       
-
-      /* If the distance to a destination is greater than 5m 
-       * then the directions are spoken.
-       */
-      while (realDistance(destination) > DEST_DISTANCE) {
-          //String currentLocation = getPosition();
-          for (String key : route.keySet()) {
-              String value = route.get(key);
-              String italianText = String.valueOf(value);
-              // Search the directions String here for Rd or Ln
-              String keyword1 = "Rd";
-              String keyword2 = "Ln";
-              /*
-               * If the String contains "Rd" then this is changed to "Road" and
-               * if the String contains "Ln" then this is changed to "Road". 
-               */
-              Boolean foundOne = Arrays.asList(italianText.split(" ")).contains(keyword1);
-              if(foundOne){
-                  String newKeyword1 = "Road";
-                  italianText = italianText.replaceAll("Rd", newKeyword1);
-              }
-              
-              Boolean foundTwo = Arrays.asList(italianText.split(" ")).contains(keyword2);
-              if(foundTwo){
-                  String newKeyword2 = "Lane";
-                  italianText = italianText.replaceAll("Ln", newKeyword2);
-              }
-              
-
-              /* If the distance to a route point is less than or 
-               * equal to 10m then the corresponding directions are spoken.
-               */
-              if (realDistance(key) <= ROUTE_DISTANCE) {
-                  Text = italianText;
-                  open(4);
-              }
-          }
-      }
-      // When the current location is within 5m of the destination. 
-      Text = "You have reached your destination";
-      open(4);
-      
-  }
-  
-  /*
-   * Speaks the directions in Spanish.
-   */
-  public static void spanishDirectionsReader() throws Exception {
-       
-
-      /* If the distance to a destination is greater than 5m 
-       * then the directions are spoken.
-       */
-      while (realDistance(destination) > DEST_DISTANCE) {
-          //String currentLocation = getPosition();
-          for (String key : route.keySet()) {
-              String value = route.get(key);
-              String spanishText = String.valueOf(value);
-              // Search the directions String here for Rd or Ln
-              String keyword1 = "Rd";
-              String keyword2 = "Ln";
-              /*
-               * If the String contains "Rd" then this is changed to "Road" and
-               * if the String contains "Ln" then this is changed to "Road". 
-               */
-              Boolean foundOne = Arrays.asList(spanishText.split(" ")).contains(keyword1);
-              if(foundOne){
-                  String newKeyword1 = "Road";
-                  spanishText = spanishText.replaceAll("Rd", newKeyword1);
-              }
-              
-              Boolean foundTwo = Arrays.asList(spanishText.split(" ")).contains(keyword2);
-              if(foundTwo){
-                  String newKeyword2 = "Lane";
-                  spanishText = spanishText.replaceAll("Ln", newKeyword2);
-              }
-              
-
-              /* If the distance to a route point is less than or 
-               * equal to 10m then the corresponding directions are spoken.
-               */
-              if (realDistance(key) <= ROUTE_DISTANCE) {
-                  Text = spanishText;
-                  open(5);
-              }
-          }
-      }
-      // When the current location is within 5m of the destination. 
-      Text = "You have reached your destination";
-      open(5);
-      
+     if (!read.isAlive()){
+        read.start();
+     }
   }
   
   /*
    * Generate sound.
    */
   public static void main( String[] argv ) throws Exception {
+      addKeyValuePair();
+      directionsReader(Language.SPANISH);
+     if (read.isAlive()) {
+          read.interrupt();
+       } 
+      directionsReader(Language.ENGLISH);
       
-      addKeyValuePair(); 
-      englishDirectionsReader();
-      //spanishDirectionsReader();
-     
       
  
   }
