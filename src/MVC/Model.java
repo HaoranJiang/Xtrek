@@ -6,6 +6,7 @@ import static MVC.Maps.getMap;
 import static MVC.Maps.zoomIn;
 import static MVC.Maps.zoomOut;
 import static MVC.ModelViewController.SatController;
+import static MVC.NewSoundAndSpeech.addKeyValuePair;
 import static MVC.NewSoundAndSpeech.distance;
 import static MVC.NewSoundAndSpeech.splitPlace;
 import static MVC.SpeechPanel.smenu1;
@@ -34,6 +35,7 @@ import java.io.File;
 import static java.lang.Thread.sleep;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import static MVC.NewSoundAndSpeech.read;
 
 
 //
@@ -62,6 +64,7 @@ enum Keys{KEY_A,KEY_B,KEY_C,KEY_D,KEY_E,KEY_F,KEY_G,KEY_H,KEY_I,KEY_J,KEY_K,KEY_
          KEY_P,KEY_Q,KEY_R,KEY_S,KEY_T,KEY_U,KEY_V,KEY_W,KEY_X,KEY_Y,KEY_Z,KEY_SPACE,KEY_NEXT,KEY_SUB1,
          KEY_ONE,KEY_TWO,KEY_THREE,KEY_FOUR,KEY_FIVE,KEY_SIX,KEY_SEVEN,KEY_EIGHT,KEY_NINE,KEY_ZERO,KEY_DELETE,KEY_PREV,KEY_SUB2};
  enum SpeechMenuOrder {ONE, TWO, THREE, FOUR, FIVE, SIX};
+ enum Language {ENGLISH, FRENCH, GERMAN, ITALIAN, SPANISH};
 
 public class Model{
     static Menu menu;
@@ -87,6 +90,7 @@ public class Model{
     static char   dOLongitude;  // direction of longitude
     static boolean signal;
     static String time;
+    static Language currentLanguage;
 
   
     static HashMap<String,String> route;
@@ -1314,7 +1318,7 @@ public class Model{
         
     }
     
-    public void select(){
+    public void select() throws Exception{
         if (null != situation) // TODO add your handling code here:
         switch (situation) {
             case MENU:
@@ -1492,7 +1496,8 @@ public class Model{
                             route.clear();
                             t = 0;
                             odometer = 0.0;
-                            String s1 = "Cathedral Green, Exeter";
+                            System.out.println(textdisp);
+                            String s1 = textdisp;
                             if(submitClicked == false){
                                 initialPosition =getPosition();
                                 
@@ -1665,40 +1670,76 @@ public class Model{
                 screenPanel.revalidate();
                 break;
                 }
-            case SPEECH:
-                 switch(speechMenu){
+case SPEECH:
+
+    //addKeyValuePair();
+
+
+         switch(speechMenu){
             case TWO:
                 try {
-                    NewSoundAndSpeech.englishDirectionsReader();
+                    try{
+                        if (read.isAlive()) {
+                             read.interrupt();
+                        }
+                    }finally{
+                    currentLanguage= Language.ENGLISH;
+                    NewSoundAndSpeech.directionsReader(currentLanguage);
+                   }
                 } catch (Exception e) {
                     ;
                 }
                 break;
             case THREE:
                 try {
-                    NewSoundAndSpeech.frenchDirectionsReader();
+                   try{
+                        if (read.isAlive()) {
+                             read.interrupt();
+                    } 
+                    }finally{
+                    currentLanguage= Language.FRENCH;
+                    NewSoundAndSpeech.directionsReader(currentLanguage);
+                   }
                 } catch (Exception e) {
                     ;
                 }
                 break;
             case FOUR:
                 try {
-                    NewSoundAndSpeech.germanDirectionsReader();
-                } catch (Exception e) {
+                   try{
+                        if (read.isAlive()) {
+                             read.interrupt();
+                        } 
+                    }finally{
+                    currentLanguage= Language.GERMAN;
+                    NewSoundAndSpeech.directionsReader(currentLanguage);
+                   }} catch (Exception e) {
                     ;
                 }
                 break;
             case FIVE:
-                try {
-                    NewSoundAndSpeech.italianDirectionsReader();
-                } catch (Exception e) {
+                try{
+                   try{
+                        if (read.isAlive()) {
+                             read.interrupt();
+                        } 
+                    }finally{
+                    currentLanguage= Language.ITALIAN;
+                    NewSoundAndSpeech.directionsReader(currentLanguage);
+                   } } catch (Exception e) {
                     ;
                 }
                 break;
             case SIX:
                  try {
-                    NewSoundAndSpeech.spanishDirectionsReader();
-                } catch (Exception e) {
+                   try{
+                        if (read.isAlive()) {
+                             read.interrupt();
+                        } 
+                    }finally{
+                    currentLanguage= Language.SPANISH;
+                    NewSoundAndSpeech.directionsReader(currentLanguage);
+                   } } catch (Exception e) {
                     ;
                 }
                 break;   
@@ -1708,6 +1749,7 @@ public class Model{
                 
         }
     }
+    /* Return position in String form "(latitude,longitude)" */
     public static String  getPosition(){
         String position = "" + latitude +","+ longitude;
         return position;
@@ -1784,7 +1826,7 @@ public class Model{
                     try{sleep(6000);}catch(InterruptedException e){}
                     
                     currentPosition = getPosition();
-                    System.out.println(currentPosition);
+                    //System.out.println(currentPosition);
                     odometer = odometer+realDist(initialPosition,currentPosition);
                     odemInKM = 1.0*odometer/1000;
                     tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
@@ -1878,8 +1920,8 @@ public class Model{
             JSONObject step = steps.getJSONObject(i);
             //end location
             JSONObject end_location = (JSONObject)step.getJSONObject("end_location");
-            String lat = Double.toString(round((end_location.getDouble("lat")),3));
-            String lng = Double.toString(round((end_location.getDouble("lng")),3));
+            String lat = Double.toString((end_location.getDouble("lat")));
+            String lng = Double.toString((end_location.getDouble("lng")));
             String location = lat+","+lng;
             
             //instruction

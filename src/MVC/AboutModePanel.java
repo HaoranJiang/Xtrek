@@ -18,18 +18,20 @@ public class AboutModePanel extends javax.swing.JPanel {
 
 
     private void initComponents() {
-
+        /*
         year = new javax.swing.JLabel();
         university = new javax.swing.JLabel();
         XTrek = new javax.swing.JLabel();
         group = new javax.swing.JLabel();
         icon = new javax.swing.JLabel();
+        */
+        pic = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(203, 245));
         setMinimumSize(new java.awt.Dimension(203, 245));
         setPreferredSize(new java.awt.Dimension(203, 245));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
+        /*
         year.setText("(c)2018");
         add(year, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 85, -1));
 
@@ -43,14 +45,20 @@ public class AboutModePanel extends javax.swing.JPanel {
 
         group.setText("Group L");
         add(group, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
+        */
+        pic.setSize(203,245);
+        pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/about_png.PNG"))); // the sample picture
+        add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 203, 245));
     }
 
 
     // Variables declaration 
-    private javax.swing.JLabel XTrek;
+  /*private javax.swing.JLabel XTrek;
     private javax.swing.JLabel group;
     private javax.swing.JLabel icon;
     private javax.swing.JLabel university;
     private javax.swing.JLabel year;
+    */
+    private javax.swing.JLabel pic;
     
 }
