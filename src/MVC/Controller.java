@@ -5,6 +5,8 @@ package MVC;
 import static MVC.View.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * Controller.
@@ -38,7 +40,11 @@ class Controller implements ActionListener{
          }
      else if (evt.getSource()== selectButton)
          {
-            model.select();
+            try {
+                model.select();
+            } catch (Exception ex) {
+                Logger.getLogger(Controller.class.getName()).log(Level.SEVERE, null, ex);
+            }
          } //To change body of generated methods, choose Tools | Templates.
     }
 }
