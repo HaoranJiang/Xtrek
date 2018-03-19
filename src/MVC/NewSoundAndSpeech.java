@@ -54,8 +54,8 @@ public class NewSoundAndSpeech {
   static final int ROUTE_DISTANCE = 5;
   
   // I have created my own route
-  static HashMap<String,String> my_route = new HashMap<String,String>();
-  
+  //static HashMap<String,String> my_route = new HashMap<String,String>();
+  static HashMap<String,String> my_route = Model.route;
   
   // I have added custom key and value pairs to this route
   public static void addKeyValuePair() {

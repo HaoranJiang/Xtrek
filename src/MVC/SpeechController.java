@@ -5,6 +5,8 @@ import static MVC.SpeechView.jButton3;
 import static MVC.SpeechView.jButton4;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -34,7 +36,11 @@ public class SpeechController implements ActionListener {
         }
         else if (e.getSource() == jButton1)
         {
-            model.select();
+            try {
+                model.select();
+            } catch (Exception ex) {
+                Logger.getLogger(SpeechController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
     

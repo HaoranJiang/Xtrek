@@ -93,7 +93,7 @@ public class Model{
     static Language currentLanguage;
 
   
-    static HashMap<String,String> route;
+    public static HashMap<String,String> route;
     /**
      *
      * @param menu
