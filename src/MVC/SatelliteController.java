@@ -23,11 +23,25 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     private MVC.Model model;
     private SatellitePanel view;
     
-    static SerialPort serialPort;
+    private static final String GLL = "$GPGLL";
+    private static final String GLL_VOID = "V";
+    private static final int    TIME_OUT = 2000;
+    private static final int    BUFFER_SIZE = 128;
+    private static final int    DATA_RATE= 9600;
+    
+    private static final String WINDOWS10_PORT = "COM4";   // windows 10 default serial port 
+    private static final String LINUX_PORT =   "/dev/ttySO"; // linux default serial port
+    private static final String OS_PORT =      "????";     // os default serial port
+    private static final String WINDOWS7_PORT = "COM3";    // windows 7 default serial port
+            
+    static RXTXPort serialPort;
     static InputStream in;
     static Thread readThread;
     static CommPortIdentifier portID;
     static Enumeration portList;
+    static boolean connected;
+    static boolean signal;
+    String PortName;
     
     /* Constuctor: initialize model and view */
     public SatelliteController(MVC.Model model,SatellitePanel view){
@@ -42,12 +56,25 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     */ 
     public void connect(){
     try{
+        String osname = System.getProperty("os.name","").toLowerCase(); // get opeating system name
+        if (osname.startsWith("windows 10")){  
+            PortName = WINDOWS10_PORT;
+        }else if(osname.startsWith("linux")){ 
+            PortName = LINUX_PORT;
+        }else if(osname.startsWith("mac")){  
+            PortName = OS_PORT;
+        }else if(osname.startsWith("windows 7")){ 
+            PortName = WINDOWS7_PORT;
+        }else{
+            System.out.println("Sorry, your operating system is not supported!");
+        }
+
       portList = CommPortIdentifier.getPortIdentifiers();
 
       while(portList.hasMoreElements()){
           portID = (CommPortIdentifier)portList.nextElement();
           if (portID.getPortType() == CommPortIdentifier.PORT_SERIAL){
-            if(portID.getName().equals("COM4")){     // Windows 10: COM4
+            if(portID.getName().equals(PortName)){    
                 SatelliteController reader = new SatelliteController();
                 return;
             }  
@@ -55,35 +82,33 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
         }
         }catch(UnsatisfiedLinkError | NoClassDefFoundError e){System.out.println("rxtxSerial File has wrong version! Please read the README.txt and change it.");
         }
-
-      SatellitePanel.updateView(false, 0, 'a', 0,'a', false);   // not connected with GPS device
-      Model.signal = false;
+      connected = false;
+      signal = false;
+      SatellitePanel.updateView(connected, 0, 'a', 0,'a', signal);   // not connected with GPS device
     } 
     /**
      * Open serial port and start a reading thread 
-     * @exception PortInUseException Port is being used by another app (can be caused by opening the app twice.
-     * @exception TooManyListenersException Too many listeners are added to the port( can be caused by opening the app twice).
-     * @exception UnsupportedCommOperationException COM port not supported.
      */
     public SatelliteController() {        
        try{
-            serialPort = (SerialPort)portID.open("TheSatellite",3000);
+            serialPort = (RXTXPort)portID.open("TheSatellite",TIME_OUT);
        }catch(PortInUseException e){System.out.println("Port is being used by another application! Please turn off and restart! ");}
        try{
            in  = serialPort.getInputStream();
-       }catch(IOException e){System.out.println(e);}
+       }catch(Exception e){System.out.println(e);}
        try{
            serialPort.addEventListener(this);
         }catch(TooManyListenersException e){System.out.println("Too many listener added!Please check if you have opened the project twice!");}
         serialPort.notifyOnDataAvailable(true);     
         try{
             serialPort.setSerialPortParams(
-                9600,
+                DATA_RATE,
                 SerialPort.DATABITS_8,SerialPort.STOPBITS_1,
                 SerialPort.PARITY_NONE);
             
             serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_NONE);
         }catch(UnsupportedCommOperationException e){System.out.println(e);}
+            connected = true;    // connected to the serial port
             readThread = new Thread(this);
             readThread.start();    
      
@@ -112,7 +137,9 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             case SerialPortEvent.CTS:
             case SerialPortEvent.DSR:
             case SerialPortEvent.RI:
-            case SerialPortEvent.OUTPUT_BUFFER_EMPTY: break;
+            case SerialPortEvent.OUTPUT_BUFFER_EMPTY: 
+                SatellitePanel.updateView(signal, 0, 'a', 0,'a',connected);
+                break;
             case SerialPortEvent.DATA_AVAILABLE:
                 update();
                 break;
@@ -120,33 +147,31 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
   }
     /**
      * Read from the input stream, convert messages and update position .
-     * @exception IOException input/output exception
      */
     public void update(){
-    try{
-        byte[] buffer  = new byte[ 128 ];
+    try{    
+        byte[] buffer  = new byte[ BUFFER_SIZE ];
         String msg;
         int    n;             
         while( ( n = in.read( buffer ) ) > -1 ) {
         msg = new String( buffer, 0, n ); 
-
-        // no available message.. 
-        if (msg.startsWith("$GPGLL,,,")){
-            Model.signal = false; 
-            SatellitePanel.updateView(false, 0, 'a', 0,'a',true); // connected but no signal
-        }
-        // available message.. update model and view
-        else if (msg.startsWith("$GPGLL")){       
-            Model.signal = true;
+        // GLL message...
+        if (msg.startsWith(GLL)){   
+            if(msg.contains(GLL_VOID)){   // message contains "V" : void message, display no signal
+                signal = false; 
+                SatellitePanel.updateView(signal, 0, 'a', 0,'a',connected); // connected but no signal
+            }else{ 
+             
+            signal = true;                  // connected and have available message         
             // Convert NMEA latitude, longitude message.
             // An example NMEA message:$GPGLL,5043.61007,N,00331.04761,W,204703.00,A,A*7E
-            // substring index of 7-9/20-23 : degree of latitude/longitude (50,003 in the example)
-            // substring index of 9-11/23-25: minite of latitude/longitude (43,31 in the example)
-            // substring index of 12-17/38-40 : seconds of latitude/longitude (61007,04761 in the example)
-            // index of 18/32: direction of latitude/longitude (N and W in the example)
-            double latitude  = converter(msg.substring(7,9),msg.substring(9,11),msg.substring(12,17));
-            double longitude = converter(msg.substring(20,23),msg.substring(23,25),msg.substring(26,31));
-            // String time     =  convertTime(s.substring(34,36),s.substring(36,38),s.substring(38,40));
+            // substring of 7-9/20-23 : degree of latitude/longitude (50 / 003 in the example)
+            // substring of 9-17/23-31: minite of latitude/longitude (43.61007 minutes / 31.04761 minutes in the example)
+            // index of 18/32: direction of latitude/longitude (N / W in the example)
+            double latitude  = converter(msg.substring(7,9),msg.substring(9,17));
+            double longitude = converter(msg.substring(20,23),msg.substring(23,31));
+            
+            // update model location..
             Model.latitude = latitude;
             Model.dOLatitude= msg.charAt(18);
             Model.longitude= longitude;
@@ -155,45 +180,50 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
                 Model.latitude *= -1;
             if (Model.dOLongitude == 'W')
                 Model.longitude *= -1;
-            SatellitePanel.updateView(true, latitude, Model.dOLatitude, longitude, Model.dOLongitude,true);
+            SatellitePanel.updateView(signal, latitude, Model.dOLatitude, longitude, Model.dOLongitude,connected);
             }
         }
+        } 
     }catch(IOException e){}
-   }
+    
+}
 
 
    /** 
     *  Convert NMEA DMS Geographic coordinate system string message into decimal degrees
     *  @see https://www.latlong.net/degrees-minutes-seconds-to-decimal-degrees.
     */
-    private double converter(String degree, String minute, String second){
-        Integer degrees  = Integer.valueOf(degree);
-        Integer minites  = Integer.valueOf(minute);
-       // NMEA seconds String message is 5 digit long, and it represents seconds in 0.***** minute form. 
-       // Therefore, for example, 61007 will be divide by 100000 first becoming 0.61007 and 
-       // then multiply by 60 because 60 seconds in one minute, and then we get the seconds
-        double seconds  = 60/100000*(Integer.valueOf(second));  
-        double posi = degrees + minites/60.0 + seconds / 3600.0; // Decimal Degrees = degrees + (minutes/60) + (seconds/3600)
+    private double converter(String degree, String minute){
+        Float degrees  = Float.valueOf(degree);
+        Float minites  = Float.valueOf(minute);
+        double posi = degrees + minites/60.0 ; // Decimal Degrees = degrees + (minutes/60)
 
     return posi;
 } 
-
+    
     /**
      * Disconnect the port, remove listeners and close input stream,
-     * Force quit without calling the disconnect() method will procude "getCommModelFailed" error. 
-     * @exception IOException input/output exception
+     * Force quit without calling the disconnect() method will procude "getCommModemFailed" error. 
+     * But rxtx library seems to have a problem with closing port in multi-thread applications. The IOLocked variable is not synchronized. 
+     * @see https://issues.apache.org/jira/browse/DIRMINA-813 for this problem. This CloseThread class use workaround one solution. 
      */
-    public void disconnect(){
-        try{ 
-            if(Model.signal == true){
-                serialPort.removeEventListener();                 
-                serialPort.close();
-                in .close();
-            }
-            Model.signal = false;
-        }catch(IOException e){}               
-}
+    class CloseThread extends Thread { 
+        public void run() { 
+            serialPort.removeEventListener(); 
+            serialPort.close(); 
+        }
+} 
+        public void disconnect() {
+            try { 
+                if (serialPort != null) { 
+                    serialPort.getInputStream().close(); 
+                    serialPort.getOutputStream().close(); 
+                    new CloseThread().start(); 
+                }
+             } catch (Exception e) {} 
+        }
+ 
 
-    
-    
+
+ 
 }
