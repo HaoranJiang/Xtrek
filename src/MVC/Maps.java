@@ -21,7 +21,7 @@ public class Maps {
   static String LONGITUDE = "-3.5351";     /* Exeter, longitude */
   static String ZOOM      = "13";          /* 0 .. 21           */
   final static String SIZE      = "203x245";     /* Size              */
- 
+  final static String API_KEY = "AIzaSyDkH2-ZSQl09udvKzhG5i598K9RXrIehH4";
 
           
   static byte[] readData( String latitude
@@ -34,7 +34,7 @@ public class Maps {
       = ( "https://maps.googleapis.com/maps/api/staticmap"
         + "?" + "center" + "=" + latitude + "," + longitude
         + "&" + "zoom"   + "=" + zoom
-        + "&" + "size"   + "=" + size
+        + "&" + "size"   + "=" + size +"&key="+API_KEY
         );
     final byte[] body
         = {};
