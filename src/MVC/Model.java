@@ -1329,6 +1329,10 @@ public class Model{
 
                     case FIVE:
                         screenPanel.add(TSPanel);
+                        if (SatelliteController.connected == false)
+                            SatelliteController.generateSound(SatelliteController.NOT_CONNECTED);
+                         if (SatelliteController.signal == false && SatelliteController.connected == true)
+                            SatelliteController.generateSound(SatelliteController.NO_SIGNAL);
                         situation = Situation.SATELLITE;
                         break;
 
@@ -1711,7 +1715,7 @@ case SPEECH:
                     odemInKM = 1.0*odometer/1000;
                     tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
                     initialPosition = currentPosition;
-                    System.out.println(odometer);
+                    //System.out.println(odometer);
                 }
             }
         };

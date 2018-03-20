@@ -53,8 +53,8 @@ public class NewSoundAndSpeech {
   final static String FORMAT = "riff-16khz-16bit-mono-pcm";
   static final double NAUTICAL_MILE = 1.15077945;
   static final double MILE_TO_METER = 1609.344;
-  static final int DEST_DISTANCE = 50;
-  static final int ROUTE_DISTANCE = 50;
+  static final int DEST_DISTANCE = 25;
+  static final int ROUTE_DISTANCE = 25;
   
   // I have created my own route
   //static HashMap<String,String> my_route = new HashMap<String,String>();
@@ -157,7 +157,7 @@ public class NewSoundAndSpeech {
    */
   public static double realDistance(String place) {
       
-      List splitCurrentLocation = splitPlace(currentLocation);
+      List splitCurrentLocation = splitPlace(Model.getPosition());
       
       List splitPlace = splitPlace(place);
       
@@ -381,7 +381,7 @@ public class NewSoundAndSpeech {
   /*
    * Set up stream. 
    */
-  static AudioInputStream setupStream( String name ) {
+  public static AudioInputStream setupStream( String name ) {
     try {
       File             file = new File( name );
       AudioInputStream stm  = AudioSystem.getAudioInputStream( file );
@@ -394,7 +394,7 @@ public class NewSoundAndSpeech {
   /*
    * Read stream.
    */
-  static ByteArrayOutputStream readStream( AudioInputStream stm ) {
+  public static ByteArrayOutputStream readStream( AudioInputStream stm ) {
     try {
       AudioFormat           af  = stm.getFormat();
       ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -420,7 +420,7 @@ public class NewSoundAndSpeech {
   /*
    * Play stream.
    */
-  static void playStream( AudioInputStream stm, ByteArrayOutputStream bos ) {
+  public static void playStream( AudioInputStream stm, ByteArrayOutputStream bos ) {
     try {
       AudioFormat    af   = stm.getFormat();
       byte[]         ba   = bos.toByteArray();
@@ -548,7 +548,6 @@ public class NewSoundAndSpeech {
    * Speaks the directions in the desird language. 
    */
   public static synchronized void directionsReader(Language language) throws Exception {
-      System.out.println(my_route);
       read = new Thread(){
           @Override
           public void run(){
@@ -569,7 +568,7 @@ public class NewSoundAndSpeech {
                                   try {
                                       Text = text;
                                       open(language);
-                                      TimeUnit.SECONDS.sleep(5);
+                                      TimeUnit.SECONDS.sleep(10);
                                       
                                   } catch (Exception ex) {
                                       Logger.getLogger(NewSoundAndSpeech.class.getName()).log(Level.SEVERE, null, ex);
@@ -581,7 +580,7 @@ public class NewSoundAndSpeech {
                       });
                   }
                 
-                  // When the current location is within 5m of the destination.
+                  // When the current location is within 25m of the destination.
                   Text = "You have reached your destination";
                   open(language);
                   
@@ -599,15 +598,7 @@ public class NewSoundAndSpeech {
    * Generate sound.
    */
   public static void main( String[] argv ) throws Exception {
-      addKeyValuePair();
-      directionsReader(Language.SPANISH);
-     if (read.isAlive()) {
-          read.interrupt();
-       } 
-      directionsReader(Language.ENGLISH);
-      
-      
- 
+
   }
 } 
 

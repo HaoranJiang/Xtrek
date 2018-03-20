@@ -2,6 +2,9 @@
 package MVC;
 
 
+import static MVC.NewSoundAndSpeech.playStream;
+import static MVC.NewSoundAndSpeech.readStream;
+import static MVC.NewSoundAndSpeech.setupStream;
 import gnu.io.CommPortIdentifier;
 import gnu.io.SerialPort;
 import gnu.io.SerialPortEvent;
@@ -11,6 +14,7 @@ import java.util.Enumeration;
 import gnu.io.*;
 import java.io.IOException;
 import java.util.TooManyListenersException;
+import javax.sound.sampled.AudioInputStream;
 
 /**
  * @MVC - Controller: SatelliteController controls model and view(SatellitePanel)
@@ -23,8 +27,8 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     private MVC.Model model;
     private SatellitePanel view;
     
-    private static final String GLL = "$GPGLL";
-    private static final String GLL_VOID = "V";
+    private static final String GLL = "$GPGLL";          // GLL message
+    private static final String GLL_VOID = "V";          // void sign
     private static final int    TIME_OUT = 2000;
     private static final int    BUFFER_SIZE = 128;
     private static final int    DATA_RATE= 9600;
@@ -33,6 +37,9 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     private static final String LINUX_PORT =   "/dev/ttySO"; // linux default serial port
     private static final String OS_PORT =      "????";     // os default serial port
     private static final String WINDOWS7_PORT = "COM3";    // windows 7 default serial port
+    
+    public static final String NO_SIGNAL = "src/Sounds/nosignal.wav";        // location of the pre-recorded file
+    public static final String NOT_CONNECTED = "src/Sounds/notconnected.wav";
             
     static RXTXPort serialPort;
     static InputStream in;
@@ -148,7 +155,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     /**
      * Read from the input stream, convert messages and update position .
      */
-    public void update(){
+    public synchronized void update(){
     try{    
         byte[] buffer  = new byte[ BUFFER_SIZE ];
         String msg;
@@ -187,7 +194,20 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     }catch(IOException e){}
     
 }
-
+    /** 
+     * Generate pre-recorded sound when there is no signal or the dongle is not connected.
+     */
+    public static void generateSound(String filename){
+        Thread reading = new Thread(){
+           @Override
+           public void run(){
+               AudioInputStream stm = setupStream( filename );
+               playStream( stm, readStream( stm ) );
+           }
+        };
+        reading.start();
+        
+    }
 
    /** 
     *  Convert NMEA DMS Geographic coordinate system string message into decimal degrees
