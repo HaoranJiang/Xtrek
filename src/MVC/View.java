@@ -1,7 +1,10 @@
 
 package MVC;
 
+import static MVC.Maps.moveTo;
 import java.awt.event.ActionListener;
+import java.io.File;
+import javax.swing.ImageIcon;
 
 
 /**
@@ -61,6 +64,7 @@ public class View extends javax.swing.JFrame {
         menu6Panel = new javax.swing.JPanel();
         menu6 = new javax.swing.JLabel();
         mapPanel = new javax.swing.JPanel();
+        move = new javax.swing.JButton();
         mark = new javax.swing.JLabel();
         mapImage = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
@@ -213,6 +217,13 @@ public class View extends javax.swing.JFrame {
 
         screenPanel.add(menu6Panel, "card5");
 
+        move.setText("move");
+        move.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moveActionPerformed(evt);
+            }
+        });
+
         mark.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Webp.net-resizeimage.png"))); // NOI18N
 
         mapImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MVC/output.png"))); // NOI18N
@@ -221,7 +232,10 @@ public class View extends javax.swing.JFrame {
         mapPanel.setLayout(mapPanelLayout);
         mapPanelLayout.setHorizontalGroup(
             mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
+            .addGroup(mapPanelLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(move)
+                .addContainerGap(75, Short.MAX_VALUE))
             .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(mapPanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -234,7 +248,10 @@ public class View extends javax.swing.JFrame {
         );
         mapPanelLayout.setVerticalGroup(
             mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 245, Short.MAX_VALUE)
+            .addGroup(mapPanelLayout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(move)
+                .addContainerGap(194, Short.MAX_VALUE))
             .addGroup(mapPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(mapPanelLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -278,6 +295,18 @@ public class View extends javax.swing.JFrame {
        
     }//GEN-LAST:event_menuButtonActionPerformed
 
+    private void moveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moveActionPerformed
+        // TODO add your handling code here:zoomIn();
+                    moveTo();
+                    File file =new File("output.png");
+                    String path = file.getAbsolutePath();
+                    ImageIcon icon = new ImageIcon(path);
+                    icon.getImage().flush();
+                    mapImage.setIcon(icon); 
+                    mapImage.repaint();
+        
+    }//GEN-LAST:event_moveActionPerformed
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -299,6 +328,7 @@ public class View extends javax.swing.JFrame {
     public static javax.swing.JLabel menu6;
     public static javax.swing.JPanel menu6Panel;
     public static javax.swing.JButton menuButton;
+    public static javax.swing.JButton move;
     public static javax.swing.JPanel offPanel;
     public static javax.swing.JButton onButton;
     public static javax.swing.JPanel screenPanel;

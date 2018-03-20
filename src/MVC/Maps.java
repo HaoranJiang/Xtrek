@@ -1,5 +1,7 @@
 package MVC;
 
+import static MVC.Model.getLatitude;
+import static MVC.Model.getLongitude;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -59,8 +61,12 @@ public class Maps {
           ZOOM = "" + value;
       }   
   }
-  
-
+  static void moveTo(){
+      
+      LONGITUDE = getLongitude();
+      LATITUDE = getLatitude();
+     
+  }
   /*
    * Write map data.
    */

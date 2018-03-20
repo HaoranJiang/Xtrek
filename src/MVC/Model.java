@@ -698,8 +698,12 @@ public class Model{
         }
             
             case MAP:{
-                zoomOut();
-                getMap();
+                try{
+                    zoomOut();
+                    getMap();
+                    } catch (Exception e){
+                        System.out.println("You should press it slowly!");
+                    }
                 File file =new File("output.png");
                 String path = file.getAbsolutePath();
                 ImageIcon icon = new ImageIcon(path);
@@ -1256,8 +1260,12 @@ public class Model{
             
         }
                 case MAP:{
+                    try{
                     zoomIn();
                     getMap();
+                    } catch (Exception e){
+                        System.out.println("You should press it slowly!");
+                    }
                     File file =new File("output.png");
                     String path = file.getAbsolutePath();
                     ImageIcon icon = new ImageIcon(path);
@@ -1267,7 +1275,9 @@ public class Model{
                 }
         
         
-    }}
+    }
+        
+    }
     
     public void backMenu(){
         if (situation != Situation.MENU && situation != Situation.OFF) {
@@ -1754,6 +1764,16 @@ case SPEECH:
     /* Return position in String form "(latitude,longitude)" */
     public static String  getPosition(){
         String position = "" + latitude +","+ longitude;
+        return position;
+    }
+    
+    public static String  getLongitude(){
+        String position = "" +  longitude;
+        return position;
+    }
+    
+    public static String  getLatitude(){
+        String position = "" + latitude;
         return position;
     }
     
