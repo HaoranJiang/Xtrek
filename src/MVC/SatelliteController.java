@@ -80,7 +80,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             }  
           }
         }
-        }catch(UnsatisfiedLinkError | NoClassDefFoundError e){System.out.println("rxtxSerial File has wrong version! Please read the README.txt and change it.");
+        }catch(UnsatisfiedLinkError | NoClassDefFoundError e){System.out.println("Hint: rxtxSerial File has wrong version! Please read the README.txt and change it.");
         }
       connected = false;
       signal = false;
@@ -92,13 +92,13 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     public SatelliteController() {        
        try{
             serialPort = (RXTXPort)portID.open("TheSatellite",TIME_OUT);
-       }catch(PortInUseException e){System.out.println("Port is being used by another application! Please turn off and restart! ");}
+       }catch(PortInUseException e){System.out.println("Hint: Port is being used by another application! Please turn off and restart! ");}
        try{
            in  = serialPort.getInputStream();
        }catch(Exception e){System.out.println(e);}
        try{
            serialPort.addEventListener(this);
-        }catch(TooManyListenersException e){System.out.println("Too many listener added!Please check if you have opened the project twice!");}
+        }catch(TooManyListenersException e){System.out.println("Hint: Too many listener added!Please check if you have opened the project twice!");}
         serialPort.notifyOnDataAvailable(true);     
         try{
             serialPort.setSerialPortParams(

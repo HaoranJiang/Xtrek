@@ -53,12 +53,12 @@ public class NewSoundAndSpeech {
   final static String FORMAT = "riff-16khz-16bit-mono-pcm";
   static final double NAUTICAL_MILE = 1.15077945;
   static final double MILE_TO_METER = 1609.344;
-  static final int DEST_DISTANCE = 5;
-  static final int ROUTE_DISTANCE = 5;
+  static final int DEST_DISTANCE = 50;
+  static final int ROUTE_DISTANCE = 50;
   
   // I have created my own route
   //static HashMap<String,String> my_route = new HashMap<String,String>();
-  static LinkedHashMap<String,String> my_route = Model.route;
+  public static LinkedHashMap<String,String> my_route;
   
   // I have added custom key and value pairs to this route
   public static void addKeyValuePair() {
@@ -126,7 +126,7 @@ public class NewSoundAndSpeech {
   // I have created my own destination 
 
 
-  public static String destination = "50.737950,-3.532659";
+  public static String destination = "50.726206,-3.516181";
 
   
   
@@ -548,6 +548,7 @@ public class NewSoundAndSpeech {
    * Speaks the directions in the desird language. 
    */
   public static synchronized void directionsReader(Language language) throws Exception {
+      System.out.println(my_route);
       read = new Thread(){
           @Override
           public void run(){

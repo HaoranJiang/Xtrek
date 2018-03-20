@@ -1505,6 +1505,7 @@ public class Model{
             
                                 
                             try {
+                                System.out.println(initialPosition);
                                 findInstruction(initialPosition,s1);
                                 displayOdem();
                                 movingTimeIncease();
@@ -1520,8 +1521,9 @@ public class Model{
                             } catch (JSONException ex) {
                                 Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
                             }
-                              
+                            
                             System.out.println(route);
+                            NewSoundAndSpeech.my_route = route;
                                     
                         
                         
