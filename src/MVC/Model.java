@@ -74,7 +74,7 @@ public class Model{
     static String textdisp;
     static boolean wtFirstClicked;
     static boolean firstClickedWT;
-    
+    static Double stationaryRange;
     static int second;
     static int minute;
     static int hour;
@@ -112,7 +112,7 @@ public class Model{
         textdisp = "";
         wtFirstClicked = false;
         firstClickedWT = true;
-        
+        stationaryRange = 0.0;
         second = 0;
         minute = 0;
         hour = 0;
@@ -1705,7 +1705,9 @@ case SPEECH:
                     
                     currentPosition = getPosition();
                     //System.out.println(currentPosition);
-                    odometer = odometer+realDist(initialPosition,currentPosition);
+                    Double distanceIn6s = realDist(initialPosition,currentPosition);
+                    if(distanceIn6s<3.0){odometer = odometer+0.0;}else{
+                    odometer = odometer+distanceIn6s;}
                     odemInKM = 1.0*odometer/1000;
                     tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
                     initialPosition = currentPosition;
