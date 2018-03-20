@@ -1711,6 +1711,7 @@ case SPEECH:
                     odemInKM = 1.0*odometer/1000;
                     tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
                     initialPosition = currentPosition;
+                    System.out.println(odometer);
                 }
             }
         };
