@@ -93,7 +93,7 @@ public class Model{
     static Language currentLanguage;
 
   
-    public static HashMap<String,String> route;
+    public static LinkedHashMap<String,String> route;
     /**
      *
      * @param menu
@@ -121,7 +121,7 @@ public class Model{
         currentPosition = "";
         initialPosition = "";
         lock = new Object();
-        route = new HashMap<>();
+        route = new LinkedHashMap<>();
         speechMenu = SpeechMenuOrder.ONE;
 
     }

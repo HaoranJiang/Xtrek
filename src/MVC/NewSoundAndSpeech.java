@@ -2,6 +2,7 @@ package MVC;
 
 import static MVC.Model.getPosition;
 
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.DataOutputStream;
@@ -12,6 +13,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.*;
 import java.lang.*;
 import java.io.*;
+import java.util.Map.Entry;
 import java.util.function.Consumer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,6 +23,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.DataLine;
 import javax.sound.sampled.SourceDataLine;
+
 
 
 /*
@@ -55,7 +58,7 @@ public class NewSoundAndSpeech {
   
   // I have created my own route
   //static HashMap<String,String> my_route = new HashMap<String,String>();
-  static HashMap<String,String> my_route = Model.route;
+  static LinkedHashMap<String,String> my_route = Model.route;
   
   // I have added custom key and value pairs to this route
   public static void addKeyValuePair() {
@@ -121,7 +124,10 @@ public class NewSoundAndSpeech {
   public static String currentLocation = Model.getPosition();
   
   // I have created my own destination 
-  public static String destination = "50.7260866,-3.5163002";
+
+
+  public static String destination = "50.737950,-3.532659";
+
   
   
   
