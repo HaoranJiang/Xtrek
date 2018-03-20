@@ -115,29 +115,25 @@ public class WhereToView extends javax.swing.JPanel {
         jLabelAlphaKeyBoard = new javax.swing.JLabel();
         jPanelNumKeyBoard = new javax.swing.JPanel();
         jLabelNumKeyBoard = new javax.swing.JLabel();
-        jPanelSubmit = new javax.swing.JPanel();
-        jPanelSubmitButton = new javax.swing.JPanel();
-        jLabelSubmitButton = new javax.swing.JLabel();
-        jPanelSubmitHighlight = new javax.swing.JPanel();
-        jLabelSubmitHighlight = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(203, 245));
 
-        jPanelTextDisplay.setPreferredSize(new java.awt.Dimension(150, 33));
+        jPanelTextDisplay.setPreferredSize(new java.awt.Dimension(203, 33));
 
         jLabelTextDisplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/text_adv.png"))); // NOI18N
+        jLabelTextDisplay.setPreferredSize(new java.awt.Dimension(203, 33));
 
-        jTextFieldDestination.setPreferredSize(new java.awt.Dimension(130, 24));
+        jTextFieldDestination.setPreferredSize(new java.awt.Dimension(180, 24));
 
         javax.swing.GroupLayout jPanelTextDisplayLayout = new javax.swing.GroupLayout(jPanelTextDisplay);
         jPanelTextDisplay.setLayout(jPanelTextDisplayLayout);
         jPanelTextDisplayLayout.setHorizontalGroup(
             jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+            .addGap(0, 203, Short.MAX_VALUE)
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelTextDisplay)
+                    .addComponent(jLabelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
@@ -151,7 +147,7 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelTextDisplay)
+                    .addComponent(jLabelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
@@ -1217,61 +1213,6 @@ public class WhereToView extends javax.swing.JPanel {
 
         jPanelKeyBoard.add(jPanelNumKeyBoard, "card43");
 
-        jPanelSubmit.setPreferredSize(new java.awt.Dimension(53, 33));
-        jPanelSubmit.setLayout(new java.awt.CardLayout());
-
-        jPanelSubmitButton.setPreferredSize(new java.awt.Dimension(53, 33));
-
-        jLabelSubmitButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/sub_btn.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelSubmitButtonLayout = new javax.swing.GroupLayout(jPanelSubmitButton);
-        jPanelSubmitButton.setLayout(jPanelSubmitButtonLayout);
-        jPanelSubmitButtonLayout.setHorizontalGroup(
-            jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 53, Short.MAX_VALUE)
-            .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelSubmitButtonLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelSubmitButton)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelSubmitButtonLayout.setVerticalGroup(
-            jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
-            .addGroup(jPanelSubmitButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelSubmitButtonLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelSubmitButton)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelSubmit.add(jPanelSubmitButton, "card2");
-
-        jLabelSubmitHighlight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/sub_btn_high.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanelSubmitHighlightLayout = new javax.swing.GroupLayout(jPanelSubmitHighlight);
-        jPanelSubmitHighlight.setLayout(jPanelSubmitHighlightLayout);
-        jPanelSubmitHighlightLayout.setHorizontalGroup(
-            jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 53, Short.MAX_VALUE)
-            .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelSubmitHighlightLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelSubmitHighlight)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelSubmitHighlightLayout.setVerticalGroup(
-            jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
-            .addGroup(jPanelSubmitHighlightLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelSubmitHighlightLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelSubmitHighlight)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-
-        jPanelSubmit.add(jPanelSubmitHighlight, "card3");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -1280,13 +1221,9 @@ public class WhereToView extends javax.swing.JPanel {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(jPanelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 53, Short.MAX_VALUE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 150, Short.MAX_VALUE)
-                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1299,10 +1236,6 @@ public class WhereToView extends javax.swing.JPanel {
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addGap(0, 33, Short.MAX_VALUE)
                     .addComponent(jPanelKeyBoard, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanelSubmit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 212, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1350,8 +1283,6 @@ public class WhereToView extends javax.swing.JPanel {
     public static javax.swing.JLabel jLabelKeyZ;
     public static javax.swing.JLabel jLabelKeyZero;
     public static javax.swing.JLabel jLabelNumKeyBoard;
-    public static javax.swing.JLabel jLabelSubmitButton;
-    public static javax.swing.JLabel jLabelSubmitHighlight;
     public static javax.swing.JLabel jLabelTextDisplay;
     public static javax.swing.JPanel jPanelAlphaKeyBoard;
     public static javax.swing.JPanel jPanelKeyA;
@@ -1396,9 +1327,6 @@ public class WhereToView extends javax.swing.JPanel {
     public static javax.swing.JPanel jPanelKeyZ;
     public static javax.swing.JPanel jPanelKeyZero;
     public static javax.swing.JPanel jPanelNumKeyBoard;
-    public static javax.swing.JPanel jPanelSubmit;
-    public static javax.swing.JPanel jPanelSubmitButton;
-    public static javax.swing.JPanel jPanelSubmitHighlight;
     public static javax.swing.JPanel jPanelTextDisplay;
     public static javax.swing.JTextField jTextFieldDestination;
     // End of variables declaration//GEN-END:variables

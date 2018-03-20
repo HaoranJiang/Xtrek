@@ -61,8 +61,8 @@ import javax.swing.ImageIcon;
 enum Menu {ONE, TWO, THREE, FOUR, FIVE, SIX};
 enum Situation {OFF, MENU, WHERETO, TRIPCOMPUTER, MAP, SPEECH, SATELLITE, ABOUTME};
 enum Keys{KEY_A,KEY_B,KEY_C,KEY_D,KEY_E,KEY_F,KEY_G,KEY_H,KEY_I,KEY_J,KEY_K,KEY_L,KEY_M,KEY_N,KEY_O,
-         KEY_P,KEY_Q,KEY_R,KEY_S,KEY_T,KEY_U,KEY_V,KEY_W,KEY_X,KEY_Y,KEY_Z,KEY_SPACE,KEY_NEXT,KEY_SUB1,
-         KEY_ONE,KEY_TWO,KEY_THREE,KEY_FOUR,KEY_FIVE,KEY_SIX,KEY_SEVEN,KEY_EIGHT,KEY_NINE,KEY_ZERO,KEY_DELETE,KEY_PREV,KEY_SUB2};
+         KEY_P,KEY_Q,KEY_R,KEY_S,KEY_T,KEY_U,KEY_V,KEY_W,KEY_X,KEY_Y,KEY_Z,KEY_SPACE,KEY_NEXT,
+         KEY_ONE,KEY_TWO,KEY_THREE,KEY_FOUR,KEY_FIVE,KEY_SIX,KEY_SEVEN,KEY_EIGHT,KEY_NINE,KEY_ZERO,KEY_DELETE,KEY_PREV};
  enum SpeechMenuOrder {ONE, TWO, THREE, FOUR, FIVE, SIX};
  enum Language {ENGLISH, FRENCH, GERMAN, ITALIAN, SPANISH};
 
@@ -72,8 +72,9 @@ public class Model{
     static Keys keys;
     static SpeechMenuOrder speechMenu ;
     static String textdisp;
+    static boolean wtFirstClicked;
     static boolean firstClickedWT;
-    static boolean submitClicked;
+    
     static int second;
     static int minute;
     static int hour;
@@ -109,8 +110,9 @@ public class Model{
         this.speechMenu = speechMenu;
         time = "";
         textdisp = "";
+        wtFirstClicked = false;
         firstClickedWT = true;
-        submitClicked = false;
+        
         second = 0;
         minute = 0;
         hour = 0;
@@ -255,7 +257,7 @@ public class Model{
                             break;
                     case KEY_F: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jTextFieldDestination.setText(textdisp);
                             View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyG);
                             View.whereToPanel.jPanelKeyBoard.repaint();
                             View.whereToPanel.jPanelKeyBoard.revalidate();
@@ -454,39 +456,16 @@ public class Model{
                     case KEY_NEXT: 
                             screenPanel.add(whereToPanel);
                             whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelAlphaKeyBoard);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
-                    
-                            View.whereToPanel.jPanelSubmit.removeAll();
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            View.whereToPanel.jPanelSubmit.add(View.whereToPanel.jPanelSubmitHighlight);
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            keys = Keys.KEY_SUB1;
-                            break;
-            
-                    case KEY_SUB1: 
-                            screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
                             View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyA);
                             View.whereToPanel.jPanelKeyBoard.repaint();
                             View.whereToPanel.jPanelKeyBoard.revalidate();
                     
-                            View.whereToPanel.jPanelSubmit.removeAll();
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            View.whereToPanel.jPanelSubmit.add(View.whereToPanel.jPanelSubmitButton);
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
+                            
                     
                             keys = Keys.KEY_A;
-                            
                             break;
+            
+                    
                     
             //numeric keyboard
                     case KEY_ONE: 
@@ -591,39 +570,17 @@ public class Model{
                     case KEY_PREV: 
                             screenPanel.add(whereToPanel);
                             whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelNumKeyBoard);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
-                    
-                            View.whereToPanel.jPanelSubmit.removeAll();
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            View.whereToPanel.jPanelSubmit.add(View.whereToPanel.jPanelSubmitHighlight);
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                    
-                            keys = Keys.KEY_SUB2;
-                            break;
-                    
-                    case KEY_SUB2:
-                            screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
                             View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyOne);
                             View.whereToPanel.jPanelKeyBoard.repaint();
                             View.whereToPanel.jPanelKeyBoard.revalidate();
                     
-                            View.whereToPanel.jPanelSubmit.removeAll();
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
+                            
                     
-                            View.whereToPanel.jPanelSubmit.add(View.whereToPanel.jPanelSubmitButton);
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
                     
                             keys = Keys.KEY_ONE;
                             break;
+                    
+                    
                    
                 }
                 
@@ -772,20 +729,14 @@ public class Model{
                     case KEY_A: 
                             screenPanel.add(whereToPanel);
                             whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelAlphaKeyBoard);
+                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyNext);
                             View.whereToPanel.jPanelKeyBoard.repaint();
                             View.whereToPanel.jPanelKeyBoard.revalidate();
                     
-                            View.whereToPanel.jPanelSubmit.removeAll();
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            View.whereToPanel.jPanelSubmit.add(View.whereToPanel.jPanelSubmitHighlight);
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
                             
                             
-                            keys = Keys.KEY_SUB1;
+                            
+                            keys = Keys.KEY_NEXT;
                             break;
             
                     case KEY_B: 
@@ -1033,42 +984,19 @@ public class Model{
                             keys = Keys.KEY_SPACE;
                             break;
             
-                    case KEY_SUB1: 
-                            screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyNext);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
                     
-                            View.whereToPanel.jPanelSubmit.removeAll();
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            View.whereToPanel.jPanelSubmit.add(View.whereToPanel.jPanelSubmitButton);
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            keys = Keys.KEY_NEXT;
-                            
-                            break;
                     
             //numeric keyboard
                     case KEY_ONE: 
                             screenPanel.add(whereToPanel);
                             whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelNumKeyBoard);
+                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyPrev);
                             View.whereToPanel.jPanelKeyBoard.repaint();
                             View.whereToPanel.jPanelKeyBoard.revalidate();
                     
-                            View.whereToPanel.jPanelSubmit.removeAll();
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
+                            
                     
-                            View.whereToPanel.jPanelSubmit.add(View.whereToPanel.jPanelSubmitHighlight);
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            keys = Keys.KEY_SUB2;
+                            keys = Keys.KEY_PREV;
                             break;
                     case KEY_TWO: 
                             screenPanel.add(whereToPanel);
@@ -1171,23 +1099,7 @@ public class Model{
                             keys = Keys.KEY_DELETE;
                             break;
                     
-                    case KEY_SUB2:
-                            screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyPrev);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
                     
-                            View.whereToPanel.jPanelSubmit.removeAll();
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            View.whereToPanel.jPanelSubmit.add(View.whereToPanel.jPanelSubmitButton);
-                            View.whereToPanel.jPanelSubmit.repaint();
-                            View.whereToPanel.jPanelSubmit.revalidate();
-                    
-                            keys = Keys.KEY_PREV;
-                            break;
                 }
             }
                 screenPanel.repaint();
@@ -1291,6 +1203,65 @@ public class Model{
             switch (menu) {
                 case ONE:
                     screenPanel.add(menu1Panel);
+                    whereToPanel.jTextFieldDestination.setText(textdisp);
+                    route.clear();
+                    t = 0;
+                    odometer = 0.0;
+                    System.out.println(textdisp);
+                    String s1 = textdisp;
+                    if(wtFirstClicked == false){
+                        initialPosition =getPosition();
+                                
+                                
+            
+                                
+                    try {
+                        System.out.println(initialPosition);
+                        findInstruction(initialPosition,s1);
+                        displayOdem();
+                        movingTimeIncease();
+                        dynamicTime();
+                        displaySpeed();
+                                
+                                
+                                
+                                
+                        wtFirstClicked = true;
+                        textdisp = "";
+                        whereToPanel.jTextFieldDestination.setText(textdisp);
+                        } catch (JSONException ex) {
+                        Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                            
+                    System.out.println(route);
+                    NewSoundAndSpeech.my_route = route;
+                                    
+                        
+                        
+                    }
+                    else{
+                        tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
+                        t = 0;
+                        odometer = 0.0;
+                    
+            
+                        {   
+                            try {
+                                initialPosition = getPosition();
+                                findInstruction(initialPosition,textdisp);
+                                
+                                        
+                                
+                                textdisp = "";
+                                whereToPanel.jTextFieldDestination.setText(textdisp);
+                            } catch (JSONException ex) {
+                                Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                        System.out.println(route);
+                        
+                    }
+                    
                     firstClickedWT = true;
                     break;
                     
@@ -1501,67 +1472,7 @@ public class Model{
                             
                             break;
             
-                    case KEY_SUB1: 
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            route.clear();
-                            t = 0;
-                            odometer = 0.0;
-                            System.out.println(textdisp);
-                            String s1 = textdisp;
-                            if(submitClicked == false){
-                                initialPosition =getPosition();
-                                
-                                
-            
-                                
-                            try {
-                                System.out.println(initialPosition);
-                                findInstruction(initialPosition,s1);
-                                displayOdem();
-                                movingTimeIncease();
-                                dynamicTime();
-                                displaySpeed();
-                                
-                                
-                                
-                                
-                                submitClicked = true;
-                                textdisp = "";
-                                whereToPanel.jTextFieldDestination.setText(textdisp);
-                            } catch (JSONException ex) {
-                                Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
-                            }
-                            
-                            System.out.println(route);
-                            NewSoundAndSpeech.my_route = route;
-                                    
-                        
-                        
-                            }
-                            else{
-                                tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
-                                t = 0;
-                                
                     
-            
-                                {   
-                                    try {
-                                        initialPosition = getPosition();
-                                        findInstruction(initialPosition,textdisp);
-                                
-                                        
-                                
-                                        textdisp = "";
-                                        whereToPanel.jTextFieldDestination.setText(textdisp);
-                                    } catch (JSONException ex) {
-                                        Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
-                                    }
-                                }
-                                System.out.println(route);
-                        
-                            }
-                            
-                            break;
                     
             //numeric keyboard
                     case KEY_ONE: 
@@ -1621,62 +1532,7 @@ public class Model{
                             keys = Keys.KEY_NEXT;
                             break;
                     
-                    case KEY_SUB2:
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            route.clear();
-                            t = 0;
-                            odometer = 0.0;
-                            if(submitClicked == false){
-                                initialPosition =getPosition();
-                                
-                                
-            
-                                
-                            try {
-                                findInstruction(initialPosition,textdisp);
-                                displayOdem();
-                                movingTimeIncease();
-                                dynamicTime();
-                                displaySpeed();
-                                
-                                
-                                
-                                
-                                submitClicked = true;
-                                textdisp = "";
-                                whereToPanel.jTextFieldDestination.setText(textdisp);
-                            } catch (JSONException ex) {
-                                Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
-                            }
-                              
-                            System.out.println(route);
-                                    
-                        
-                        
-                            }
-                            else{
-                                tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
-                                t = 0;
-                                
                     
-            
-                                {   
-                                    try {
-                                        initialPosition = getPosition();
-                                        findInstruction(initialPosition,textdisp);
-                                
-                                        
-                                
-                                        textdisp = "";
-                                        whereToPanel.jTextFieldDestination.setText(textdisp);
-                                    } catch (JSONException ex) {
-                                        Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
-                                    }
-                                }
-                                System.out.println(route);
-                        
-                            }
-                            break;
                 }}
                 screenPanel.repaint();
                 screenPanel.revalidate();
