@@ -1732,7 +1732,8 @@ case SPEECH:
             String lat = Double.toString((end_location.getDouble("lat")));
             String lng = Double.toString((end_location.getDouble("lng")));
             String location = lat+","+lng;
-            
+            if(i == (steps.length()-1))                         // get last end location
+                    NewSoundAndSpeech.destination = location;  // set it to be destination 
             //instruction
             String html_instruction = StringEscapeUtils.unescapeJava(step.getString("html_instructions"));
             String instruction = Jsoup.parse(html_instruction).text();
@@ -1740,6 +1741,7 @@ case SPEECH:
             //add map
             route.put(location,instruction);
         }
+        
     }
             
    /**
