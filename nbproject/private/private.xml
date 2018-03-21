@@ -3,7 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/Controller.java</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/Maps.java</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/SpeechController.java</file>
@@ -17,33 +16,13 @@
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/HttpConnect.java</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/Model.java</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/SoundController.java</file>
+            <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/SpeechMenu.java</file>
+            <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/UI/menu3.PNG</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/Translator.java</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/OutputCapturer.java</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/SatellitePanel.java</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/SpeechView.java</file>
             <file>file:/C:/Users/zhuhongbo/Desktop/work/Xtrek/src/MVC/SpeechPanel.java</file>
-=======
-<<<<<<< HEAD
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/Model.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/SpeechController.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/HttpConnect.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/SatellitePanel.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/View.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/SatelliteController.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/Maps.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/NewSoundAndSpeech.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/WhereToView.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/SpeechPanel.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/SoundController.java</file>
-            <file>file:/C:/Users/harry/Documents/GitHub/Xtrek/src/MVC/ModelViewController.java</file>
-=======
-            <file>file:/C:/Users/20521/Documents/GitHub/Xtrek/src/MVC/Model.java</file>
-            <file>file:/C:/Users/20521/Documents/GitHub/Xtrek/src/MVC/SpeechController.java</file>
-            <file>file:/C:/Users/20521/Documents/GitHub/Xtrek/src/MVC/Controller.java</file>
-            <file>file:/C:/Users/20521/Documents/GitHub/Xtrek/src/MVC/View.java</file>
-            <file>file:/C:/Users/20521/Documents/GitHub/Xtrek/src/MVC/NewSoundAndSpeech.java</file>
->>>>>>> 25c0afe5e818224d7d9b5e987b8056516b36f2bd
->>>>>>> f7eb198c496006759b472d8933a28b4fe63c54a5
         </group>
     </open-files>
 </project-private>
