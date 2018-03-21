@@ -6,7 +6,10 @@ import static MVC.Maps.getMap;
 import static MVC.Maps.zoomIn;
 import static MVC.Maps.zoomOut;
 import static MVC.ModelViewController.SatController;
+import static MVC.NewSoundAndSpeech.FORMAT;
+import static MVC.NewSoundAndSpeech.KEY1;
 import static MVC.NewSoundAndSpeech.addKeyValuePair;
+import static MVC.NewSoundAndSpeech.changeLanguage;
 import static MVC.NewSoundAndSpeech.distance;
 import static MVC.NewSoundAndSpeech.splitPlace;
 import static MVC.SpeechPanel.smenu1;
@@ -36,6 +39,8 @@ import static java.lang.Thread.sleep;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import static MVC.NewSoundAndSpeech.read;
+import static MVC.NewSoundAndSpeech.renewAccessToken;
+import static MVC.NewSoundAndSpeech.token;
 
 
 //
@@ -46,6 +51,7 @@ import org.json.*;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.jsoup.*;
 import java.util.*;
+import javax.sound.sampled.AudioInputStream;
 import javax.swing.ImageIcon;
 
 
@@ -1789,6 +1795,8 @@ case SPEECH:
         bd = bd.setScale(places, RoundingMode.HALF_UP);
     return bd.doubleValue();
     }    
+    
+
             
         
             
