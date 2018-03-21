@@ -41,6 +41,7 @@ import java.math.RoundingMode;
 import static MVC.NewSoundAndSpeech.read;
 import static MVC.NewSoundAndSpeech.renewAccessToken;
 import static MVC.NewSoundAndSpeech.token;
+import static MVC.SpeechMenu.openSpeech;
 
 
 //
@@ -1237,26 +1238,31 @@ public class Model{
                 screenPanel.revalidate();
                 switch (menu) {
                     case ONE:
+                        openSpeech(Menu.ONE);
                         screenPanel.add(whereToPanel);
                         situation = Situation.WHERETO;
                         break;
 
                     case TWO:
+                        openSpeech(Menu.TWO);
                         screenPanel.add(tripComputerPanel);
                         situation = Situation.TRIPCOMPUTER;
                         break;
 
                     case THREE:
+                        openSpeech(Menu.THREE);
                         screenPanel.add(mapPanel);
                         situation = Situation.MAP;
                         break;
 
                     case FOUR:
+                        openSpeech(Menu.FOUR);
                         screenPanel.add(speechPanel);
                         situation = Situation.SPEECH;
                         break;
 
                     case FIVE:
+                        openSpeech(Menu.FIVE);
                         screenPanel.add(TSPanel);
                         if (SatelliteController.connected == false)
                             SatelliteController.generateSound(SatelliteController.NOT_CONNECTED);
@@ -1266,6 +1272,7 @@ public class Model{
                         break;
 
                     case SIX:
+                        openSpeech(Menu.SIX);
                         screenPanel.add(aboutPanel);
                         situation = Situation.ABOUTME;
                         break;
