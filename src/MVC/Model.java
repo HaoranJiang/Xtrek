@@ -212,8 +212,7 @@ public class Model{
                             screenPanel.add(whereToPanel);
                             WhereToView.jTextFieldDestination.setText(textdisp);
                             WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyB);
-                            WhereToView.jPanelKeyBoard.repaint();
-                            WhereToView.jPanelKeyBoard.revalidate();
+                            
                             
                             
                             keys = Keys.KEY_B;
@@ -223,8 +222,7 @@ public class Model{
                             screenPanel.add(whereToPanel);
                             WhereToView.jTextFieldDestination.setText(textdisp);
                             WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyC);
-                            WhereToView.jPanelKeyBoard.repaint();
-                            WhereToView.jPanelKeyBoard.revalidate();
+                            
                     
                             keys = Keys.KEY_C;
                             break;
@@ -232,8 +230,7 @@ public class Model{
                             screenPanel.add(whereToPanel);
                             WhereToView.jTextFieldDestination.setText(textdisp);
                             WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyD);
-                            WhereToView.jPanelKeyBoard.repaint();
-                            WhereToView.jPanelKeyBoard.revalidate();
+                            
                     
                             keys = Keys.KEY_D;
                             break;
@@ -241,8 +238,7 @@ public class Model{
                             screenPanel.add(whereToPanel);
                             WhereToView.jTextFieldDestination.setText(textdisp);
                             WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyE);
-                            WhereToView.jPanelKeyBoard.repaint();
-                            WhereToView.jPanelKeyBoard.revalidate();
+                            
                     
                             keys = Keys.KEY_E;
                             break;
@@ -250,215 +246,191 @@ public class Model{
                             screenPanel.add(whereToPanel);
                             WhereToView.jTextFieldDestination.setText(textdisp);
                             WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyF);
-                            WhereToView.jPanelKeyBoard.repaint();
-                            WhereToView.jPanelKeyBoard.revalidate();
+                            
                     
                             keys = Keys.KEY_F;
                             break;
                     case KEY_F: 
                             screenPanel.add(whereToPanel);
                             WhereToView.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyG);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyG);
+                           
                     
                             keys = Keys.KEY_G;
                             break;
                     case KEY_G: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyH);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyH);
+                            
                     
                             keys = Keys.KEY_H;
                             break;
                     case KEY_H: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyI);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyI);
+                            
                     
                             keys = Keys.KEY_I;
                             break;   
                     case KEY_I: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyJ);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyJ);
+                            
                     
                             keys = Keys.KEY_J;
                             break;  
                     case KEY_J: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyK);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyK);
+                            
                     
                             keys = Keys.KEY_K;
                             break;
                     case KEY_K: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyL);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();  
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyL);
+                            
                     
                             keys = Keys.KEY_L;
                             break;
                     case KEY_L: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyM);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyM);
+                            
                     
                             keys = Keys.KEY_M;
                             break;
                     case KEY_M: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyN);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyN);
+                            
                     
                             keys =Keys.KEY_N;
                             break;
                     case KEY_N: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyO);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyO);
+                            
                     
                             keys = Keys.KEY_O;
                             break;
                     case KEY_O: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyP);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyP);
+                            
                     
                             keys = Keys.KEY_P;
                             break;
                     case KEY_P: 
                             screenPanel.add(whereToPanel);
                             WhereToView.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyQ);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyQ);
+                            
                     
                             keys = Keys.KEY_Q;
                             break;
                     case KEY_Q: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyR);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyR);
+                            
                     
                             keys = Keys.KEY_R;
                             break;
                     case KEY_R: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyS);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyS);
+                            
                     
                             keys = Keys.KEY_S;
                             break;
                     case KEY_S: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyT);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyT);
+                            
                     
                             keys = Keys.KEY_T;
                             break;
                     case KEY_T: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyU);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyU);
+                            
                     
                             keys = Keys.KEY_U;
                             break;
                     case KEY_U: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyV);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyV);
+                            
                     
                             keys = Keys.KEY_V;
                             break;
                     case KEY_V: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyW);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyW);
+                            
                     
                             keys = Keys.KEY_W;
                             break;
                     case KEY_W: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyX);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyX);
+                            
                     
                             keys =Keys.KEY_X;
                             break;
                     case KEY_X: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyY);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyY);
+                            
                     
                             keys = Keys.KEY_Y;
                             break;
                     case KEY_Y: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyZ);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyZ);
+                            
                     
                             keys = Keys.KEY_Z;
                             break;
                     case KEY_Z: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeySpace);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeySpace);
+                            
                     
                             keys = Keys.KEY_SPACE;
                             break;
                     case KEY_SPACE: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyNext);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyNext);
+                            
                     
                             keys = Keys.KEY_NEXT;
                             break;
                     case KEY_NEXT: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyA);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyA);
+                            
                     
                             
                     
@@ -470,109 +442,97 @@ public class Model{
             //numeric keyboard
                     case KEY_ONE: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyTwo);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyTwo);
+                            
                     
                             keys = Keys.KEY_TWO;
                             break;
                     case KEY_TWO: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyThree);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyThree);
+                            
                     
                             keys = Keys.KEY_THREE;
                             break;
                     case KEY_THREE: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyFour);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyFour);
+                           
                     
                             keys = Keys.KEY_FOUR;
                             break;
                     case KEY_FOUR: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jTextFieldDestination.setText(textdisp);
                             WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyFive);
-                            WhereToView.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            
                     
                             keys = Keys.KEY_FIVE;
                             break;
                     case KEY_FIVE: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeySix);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeySix);
+                            
                     
                             keys = Keys.KEY_SIX;
                             break;
                     case KEY_SIX: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeySeven);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeySeven);
+                            
                     
                             keys = Keys.KEY_SEVEN;
                             break;
                     case KEY_SEVEN: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyEight);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyEight);
+                            
                     
                             keys = Keys.KEY_EIGHT;
                             break;
                     case KEY_EIGHT: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyNine);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyNine);
+                            
                     
                             keys = Keys.KEY_NINE;
                             break;
                     case KEY_NINE: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyZero);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyZero);
+                            
                     
                             keys = Keys.KEY_ZERO;
                             break;
                     case KEY_ZERO: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyDel);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyDel);
+                            
                     
                             keys = Keys.KEY_DELETE;
                             break;
                     case KEY_DELETE: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyPrev);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyPrev);
+                            
                     
                             keys = Keys.KEY_PREV;
                             break;
                     case KEY_PREV: 
                             screenPanel.add(whereToPanel);
-                            whereToPanel.jTextFieldDestination.setText(textdisp);
-                            View.whereToPanel.jPanelKeyBoard.add(View.whereToPanel.jPanelKeyOne);
-                            View.whereToPanel.jPanelKeyBoard.repaint();
-                            View.whereToPanel.jPanelKeyBoard.revalidate();
+                            WhereToView.jTextFieldDestination.setText(textdisp);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyOne);
+                            
                     
                             
                     
@@ -583,7 +543,8 @@ public class Model{
                     
                    
                 }
-                
+                WhereToView.jPanelKeyBoard.repaint();
+                WhereToView.jPanelKeyBoard.revalidate();
               
             }
                 screenPanel.repaint();
