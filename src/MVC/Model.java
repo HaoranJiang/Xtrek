@@ -1778,14 +1778,19 @@ case SPEECH:
     return bd.doubleValue();
     }    
     
-    private static void speechMenu(String name) throws Exception {
-
-    AudioInputStream stm = setupStream( name );
-    playStream( stm, readStream( stm ) );
-  }
+    public static void speechMenu(String name) throws Exception {
+        Thread menuThread = new Thread(){
+           @Override
+           public void run(){
+               AudioInputStream stm = setupStream( name );
+               playStream( stm, readStream( stm ) );
+           }
+        };
+        menuThread.start();
+      
     
 
-            
+    }
         
             
        
