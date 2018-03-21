@@ -1,4 +1,3 @@
-
 package MVC;
 
 
@@ -17,9 +16,10 @@ import java.util.TooManyListenersException;
 import javax.sound.sampled.AudioInputStream;
 
 /**
+ * This Satellite Controller class is used to connect to port, reading GPS message,
+ * updating latitude/longitude/direction in model and displaying them in the panel(view).
+ * This class implements Runnable,therefore, it is able to create its own thread for reading NMEA message, without crashing the main UI thread.
  * @MVC - Controller: SatelliteController controls model and view(SatellitePanel)
- * @functions Connectin to port, reading GPS message, updating latitude/longitude/direction in model, 
- * and displaying them in the panel(view). 
  * @author - Yukun Sun (Group L WorkPackage 5)
  */
 

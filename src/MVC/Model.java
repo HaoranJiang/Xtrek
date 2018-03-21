@@ -11,6 +11,7 @@ import static MVC.NewSoundAndSpeech.KEY1;
 import static MVC.NewSoundAndSpeech.addKeyValuePair;
 import static MVC.NewSoundAndSpeech.changeLanguage;
 import static MVC.NewSoundAndSpeech.distance;
+import static MVC.NewSoundAndSpeech.playStream;
 import static MVC.NewSoundAndSpeech.splitPlace;
 import static MVC.SpeechPanel.smenu1;
 import static MVC.SpeechPanel.smenu2;
@@ -39,10 +40,15 @@ import static java.lang.Thread.sleep;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import static MVC.NewSoundAndSpeech.read;
+import static MVC.NewSoundAndSpeech.readStream;
 import static MVC.NewSoundAndSpeech.renewAccessToken;
+import static MVC.NewSoundAndSpeech.setupStream;
 import static MVC.NewSoundAndSpeech.token;
+<<<<<<< HEAD
 import static MVC.SpeechMenu.openSpeech;
 import java.io.IOException;
+=======
+>>>>>>> 4d51a4fa600566a493cc924ba93d012e3633dffc
 
 
 //
@@ -1251,35 +1257,35 @@ public class Model{
                 switch (menu) {
                     case ONE:                     
                         screenPanel.add(whereToPanel);
-                        openSpeech(Menu.ONE);
+                        speechMenu("menuOne.wav");
                         situation = Situation.WHERETO;
                         break;
 
                     case TWO:
                         
                         screenPanel.add(tripComputerPanel);
-                        openSpeech(Menu.TWO);
+                        speechMenu("menuTwo.wav");
                         situation = Situation.TRIPCOMPUTER;
                         break;
 
                     case THREE:
                         
                         screenPanel.add(mapPanel);
-                        openSpeech(Menu.THREE);
+                        speechMenu("menuThree.wav");
                         situation = Situation.MAP;
                         break;
 
                     case FOUR:
                         
                         screenPanel.add(speechPanel);
-                        openSpeech(Menu.FOUR);
+                        speechMenu("menuFour.wav");
                         situation = Situation.SPEECH;
                         break;
 
                     case FIVE:
                         
                         screenPanel.add(TSPanel);
-                        openSpeech(Menu.FIVE);
+                        speechMenu("menuFive.wav");
                         if (SatelliteController.connected == false)
                             SatelliteController.generateSound(SatelliteController.NOT_CONNECTED);
                          if (SatelliteController.signal == false && SatelliteController.connected == true)
@@ -1290,7 +1296,7 @@ public class Model{
                     case SIX:
                         
                         screenPanel.add(aboutPanel);
-                        openSpeech(Menu.SIX);
+                        speechMenu("menuSix.wav");
                         situation = Situation.ABOUTME;
                         break;
 
@@ -1576,7 +1582,10 @@ case SPEECH:
                 
         }
     }
-    /* Return position in String form "(latitude,longitude)" */
+    /**
+     * @author YuKun Sun
+     * Return position in String form "(latitude,longitude)" 
+     */
     public static String  getPosition(){
         String position = "" + latitude +","+ longitude;
         return position;
@@ -1765,7 +1774,8 @@ case SPEECH:
             String lat = Double.toString((end_location.getDouble("lat")));
             String lng = Double.toString((end_location.getDouble("lng")));
             String location = lat+","+lng;
-            
+            if(i == (steps.length()-1))                         // get last end location
+                    NewSoundAndSpeech.destination = location;  // set it to be destination 
             //instruction
             String html_instruction = StringEscapeUtils.unescapeJava(step.getString("html_instructions"));
             String instruction = Jsoup.parse(html_instruction).text();
@@ -1773,6 +1783,7 @@ case SPEECH:
             //add map
             route.put(location,instruction);
         }
+        
     }
             
    /**
@@ -1786,8 +1797,19 @@ case SPEECH:
     return bd.doubleValue();
     }    
     
+    public static void speechMenu(String name) throws Exception {
+        Thread menuThread = new Thread(){
+           @Override
+           public void run(){
+               AudioInputStream stm = setupStream( name );
+               playStream( stm, readStream( stm ) );
+           }
+        };
+        menuThread.start();
+      
+    
 
-            
+    }
         
             
        

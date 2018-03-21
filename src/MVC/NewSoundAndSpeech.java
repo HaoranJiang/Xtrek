@@ -126,7 +126,7 @@ public class NewSoundAndSpeech {
   // I have created my own destination 
 
 
-  public static String destination = "50.726206,-3.516181";
+  public static String destination;
 
   
   
@@ -552,7 +552,8 @@ public class NewSoundAndSpeech {
           public void run(){
               while(!Thread.currentThread().isInterrupted()){
                 try {
-                  while (realDistance(destination) > DEST_DISTANCE) {
+                    System.out.println(destination);
+                    while (realDistance(destination) > DEST_DISTANCE) {
                       //String currentLocation = getPosition();
                       my_route.keySet().forEach(new Consumer<String>() {
                           @Override
