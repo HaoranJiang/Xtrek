@@ -481,7 +481,6 @@ public class NewSoundAndSpeech {
   public static void open(Language language) throws Exception {
     changeLanguage(language);
     token  = renewAccessToken( KEY1 );
-    while(!Thread.currentThread().isInterrupted()){
     switch(language) {
 		case ENGLISH:
                     speech = generateEnglishSpeech( token,  Text,   Lang
@@ -539,7 +538,7 @@ public class NewSoundAndSpeech {
     writeData( speech, OUTPUT );
     AudioInputStream stm = setupStream( FILENAME );
     playStream( stm, readStream( stm ) );
-  }
+  
   }
   
 
@@ -561,15 +560,16 @@ public class NewSoundAndSpeech {
                               String value = my_route.get(key);
                               String text = String.valueOf(value);
                               text = alterText(text);
+                              
                               /* If the distance to a route point is less than or
-                              * equal to 10m then the corresponding directions are spoken.
+                              * equal to 25m then the corresponding directions are spoken.
                               */
                               if (realDistance(key) <= ROUTE_DISTANCE) {
                                   try {
                                       Text = text;
                                       open(language);
-                                      TimeUnit.SECONDS.sleep(10);
-                                      
+                                      my_route.remove(key);                         
+                                      TimeUnit.SECONDS.sleep(10);        
                                   } catch (Exception ex) {
                                       Logger.getLogger(NewSoundAndSpeech.class.getName()).log(Level.SEVERE, null, ex);
                                   }
