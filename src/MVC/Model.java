@@ -42,6 +42,7 @@ import static MVC.NewSoundAndSpeech.read;
 import static MVC.NewSoundAndSpeech.renewAccessToken;
 import static MVC.NewSoundAndSpeech.token;
 import static MVC.SpeechMenu.openSpeech;
+import java.io.IOException;
 
 
 //
@@ -1130,24 +1131,32 @@ public class Model{
             
         // add panel
             switch (menu) {
-                case ONE:
+                case ONE: 
+                    String textdisp = WhereToView.jTextFieldDestination.getText();
+                    //WhereToView.jTextFieldDestination.setText(textdisp);
                     screenPanel.add(menu1Panel);
-                    String destination = whereToPanel.jTextFieldDestination.getText();
-                    whereToPanel.jTextFieldDestination.setText(textdisp);
+                    if (!"".equals(textdisp)){
+                        
+                                          
+                        System.out.println(textdisp);
+                    
+                    
                     route.clear();
                     t = 0;
                     odometer = 0.0;
                     System.out.println(textdisp);
+                   
+                        
                     
                     if(wtFirstClicked == false){
                         initialPosition =getPosition();
                                 
                                 
-            
+                    
                                 
                     try {
                         System.out.println(initialPosition);
-                        findInstruction(initialPosition,destination);
+                        findInstruction(initialPosition,textdisp);
                         displayOdem();
                         movingTimeIncease();
                         dynamicTime();
@@ -1158,7 +1167,7 @@ public class Model{
                                 
                         wtFirstClicked = true;
                         textdisp = "";
-                        whereToPanel.jTextFieldDestination.setText(textdisp);
+                        WhereToView.jTextFieldDestination.setText(textdisp);
                         } catch (JSONException ex) {
                         Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
                     }
@@ -1178,7 +1187,7 @@ public class Model{
                         {   
                             try {
                                 initialPosition = getPosition();
-                                findInstruction(initialPosition,destination);
+                                findInstruction(initialPosition,textdisp);
                                 
                                         
                                 
@@ -1191,7 +1200,10 @@ public class Model{
                         System.out.println(route);
                         
                     }
-                    
+                   
+                    }else{
+                        System.out.print("Please enter a destination.");
+                    }
                     firstClickedWT = true;
                     break;
                     
@@ -1291,9 +1303,12 @@ public class Model{
             case WHERETO:{                                                         //siqi wang line1356-1659
                 if(firstClickedWT){screenPanel.add(whereToPanel);
                 WhereToView.jTextFieldDestination.setText(textdisp);
-                firstClickedWT = false;}else{
-                WhereToView.jTextFieldDestination.setText(textdisp);
+                firstClickedWT = false;
+                } else{
+                //WhereToView.jTextFieldDestination.setText(textdisp);
+                textdisp = WhereToView.jTextFieldDestination.getText();
                 switch(keys){
+                    
                     case KEY_A: 
                             WhereToView.jTextFieldDestination.setText(textdisp + "A");
                             textdisp = textdisp + "A";

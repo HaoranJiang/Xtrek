@@ -28,8 +28,8 @@ public class WhereToView extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanelTextDisplay = new javax.swing.JPanel();
-        jLabelTextDisplay = new javax.swing.JLabel();
         jTextFieldDestination = new javax.swing.JTextField();
+        jLabelTextDisplay = new javax.swing.JLabel();
         jPanelKeyBoard = new javax.swing.JPanel();
         jPanelKeyA = new javax.swing.JPanel();
         jLabelKeyA = new javax.swing.JLabel();
@@ -119,42 +119,13 @@ public class WhereToView extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(203, 245));
 
         jPanelTextDisplay.setPreferredSize(new java.awt.Dimension(203, 33));
-
-        jLabelTextDisplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/text_adv.png"))); // NOI18N
-        jLabelTextDisplay.setPreferredSize(new java.awt.Dimension(203, 33));
+        jPanelTextDisplay.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTextFieldDestination.setPreferredSize(new java.awt.Dimension(180, 24));
+        jPanelTextDisplay.add(jTextFieldDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 4, -1, -1));
 
-        javax.swing.GroupLayout jPanelTextDisplayLayout = new javax.swing.GroupLayout(jPanelTextDisplay);
-        jPanelTextDisplay.setLayout(jPanelTextDisplayLayout);
-        jPanelTextDisplayLayout.setHorizontalGroup(
-            jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelTextDisplayLayout.setVerticalGroup(
-            jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 33, Short.MAX_VALUE)
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabelTextDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-            .addGroup(jPanelTextDisplayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelTextDisplayLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jTextFieldDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabelTextDisplay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/text_adv.png"))); // NOI18N
+        jPanelTextDisplay.add(jLabelTextDisplay, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanelKeyBoard.setPreferredSize(new java.awt.Dimension(203, 212));
         jPanelKeyBoard.setLayout(new java.awt.CardLayout());
