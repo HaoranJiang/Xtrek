@@ -1237,33 +1237,37 @@ public class Model{
                 screenPanel.repaint();
                 screenPanel.revalidate();
                 switch (menu) {
-                    case ONE:
-                        openSpeech(Menu.ONE);
+                    case ONE:                     
                         screenPanel.add(whereToPanel);
+                        openSpeech(Menu.ONE);
                         situation = Situation.WHERETO;
                         break;
 
                     case TWO:
-                        openSpeech(Menu.TWO);
+                        
                         screenPanel.add(tripComputerPanel);
+                        openSpeech(Menu.TWO);
                         situation = Situation.TRIPCOMPUTER;
                         break;
 
                     case THREE:
-                        openSpeech(Menu.THREE);
+                        
                         screenPanel.add(mapPanel);
+                        openSpeech(Menu.THREE);
                         situation = Situation.MAP;
                         break;
 
                     case FOUR:
-                        openSpeech(Menu.FOUR);
+                        
                         screenPanel.add(speechPanel);
+                        openSpeech(Menu.FOUR);
                         situation = Situation.SPEECH;
                         break;
 
                     case FIVE:
-                        openSpeech(Menu.FIVE);
+                        
                         screenPanel.add(TSPanel);
+                        openSpeech(Menu.FIVE);
                         if (SatelliteController.connected == false)
                             SatelliteController.generateSound(SatelliteController.NOT_CONNECTED);
                          if (SatelliteController.signal == false && SatelliteController.connected == true)
@@ -1272,8 +1276,9 @@ public class Model{
                         break;
 
                     case SIX:
-                        openSpeech(Menu.SIX);
+                        
                         screenPanel.add(aboutPanel);
+                        openSpeech(Menu.SIX);
                         situation = Situation.ABOUTME;
                         break;
 
