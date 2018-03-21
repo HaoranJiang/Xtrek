@@ -44,11 +44,10 @@ import static MVC.NewSoundAndSpeech.readStream;
 import static MVC.NewSoundAndSpeech.renewAccessToken;
 import static MVC.NewSoundAndSpeech.setupStream;
 import static MVC.NewSoundAndSpeech.token;
-<<<<<<< HEAD
-import static MVC.SpeechMenu.openSpeech;
+
+
 import java.io.IOException;
-=======
->>>>>>> 4d51a4fa600566a493cc924ba93d012e3633dffc
+
 
 
 //
@@ -1175,8 +1174,12 @@ public class Model{
                         textdisp = "";
                         WhereToView.jTextFieldDestination.setText(textdisp);
                         } catch (JSONException ex) {
-                        Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
-                    }
+                            if(initialPosition.equals("0.0,0.0")){System.out.println("Please check your GPS signal");}
+                            else{
+                                System.out.println("Please type a detailed and legal destination");
+                            } 
+                        
+                        }
                             
                     System.out.println(route);
                     NewSoundAndSpeech.my_route = route;
@@ -1200,7 +1203,10 @@ public class Model{
                                 textdisp = "";
                                 whereToPanel.jTextFieldDestination.setText(textdisp);
                             } catch (JSONException ex) {
-                                Logger.getLogger(Model.class.getName()).log(Level.SEVERE, null, ex);
+                                if(initialPosition.equals("0.0,0.0")){System.out.println("Please check your GPS signal");}
+                                else{
+                                    System.out.println("Please type a detailed and legal destination");
+                                } 
                             }
                         }
                         System.out.println(route);
