@@ -601,7 +601,7 @@ public class Model{
                 switch (speechMenu) {
                 
                 case ONE:
-                    speP.add(smenu2);
+                    speP.add(smenu6);
                     screenPanel.add(speP);
                     //speP.add(smenu2);
                     speP.repaint();
@@ -609,7 +609,7 @@ public class Model{
                     speechMenu = SpeechMenuOrder.SIX;
                     break;
                 case TWO:
-                    speP.add(smenu3);
+                    speP.add(smenu1);
                     screenPanel.add(speP);
                     //speP.add(smenu3);
                     speP.repaint();
@@ -617,29 +617,29 @@ public class Model{
                     speechMenu = SpeechMenuOrder.ONE;
                     break;
                 case THREE:
+                    speP.add(smenu2);
                     screenPanel.add(speP);
-                    speP.add(smenu4);
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.TWO;
                     break;
                 case FOUR:
+                    speP.add(smenu3);
                     screenPanel.add(speP);
-                    speP.add(smenu5);
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.THREE;
                     break;
                 case FIVE:
-                    screenPanel.add(speP);
-                    speP.add(smenu6);
+                    speP.add(smenu4);
+                    screenPanel.add(speP);                 
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.FOUR;
                     break;
-                case SIX:
+                case SIX: 
+                    speP.add(smenu5);
                     screenPanel.add(speP);
-                    speP.add(smenu1);
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.FIVE;
@@ -1133,29 +1133,29 @@ public class Model{
                     speechMenu = SpeechMenuOrder.THREE;
                     break;
                 case THREE:
-                    screenPanel.add(speP);
                     speP.add(smenu4);
+                    screenPanel.add(speP); 
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.FOUR;
                     break;
                 case FOUR:
-                    screenPanel.add(speP);
                     speP.add(smenu5);
+                    screenPanel.add(speP);
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.FIVE;
                     break;
                 case FIVE:
-                    screenPanel.add(speP);
                     speP.add(smenu6);
+                    screenPanel.add(speP);      
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.SIX;
                     break;
                 case SIX:
-                    screenPanel.add(speP);
                     speP.add(smenu1);
+                    screenPanel.add(speP);       
                     speP.repaint();
                     speP.revalidate();
                     speechMenu = SpeechMenuOrder.ONE;
@@ -1544,7 +1544,6 @@ public class Model{
                 }
 case SPEECH:
 
-    //addKeyValuePair();
 
 
          switch(speechMenu){
