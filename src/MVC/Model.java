@@ -1125,12 +1125,13 @@ public class Model{
             switch (menu) {
                 case ONE:
                     screenPanel.add(menu1Panel);
+                    String destination = whereToPanel.jTextFieldDestination.getText();
                     whereToPanel.jTextFieldDestination.setText(textdisp);
                     route.clear();
                     t = 0;
                     odometer = 0.0;
                     System.out.println(textdisp);
-                    String s1 = textdisp;
+                    
                     if(wtFirstClicked == false){
                         initialPosition =getPosition();
                                 
@@ -1139,7 +1140,7 @@ public class Model{
                                 
                     try {
                         System.out.println(initialPosition);
-                        findInstruction(initialPosition,s1);
+                        findInstruction(initialPosition,destination);
                         displayOdem();
                         movingTimeIncease();
                         dynamicTime();
@@ -1170,7 +1171,7 @@ public class Model{
                         {   
                             try {
                                 initialPosition = getPosition();
-                                findInstruction(initialPosition,textdisp);
+                                findInstruction(initialPosition,destination);
                                 
                                         
                                 
@@ -1635,7 +1636,8 @@ case SPEECH:
                     if(distanceIn6s<3.0){odometer = odometer+0.0;}else{
                     odometer = odometer+distanceIn6s;}
                     odemInKM = 1.0*odometer/1000;
-                    tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
+                    Double roundOdemInKM = round(odemInKM,3);
+                    tripComputerPanel.odemDisplay.setText(Double.toString(roundOdemInKM)+" KM");
                     initialPosition = currentPosition;
                     //System.out.println(odometer);
                 }
@@ -1657,7 +1659,8 @@ case SPEECH:
                    //String pureSpeed = odometer.substring(0,odometer.length()-3);
                    //Double distanceValue = Double.parseDouble(pureSpeed);
                    Double speedValue = odometer/t*3.6;
-                   String speedInKmh = Double.toString(speedValue) + "   KM/H";
+                   Double roundSpeedValue = round(speedValue,2);
+                   String speedInKmh = Double.toString(roundSpeedValue) + "   KM/H";
                    
                    tripComputerPanel.speedDisplay.setText(speedInKmh);
                    
