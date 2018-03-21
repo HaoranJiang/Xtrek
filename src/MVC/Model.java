@@ -6,7 +6,10 @@ import static MVC.Maps.getMap;
 import static MVC.Maps.zoomIn;
 import static MVC.Maps.zoomOut;
 import static MVC.ModelViewController.SatController;
+import static MVC.NewSoundAndSpeech.FORMAT;
+import static MVC.NewSoundAndSpeech.KEY1;
 import static MVC.NewSoundAndSpeech.addKeyValuePair;
+import static MVC.NewSoundAndSpeech.changeLanguage;
 import static MVC.NewSoundAndSpeech.distance;
 import static MVC.NewSoundAndSpeech.splitPlace;
 import static MVC.SpeechPanel.smenu1;
@@ -36,6 +39,9 @@ import static java.lang.Thread.sleep;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import static MVC.NewSoundAndSpeech.read;
+import static MVC.NewSoundAndSpeech.renewAccessToken;
+import static MVC.NewSoundAndSpeech.token;
+import static MVC.SpeechMenu.openSpeech;
 
 
 //
@@ -46,6 +52,7 @@ import org.json.*;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.jsoup.*;
 import java.util.*;
+import javax.sound.sampled.AudioInputStream;
 import javax.swing.ImageIcon;
 
 
@@ -1230,28 +1237,37 @@ public class Model{
                 screenPanel.repaint();
                 screenPanel.revalidate();
                 switch (menu) {
-                    case ONE:
+                    case ONE:                     
                         screenPanel.add(whereToPanel);
+                        openSpeech(Menu.ONE);
                         situation = Situation.WHERETO;
                         break;
 
                     case TWO:
+                        
                         screenPanel.add(tripComputerPanel);
+                        openSpeech(Menu.TWO);
                         situation = Situation.TRIPCOMPUTER;
                         break;
 
                     case THREE:
+                        
                         screenPanel.add(mapPanel);
+                        openSpeech(Menu.THREE);
                         situation = Situation.MAP;
                         break;
 
                     case FOUR:
+                        
                         screenPanel.add(speechPanel);
+                        openSpeech(Menu.FOUR);
                         situation = Situation.SPEECH;
                         break;
 
                     case FIVE:
+                        
                         screenPanel.add(TSPanel);
+                        openSpeech(Menu.FIVE);
                         if (SatelliteController.connected == false)
                             SatelliteController.generateSound(SatelliteController.NOT_CONNECTED);
                          if (SatelliteController.signal == false && SatelliteController.connected == true)
@@ -1260,7 +1276,9 @@ public class Model{
                         break;
 
                     case SIX:
+                        
                         screenPanel.add(aboutPanel);
+                        openSpeech(Menu.SIX);
                         situation = Situation.ABOUTME;
                         break;
 
@@ -1754,6 +1772,8 @@ case SPEECH:
         bd = bd.setScale(places, RoundingMode.HALF_UP);
     return bd.doubleValue();
     }    
+    
+
             
         
             
