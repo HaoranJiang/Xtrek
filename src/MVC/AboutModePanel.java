@@ -1,9 +1,10 @@
 package MVC;
 
-
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 /**
- *
+ * About mode panel. Added standard picture.
  * @author Yukun Sun (Group L WorkPackage 5)
  */
 public class AboutModePanel extends javax.swing.JPanel {
@@ -15,50 +16,22 @@ public class AboutModePanel extends javax.swing.JPanel {
         initComponents();
     }
 
-
-
     private void initComponents() {
-        /*
-        year = new javax.swing.JLabel();
-        university = new javax.swing.JLabel();
-        XTrek = new javax.swing.JLabel();
-        group = new javax.swing.JLabel();
-        icon = new javax.swing.JLabel();
-        */
+
         pic = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(203, 245));
         setMinimumSize(new java.awt.Dimension(203, 245));
         setPreferredSize(new java.awt.Dimension(203, 245));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        /*
-        year.setText("(c)2018");
-        add(year, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 210, 85, -1));
+        setLayout(new AbsoluteLayout());
 
-        university.setText("ECM2415 University of Exeter");
-        add(university, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, -1, -1));
-        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/AM.png")));
-        add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70 ));
-        XTrek.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
-        XTrek.setText("XTrek");
-        add(XTrek, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 145, 73));
-
-        group.setText("Group L");
-        add(group, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, -1, -1));
-        */
         pic.setSize(203,245);
         pic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/about_png.PNG"))); // the sample picture
-        add(pic, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 203, 245));
+        add(pic, new AbsoluteConstraints(0, 0, 203, 245));
     }
 
 
     // Variables declaration 
-  /*private javax.swing.JLabel XTrek;
-    private javax.swing.JLabel group;
-    private javax.swing.JLabel icon;
-    private javax.swing.JLabel university;
-    private javax.swing.JLabel year;
-    */
     private javax.swing.JLabel pic;
     
 }

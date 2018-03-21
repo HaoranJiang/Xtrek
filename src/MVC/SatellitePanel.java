@@ -4,10 +4,12 @@ import java.awt.Color;
 import java.awt.Font;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import org.netbeans.lib.awtextra.AbsoluteConstraints;
+import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 
 /**
- * @MVC - view. Display latitude/longitude/time. Refreshed by controller.
+ * @MVC - Satellite View. Display latitude/longitude/time. Refreshed by controller.
  * @author - Yukun Sun (Group L WorkPackage 5)
  */
 public class SatellitePanel extends javax.swing.JPanel {
@@ -26,17 +28,17 @@ public class SatellitePanel extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(203, 245));
         setMinimumSize(new java.awt.Dimension(203, 245));
         setPreferredSize(new java.awt.Dimension(203, 245));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new AbsoluteLayout());
 
         latitude.setEditable(false);
-        latitude.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        latitude.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); 
         latitude.setBorder(null);
-        add(latitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 200,70));
+        add(latitude, new AbsoluteConstraints(0, 60, 200,70));
 
         longitude.setEditable(false);
-        longitude.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        longitude.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); 
         longitude.setBorder(null);
-        add(longitude, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 200, 70));
+        add(longitude, new AbsoluteConstraints(0, 130, 200, 70));
 
 
     }

@@ -1561,7 +1561,10 @@ case SPEECH:
                 
         }
     }
-    /* Return position in String form "(latitude,longitude)" */
+    /**
+     * @author YuKun Sun
+     * Return position in String form "(latitude,longitude)" 
+     */
     public static String  getPosition(){
         String position = "" + latitude +","+ longitude;
         return position;
