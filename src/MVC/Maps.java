@@ -5,6 +5,9 @@ import static MVC.Model.getLongitude;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import static java.lang.Math.abs;
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
 import java.net.URL;
 import static jdk.nashorn.internal.objects.NativeArray.map;
 
@@ -22,7 +25,6 @@ public class Maps {
   static String ZOOM      = "13";          /* 0 .. 21           */
   final static String SIZE      = "203x245";     /* Size              */
   final static String API_KEY = "AIzaSyDkH2-ZSQl09udvKzhG5i598K9RXrIehH4";
-
           
   static byte[] readData( String latitude
                         , String longitude
@@ -61,12 +63,45 @@ public class Maps {
           ZOOM = "" + value;
       }   
   }
+  
+  /*
+  * Move the map
+  */
   static void moveTo(){
       
       LONGITUDE = getLongitude();
       LATITUDE = getLatitude();
      
   }
+  
+  /*
+  * Calculate the turning angle between locations
+   */
+
+  
+  static double calculateAngle(double x1, double y1, double x2, double y2)
+{
+    double lat1 = Double.parseDouble(LATITUDE);
+    double lon1 = Double.parseDouble(LONGITUDE);
+    double radian = calculateAngle(lat1, lon1, 50.7260, -3.5332);
+    x1 = deg2rad(x1);
+    x2 = deg2rad(x2);
+    y1 = deg2rad(y1);
+    y2 = deg2rad(y2);
+    double x = cos(x2)*sin(abs(y2 - y1));
+    double y = cos(x1)*sin(x2) - sin(x1)*cos(x2)*cos(abs(y2 - y1));
+    double angle = Math.toDegrees(Math.atan2(x, y)); 
+    angle = 360 - angle;
+    return angle;
+    
+}	
+
+  public static double deg2rad(double deg) {
+    return (deg * Math.PI / 180.0);
+  }
+  
+  
+  
   /*
    * Write map data.
    */
