@@ -40,6 +40,8 @@ public class TripComputerView extends javax.swing.JPanel {
         tripComputerOdem.setToolTipText("");
         tripComputerOdem.setPreferredSize(new java.awt.Dimension(203, 30));
 
+        odemDisplay.setEditable(false);
+        odemDisplay.setFont(new java.awt.Font("黑体", 1, 18)); // NOI18N
         odemDisplay.setPreferredSize(new java.awt.Dimension(203, 51));
         odemDisplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +52,8 @@ public class TripComputerView extends javax.swing.JPanel {
         tripComputerSpeed.setText("speed");
         tripComputerSpeed.setPreferredSize(new java.awt.Dimension(203, 30));
 
+        speedDisplay.setEditable(false);
+        speedDisplay.setFont(new java.awt.Font("黑体", 1, 18)); // NOI18N
         speedDisplay.setPreferredSize(new java.awt.Dimension(203, 52));
         speedDisplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -60,6 +64,8 @@ public class TripComputerView extends javax.swing.JPanel {
         tripComputerTime.setText("moving time");
         tripComputerTime.setPreferredSize(new java.awt.Dimension(203, 30));
 
+        timeDisplay.setEditable(false);
+        timeDisplay.setFont(new java.awt.Font("黑体", 1, 5)); // NOI18N
         timeDisplay.setPreferredSize(new java.awt.Dimension(203, 52));
         timeDisplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
