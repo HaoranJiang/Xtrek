@@ -120,6 +120,7 @@ public class Model{
     
 
     public Model(Menu menu, Situation situation,Keys keys, SpeechMenuOrder speechMenu){
+        // model constructer
         Model.menu = menu;
         Model.situation = situation;
         Model.keys = keys; 
@@ -145,22 +146,27 @@ public class Model{
     }
 
     public void openAndClose(){
+        /*
+        function can help to open and close the screen on the device
+        @ author Haoran Jiang
+        */
         
-        screenPanel.removeAll();
+        screenPanel.removeAll();    // refresh the screen panel
         screenPanel.repaint();
         screenPanel.revalidate(); 
-        if (situation == Situation.OFF){  
+        
+        if (situation == Situation.OFF){   // if screen is closed, then open it
             screenPanel.add(View.menu1Panel);
             situation = Situation.MENU;
             SatController.connect();
             
         } else {         
             situation = Situation.OFF;
-            View.screenPanel.add(View.offPanel);   
+            View.screenPanel.add(View.offPanel);   // if else, adding a black panel to screen
             SatController.disconnect();         
         }
         
-        menu = Menu.ONE;
+        menu = Menu.ONE;  // reset menu order to page one
         screenPanel.repaint();
         screenPanel.revalidate();
         
@@ -168,17 +174,21 @@ public class Model{
     
     public void goUp(){
          
+        /*
+        the function makes the UI can have "up" action on different situation, like menu mode and speech mode
+        @ author Haoran Jiang
+        */
         
-        switch(situation){
+        switch(situation){   // switch situation to change different funtionality for "up" action
             
             case MENU:{
-                screenPanel.removeAll();
+                screenPanel.removeAll(); // refresh screen panel
                 screenPanel.repaint();
                 screenPanel.revalidate();
-            switch (menu) {
+            switch (menu) { // add different panel on different situation
                 case ONE:
-                    screenPanel.add(menu2Panel);
-                    menu = Menu.TWO;
+                    screenPanel.add(menu2Panel); // add menu panel on screen panel
+                    menu = Menu.TWO; // set specific menu order
                     break;
 
                 case TWO:
@@ -209,7 +219,7 @@ public class Model{
                 default:
                     break;
             }            
-            screenPanel.repaint();
+            screenPanel.repaint(); // refresh screen panel
             screenPanel.revalidate();
             break;
             
@@ -633,8 +643,8 @@ public class Model{
             
             case MAP:{
                 try{
-                    moveTo();
-                    zoomOut();
+                    moveTo(); // change to current coordinate from satellite
+                    zoomOut(); // zoom out the size of map
                     getMap();
                     } catch (Exception e){
                         System.out.println("You should press it slowly!");
@@ -642,7 +652,7 @@ public class Model{
                 File file =new File("output.png");
                 String path = file.getAbsolutePath();
                 ImageIcon icon = new ImageIcon(path);
-                icon.getImage().flush();
+                icon.getImage().flush(); // refresh the image on panel
                 mapImage.setIcon(icon); 
                 mapImage.repaint();
             }
@@ -651,6 +661,10 @@ public class Model{
     }}
     
     public void goDown(){
+        /*
+        the function makes the UI can have "down" action on different situation, like menu mode and speech mode
+        @ author Haoran Jiang
+        */
         
         switch(situation){
             
@@ -1131,12 +1145,15 @@ public class Model{
         
     }
     
+    /*
+    method can use on the backmenu button, that can help UI to back to the menu page when on the other situation except "off"
+    @ author Haoran Jiang
+    */
     public void backMenu(){
-        if (situation != Situation.MENU && situation != Situation.OFF) {
-            situation = Situation.MENU;
-            
+        if (situation != Situation.MENU && situation != Situation.OFF) { // only if on the "off" and "menu" situation, it will not work
+            situation = Situation.MENU;   // reset the situation to MENU
             screenPanel.removeAll();
-            screenPanel.repaint();
+            screenPanel.repaint();     // refresh the screen panel
             screenPanel.revalidate();
             
         // add panel
@@ -1146,11 +1163,7 @@ public class Model{
                     //WhereToView.jTextFieldDestination.setText(textdisp);
                     screenPanel.add(menu1Panel);
                     if (!"".equals(textdisp)){
-                        
-                                          
-
-                    
-                    
+                                   
                     route.clear();
                     t = 0;
                     odometer = 0.0;
@@ -1227,7 +1240,7 @@ public class Model{
                     break;
                     
                 case TWO:
-                    screenPanel.add(menu2Panel);
+                    screenPanel.add(menu2Panel); // afte back to menu, it will show the orginal page on the screen panel.
                     firstClickedWT = true;
                     break;
                     
@@ -1255,33 +1268,37 @@ public class Model{
                     break;
             }
             screenPanel.repaint();
-            screenPanel.revalidate();
+            screenPanel.revalidate();  //refresh the screen panel
         }
         
     }
     
+    /*
+    the method can used on the select button, that makes the UI can have "select" action on different situation, like menu mode and speech mode
+    @ author Haoran Jiang
+    */
     public void select() throws Exception{
         if (null != situation) 
-        switch (situation) {
+        switch (situation) {  // change the situation to make method have different functionality
             case MAP:
-                moveTo();
+                moveTo();   // change the coordinate to current location
                 File file =new File("output.png");
                 String path = file.getAbsolutePath();
                 ImageIcon icon = new ImageIcon(path);
-                icon.getImage().flush();
+                icon.getImage().flush();   // refresh the screen panel
                 mapImage.setIcon(icon); 
                 mapImage.repaint();
                 break;
             
             case MENU:
                 screenPanel.removeAll();
-                screenPanel.repaint();
+                screenPanel.repaint();  // refresh the screen panel
                 screenPanel.revalidate();
                 switch (menu) {
                     case ONE:                     
                         screenPanel.add(whereToPanel);
-                        speechMenu("menuOne.wav");
-                        situation = Situation.WHERETO;
+                        speechMenu("menuOne.wav");   // add a speech for the page one
+                        situation = Situation.WHERETO; // set the specific situation orer
                         break;
 
                     case TWO:
@@ -1845,15 +1862,19 @@ case SPEECH:
     return bd.doubleValue();
     }    
     
+    /*
+    function can help menu mode to read the name of different situation
+    @ author Haoran Jiang
+    */
     public static void speechMenu(String name) throws Exception {
-        Thread menuThread = new Thread(){
+        Thread menuThread = new Thread(){ // use an another thread to avoid delaying UI
            @Override
            public void run(){
-               AudioInputStream stm = setupStream( name );
+               AudioInputStream stm = setupStream( name ); // read the recorded sound from the file
                playStream( stm, readStream( stm ) );
            }
         };
-        menuThread.start();
+        menuThread.start(); // start thread 
       
     
 

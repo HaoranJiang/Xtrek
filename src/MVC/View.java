@@ -23,11 +23,14 @@ public class View extends javax.swing.JFrame {
     public View(Model model, Controller controller) {
         initComponents();
         
+        // add specific event to different buttons
         onButton.addActionListener((ActionListener) controller);
         upButton.addActionListener((ActionListener) controller);
         downButton.addActionListener((ActionListener) controller);
         selectButton.addActionListener((ActionListener) controller);
         menuButton.addActionListener((ActionListener) controller);
+        
+        // set different panels
         TSPanel = new SatellitePanel();
         aboutPanel = new AboutModePanel();
         whereToPanel = new WhereToView();

@@ -21,6 +21,9 @@ class Controller implements ActionListener{
     }
     
     @Override
+    /*
+    method can help to link right method with right button
+    */
     public void actionPerformed(ActionEvent evt) {
         if (evt.getSource()== onButton)
          {
