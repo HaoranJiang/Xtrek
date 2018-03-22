@@ -1218,6 +1218,7 @@ public class Model{
                     }else{
                         System.out.print("Please enter a destination.");
                     }
+            
                     firstClickedWT = true;
                     break;
                     
