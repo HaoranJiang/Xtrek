@@ -34,6 +34,7 @@ import javax.sound.sampled.SourceDataLine;
  *
  */
 public class NewSoundAndSpeech {
+  // API keys for the Microsoft Cognitive Services API
   final static String KEY1 = "a89f18480dcb445badddd290b4a2a168";
   final static String KEY2 = "e0cddeeff74d40b9a03e8f7acc20b02b";
   
@@ -49,6 +50,7 @@ public class NewSoundAndSpeech {
   public static String token;
   static byte[] speech;
   
+  // Audio files for each language selection in Speech Mode.
   public static final String ENGLISH = "src/Sounds/English.wav";        // location of the pre-recorded file
   public static final String FRENCH = "src/Sounds/French.wav";
   public static final String GERMAN = "src/Sounds/German.wav";
@@ -57,28 +59,23 @@ public class NewSoundAndSpeech {
   
   final static String OUTPUT = "output.wav";
   final static String FORMAT = "riff-16khz-16bit-mono-pcm";
+  
   static final double NAUTICAL_MILE = 1.15077945;
   static final double MILE_TO_METER = 1609.344;
+  
+  // Distance to the destination when the directions are spoken.
   static final int DEST_DISTANCE = 25;
+  // Distance to a route lcation point when the directions are spoken.
   static final int ROUTE_DISTANCE = 10;
   
    static byte[] body;
   
-  // I have created my own route
-  //static HashMap<String,String> my_route = new HashMap<String,String>();
   public static LinkedHashMap<String,String> my_route;
   
-  // I have added custom key and value pairs to this route
-  public static void addKeyValuePair() {
-  
-    // route.put("50.7269971,-3.5180801", "Turn right");
-    // route.put("50.7269972,-3.5180801", "Turn right");
-    // route.put("50.7269973,-3.5180801", "Turn right");
-    // route.put("50.7269974,-3.5180801", "Turn right");
-    // route.put("50.7269975,-3.5180801", "Turn right");
-    // route.put("50.7269976,-3.5180801", "Turn right");
-    my_route.put("50.7269977,-3.5180801", "Turn S on Sylvan Rd or left on Soopy Ln");
-  }
+  /*
+   * This method searches through the directions and chnages certain phrses to 
+   * ones that are more comprehendable. 
+   */
   
   public static String alterText(String text) {
       // Search the directions String here for Rd or Ln
@@ -88,10 +85,7 @@ public class NewSoundAndSpeech {
       String keyword4 = "N";
       String keyword5 = "E";
       String keyword6 = "S";
-      /*
-       * If the String contains "Rd" then this is changed to "Road" and
-       * if the String contains "Ln" then this is changed to "Road".
-       */
+      
       Boolean foundOne = Arrays.asList(text.split(" ")).contains(keyword1);
       if(foundOne){
       String newKeyword1 = "Road";
@@ -128,17 +122,11 @@ public class NewSoundAndSpeech {
       return text;
   }
   
-  // I have created my own currentLocation
+  
   public static String currentLocation = Model.getPosition();
   
-  // I have created my own destination 
-
-
   public static String destination;
 
-  
-  
-  
   /*  
    * This function returns a list containing the lattitude and longitude
    * of the chosen place. 
@@ -147,8 +135,8 @@ public class NewSoundAndSpeech {
       
       List<String> separate = new ArrayList<String>();
       
-      String[] parts = place.split(",");
-      String lattitude = parts[0]; 
+      String[] parts = place.split(","); 
+      String lattitude = parts[0];      
       String longitude = parts[1]; 
   
       separate.add(lattitude);
@@ -166,23 +154,16 @@ public class NewSoundAndSpeech {
   public static double realDistance(String place) {
       
       List splitCurrentLocation = splitPlace(Model.getPosition());
-      
       List splitPlace = splitPlace(place);
       
       String placeLattitude = splitPlace.get(0).toString();
-              
-      String placeLongitude = splitPlace.get(1).toString();
-              
+      String placeLongitude = splitPlace.get(1).toString();  
       String currentLattitude = splitCurrentLocation.get(0).toString();
-              
       String currentLongitude = splitCurrentLocation.get(1).toString();
       
       double placeLattitudeValue = Double.parseDouble(placeLattitude);
-      
       double placeLongitudeValue = Double.parseDouble(placeLongitude);
-      
       double currentLattitudeValue = Double.parseDouble(currentLattitude);
-      
       double currentLongitudeValue = Double.parseDouble(currentLongitude);
       
       return distance(placeLattitudeValue, placeLongitudeValue, currentLattitudeValue, currentLongitudeValue, 'M');
@@ -429,7 +410,10 @@ public class NewSoundAndSpeech {
 	  }
   }
   
-    public static void generateLanguage(String filename){
+  /*  
+   * Plays a pe-recorded audi file.
+   */
+  public static void generateLanguage(String filename){
         Thread reading = new Thread(){
            @Override
            public void run(){
@@ -440,6 +424,11 @@ public class NewSoundAndSpeech {
         reading.start();
         
     }
+    
+    /*
+     * This function ensures that the renewAccessToken() method is called
+     * every nine minutes. 
+     */
     public static void task(){
      TimerTask task = new TimerTask(){
           @Override
@@ -519,7 +508,7 @@ public class NewSoundAndSpeech {
 
   
   /*
-   * Speaks the directions in the desird language. 
+   * Speaks the directions in the desird language during the route.  
    */
   public static synchronized void directionsReader(Language language) throws Exception {
       System.out.println(destination);
@@ -576,12 +565,8 @@ public class NewSoundAndSpeech {
    * Generate sound.
    */
   public static void main( String[] argv ) throws Exception {
-      addKeyValuePair();
-       directionsReader(Language.ENGLISH);
+      
   }
-  
-  
-  
   
 } 
 

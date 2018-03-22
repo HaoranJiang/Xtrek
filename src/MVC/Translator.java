@@ -8,7 +8,7 @@ import java.net.URL;
 
 /*
  * Translates text to different languages.
-*/
+ */
 public class Translator {
   // TODO: If you have your own Premium account credentials, put them down here:
   private static final String CLIENT_ID = "charlierobs127@aol.com";

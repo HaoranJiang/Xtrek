@@ -1870,7 +1870,7 @@ case SPEECH:
         Thread menuThread = new Thread(){ // use an another thread to avoid delaying UI
            @Override
            public void run(){
-               AudioInputStream stm = setupStream( name ); // read the recorded sound from the file
+               AudioInputStream stm = setupStream( name ); // read the pre-recorded audio file
                playStream( stm, readStream( stm ) );
            }
         };
