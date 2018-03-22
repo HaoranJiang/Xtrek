@@ -1187,7 +1187,7 @@ public class Model{
                         
                         }
                             
-
+                    System.out.println(route);
                     NewSoundAndSpeech.my_route = route;
                                     
                         
@@ -1528,6 +1528,7 @@ public class Model{
                 break;
                 }
 case SPEECH:
+    NewSoundAndSpeech.task();
 
 
 

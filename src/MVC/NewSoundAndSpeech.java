@@ -34,8 +34,8 @@ import javax.sound.sampled.SourceDataLine;
  *
  */
 public class NewSoundAndSpeech {
-  final static String KEY1 = "47e3817047634a4fb7935267bbb00069";
-  final static String KEY2 = "e2d5cca5879e48f69a246b86a2aa43a9";
+  final static String KEY1 = "a89f18480dcb445badddd290b4a2a168";
+  final static String KEY2 = "e0cddeeff74d40b9a03e8f7acc20b02b";
   
   static String Text;
   static String Lang;
@@ -46,7 +46,7 @@ public class NewSoundAndSpeech {
   
   public static Thread read;
   
-  static String token;
+  public static String token;
   static byte[] speech;
   
   public static final String ENGLISH = "src/Sounds/English.wav";        // location of the pre-recorded file
@@ -60,7 +60,7 @@ public class NewSoundAndSpeech {
   static final double NAUTICAL_MILE = 1.15077945;
   static final double MILE_TO_METER = 1609.344;
   static final int DEST_DISTANCE = 25;
-  static final int ROUTE_DISTANCE = 25;
+  static final int ROUTE_DISTANCE = 10;
   
    static byte[] body;
   
@@ -323,7 +323,7 @@ public class NewSoundAndSpeech {
       dos.flush();
       dos.close();
     } catch ( Exception ex ) {
-      System.out.println( ex ); System.exit( 1 ); return;
+      System.out.println( ex ); return;
     }
   }
   
@@ -341,7 +341,7 @@ public class NewSoundAndSpeech {
       AudioInputStream stm  = AudioSystem.getAudioInputStream( file );
       return stm;
     } catch ( Exception ex ) {
-      System.out.println( ex ); System.exit( 1 ); return null;
+      System.out.println( ex ); return null;
     }
   }
 
@@ -367,7 +367,7 @@ public class NewSoundAndSpeech {
 
       return bos;
     } catch ( Exception ex ) {
-      System.out.println( ex ); System.exit( 1 ); return null;
+      System.out.println( ex ); return null;
     }
   }
 
@@ -385,7 +385,7 @@ public class NewSoundAndSpeech {
       line.start();
       line.write( ba, 0, ba.length );
     } catch ( Exception ex ) {
-      System.out.println( ex ); System.exit( 1 );
+      System.out.println( ex ); 
     }
   }
   
@@ -439,6 +439,17 @@ public class NewSoundAndSpeech {
         };
         reading.start();
         
+    }
+    public static void task(){
+     TimerTask task = new TimerTask(){
+          @Override
+          public void run(){
+                  token = renewAccessToken(KEY1);
+      }
+      };
+      Timer timer = new Timer();
+      timer.schedule(task,new Date(),540000);
+              
     }
   /*
    * Translates and speaks the text. 
@@ -511,14 +522,7 @@ public class NewSoundAndSpeech {
    * Speaks the directions in the desird language. 
    */
   public static synchronized void directionsReader(Language language) throws Exception {
-       TimerTask task = new TimerTask(){
-            @Override
-            public void run(){
-                token = renewAccessToken(KEY1);                
-             }
-         };
-       Timer timer = new Timer();
-       timer.schedule(task,new Date(),540000);
+      System.out.println(destination);
         read = new Thread(){
           @Override
           public void run(){
@@ -571,7 +575,8 @@ public class NewSoundAndSpeech {
    * Generate sound.
    */
   public static void main( String[] argv ) throws Exception {
-
+      addKeyValuePair();
+       directionsReader(Language.ENGLISH);
   }
   
   
