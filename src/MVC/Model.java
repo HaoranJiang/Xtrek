@@ -12,6 +12,7 @@ import static MVC.NewSoundAndSpeech.KEY1;
 import static MVC.NewSoundAndSpeech.addKeyValuePair;
 import static MVC.NewSoundAndSpeech.changeLanguage;
 import static MVC.NewSoundAndSpeech.distance;
+import static MVC.NewSoundAndSpeech.generateLanguage;
 import static MVC.NewSoundAndSpeech.playStream;
 import static MVC.NewSoundAndSpeech.splitPlace;
 import static MVC.SpeechPanel.smenu1;
@@ -1147,7 +1148,7 @@ public class Model{
                     if (!"".equals(textdisp)){
                         
                                           
-                        System.out.println(textdisp);
+
                     
                     
                     route.clear();
@@ -1155,7 +1156,7 @@ public class Model{
                     odometer = 0.0;
                     tripComputerPanel.odemDisplay.setText("0.0 KM");
                     tripComputerPanel.speedDisplay.setText("0.0 KM/H");
-                    System.out.println(textdisp);
+
                    
                         
                     
@@ -1166,7 +1167,6 @@ public class Model{
                     
                                 
                     try {
-                        System.out.println(initialPosition);
                         findInstruction(initialPosition,textdisp);
                         displayOdem();
                         movingTimeIncease();
@@ -1187,7 +1187,7 @@ public class Model{
                         
                         }
                             
-                    System.out.println(route);
+
                     NewSoundAndSpeech.my_route = route;
                                     
                         
@@ -1215,7 +1215,7 @@ public class Model{
                                 } 
                             }
                         }
-                        System.out.println(route);
+
                         
                     }
                    
@@ -1534,6 +1534,7 @@ case SPEECH:
          switch(speechMenu){
             case TWO:
                 try {
+                    generateLanguage(NewSoundAndSpeech.ENGLISH);
                     try{
                         if (read.isAlive()) {
                              read.interrupt();
@@ -1548,6 +1549,7 @@ case SPEECH:
                 break;
             case THREE:
                 try {
+                    generateLanguage(NewSoundAndSpeech.FRENCH);
                    try{
                         if (read.isAlive()) {
                              read.interrupt();
@@ -1562,6 +1564,7 @@ case SPEECH:
                 break;
             case FOUR:
                 try {
+                    generateLanguage(NewSoundAndSpeech.GERMAN);
                    try{
                         if (read.isAlive()) {
                              read.interrupt();
@@ -1575,6 +1578,7 @@ case SPEECH:
                 break;
             case FIVE:
                 try{
+                    generateLanguage(NewSoundAndSpeech.ITALIAN);
                    try{
                         if (read.isAlive()) {
                              read.interrupt();
@@ -1588,6 +1592,7 @@ case SPEECH:
                 break;
             case SIX:
                  try {
+                     generateLanguage(NewSoundAndSpeech.SPANISH);
                    try{
                         if (read.isAlive()) {
                              read.interrupt();
@@ -1680,7 +1685,7 @@ case SPEECH:
              = {};
             byte[] response = HttpConnect.httpConnect( method, url, headers, body );
             return response;
-            } catch ( Exception ex ) {System.out.println( ex ); System.exit( 1 ); return null;}
+            } catch ( Exception ex ) {System.out.println( ex ); return null;}
     }
     
     
@@ -1696,7 +1701,6 @@ case SPEECH:
                     try{sleep(6000);}catch(InterruptedException e){}               //update odometer by 6s
                     
                     currentPosition = getPosition();
-                    //System.out.println(currentPosition);
                     Double distanceIn6s = realDist(initialPosition,currentPosition);         //Calculate distance moved in 6s
                     if(distanceIn6s<3.0){odometer = odometer+0.0;}else{
                     odometer = odometer+distanceIn6s;}
@@ -1704,7 +1708,6 @@ case SPEECH:
                     Double roundOdemInKM = round(odemInKM,3);
                     tripComputerPanel.odemDisplay.setText(Double.toString(roundOdemInKM)+" KM");
                     initialPosition = currentPosition;
-                    //System.out.println(odometer);
                 }
             }
         };
@@ -1803,7 +1806,6 @@ case SPEECH:
     
     public void findInstruction(String s1,String s2) throws JSONException{
         String s = new String(readDirections(s1, s2));
-        System.out.println(s);
         JSONObject obj = new JSONObject(s);
         JSONArray routes = (JSONArray) obj.get("routes");
         JSONObject child1 = (JSONObject) routes.getJSONObject(0);

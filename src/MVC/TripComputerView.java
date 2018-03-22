@@ -65,7 +65,7 @@ public class TripComputerView extends javax.swing.JPanel {
         tripComputerTime.setPreferredSize(new java.awt.Dimension(203, 30));
 
         timeDisplay.setEditable(false);
-        timeDisplay.setFont(new java.awt.Font("黑体", 1, 5)); // NOI18N
+        timeDisplay.setFont(new java.awt.Font("黑体", 1, 15)); // NOI18N
         timeDisplay.setPreferredSize(new java.awt.Dimension(203, 52));
         timeDisplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -49,12 +49,20 @@ public class NewSoundAndSpeech {
   static String token;
   static byte[] speech;
   
+  public static final String ENGLISH = "src/Sounds/English.wav";        // location of the pre-recorded file
+  public static final String FRENCH = "src/Sounds/French.wav";
+  public static final String GERMAN = "src/Sounds/German.wav";
+  public static final String ITALIAN = "src/Sounds/Italian.wav";
+  public static final String SPANISH = "src/Sounds/Spanish.wav";
+  
   final static String OUTPUT = "output.wav";
   final static String FORMAT = "riff-16khz-16bit-mono-pcm";
   static final double NAUTICAL_MILE = 1.15077945;
   static final double MILE_TO_METER = 1609.344;
   static final int DEST_DISTANCE = 25;
   static final int ROUTE_DISTANCE = 25;
+  
+   static byte[] body;
   
   // I have created my own route
   //static HashMap<String,String> my_route = new HashMap<String,String>();
@@ -226,16 +234,21 @@ public class NewSoundAndSpeech {
     return new String( response ); 
   }
   
+  
   /*
    * Synthesize English text to English Speech.
    */
-  static byte[] generateEnglishSpeech( String token,  String text
+  static byte[] generateSpeech( String token,  String text
                               , String lang,   String gender
-                              , String artist, String format ) {
+                              , String artist, String format, Language language ) {
       
     final String method = "POST";
     final String url = "https://speech.platform.bing.com/synthesize";
-    final byte[] body
+    
+    switch (language) {
+ 
+        case ENGLISH:
+            body
       = ( "<speak version='1.0' xml:lang='en-GB'>"
         + "<voice xml:lang='" + lang   + "' "
         + "xml:gender='"      + gender + "' "
@@ -243,6 +256,51 @@ public class NewSoundAndSpeech {
         + artist + "'>"
         + text
         + "</voice></speak>" ).getBytes(); 
+        break;
+        case FRENCH:
+            body
+      = ( "<speak version='1.0' xml:lang='fr-FR'>"
+        + "<voice xml:lang='" + lang   + "' "
+        + "xml:gender='"      + gender + "' "
+        + "name='Microsoft Server Speech Text to Speech Voice "
+        + artist + "'>"
+        + text
+        + "</voice></speak>" ).getBytes(); 
+        break;
+        case GERMAN:
+            body
+      = ( "<speak version='1.0' xml:lang='de-DE'>"
+        + "<voice xml:lang='" + lang   + "' "
+        + "xml:gender='"      + gender + "' "
+        + "name='Microsoft Server Speech Text to Speech Voice "
+        + artist + "'>"
+        + text
+        + "</voice></speak>" ).getBytes(); 
+        break;
+        case ITALIAN:
+            body
+      = ( "<speak version='1.0' xml:lang='it-IT'>"
+        + "<voice xml:lang='" + lang   + "' "
+        + "xml:gender='"      + gender + "' "
+        + "name='Microsoft Server Speech Text to Speech Voice "
+        + artist + "'>"
+        + text
+        + "</voice></speak>" ).getBytes(); 
+        break;
+        case SPANISH:
+            body
+      = ( "<speak version='1.0' xml:lang='es-ES'>"
+        + "<voice xml:lang='" + lang   + "' "
+        + "xml:gender='"      + gender + "' "
+        + "name='Microsoft Server Speech Text to Speech Voice "
+        + artist + "'>"
+        + text
+        + "</voice></speak>" ).getBytes(); 
+        break;
+        default:
+    break;
+            
+    }
     final String[][] headers
       = { { "Content-Type"             , "application/ssml+xml"        }
         , { "Content-Length"           , String.valueOf( body.length ) }
@@ -252,110 +310,6 @@ public class NewSoundAndSpeech {
     byte[] response = HttpConnect.httpConnect( method, url, headers, body );
     return response;
   } 
-  
-  /*
-   * Synthesize French text to French Speech.
-   */
-  static byte[] generateFrenchSpeech( String token,  String text
-                              , String lang,   String gender
-                              , String artist, String format ) {
-    final String method = "POST";
-    final String url = "https://speech.platform.bing.com/synthesize";
-    final byte[] body
-      = ( "<speak version='1.0' xml:lang='fr-FR'>"
-        + "<voice xml:lang='" + lang   + "' "
-        + "xml:gender='"      + gender + "' "
-        + "name='Microsoft Server Speech Text to Speech Voice "
-        + artist + "'>"
-        + text
-        + "</voice></speak>" ).getBytes(); 
-    final String[][] headers
-      = { { "Content-Type"             , "application/ssml+xml"        }
-        , { "Content-Length"           , String.valueOf( body.length ) }
-        , { "Authorization"            , "Bearer " + token             }
-        , { "X-Microsoft-OutputFormat" , format                        }
-        };
-    byte[] response = HttpConnect.httpConnect( method, url, headers, body );
-    return response;
-  }     
-  
-  /*
-   * Synthesize German text to German Speech.
-   */
-  static byte[] generateGermanSpeech( String token,  String text
-                              , String lang,   String gender
-                              , String artist, String format ) {
-    final String method = "POST";
-    final String url = "https://speech.platform.bing.com/synthesize";
-    final byte[] body
-      = ( "<speak version='1.0' xml:lang='de-DE'>"
-        + "<voice xml:lang='" + lang   + "' "
-        + "xml:gender='"      + gender + "' "
-        + "name='Microsoft Server Speech Text to Speech Voice "
-        + artist + "'>"
-        + text
-        + "</voice></speak>" ).getBytes(); 
-    final String[][] headers
-      = { { "Content-Type"             , "application/ssml+xml"        }
-        , { "Content-Length"           , String.valueOf( body.length ) }
-        , { "Authorization"            , "Bearer " + token             }
-        , { "X-Microsoft-OutputFormat" , format                        }
-        };
-    byte[] response = HttpConnect.httpConnect( method, url, headers, body );
-    return response;
-  }
-  
-  /*
-   * Synthesize Italian text to Italian Speech.
-   */
-  static byte[] generateItalianSpeech( String token,  String text
-                              , String lang,   String gender
-                              , String artist, String format ) {
-    final String method = "POST";
-    final String url = "https://speech.platform.bing.com/synthesize";
-    final byte[] body
-      = ( "<speak version='1.0' xml:lang='it-IT'>"
-        + "<voice xml:lang='" + lang   + "' "
-        + "xml:gender='"      + gender + "' "
-        + "name='Microsoft Server Speech Text to Speech Voice "
-        + artist + "'>"
-        + text
-        + "</voice></speak>" ).getBytes(); 
-    final String[][] headers
-      = { { "Content-Type"             , "application/ssml+xml"        }
-        , { "Content-Length"           , String.valueOf( body.length ) }
-        , { "Authorization"            , "Bearer " + token             }
-        , { "X-Microsoft-OutputFormat" , format                        }
-        };
-    byte[] response = HttpConnect.httpConnect( method, url, headers, body );
-    return response;
-  }
-  
-  /*
-   * Synthesize Spanish text to Spanish Speech.
-   */
-  static byte[] generateSpanishSpeech( String token,  String text
-                              , String lang,   String gender
-                              , String artist, String format ) {
-    final String method = "POST";
-    final String url = "https://speech.platform.bing.com/synthesize";
-    final byte[] body
-      = ( "<speak version='1.0' xml:lang='es-ES'>"
-        + "<voice xml:lang='" + lang   + "' "
-        + "xml:gender='"      + gender + "' "
-        + "name='Microsoft Server Speech Text to Speech Voice "
-        + artist + "'>"
-        + text
-        + "</voice></speak>" ).getBytes(); 
-    final String[][] headers
-      = { { "Content-Type"             , "application/ssml+xml"        }
-        , { "Content-Length"           , String.valueOf( body.length ) }
-        , { "Authorization"            , "Bearer " + token             }
-        , { "X-Microsoft-OutputFormat" , format                        }
-        };
-    byte[] response = HttpConnect.httpConnect( method, url, headers, body );
-    return response;
-  }
 
   /*
    * Write data to file.
@@ -475,16 +429,26 @@ public class NewSoundAndSpeech {
 	  }
   }
   
+    public static void generateLanguage(String filename){
+        Thread reading = new Thread(){
+           @Override
+           public void run(){
+               AudioInputStream stm = setupStream( filename );
+               playStream( stm, readStream( stm ) );
+           }
+        };
+        reading.start();
+        
+    }
   /*
    * Translates and speaks the text. 
    */
   public static void open(Language language) throws Exception {
     changeLanguage(language);
-    token  = renewAccessToken( KEY1 );
     switch(language) {
 		case ENGLISH:
-                    speech = generateEnglishSpeech( token,  Text,   Lang
-                                        , Gender, Artist, FORMAT );
+                    speech = generateSpeech( token,  Text,   Lang
+                                        , Gender, Artist, FORMAT,Language.ENGLISH);
                     break;
 		  
 		case FRENCH:
@@ -495,8 +459,8 @@ public class NewSoundAndSpeech {
                     frenchTranslator.translate("en", "fr", Text);
                     frenchText = OutputCapturer.stop();  
                     
-                    speech = generateFrenchSpeech( token,  frenchText,   Lang
-                                        , Gender, Artist, FORMAT );	
+                    speech = generateSpeech( token,  frenchText,   Lang
+                                        , Gender, Artist, FORMAT,Language.FRENCH );	
                     break;
 			
 		case GERMAN:
@@ -506,8 +470,8 @@ public class NewSoundAndSpeech {
                     germanTranslator.translate("en", "de", Text);
                     germanText = OutputCapturer.stop();  
                     
-                    speech = generateGermanSpeech( token,  germanText,   Lang
-                                        , Gender, Artist, FORMAT );
+                    speech = generateSpeech( token,  germanText,   Lang
+                                        , Gender, Artist, FORMAT,Language.GERMAN );
                     break;
 			
 		case ITALIAN:
@@ -517,8 +481,8 @@ public class NewSoundAndSpeech {
                     italianTranslator.translate("en", "it", Text);
                     italianText = OutputCapturer.stop();  
                     
-                    speech = generateItalianSpeech( token,  italianText,   Lang
-                                        , Gender, Artist, FORMAT );
+                    speech = generateSpeech( token,  italianText,   Lang
+                                        , Gender, Artist, FORMAT,Language.ITALIAN );
                     break;
 			
 		case SPANISH:
@@ -528,8 +492,8 @@ public class NewSoundAndSpeech {
                     spanishTranslator.translate("en", "es", Text);
                     spanishText = OutputCapturer.stop();  
                     
-                    speech = generateSpanishSpeech( token,  spanishText,   Lang
-                                        , Gender, Artist, FORMAT );
+                    speech = generateSpeech( token,  spanishText,   Lang
+                                        , Gender, Artist, FORMAT,Language.SPANISH );
                     break;
 		
 		default:
@@ -547,12 +511,20 @@ public class NewSoundAndSpeech {
    * Speaks the directions in the desird language. 
    */
   public static synchronized void directionsReader(Language language) throws Exception {
-      read = new Thread(){
+       TimerTask task = new TimerTask(){
+            @Override
+            public void run(){
+                token = renewAccessToken(KEY1);                
+             }
+         };
+       Timer timer = new Timer();
+       timer.schedule(task,new Date(),540000);
+        read = new Thread(){
           @Override
           public void run(){
               while(!Thread.currentThread().isInterrupted()){
                 try {
-                    System.out.println(destination);
+                    //System.out.println(destination);
                     while (realDistance(destination) > DEST_DISTANCE) {
                       //String currentLocation = getPosition();
                       my_route.keySet().forEach(new Consumer<String>() {
@@ -601,5 +573,9 @@ public class NewSoundAndSpeech {
   public static void main( String[] argv ) throws Exception {
 
   }
+  
+  
+  
+  
 } 
 

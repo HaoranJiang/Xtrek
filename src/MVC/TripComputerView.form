@@ -152,7 +152,7 @@
       <Properties>
         <Property name="editable" type="boolean" value="false"/>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="&#x9ed1;&#x4f53;" size="5" style="1"/>
+          <Font name="&#x9ed1;&#x4f53;" size="15" style="1"/>
         </Property>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[203, 52]"/>
