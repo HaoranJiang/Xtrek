@@ -7,7 +7,7 @@ package MVC;
 
 /**
  *
- * @author 20521
+ * @author siqi wang
  */
 public class WhereToView extends javax.swing.JPanel {
 
