@@ -560,6 +560,7 @@ public class NewSoundAndSpeech {
                   // When the current location is within 25m of the destination.
                   Text = "You have reached your destination";
                   open(language);
+                  read.interrupt();
                   
 		 } catch (Exception ex) {
                   Logger.getLogger(NewSoundAndSpeech.class.getName()).log(Level.SEVERE, null, ex);
