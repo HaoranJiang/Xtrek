@@ -9,7 +9,7 @@ import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 
 /**
- * @MVC - Satellite View. Display latitude/longitude/time. Refreshed by controller.
+ * @MVC - Satellite View. Display latitude/longitude/time. Refreshed by Satellite controller.
  * @author - Yukun Sun, 2018.
  */
 public class SatellitePanel extends javax.swing.JPanel {

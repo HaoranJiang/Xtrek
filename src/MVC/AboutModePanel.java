@@ -5,7 +5,7 @@ import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 /**
  * About mode panel. Added standard picture.
- * @author Yukun Sun (Group L WorkPackage 5)
+ * @author Yukun Sun, 2018.
  */
 public class AboutModePanel extends javax.swing.JPanel {
 
