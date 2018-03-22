@@ -632,6 +632,7 @@ public class Model{
             
             case MAP:{
                 try{
+                    moveTo();
                     zoomOut();
                     getMap();
                     } catch (Exception e){
@@ -1110,6 +1111,7 @@ public class Model{
         }
                 case MAP:{
                     try{
+                    moveTo();
                     zoomIn();
                     getMap();
                     } catch (Exception e){
@@ -1259,7 +1261,7 @@ public class Model{
     }
     
     public void select() throws Exception{
-        if (null != situation) // TODO add your handling code here:
+        if (null != situation) 
         switch (situation) {
             case MAP:
                 moveTo();
