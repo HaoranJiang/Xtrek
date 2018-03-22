@@ -1149,6 +1149,8 @@ public class Model{
                     route.clear();
                     t = 0;
                     odometer = 0.0;
+                    tripComputerPanel.odemDisplay.setText("0.0 KM");
+                    tripComputerPanel.speedDisplay.setText("0.0 KM/H");
                     System.out.println(textdisp);
                    
                         
