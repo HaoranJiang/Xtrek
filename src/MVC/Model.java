@@ -9,7 +9,7 @@ import static MVC.Maps.zoomOut;
 import static MVC.ModelViewController.SatController;
 import static MVC.NewSoundAndSpeech.FORMAT;
 import static MVC.NewSoundAndSpeech.KEY1;
-import static MVC.NewSoundAndSpeech.addKeyValuePair;
+
 import static MVC.NewSoundAndSpeech.changeLanguage;
 import static MVC.NewSoundAndSpeech.distance;
 import static MVC.NewSoundAndSpeech.generateLanguage;
@@ -225,23 +225,23 @@ public class Model{
             
             }
             
-            case WHERETO:{                                                 //siqi wang line 191-625
+            case WHERETO:{                                                                //line 228-578 author siqi wang 
                 screenPanel.removeAll();
                 screenPanel.repaint();
                 screenPanel.revalidate();
                 
-                WhereToView.jPanelKeyBoard.removeAll();
+                WhereToView.jPanelKeyBoard.removeAll();  //refresh keyboard panel
                 WhereToView.jPanelKeyBoard.repaint();
                 WhereToView.jPanelKeyBoard.revalidate();
                 switch(keys){
                     case KEY_A: 
                             screenPanel.add(whereToPanel);
-                            WhereToView.jTextFieldDestination.setText(textdisp);
-                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyB);
+                            WhereToView.jTextFieldDestination.setText(textdisp);          //set user typing to display form
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyB);       //change to next key in keyboard panel
                             
                             
                             
-                            keys = Keys.KEY_B;
+                            keys = Keys.KEY_B;                                            //set the current key state after clicking button
                             break;
             
                     case KEY_B: 
@@ -710,7 +710,7 @@ public class Model{
             screenPanel.revalidate();
             break;
         }   
-            case WHERETO:{                                              //siqi wang line751-1182
+            case WHERETO:{                                                                 //line 713-1060 author siqi wang
                 screenPanel.removeAll();
                 screenPanel.repaint();
                 screenPanel.revalidate();
@@ -721,7 +721,7 @@ public class Model{
                     case KEY_A: 
                             screenPanel.add(whereToPanel);
                             WhereToView.jTextFieldDestination.setText(textdisp);
-                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyNext);
+                            WhereToView.jPanelKeyBoard.add(WhereToView.jPanelKeyNext);     //change to previous key in keyboard panel
                             
                     
                             
@@ -1157,12 +1157,12 @@ public class Model{
             screenPanel.revalidate();
             
         // add panel
-            switch (menu) {
-                case ONE: 
+            switch (menu) {                                         
+                case ONE:                                                               //line1161-1240 author siqi wang
                     String textdisp = WhereToView.jTextFieldDestination.getText();
                     //WhereToView.jTextFieldDestination.setText(textdisp);
                     screenPanel.add(menu1Panel);
-                    if (!"".equals(textdisp)){
+                    if (!"".equals(textdisp)){                                
                                    
                     route.clear();
                     t = 0;
@@ -1208,7 +1208,7 @@ public class Model{
                     }
                     else{
                         tripComputerPanel.odemDisplay.setText(Double.toString(odemInKM)+" KM");
-                        t = 0;
+                        t = 0;                                                                  //if navigation was started again, odometer and time will be set to zero
                         odometer = 0.0;
                     
             
@@ -1346,8 +1346,8 @@ public class Model{
                 screenPanel.revalidate();
                 break;
                 
-            case WHERETO:{                                                         //siqi wang line1356-1659
-                if(firstClickedWT){screenPanel.add(whereToPanel);
+            case WHERETO:{                                                      //line 1349-1546 author siqi wang     
+                if(firstClickedWT){screenPanel.add(whereToPanel);               // check that function of select button at this moment(enter to whereto interface or select a key on virtual keyboard)
                 WhereToView.jTextFieldDestination.setText(textdisp);
                 firstClickedWT = false;
                 } else{
@@ -1356,7 +1356,7 @@ public class Model{
                 switch(keys){
                     
                     case KEY_A: 
-                            WhereToView.jTextFieldDestination.setText(textdisp + "A");
+                            WhereToView.jTextFieldDestination.setText(textdisp + "A");       //add the corresponding letter to display form
                             textdisp = textdisp + "A";
                             break;
             
@@ -1465,7 +1465,7 @@ public class Model{
                             textdisp = textdisp + " ";
                             break;
                     case KEY_NEXT: 
-                            WhereToView.jPanelKeyBoard.removeAll();
+                            WhereToView.jPanelKeyBoard.removeAll();                         //move to numeric keyboard
                             WhereToView.jPanelKeyBoard.repaint();
                             WhereToView.jPanelKeyBoard.revalidate();
                     
@@ -1526,7 +1526,7 @@ public class Model{
                             WhereToView.jTextFieldDestination.setText(textdisp);
                             break;
                     case KEY_PREV: 
-                            WhereToView.jPanelKeyBoard.removeAll();
+                            WhereToView.jPanelKeyBoard.removeAll();                              //move to alphabetic keyboard
                             WhereToView.jPanelKeyBoard.repaint();
                             WhereToView.jPanelKeyBoard.revalidate();
                     

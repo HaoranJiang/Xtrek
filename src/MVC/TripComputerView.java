@@ -7,7 +7,7 @@ package MVC;
 
 /**
  *
- * @author 20521
+ * @author siqi wang
  */
 public class TripComputerView extends javax.swing.JPanel {
 
