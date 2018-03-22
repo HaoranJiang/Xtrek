@@ -3,6 +3,7 @@ package MVC;
 
 
 import static MVC.Maps.getMap;
+import static MVC.Maps.moveTo;
 import static MVC.Maps.zoomIn;
 import static MVC.Maps.zoomOut;
 import static MVC.ModelViewController.SatController;
@@ -1260,6 +1261,16 @@ public class Model{
     public void select() throws Exception{
         if (null != situation) // TODO add your handling code here:
         switch (situation) {
+            case MAP:
+                moveTo();
+                File file =new File("output.png");
+                String path = file.getAbsolutePath();
+                ImageIcon icon = new ImageIcon(path);
+                icon.getImage().flush();
+                mapImage.setIcon(icon); 
+                mapImage.repaint();
+                break;
+            
             case MENU:
                 screenPanel.removeAll();
                 screenPanel.repaint();
