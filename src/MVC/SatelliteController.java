@@ -16,11 +16,11 @@ import java.util.TooManyListenersException;
 import javax.sound.sampled.AudioInputStream;
 
 /**
- * This Satellite Controller class is used to connect to port, reading GPS message,
+ * This Satellite Controller class is used to connect to serial port, reading, parsing NMEA message,
  * updating latitude/longitude/direction in model and displaying them in the panel(view).
  * This class implements Runnable,therefore, it is able to create its own thread for reading NMEA message, without crashing the main UI thread.
  * @MVC - Controller: SatelliteController controls model and view(SatellitePanel)
- * @author - Yukun Sun (Group L WorkPackage 5)
+ * @author - Yukun Sun, 2018. 
  */
 
 public class SatelliteController implements Runnable, SerialPortEventListener{
@@ -32,6 +32,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     private static final int    TIME_OUT = 2000;
     private static final int    BUFFER_SIZE = 128;
     private static final int    DATA_RATE= 9600;
+    private static final double MINUTE_TO_HOUR = 60.0;
     
     private static final String WINDOWS10_PORT = "COM4";   // windows 10 default serial port 
     private static final String LINUX_PORT =   "/dev/ttySO"; // linux default serial port
@@ -63,6 +64,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     */ 
     public void connect(){
     try{
+        // change the connecting port name based on operating system
         String osname = System.getProperty("os.name","").toLowerCase(); // get opeating system name
         if (osname.startsWith("windows 10")){  
             PortName = WINDOWS10_PORT;
@@ -87,25 +89,32 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             }  
           }
         }
-        }catch(UnsatisfiedLinkError | NoClassDefFoundError e){System.out.println("Hint: rxtxSerial File has wrong version! Please read the README.txt and change it.");
+        }catch(UnsatisfiedLinkError | NoClassDefFoundError e){
+            System.out.println("Hint: rxtxSerial File has wrong version! Please read the README.txt and change it.");
         }
+      // not connected with dongle
       connected = false;
       signal = false;
-      SatellitePanel.updateView(connected, 0, 'a', 0,'a', signal);   // not connected with GPS device
+      SatellitePanel.updateView(connected, 0, 'a', 0,'a', signal);   
     } 
     /**
-     * Open serial port and start a reading thread 
+     * Open serial port and start a reading thread. 
+     * Add event listner, notify when there are available messages.
      */
     public SatelliteController() {        
        try{
             serialPort = (RXTXPort)portID.open("TheSatellite",TIME_OUT);
-       }catch(PortInUseException e){System.out.println("Hint: Port is being used by another application! Please turn off and restart! ");}
+       }catch(PortInUseException e){
+           System.out.println("Hint: Port is being used by another application! Please turn off and restart! ");
+       }
        try{
            in  = serialPort.getInputStream();
        }catch(Exception e){System.out.println(e);}
        try{
            serialPort.addEventListener(this);
-        }catch(TooManyListenersException e){System.out.println("Hint: Too many listener added!Please check if you have opened the project twice!");}
+        }catch(TooManyListenersException e){
+            System.out.println("Hint: Too many listener added!Please check if you have opened the project twice!");
+        }
         serialPort.notifyOnDataAvailable(true);     
         try{
             serialPort.setSerialPortParams(
@@ -114,14 +123,15 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
                 SerialPort.PARITY_NONE);
             
             serialPort.setFlowControlMode(SerialPort.FLOWCONTROL_NONE);
-        }catch(UnsupportedCommOperationException e){System.out.println(e);}
+        }catch(UnsupportedCommOperationException e){
+            System.out.println("Not supported!");
+        }
             connected = true;    // connected to the serial port
             readThread = new Thread(this);
-            readThread.start();    
+            readThread.start();    // start read thread for reading NMEA messages
      
  }
     @Override
-    @SuppressWarnings("empty-statement")
     public void run() {
         try{
             Thread.sleep(20000);
@@ -145,15 +155,17 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
             case SerialPortEvent.DSR:
             case SerialPortEvent.RI:
             case SerialPortEvent.OUTPUT_BUFFER_EMPTY: 
+                // no signal, update view!
                 SatellitePanel.updateView(signal, 0, 'a', 0,'a',connected);
                 break;
             case SerialPortEvent.DATA_AVAILABLE:
+                // availeble date, update!
                 update();
                 break;
         }
   }
     /**
-     * Read from the input stream, convert messages and update position .
+     * Read from the input stream, parses messages and update position .
      */
     public synchronized void update(){
     try{    
@@ -169,7 +181,8 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
                 SatellitePanel.updateView(signal, 0, 'a', 0,'a',connected); // connected but no signal
             }else{ 
              
-            signal = true;                  // connected and have available message         
+            signal = true;                 
+            // connected and have available message         
             // Convert NMEA latitude, longitude message.
             // An example NMEA message:$GPGLL,5043.61007,N,00331.04761,W,204703.00,A,A*7E
             // substring of 7-9/20-23 : degree of latitude/longitude (50 / 003 in the example)
@@ -216,7 +229,7 @@ public class SatelliteController implements Runnable, SerialPortEventListener{
     private double converter(String degree, String minute){
         Float degrees  = Float.valueOf(degree);
         Float minites  = Float.valueOf(minute);
-        double posi = degrees + minites/60.0 ; // Decimal Degrees = degrees + (minutes/60)
+        double posi = degrees + minites/MINUTE_TO_HOUR;
 
     return posi;
 } 

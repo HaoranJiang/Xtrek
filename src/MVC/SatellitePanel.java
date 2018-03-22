@@ -10,14 +10,14 @@ import org.netbeans.lib.awtextra.AbsoluteLayout;
 
 /**
  * @MVC - Satellite View. Display latitude/longitude/time. Refreshed by controller.
- * @author - Yukun Sun (Group L WorkPackage 5)
+ * @author - Yukun Sun, 2018.
  */
 public class SatellitePanel extends javax.swing.JPanel {
 
     public SatellitePanel(){ initComponents();}
 
 
-    @SuppressWarnings("unchecked")
+
   
     private void initComponents() {
 
