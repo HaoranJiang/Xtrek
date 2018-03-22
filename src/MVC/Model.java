@@ -71,6 +71,7 @@ import javax.swing.ImageIcon;
 
 
 
+
 enum Menu {ONE, TWO, THREE, FOUR, FIVE, SIX};
 enum Situation {OFF, MENU, WHERETO, TRIPCOMPUTER, MAP, SPEECH, SATELLITE, ABOUTME};
 enum Keys{KEY_A,KEY_B,KEY_C,KEY_D,KEY_E,KEY_F,KEY_G,KEY_H,KEY_I,KEY_J,KEY_K,KEY_L,KEY_M,KEY_N,KEY_O,
@@ -84,20 +85,20 @@ public class Model{
     static Situation situation;
     static Keys keys;
     static SpeechMenuOrder speechMenu ;
-    static String textdisp;
-    static boolean wtFirstClicked;
-    static boolean firstClickedWT;
-    static Double stationaryRange;
-    static int second;
-    static int minute;
-    static int hour;
-    static String MODE;
-    static Double odometer;
-    static Double odemInKM;
-    static int t;
-    static String currentPosition;
-    static String initialPosition;
-    private final Object lock;
+    static String textdisp;   //text content of user interface in whereto part
+    static boolean wtFirstClicked;    //identify whether navigation has been started 
+    static boolean firstClickedWT;    
+    static Double stationaryRange;    //acceptable range of stationary state
+    static int second;                //value of seconds of moving time 
+    static int minute;                //value of minutes of moving time
+    static int hour;                  //value of hours of moving time
+    static String MODE;               //mode of transit(default:walking)
+    static Double odometer;           
+    static Double odemInKM;           //odometer with KM unit
+    static int t;                     //time duration of each navigation
+    static String currentPosition;    //coordinate of current position
+    static String initialPosition;    
+    
     static double latitude;
     static double longitude;
     static char   dOLatitude;  // direction of latitude
@@ -107,9 +108,9 @@ public class Model{
     static Language currentLanguage;
 
   
-    public static LinkedHashMap<String,String> route;
+    public static LinkedHashMap<String,String> route;      //a hash map which stores all of the position and instruction pairs
     /**
-     *
+     *@param keys a instance of enum class which identify key state in whereto part
      * @param menu
      * @param situation
      */
@@ -135,7 +136,7 @@ public class Model{
         t = 0;
         currentPosition = "";
         initialPosition = "";
-        lock = new Object();
+        
         route = new LinkedHashMap<>();
         speechMenu = SpeechMenuOrder.ONE;
 
@@ -1610,32 +1611,44 @@ case SPEECH:
         return position;
     }
     
-    public void movingTimeIncease(){                                                         //siqi wang line1708-1865
+    /**
+     * Run a thread which record moving time dynamically
+     * @author Siqi Wang(Group L WorkPackage 2)
+     */
+    public void movingTimeIncease(){                                                         
         
-        Thread time = new Thread(){
+        Thread movingTime = new Thread(){
         public void run(){
         for(;;){
             String str_s = Integer.toString(second);
             String str_m = Integer.toString(minute);
             String str_h = Integer.toString(hour);
-            tripComputerPanel.timeDisplay.setText(str_h+"Hour    "+str_m+"Min    "+str_s+"Sec");
+            tripComputerPanel.timeDisplay.setText(str_h+"Hour   "+str_m+"Min   "+str_s+"Sec");
             try{sleep(1000);}catch(InterruptedException e){}
             
             second++;
-            if(second==60){
+            if(second==60){            //each 60s will be evaluated to 1 minute
                 minute++;
                 second = 0;
             }
-            if(minute==60){
+            if(minute==60){            //each 60m will be evaluated to 1 hour
                 hour++;
                 minute = 0;
             }
         }
         }
         };
-        time.start();
+        movingTime.start();             //start moving time thread
     }
     
+    
+    /**
+     * Generate best route solution from start position to end position
+     * @param start A string refer to address of start position
+     * @param end A string refer to address of end position
+     * @return A byte array contains json response
+     * @author Siqi Wang(Group L WorkPackage 2)
+     */
     public byte[] readDirections(String start,String end){
         try {
             final String encOrigin      = URLEncoder.encode( start,      "UTF-8" );
@@ -1658,31 +1671,20 @@ case SPEECH:
     }
     
     
-    public int calculateOdem(String start,String end)throws JSONException{
-        byte[] directions = readDirections(start,end);
-        String s = new String(directions);
-        JSONObject obj = new JSONObject(s);
-        JSONArray routes = (JSONArray) obj.getJSONArray("routes");
-        JSONObject child1 = (JSONObject) routes.getJSONObject(0);
-        JSONArray legs = (JSONArray) child1.getJSONArray("legs");
-        JSONObject child2 = (JSONObject) legs.getJSONObject(0);
-        JSONObject distance = (JSONObject) child2.get("distance");
-        int dis = distance.getInt("value");
-        
-        return dis;
-    }
     
-    
-    
-    public void displayOdem()throws JSONException{
+    /**
+     * Run a thread which display odometer in real time dynamically.
+     * @author Siqi Wang(Group L WorkPackage 2)
+     */
+    public void displayOdem(){
         Thread odemInReal = new Thread(){
             public void run(){
                 for(;;){
-                    try{sleep(6000);}catch(InterruptedException e){}
+                    try{sleep(6000);}catch(InterruptedException e){}               //update odometer by 6s
                     
                     currentPosition = getPosition();
                     //System.out.println(currentPosition);
-                    Double distanceIn6s = realDist(initialPosition,currentPosition);
+                    Double distanceIn6s = realDist(initialPosition,currentPosition);         //Calculate distance moved in 6s
                     if(distanceIn6s<3.0){odometer = odometer+0.0;}else{
                     odometer = odometer+distanceIn6s;}
                     odemInKM = 1.0*odometer/1000;
@@ -1696,6 +1698,10 @@ case SPEECH:
         odemInReal.start();
     }
     
+    /**
+     * Run a thread which display speed in real time dynamically.
+     * @author Siqi Wang(Group L WorkPackage 2)
+     */
     public void displaySpeed(){
         
         Thread speed = new Thread(){
@@ -1708,8 +1714,8 @@ case SPEECH:
                    
                    //String pureSpeed = odometer.substring(0,odometer.length()-3);
                    //Double distanceValue = Double.parseDouble(pureSpeed);
-                   Double speedValue = odometer/t*3.6;
-                   Double roundSpeedValue = round(speedValue,2);
+                   Double speedValue = odometer/t*3.6;                                //convert m/s to km/h
+                   Double roundSpeedValue = round(speedValue,2);                      // round to second decimal places
                    String speedInKmh = Double.toString(roundSpeedValue) + "   KM/H";
                    
                    tripComputerPanel.speedDisplay.setText(speedInKmh);
@@ -1722,6 +1728,13 @@ case SPEECH:
         speed.start();
     }
     
+    /**
+     * Calculate the distance from positionA to positionB in real time
+     * @param positionA start position called positionA
+     * @param positionB end position called positionB
+     * @return a double value of distance
+     * @author Siqi Wang(Group L WorkPackage 2)
+     */
     public double realDist(String positionA,String positionB) {
       
       List splitPlaceA = splitPlace(positionA);
@@ -1747,7 +1760,11 @@ case SPEECH:
       return distance(placeBLattitudeValue, placeBLongitudeValue, placeALattitudeValue, placeALongitudeValue, 'M');
       
   }
-    
+   
+    /*
+    Run a thread which update time duration of each navigation.
+    @author Siqi Wang(Group L WorkPackage 2)
+    */
     public  void dynamicTime(){
         Thread dt = new Thread(){
             public void run(){
@@ -1763,7 +1780,13 @@ case SPEECH:
     
     }
     
-    
+    /**
+     * Add all of position and instruction pairs of route from start position to end position
+     * @param s1 coordinate of start position
+     * @param s2 coordinate of end position
+     * @throws JSONException 
+     * @author Siqi Wang(Group L WorkPackage 2)
+     */
     
     public void findInstruction(String s1,String s2) throws JSONException{
         String s = new String(readDirections(s1, s2));
